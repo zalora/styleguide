@@ -1,0 +1,86 @@
+.s-layout {
+    background: url('../img/web_elements.png') no-repeat;
+    display: inline-block;
+}
+
+.i-edit {
+    background-position: -200px -110px;
+    width: 12px;
+    height: 12px;
+}
+
+.i-delete {
+    background-position: -200px -140px;
+    width: 9px;
+    height: 13px;
+}
+
+.i-location {
+    background-position: -200px -50px;
+    width: 9px;
+    height: 13px;
+}
+
+.i-lock {
+    background-position: -200px -20px;
+    width: 9px;
+    height: 13px;
+}
+
+.i-phone {
+    background-position: -200px -80px;
+    width: 9px;
+    height: 14px;
+}
+
+.i-gift {
+    background-position: -200px -170px;
+    width: 14px;
+    height: 14px;
+}
+
+.i-gift-inverted {
+    background-position: -150px -170px;
+    width: 14px;
+    height: 14px;
+}
+
+.i-cvv {
+    background-position:  -8px -80px;
+    width: 37px;
+    height: 22px;
+    vertical-align: middle;
+}
+
+.i-mastercard {
+    background-position:  -8px -110px;
+    width: 35px;
+    height: 22px;
+}
+
+.i-amex {
+    background-position:  -8px -200px;
+    width: 35px;
+    height: 22px;
+}
+
+.i-visa {
+    background-position:  -8px -140px;
+    width: 35px;
+    height: 22px;
+}
+
+.i-maestro {
+    background-position:  -8px -170px;
+    width: 35px;
+    height: 22px;
+}
+
+.i-lock {
+    background-position: -200px -20px;
+    width: 9px;
+    height: 13px;
+    position: absolute;
+    left: 7px;
+    top: 7px;
+}
