@@ -5,6 +5,11 @@ rvm:
  - "1.9.3"
  - rbx
 
+branches:
+ only:
+  - master
+  - gh-pages
+
 script:
  - sass --update scss:styles
 
