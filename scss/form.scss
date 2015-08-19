@@ -1,0 +1,91 @@
+form {}
+
+/**
+ * set box-sizing property to border-box to so that
+ * form elements can fill the full available space without ugly overflows
+ */
+
+input, select, textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #d1d1d1;
+}
+
+input {
+  &.error {
+    border: 1px solid #ff8484;
+  }
+  &:focus {
+    border: 1px solid #00c8b4;
+  }
+  &[type="text"], &[type="password"] {
+    padding: 5px 0;
+    text-indent: 5px;
+    width: 100%;
+  }
+}
+
+form {
+  input {
+    &.s10 {
+      width: 10%;
+    }
+    &.s20 {
+      width: 20%;
+    }
+    &.s30 {
+      width: 30%;
+    }
+    &.s40 {
+      width: 40%;
+    }
+    &.s50 {
+      width: 50%;
+    }
+    &.s60 {
+      width: 60%;
+    }
+    &.s70 {
+      width: 70%;
+    }
+    &.s80 {
+      width: 80%;
+    }
+    &.s90 {
+      width: 90%;
+    }
+  }
+  textarea.s90 {
+    width: 90%;
+  }
+}
+
+label {
+  display: inline-block;
+}
+
+.form__stacked label {
+  margin-bottom: 10px;
+}
+
+.form__group {
+  margin-bottom: 30px;
+  position: relative;
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.form__group--right {
+  float: left;
+  width: 75%;
+  margin-left: 5%;
+}
+
+.form__group--left {
+  float: left;
+  width: 20%;
+  text-align: right;
+}
