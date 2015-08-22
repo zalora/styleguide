@@ -11,7 +11,7 @@ branches:
   - gh-pages
 
 script:
- - sass --update scss:styles
+ - sass --update --sourcemap=none scss:styles --style compressed
 
 before_install:
  - gem install sass
