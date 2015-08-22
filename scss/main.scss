@@ -88,6 +88,13 @@ pre[class*="language-"] {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  background: #f6f6f6;
+}
+
+ul {
+  margin: 0;
+}
 
 pre {
   position: relative;
@@ -99,68 +106,18 @@ pre {
   overflow: hidden;
 }
 
-.logo {
-  border-bottom: 1px solid #333;
-  a {
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    border: 1px solid #fff;
-    color: #fff;
-    padding: 20px 10px;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-}
-
-.menu li.logo:hover {
-  background: #191818;
-}
-
-.wrapper {}
-
-.menu {
-  background: #191818;
-  position: fixed;
-  width: 100%;
-  z-index: 9;
-}
-
 .container {
   padding: 50px 20px 20px  20px;
   width: 960px;
   margin: 0 auto;
 }
 
-.menu {
-  a {
-    text-decoration: none;
-  }
-  ul {
-    padding: 0;
-    margin: 0 auto;
-    width: 960px;
-  }
-  li {
-    text-align: center;
-    display: inline-block;
-    &:hover, &.active {
-      background: #333;
-    }
-    a {
-      padding: 10px;
-      display: block;
-      color: #999;
-    }
-  }
-}
-
 .list {
-  border-bottom: 2px dotted #333;
-  padding: 20px 0;
-  margin: 20px 0;
+  padding: 20px;
+  width: 960px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
 }
 
 .list__element {

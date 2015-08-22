@@ -1,0 +1,69 @@
+@import "config/_color";
+
+
+/** UI Tabs **/
+
+.tab-content > {
+  .tab-pane {
+    display: none;
+    padding-top: 10px;
+  }
+  .active {
+    display: block;
+  }
+}
+
+.block-tab__nav {
+  border-bottom: 1px solid $tab_border;
+  text-align: center;
+  &.arrow  {
+    border-bottom: 1px solid $tab_arrow_border;
+  }
+  &.arrow .block-tab__list.active a {
+    background: url('../img/inverted-arrow.png') bottom no-repeat;
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+}
+
+.block-tab__list {
+  display: inline-block;
+  list-style: none;
+  a {
+    color: $tab_text;
+    text-decoration: none;
+    display: block;
+    margin: 0 60px 0 0;
+  }
+  &.active a {
+    border-bottom: 2px solid $tab_border_active;
+    font-weight: bold;
+  }
+}
+
+.block-tab-inverted__nav {
+  background: $tab_inverted_background;
+  color: $tab_inverted_text;
+  text-align: center;
+  &.arrow .block-tab-inverted__list.active a {
+    background: url('../img/white_arrow.png') bottom no-repeat;
+    border-bottom: none;
+    padding-bottom: 10px;
+  }
+}
+
+.block-tab-inverted__list {
+  display: inline-block;
+  list-style: none;
+  a {
+    color: $tab_inverted_text;
+    text-decoration: none;
+    display: block;
+    margin: 0 60px 0 0;
+    padding: 10px 0 5px 0;
+  }
+  &.active a {
+    border-bottom: 2px solid $tab_inverted_border;
+    font-weight: bold;
+  }
+}

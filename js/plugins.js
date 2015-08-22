@@ -23,8 +23,10 @@
 
 // Place any jQuery/helper plugins in here.
 $(document).ready(function(){
-    $('.menu li').click(function(){
-        $('.menu li').removeClass('active');
-        $(this).addClass('active');
+    var hash = window.location.hash.split("#"),
+        tab = $('.js-' + hash[1]);
+    $(tab).tab('show');
+    $('a').click(function(){
+        window.location.hash = $(this).attr('href');
     })
 });

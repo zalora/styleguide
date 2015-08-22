@@ -1,5 +1,4 @@
 /** Layout **/
-
 .box {
   position: relative;
   display: block;
@@ -25,81 +24,3 @@
   float: right;
 }
 
-/** Tabs **/
-
-.tab-content > {
-  .tab-pane {
-    display: none;
-    padding-top: 10px;
-  }
-  .active {
-    display: block;
-  }
-}
-
-.block__tab {
-  ul {
-    border-bottom: 1px solid #d1d1d1;
-    text-align: center;
-  }
-  &.arrow ul {
-    border-bottom: 1px solid #000;
-  }
-  li {
-    display: inline-block;
-    list-style: none;
-  }
-}
-
-.block__tab-inverted li {
-  display: inline-block;
-  list-style: none;
-}
-
-.block__tab {
-  li {
-    a {
-      color: #000;
-      text-decoration: none;
-      display: block;
-      margin: 0 60px 0 0;
-    }
-    &.active a {
-      border-bottom: 2px solid #000;
-      font-weight: bold;
-    }
-  }
-  &.arrow li.active a {
-    background: url('../img/inverted-arrow.png') bottom no-repeat;
-    border-bottom: none;
-  }
-}
-
-.block__tab-inverted {
-  ul {
-    background: #313131;
-    color: #fff;
-    text-align: center;
-  }
-  li {
-    a {
-      color: #fff;
-      text-decoration: none;
-      display: block;
-      margin: 0 60px 0 0;
-      padding: 10px 0 5px 0;
-    }
-    &.active a {
-      border-bottom: 2px solid #00E0C3;
-      font-weight: bold;
-    }
-  }
-  &.arrow li.active a {
-    background: url('../img/white_arrow.png') bottom no-repeat;
-    border-bottom: none;
-  }
-}
-
-.block__tab.arrow li a, .block__tab-inverted.arrow li a {
-  padding-bottom: 10px;
-}

@@ -1,4 +1,4 @@
-form {}
+@import "config/_color";
 
 /**
  * set box-sizing property to border-box to so that
@@ -10,15 +10,15 @@ input, select, textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
-  border: 1px solid #d1d1d1;
+  border: 1px solid $form_border;
 }
 
 input {
   &.error {
-    border: 1px solid #ff8484;
+    border: 1px solid $form_border_error;
   }
   &:focus {
-    border: 1px solid #00c8b4;
+    border: 1px solid $form_border_focus;
   }
   &[type="text"], &[type="password"] {
     padding: 5px 0;
@@ -28,7 +28,7 @@ input {
 }
 
 form {
-  input {
+  input, textarea {
     &.s10 {
       width: 10%;
     }
@@ -56,9 +56,6 @@ form {
     &.s90 {
       width: 90%;
     }
-  }
-  textarea.s90 {
-    width: 90%;
   }
 }
 

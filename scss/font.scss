@@ -1,14 +1,18 @@
+@import "config/_color";
+
+/** typography **/
+
 body {
   font-size: 13px;
-  color: #313131;
+  color: $body_text_color;
 }
 
 .dark {
-  color: #000;
+  color: $body_text_dark_color;
 }
 
 .muted {
-  color: #909090;
+  color: $body_text_muted_color;
 }
 
 .txtUpper {

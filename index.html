@@ -7,19 +7,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/normalize.css">
+        <!-- vendor css start -->
+        <link rel="stylesheet" href="css/vendor/normalize.css">
+        <link rel="stylesheet" href="css/vendor/prettify-hemisu.css">
+        <!-- vendor css end -->
+
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/prettify-hemisu.css">
+        <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/font.css">
 
         <!-- component css start -->
         <link rel="stylesheet" href="css/button.css">
-        <link rel="stylesheet" href="css/font.css">
+        <link rel="stylesheet" href="css/tab.css">
         <link rel="stylesheet" href="css/form.css">
-        <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/tooltip.css">
         <link rel="stylesheet" href="css/icon.css">
         <link rel="stylesheet" href="css/component.css">
         <!-- component css end -->
+
+
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
@@ -29,162 +35,224 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="wrapper">
-
-            <nav class="menu">
-                <ul>
-                    <li class="logo"><a href="/">Z</a></li>
-                    <li><a href="#font">Fonts</a></li>
-                    <li><a href="#button">Buttons</a></li>
-                    <li><a href="#form">Forms</a></li>
-                    <li><a href="#tab">Tabs</a></li>
-                    <li><a href="#component">Components</a></li>
+            <div class="block-tab-inverted">
+                <ul class="block-tab-inverted__nav" role="tablist">
+                    <li class="block-tab-inverted__list">
+                        <a href="#home_layout" class="js-home_layout" role="tab" data-toggle="tab">
+                            <i class="s-global i-logo"></i>
+                        </a>
+                    </li>
+                    <li class="block-tab-inverted__list">
+                        <a href="#font_layout" class="js-font_layout" role="tab" data-toggle="tab">Font</a>
+                    </li>
+                    <li class="block-tab-inverted__list">
+                        <a href="#button_layout" class="js-button_layout" role="tab" data-toggle="tab">Button</a>
+                    </li>
+                    <li class="block-tab-inverted__list">
+                        <a href="#form_layout" class="js-form_layout" role="tab" data-toggle="tab">Form</a>
+                    </li>
+                    <li class="block-tab-inverted__list">
+                        <a href="#tab_layout" class="js-tab_layout" role="tab" data-toggle="tab">Tab</a>
+                    </li>
+                    <li class="block-tab-inverted__list">
+                        <a href="#component_layout" role="tab" data-toggle="tab">Component</a>
+                    </li>
                 </ul>
-            </nav>
+                <div class="tab-content">
 
-            <section class="container">
-                <div class="list">
-                    <h1 class="list__title">About</h1>
-                    <h2 class="list__title-sub">A set of small CSS modules that we can use in our codebase.</h2>
-                </div>
-                <!-- Fonts Start -->
-                <div id="font" class="list">
-                    <h1 class="list__title">Fonts</h1>
-                    <h4 class="list__title-sub">Simple CSS for Fonts</h4>
+                    <!-- Home  Start -->
+                    <div role="tabpanel" class="tab-pane active" id="home_layout">
+                        <div class="list">
+                            <h1>ZALORA HTML/CSS Style Guide</h1>
 
-                    <div class="list__content">
-                        <div class="list__element">
-                            <h1>Heading 1</h1>
-                            <h2>Heading 2</h2>
-                            <h3>Heading 3</h3>
-                            <h4>Heading 4</h4>
-                            <div class="list__code">
+                            <h2>Overview</h2>
+
+                            This is for formatting and style rules for HTML and CSS.
+                            It aims at improving collaboration, code quality, and enabling supporting designer also.
+                            It applies to raw, working files that use HTML and CSS files.
+
+
+                            <h2>Naming conventions</h2>
+                            <h3>1. We follow BEM methodology, meaning Block, Element, and Modifier.</h3>
+
+<pre class="prettyprint lang-html linenums">
+.block {}
+.block__element {}
+.block--modifier {}
+</pre>
+
+                            - block represents the higher level of an abstraction or component.
+                            - block__element represents a descendant of .block that helps form .block as a whole.
+                            - block--modifier represents a different state or version of .block.
+
+                            <h3>2. JS-someName</h3>
+
+                            - CSS must not use js-* classes in selectors.
+                            Use the id attribute and js-* class names are reserved for JavaScript-only use. Application-specific data or content can be stored in data-* attributes.
+
+                            The example below includes a dedicated JavaScript utility class to which behaviour is bound. It is independent of any specific UI component.
+
+<pre class="prettyprint lang-html linenums">
+&lt;a class="js-showProfile" data-username="necolas" href="{url}"&gt;View&lt;/a&gt;
+</pre>
+
+                            <h3>3. cms-someName</h3>
+                            All css class name belongs to CMS should start with cms-*
+
+                            Eg:
+<pre class="prettyprint lang-html linenums">
+&lt;div class="cms-homepage_banner"&gt;
+Content from CMS
+&lt;/div&gt;
+</pre>
+                        </div>
+                    </div>
+                    <!-- Home  End -->
+
+                    <!-- Fonts Start -->
+                    <div role="tabpanel" class="tab-pane" id="font_layout">
+                        <div id="font" class="list">
+                            <h1 class="list__title">Fonts</h1>
+                            <h4 class="list__title-sub">Simple CSS for Fonts</h4>
+
+                            <div class="list__content">
+                                <div class="list__element">
+                                    <h1>Heading 1</h1>
+                                    <h2>Heading 2</h2>
+                                    <h3>Heading 3</h3>
+                                    <h4>Heading 4</h4>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
     &lt;h1&gt;Heading 1&lt;/h1&gt;
     &lt;h2&gt;Heading 2&lt;/h2&gt;
     &lt;h3&gt;Heading 3&lt;/h3&gt;
     &lt;h4&gt;Heading 4&lt;/h4&gt;
 </pre>
+                                    </div>
+                                </div>
 
-                            </div>
-                        </div>
-
-                        <div class="list__element">
-                            <h1>Color</h1>
-                            <p>Normal Font Color</p>
-                            <p class="dark">Jet Black Font Color</p>
-                            <p class="muted">Muted Font Color</p>
-                            <div class="list__code">
+                                <div class="list__element">
+                                    <h1>Color</h1>
+                                    <p>Normal Font Color</p>
+                                    <p class="dark">Jet Black Font Color</p>
+                                    <p class="muted">Muted Font Color</p>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
     &lt;p&gt;Normal Font Color&lt;/p&gt;
     &lt;p class="dark"&gt;Jet Black Font Color&lt;/p&gt;
     &lt;p class="muted"&gt;Muted Font Color&lt;/p&gt;
 </pre>
 
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="list__element">
-                            <h1>Size</h1>
-                            <p class="fsl">Large Font Size : 14px </p>
-                            <p>Normal Font Size : 12px</p>
-                            <p class="fss">Small font size : 11px;</p>
-                            <p class="fsxs">Extra small font size : 10px</p>
-                            <div class="list__code">
+                                <div class="list__element">
+                                    <h1>Size</h1>
+                                    <p class="fsl">Large Font Size : 14px </p>
+                                    <p>Normal Font Size : 12px</p>
+                                    <p class="fss">Small font size : 11px;</p>
+                                    <p class="fsxs">Extra small font size : 10px</p>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
     &lt;p class="fsl"&gt;Large Font Size : 14px &lt;/p&gt;
     &lt;p&gt;Normal Font Size : 12px&lt;/p&gt;
     &lt;p class="fss"&gt;Small font size : 11px;&lt;/p&gt;
     &lt;p class="fsxs"&gt;Extra small font size : 10px&lt;/p&gt;
 </pre>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Fonts End-->
+                    <!-- Fonts End-->
 
-                <!-- Button Start -->
-                <div id="button" class="list">
-                    <h1 class="list__title">Buttons</h1>
-                    <h4 class="list__title-sub">Simple CSS for buttons</h4>
 
-                    <div class="list__content">
-                        <div class="list__element">
-                            <h3>Primary Button Solid</h3>
-                            <button class="z-btn z-btn-primary">Primary</button>
-                            <button class="z-btn z-btn-primary disabled">Disabled</button>
-                            <div class="list__code">
+                    <!-- Button Start -->
+                    <div role="tabpanel" class="tab-pane" id="button_layout">
+                        <div id="button" class="list">
+                            <h1 class="list__title">Buttons</h1>
+                            <h4 class="list__title-sub">Simple CSS for buttons</h4>
+
+                            <div class="list__content">
+                                <div class="list__element">
+                                    <h3>Primary Button Solid</h3>
+                                    <button class="z-btn-primary">Primary</button>
+                                    <button class="z-btn-primary disabled">Disabled</button>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
-    &lt;button class="z-btn z-btn-primary"&gt;Primary&lt;/button&gt;
-    &lt;button class="z-btn z-btn-primary disabled"&gt;Disabled&lt;/button&gt;
+    &lt;button class="z-btn-primary"&gt;Primary&lt;/button&gt;
+    &lt;button class="z-btn-primary disabled"&gt;Disabled&lt;/button&gt;
 </pre>
+                                    </div>
+                                </div>
+                                <div class="list__element">
+                                    <h3>Primary Button Outline</h3>
+                                    <button class="z-btn-outline">Primary</button>
+                                    <button class="z-btn-outline disabled">Disabled</button>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+    &lt;button class="z-btn-outline"&gt;Primary&lt;/button&gt;
+    &lt;button class="z-btn-outline disabled"&gt;Disabled&lt;/button&gt;
+</pre>
+
+                                    </div>
+                                </div>
+                                <div class="list__element">
+                                    <h3>Secondary Button</h3>
+                                    <button class="z-btn-secondary">Secondary</button>
+                                    <button class="z-btn-secondary disabled">Disabled</button>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+    &lt;button class="z-btn-secondary"&gt;Secondary&lt;/button&gt;
+    &lt;button class="z-btn-secondary disabled"&gt;Disabled&lt;/button&gt;
+</pre>
+                                    </div>
+                                </div>
+                                <div class="list__element">
+                                    <h3>Special Button</h3>
+                                    <button class="z-btn-special">Special</button>
+                                    <button class="z-btn-special disabled">Disabled</button>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+    &lt;button class="z-btn-special"&gt;Special&lt;/button&gt;
+    &lt;button class="z-btn-special disabled"&gt;Disabled&lt;/button&gt;
+</pre>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="list__element">
-                            <h3>Primary Button Outline</h3>
-                            <button class="z-btn z-btn-outline">Primary</button>
-                            <button class="z-btn z-btn-outline disabled">Disabled</button>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-    &lt;button class="z-btn z-btn-outline"&gt;Primary&lt;/button&gt;
-    &lt;button class="z-btn z-btn-outline disabled"&gt;Disabled&lt;/button&gt;
-</pre>
-
-                            </div>
-                        </div>
-                        <div class="list__element">
-                            <h3>Secondary Button</h3>
-                            <button class="z-btn z-btn-secondary">Secondary</button>
-                            <button class="z-btn z-btn-secondary disabled">Disabled</button>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-    &lt;button class="z-btn z-btn-secondary"&gt;Secondary&lt;/button&gt;
-    &lt;button class="z-btn z-btn-secondary disabled"&gt;Disabled&lt;/button&gt;
-</pre>
-                            </div>
-                        </div>
-                        <div class="list__element">
-                            <h3>Special Button</h3>
-                            <button class="z-btn z-btn-special">Special</button>
-                            <button class="z-btn z-btn-special disabled">Disabled</button>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-    &lt;button class="z-btn z-btn-special"&gt;Special&lt;/button&gt;
-    &lt;button class="z-btn z-btn-special disabled"&gt;Disabled&lt;/button&gt;
-</pre>
-                            </div>
-                        </div>
-
                     </div>
-                </div>
-                <!-- Button End-->
+                    <!-- Button End-->
 
 
-                <!-- Form Start -->
-                <div id="form" class="list">
-                    <h1 class="list__title">Form</h1>
-                    <h4 class="list__title-sub">Simple CSS for Form</h4>
+                    <!-- Form Start -->
+                    <div role="tabpanel" class="tab-pane" id="form_layout">
+                        <div id="form" class="list">
+                            <h1 class="list__title">Form</h1>
+                            <h4 class="list__title-sub">Simple CSS for Form</h4>
 
-                    <div class="list__content">
-                        <div class="list__element">
-                            <h3>Stacked Form</h3>
-                            <form class="form__stacked">
-                                <div class="form__group">
-                                    <label> Email</label>
-                                    <input type="text"/>
-                                </div>
-                                <div class="form__group">
-                                    <label> Password</label>
-                                    <input type="password"/>
-                                </div>
-                                <div class="form__group">
-                                    <input type="checkbox" id="remember_me">
-                                    <label for="remember_me">Remember me</label>
-                                </div>
-                                <div class="form__group">
-                                    <input type="button" class="z-btn z-btn-primary" value="Submit">
-                                </div>
-                            </form>
-                            <div class="list__code">
+                            <div class="list__content">
+                                <div class="list__element">
+                                    <h3>Stacked Form</h3>
+                                    <form class="form__stacked">
+                                        <div class="form__group">
+                                            <label> Email</label>
+                                            <input type="text"/>
+                                        </div>
+                                        <div class="form__group">
+                                            <label> Password</label>
+                                            <input type="password"/>
+                                        </div>
+                                        <div class="form__group">
+                                            <input type="checkbox" id="remember_me">
+                                            <label for="remember_me">Remember me</label>
+                                        </div>
+                                        <div class="form__group">
+                                            <input type="button" class="z-btn z-btn-primary" value="Submit">
+                                        </div>
+                                    </form>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
     &lt;form class="form__stacked"&gt;
         &lt;div class="form__group"&gt;
@@ -204,47 +272,47 @@
         &lt;/div&gt;
     &lt;/form&gt;
 </pre>
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="list__element">
-                            <h3>Horizontal form</h3>
-                            <form class="form__horizontal">
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        <label> Email</label>
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="text"/>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        <label> Password</label>
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="password"/>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        &nbsp;
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="checkbox" id="rememberme">
-                                        <label for="rememberme">Remember me</label>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        &nbsp;
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="button" class="z-btn z-btn-primary" value="Submit">
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="list__code">
+                                <div class="list__element">
+                                    <h3>Horizontal form</h3>
+                                    <form class="form__horizontal">
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                <label> Email</label>
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="text"/>
+                                            </div>
+                                        </div>
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                <label> Password</label>
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="password"/>
+                                            </div>
+                                        </div>
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                &nbsp;
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="checkbox" id="rememberme">
+                                                <label for="rememberme">Remember me</label>
+                                            </div>
+                                        </div>
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                &nbsp;
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="button" class="z-btn z-btn-primary" value="Submit">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
 &lt;form class="form__horizontal"&gt;
     &lt;div class="form__group box"&gt;
@@ -282,53 +350,53 @@
     &lt;/div&gt;
 &lt;/form&gt;
 </pre>
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="list__element">
-                            <h3>Form States</h3>
-                            <form class="form__horizontal">
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        <label> Email</label>
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="text" class="error"/>
-                                        <div class="tooltip__msg right">
-                                            Required
+                                <div class="list__element">
+                                    <h3>Form States</h3>
+                                    <form class="form__horizontal">
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                <label> Email</label>
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="text" class="error"/>
+                                                <div class="tooltip__msg right">
+                                                    Required
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        <label> Password</label>
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="password"/>
-                                        <div class="tooltip__msg right grey">
-                                            Password
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                <label> Password</label>
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="password"/>
+                                                <div class="tooltip__msg right grey">
+                                                    Password
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        &nbsp;
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="checkbox" id="rememberme3">
-                                        <label for="rememberme3">Remember me</label>
-                                    </div>
-                                </div>
-                                <div class="form__group box">
-                                    <div class="form__group--left">
-                                        &nbsp;
-                                    </div>
-                                    <div class="form__group--right">
-                                        <input type="button" class="z-btn z-btn-primary" value="Submit">
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="list__code">
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                &nbsp;
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="checkbox" id="rememberme3">
+                                                <label for="rememberme3">Remember me</label>
+                                            </div>
+                                        </div>
+                                        <div class="form__group box">
+                                            <div class="form__group--left">
+                                                &nbsp;
+                                            </div>
+                                            <div class="form__group--right">
+                                                <input type="button" class="z-btn z-btn-primary" value="Submit">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
 &lt;form class="form__horizontal"&gt;
     &lt;div class="form__group box"&gt;
@@ -372,277 +440,285 @@
     &lt;/div&gt;
 &lt;/form&gt;
 </pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Form End-->
-
-                <!-- Tab Start -->
-                <div id="tab" class="list">
-                    <h1 class="list__title">Tabs</h1>
-                    <p>These Tabs are using twitter bootstrap tab javascript plugin.</p>
-                    <div class="list__content">
-
-                        <div class="list__element">
-                            <h3>Block Tabs</h3>
-                            <div class="block__tab">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active">
-                                        <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
-                                    </li>
-                                </ul>
-
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="home">Link1 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="profile">Link2 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="messages">Link3 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="settings">Link4 Content</div>
-                                </div>
-
-                            </div>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-&lt;div class="block__tab"&gt;
-    &lt;ul class="nav nav-tabs" role="tablist"&gt;
-        &lt;li role="presentation" class="active"&gt;
-            &lt;a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class="tab-content"&gt;
-        &lt;div role="tabpanel" class="tab-pane active" id="home_tab3"&gt;Link1 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="profile_tab3"&gt;Link2 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="messages_tab3"&gt;Link3 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="settings_tab3"&gt;Link4 Content&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-                            </div>
-                        </div>
-
-                        <div class="list__element">
-                            <h3>Block Tabs Inverted</h3>
-                            <div class="block__tab-inverted">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active">
-                                        <a href="#home_tab1" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#profile_tab1" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#messages_tab1" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#settings_tab1" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
-                                    </li>
-                                </ul>
-
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="home_tab1">Link1 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="profile_tab1">Link2 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="messages_tab1">Link3 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="settings_tab1">Link4 Content</div>
-                                </div>
-
-                            </div>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-&lt;div class="block__tab-inverted"&gt;
-    &lt;ul class="nav nav-tabs" role="tablist"&gt;
-        &lt;li role="presentation" class="active"&gt;
-            &lt;a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class="tab-content"&gt;
-        &lt;div role="tabpanel" class="tab-pane active" id="home_tab3"&gt;Link1 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="profile_tab3"&gt;Link2 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="messages_tab3"&gt;Link3 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="settings_tab3"&gt;Link4 Content&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-                            </div>
-                        </div>
-
-                        <div class="list__element">
-                            <h3>Arrow Tabs </h3>
-                            <div class="block__tab arrow">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active">
-                                        <a href="#home_tab2" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#profile_tab2" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#messages_tab2" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#settings_tab2" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
-                                    </li>
-                                </ul>
-
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="home_tab2">Link1 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="profile_tab2">Link2 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="messages_tab2">Link3 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="settings_tab2">Link4 Content</div>
-                                </div>
-
-                            </div>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-&lt;div class="block__tab arrow"&gt;
-    &lt;ul class="nav nav-tabs" role="tablist"&gt;
-        &lt;li role="presentation" class="active"&gt;
-            &lt;a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class="tab-content"&gt;
-        &lt;div role="tabpanel" class="tab-pane active" id="home_tab3"&gt;Link1 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="profile_tab3"&gt;Link2 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="messages_tab3"&gt;Link3 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="settings_tab3"&gt;Link4 Content&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-                            </div>
-                        </div>
-
-                        <div class="list__element">
-                            <h3>ArrowTab Inverted</h3>
-                            <div class="block__tab-inverted arrow">
-                                <!-- Nav tabs -->
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active">
-                                        <a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
-                                    </li>
-                                    <li role="presentation">
-                                        <a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
-                                    </li>
-                                </ul>
-
-                                <!-- Tab panes -->
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="home_tab3">Link1 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="profile_tab3">Link2 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="messages_tab3">Link3 Content</div>
-                                    <div role="tabpanel" class="tab-pane" id="settings_tab3">Link4 Content</div>
-                                </div>
-                            </div>
-                            <div class="list__code">
-<pre class="prettyprint lang-html linenums">
-&lt;div class="block__tab-inverted arrow"&gt;
-    &lt;ul class="nav nav-tabs" role="tablist"&gt;
-        &lt;li role="presentation" class="active"&gt;
-            &lt;a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li role="presentation"&gt;
-            &lt;a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;div class="tab-content"&gt;
-        &lt;div role="tabpanel" class="tab-pane active" id="home_tab3"&gt;Link1 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="profile_tab3"&gt;Link2 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="messages_tab3"&gt;Link3 Content&lt;/div&gt;
-        &lt;div role="tabpanel" class="tab-pane" id="settings_tab3"&gt;Link4 Content&lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Tab End-->
-
-                <div id="component" class="list">
-                    <h1 class="list__title">Components</h1>
-                        <p>Various usage of component across the shop.</p>
-                    <div class="list__content">
-                        <div class="list__element">
-                            <h3>User Card</h3>
-                            <input id="card1" class="card__selection" type="radio" />
-                            <label for="card1" class="card__label">
-                                <div class="card">
-                                    <div class="card__action">
-                                        <a class="js-edit"><i class="i-edit s-layout"></i></a>
-                                        <a class="js-delete"><i class="i-delete s-layout"></i></a>
                                     </div>
-                                    <div class="card__content">
-                                        <div class="card__data"><h3>Jean</h3></div>
-                                        <div class="card__data">
-                                            <i class="i-location s-layout lfloat"></i>
-                                            <div>
-                                            180 Clemenceau Avenue
-                                            Haw Par Centre
-                                            #06-02 Singapore
-                                            33575444
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form End-->
+
+                    <!-- Tab Start -->
+                    <div role="tabpanel" class="tab-pane" id="tab_layout">
+                        <div id="tab" class="list">
+                            <h1 class="list__title">Tabs</h1>
+                            <p>These Tabs are using twitter bootstrap tab javascript plugin.</p>
+                            <div class="list__content">
+
+                                <div class="list__element">
+                                    <h3>Block Tabs</h3>
+                                    <div class="block-tab">
+                                        <!-- Nav tabs -->
+                                        <ul class="block-tab__nav" role="tablist">
+                                            <li class="active block-tab__list">
+                                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="home">Link1 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="profile">Link2 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="messages">Link3 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="settings">Link4 Content</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+&lt;div class="block-tab"&gt;
+    &lt;ul class="block-tab__nav" role="tablist"&gt;
+        &lt;li class="active block-tab__list"&gt;
+            &lt;a href="#home" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tab-content"&gt;
+        &lt;div role="tabpanel" class="tab-pane active" id="home"&gt;Link1 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="profile"&gt;Link2 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="messages"&gt;Link3 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="settings"&gt;Link4 Content&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                    </div>
+                                </div>
+
+                                <div class="list__element">
+                                    <h3>Block Tabs Inverted</h3>
+                                    <div class="block-tab-inverted">
+                                        <!-- Nav tabs -->
+                                        <ul class="block-tab-inverted__nav" role="tablist">
+                                            <li class="active block-tab-inverted__list">
+                                                <a href="#home_tab1" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#profile_tab1" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#messages_tab1" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#settings_tab1" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="home_tab1">Link1 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="profile_tab1">Link2 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="messages_tab1">Link3 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="settings_tab1">Link4 Content</div>
+                                        </div>
+                                    </div>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+&lt;div class="block-tab-inverted"&gt;
+    &lt;ul class="block-tab-inverted__nav" role="tablist"&gt;
+        &lt;li class="active block-tab-inverted__list"&gt;
+            &lt;a href="#home_tab1" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#profile_tab1" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#messages_tab1" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#settings_tab1" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tab-content"&gt;
+        &lt;div role="tabpanel" class="tab-pane active" id="home_tab1"&gt;Link1 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="profile_tab1"&gt;Link2 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="messages_tab1"&gt;Link3 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="settings_tab1"&gt;Link4 Content&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                    </div>
+                                </div>
+
+                                <div class="list__element">
+                                    <h3>Arrow Tabs </h3>
+                                    <div class="block-tab">
+                                        <!-- Nav tabs -->
+                                        <ul class="block-tab__nav arrow" role="tablist">
+                                            <li class="active block-tab__list">
+                                                <a href="#home_tab2" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#profile_tab2" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#messages_tab2" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
+                                            </li>
+                                            <li class="block-tab__list">
+                                                <a href="#settings_tab2" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="home_tab2">Link1 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="profile_tab2">Link2 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="messages_tab2">Link3 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="settings_tab2">Link4 Content</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+&lt;div class="block-tab"&gt;
+    &lt;ul class="block-tab__nav arrow" role="tablist"&gt;
+        &lt;li class="active block-tab__list"&gt;
+            &lt;a href="#home_tab2" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#profile_tab2" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#messages_tab2" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab__list"&gt;
+            &lt;a href="#settings_tab2" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tab-content"&gt;
+        &lt;div role="tabpanel" class="tab-pane active" id="home_tab2"&gt;Link1 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="profile_tab2"&gt;Link2 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="messages_tab2"&gt;Link3 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="settings_tab2"&gt;Link4 Content&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                    </div>
+                                </div>
+
+                                <div class="list__element">
+                                    <h3>ArrowTab Inverted</h3>
+                                    <div class="block-tab-inverted">
+                                        <!-- Nav tabs -->
+                                        <ul class="block-tab-inverted__nav arrow" role="tablist">
+                                            <li class="active block-tab-inverted__list">
+                                                <a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab">Link1</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab">Link2</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab">Link3</a>
+                                            </li>
+                                            <li class="block-tab-inverted__list">
+                                                <a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab">Link4</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <div role="tabpanel" class="tab-pane active" id="home_tab3">Link1 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="profile_tab3">Link2 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="messages_tab3">Link3 Content</div>
+                                            <div role="tabpanel" class="tab-pane" id="settings_tab3">Link4 Content</div>
+                                        </div>
+                                    </div>
+                                    <div class="list__code">
+<pre class="prettyprint lang-html linenums">
+&lt;div class="block-tab-inverted"&gt;
+    &lt;ul class="block-tab-inverted__nav arrow" role="tablist"&gt;
+        &lt;li class="active block-tab-inverted__list"&gt;
+            &lt;a href="#home_tab3" aria-controls="home" role="tab" data-toggle="tab"&gt;Link1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#profile_tab3" aria-controls="profile" role="tab" data-toggle="tab"&gt;Link2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#messages_tab3" aria-controls="messages" role="tab" data-toggle="tab"&gt;Link3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="block-tab-inverted__list"&gt;
+            &lt;a href="#settings_tab3" aria-controls="settings" role="tab" data-toggle="tab"&gt;Link4&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;div class="tab-content"&gt;
+        &lt;div role="tabpanel" class="tab-pane active" id="home_tab3"&gt;Link1 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="profile_tab3"&gt;Link2 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="messages_tab3"&gt;Link3 Content&lt;/div&gt;
+        &lt;div role="tabpanel" class="tab-pane" id="settings_tab3"&gt;Link4 Content&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tab End -->
+
+                    <!-- Component start -->
+                    <div role="tabpanel" class="tab-pane" id="component_layout">
+                        <div id="component" class="list">
+                            <h1 class="list__title">Components</h1>
+                            <p>Various usage of component across the shop.</p>
+                            <div class="list__content">
+                                <div class="list__element">
+                                    <h3>User Card</h3>
+                                    <input id="card1" class="card__selection" type="radio" />
+                                    <label for="card1" class="card__label">
+                                        <div class="card">
+                                            <div class="card__action">
+                                                <a class="js-edit"><i class="i-edit s-layout"></i></a>
+                                                <a class="js-delete"><i class="i-delete s-layout"></i></a>
+                                            </div>
+                                            <div class="card__content">
+                                                <div class="card__data"><h3>Jean</h3></div>
+                                                <div class="card__data">
+                                                    <i class="i-location s-layout lfloat"></i>
+                                                    <div>
+                                                        180 Clemenceau Avenue
+                                                        Haw Par Centre
+                                                        #06-02 Singapore
+                                                        33575444
+                                                    </div>
+                                                </div>
+                                                <div class="card__data">
+                                                    <i class="i-phone s-layout lfloat"></i>
+                                                    <div>82674755</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="card__data">
-                                            <i class="i-phone s-layout lfloat"></i>
-                                            <div>82674755</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </label>
-                            <div class="list__code">
+                                    </label>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
 &lt;input id="card1" class="card__selection" type="radio" /&gt;
 &lt;label for="card1" class="card__label"&gt;
@@ -670,37 +746,37 @@
     &lt;/div&gt;
 &lt;/label&gt;
 </pre>
-                            </div>
-                        </div>
-
-                        <div class="list__element">
-                            <h3>Credit Card</h3>
-                            <input id="cc_card1" class="cc_card__selection" type="radio" />
-                            <label for="cc_card1" class="cc_card__label">
-                                <div class="cc_card box">
-                                    <div class="cc_card__action">
-                                        <a class="js-delete"><i class="i-delete s-layout"></i></a>
-                                    </div>
-                                    <div class="cc_card__content">
-                                        <form class="form__stacked">
-                                            <div class="form__group">
-                                                <label class="txtUpper"> Card Number</label>
-                                                <input type="text"/>
-                                            </div>
-                                            <div class="form__group">
-                                                <label class="txtUpper"> Enter Cvc</label>
-                                                <div class="box">
-                                                    <input type="text" class="s40 cc_card__cvc">
-                                                    <i class="s-layout i-lock"></i>
-                                                    <span class="s-layout i-cvv"></span>
-                                                    <span class="s-layout i-visa cc_card__type"></span>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
-                            </label>
-                            <div class="list__code">
+
+                                <div class="list__element">
+                                    <h3>Credit Card</h3>
+                                    <input id="cc_card1" class="cc_card__selection" type="radio" />
+                                    <label for="cc_card1" class="cc_card__label">
+                                        <div class="cc_card box">
+                                            <div class="cc_card__action">
+                                                <a class="js-delete"><i class="i-delete s-layout"></i></a>
+                                            </div>
+                                            <div class="cc_card__content">
+                                                <form class="form__stacked">
+                                                    <div class="form__group">
+                                                        <label class="txtUpper"> Card Number</label>
+                                                        <input type="text"/>
+                                                    </div>
+                                                    <div class="form__group">
+                                                        <label class="txtUpper"> Enter Cvc</label>
+                                                        <div class="box">
+                                                            <input type="text" class="s40 cc_card__cvc">
+                                                            <i class="s-layout i-lock"></i>
+                                                            <span class="s-layout i-cvv"></span>
+                                                            <span class="s-layout i-visa cc_card__type"></span>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
 &lt;input id="cc_card1" class="cc_card__selection" type="radio" /&gt;
 &lt;label for="cc_card1" class="cc_card__label"&gt;
@@ -728,19 +804,19 @@
     &lt;/div&gt;
 &lt;/label&gt;
 </pre>
-                            </div>
-                        </div>
+                                    </div>
+                                </div>
 
-                        <div class="list__element">
-                            <h3>Pagination</h3>
-                            <ul class="pagination">
-                                <li><a href="#"> < </a> </li>
-                                <li class="active"><a href="#"> 2 </a> </li>
-                                <li><a href="#"> 3 </a> </li>
-                                <li><a href="#"> 4 </a> </li>
-                                <li><a href="#"> > </a> </li>
-                            </ul>
-                            <div class="list__code">
+                                <div class="list__element">
+                                    <h3>Pagination</h3>
+                                    <ul class="pagination">
+                                        <li><a href="#"> < </a> </li>
+                                        <li class="active"><a href="#"> 2 </a> </li>
+                                        <li><a href="#"> 3 </a> </li>
+                                        <li><a href="#"> 4 </a> </li>
+                                        <li><a href="#"> > </a> </li>
+                                    </ul>
+                                    <div class="list__code">
 <pre class="prettyprint lang-html linenums">
 &lt;ul class="pagination"&gt;
     &lt;li&gt;&lt;a href="#"&gt; &lt; &lt;/a&gt; &lt;/li&gt;
@@ -750,16 +826,18 @@
     &lt;li&gt;&lt;a href="#"&gt; &gt; &lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
 </pre>
+                                    </div>
+                                </div>
+
+
                             </div>
                         </div>
-
-
                     </div>
+                    <!-- Component end -->
+
                 </div>
-
-            </section>
+            </div>
         </div>
-
 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>

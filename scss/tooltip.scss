@@ -1,15 +1,18 @@
+@import "config/_color";
+
+/** Tooltip Messages **/
 .tooltip__msg {
-  background: #cdece9;
+  background: $tooltip_default_background;
   padding: 10px;
   position: absolute;
   border-radius: 5px;
-  box-shadow: 1px 1px 5px #eee;
+  box-shadow: 1px 1px 5px $tooltip_box_shadow;
   width: 135px;
   z-index: 9;
   font-size: 11px;
   &.grey {
-    background: #ddd;
-    border: 1px solid #ddd;
+    background: $tooltip_grey_background;
+    border: 1px solid $tooltip_grey_border;
   }
   &.bottom {
     top: 45px;
@@ -24,7 +27,7 @@
       position: absolute;
       pointer-events: none;
       border-color: rgba(136, 183, 213, 0);
-      border-bottom-color: #cdece9;
+      border-bottom-color: $tooltip_default_border;
       border-width: 10px;
       margin-left: -10px;
     }
@@ -51,7 +54,7 @@
       position: absolute;
       pointer-events: none;
       border-color: rgba(136, 183, 213, 0);
-      border-left-color: #cdece9;
+      border-left-color: $tooltip_default_border;
       border-width: 10px;
       margin-top: -10px;
     }
@@ -70,7 +73,7 @@
       position: absolute;
       pointer-events: none;
       border-color: rgba(136, 183, 213, 0);
-      border-top-color: #cdece9;
+      border-top-color: $tooltip_default_border;
       border-width: 10px;
       margin-left: -10px;
     }
@@ -97,23 +100,23 @@
       position: absolute;
       pointer-events: none;
       border-color: rgba(136, 183, 213, 0);
-      border-right-color: #cdece9;
+      border-right-color: $tooltip_default_border;
       border-width: 10px;
       margin-top: -10px;
     }
   }
   &.grey {
     &.right:after {
-      border-right-color: #ddd;
+      border-right-color: $tooltip_grey_border;
     }
     &.left:after {
-      border-left-color: #ddd;
+      border-left-color: $tooltip_grey_border;
     }
     &.top:after {
-      border-top-color: #ddd;
+      border-top-color: $tooltip_grey_border;
     }
     &.bottom:after {
-      border-bottom-color: #ddd;
+      border-bottom-color: $tooltip_grey_border;
     }
   }
 }

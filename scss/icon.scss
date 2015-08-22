@@ -3,6 +3,17 @@
   display: inline-block;
 }
 
+.s-global {
+  background: url('../img/global_sprite.png') no-repeat;
+  display: inline-block;
+}
+
+.i-logo {
+  background-position: -135px -5px;
+  width: 158px;
+  height: 23px;
+}
+
 .i-edit {
   background-position: -200px -110px;
   width: 12px;

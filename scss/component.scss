@@ -1,7 +1,9 @@
-/* User Card */
+@import "config/_color";
+
+/* User Details Card */
 
 .card {
-    border: 2px solid #ddd;
+    border: 2px solid $user_card_border;
     width: 310px;
 }
 
@@ -40,11 +42,11 @@ input[type=radio].card__selection:checked + .card__label > div.card, .card__labe
     border: 2px solid #313131;
 }
 
-/** CC card **/
+/** Credit Card Detail **/
 
 .cc_card {
-    background: #f2f2f2;
-    border: 2px solid #f2f2f2;
+    background: $cc_card_background;
+    border: 2px solid $cc_card_border;
     padding: 10px;
     border-radius: 5px;
     width: 250px;
@@ -77,12 +79,12 @@ input {
         text-indent: 20px;
     }
     &[type=radio].cc_card__selection:checked + .cc_card__label > div.cc_card {
-        border: 2px solid #313131;
+        border: 2px solid $cc_card_border_hover;
     }
 }
 
 .cc_card__label:hover > div.cc_card {
-    border: 2px solid #313131;
+    border: 2px solid $cc_card_border_hover;
 }
 
 /** Pagination **/
@@ -93,15 +95,16 @@ ul.pagination li {
     a {
         display: block;
         padding: 5px 10px;
-        border: 1px solid #ddd;
-        color: #313131;
+        border: 1px solid $pagination_border;
+        color: $pagination_text;
         text-decoration: none;
     }
     &:hover a {
-        border: 1px solid #313131;
+        border: 1px solid $pagination_border_hover;
     }
     &.active a {
-        background: #313131;
-        color: #fff;
+        background: $pagination_active_background;
+        color: $pagination_active_text;
+        border: 1px solid $pagination_border_hover;
     }
 }
