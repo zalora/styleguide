@@ -1,8 +1,13 @@
 @import "config/_color";
-
 /** typography **/
 
+@font-face {
+  font-family: "Apercu";
+  src: url('../font/apercu_regular.otf');
+}
+
 body {
+  font-family: 'Apercu','Arial','sans-serif';
   font-size: 13px;
   color: $body_text_color;
 }
