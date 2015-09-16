@@ -1,0 +1,19 @@
+{
+  "name": "zalora-styleguide",
+  "version": "0.0.1",
+  "description": "This is the ZALORA styleguide project. It collects and showcases everything design related to ensure brand consistency throughout the company.",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "Nils Borchers",
+  "devDependencies": {
+    "browser-sync": "^2.9.3",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-shell": "^0.4.3",
+    "gulp-size": "^2.0.0"
+  }
+}
