@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zalora/theme.svg)](https://travis-ci.org/zalora/theme)
+[![Build Status](https://travis-ci.org/zalora/zalora-styleguide.svg)](https://travis-ci.org/zalora/zalora-styleguide)
 
 ZALORA HTML/CSS Style Guide
 ===========================
