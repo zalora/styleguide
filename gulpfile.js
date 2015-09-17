@@ -41,11 +41,12 @@ gulp.task("hologram", ["clean:hologram"], $.shell.task("hologram"));
  */
 
 // Runs the build command for Jekyll to compile the site locally
-gulp.task("jekyll:dev", $.shell.task("jekyll build"));
+gulp.task("jekyll", $.shell.task("jekyll build"));
 // This will build the site with the production settings
 gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
 
-gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
+
+gulp.task("jekyll-rebuild", ["jekyll"], function () {
   browserSync.reload();
 });
 
@@ -81,7 +82,7 @@ gulp.task("watch", function () {
  * the viewport synchronized between them.
  */
 
-gulp.task("serve:dev", ["sass", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["sass", "jekyll"], function () {
   browserSync({
     notify: true,
     // tunnel: "",
@@ -103,3 +104,10 @@ gulp.task("serve:dev", ["sass", "jekyll:dev"], function () {
 
 // Run this to start development on the styleguide
 gulp.task("default", ["serve:dev", "watch"]);
+
+gulp.task("build", ["sass", "jekyll:prod"]);
+
+gulp.task('deploy', ['build'], function() {
+  return gulp.src('./dist/**/*')
+    .pipe($.ghPages());
+});
