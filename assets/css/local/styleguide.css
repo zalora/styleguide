@@ -29,7 +29,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
-  color: green;
+  color: grey;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%; }
 
@@ -83,7 +83,7 @@ a {
   a:visited {
     color: #ff738c; }
   a:hover {
-    color: green;
+    color: grey;
     text-decoration: underline; }
 
 /**
@@ -181,7 +181,7 @@ pre {
   .site-nav .menu-icon {
     display: none; }
   .site-nav .page-link {
-    color: green;
+    color: grey;
     line-height: 1.5; }
     .site-nav .page-link:not(:first-child) {
       margin-left: 20px; }
