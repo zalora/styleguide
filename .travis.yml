@@ -6,7 +6,7 @@ rvm:
  - rbx
 
 script:
- - sass --update --sourcemap=none src/assets/_scss:src/assets/_scss/styles --style compressed
+ - sass --update --sourcemap=none src/assets/_scss:src/assets/_scss/styles
 
 before_install:
  - gem install sass
