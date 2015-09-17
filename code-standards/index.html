@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ZALORA styleguide</title>
+  <title>Coding standards</title>
   <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
   <link rel="stylesheet" href="/assets/css/local/styleguide.css">
   <link rel="stylesheet" href="/assets/css/global/global.css">
-  <link rel="canonical" href="http://styleguide.zalora.com/">
+  <link rel="canonical" href="http://styleguide.zalora.com/code-standards/">
   <link rel="alternate" type="application/rss+xml" title="ZALORA styleguide" href="http://styleguide.zalora.com/feed.xml" />
 </head>
 
@@ -86,25 +86,43 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <h1 id="naming-conventions">Naming conventions</h1>
 
-  <h1 class="page-heading">Posts</h1>
+<h2 id="we-follow-bem-methodology-meaning-block-element-and-modifier">1. We follow BEM methodology, meaning Block, Element, and Modifier.</h2>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Sep 16, 2015</span>
+<pre><code>.block {}
+.block__element {}
+.block--modifier {}
+</code></pre>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2015/09/16/welcome-to-jekyll.html">Welcome to Jekyll!</a>
-        </h2>
-      </li>
-    
-  </ul>
+<ul>
+  <li>block represents the higher level of an abstraction or component.</li>
+  <li>block__element represents a descendant of .block that helps form .block as a whole.</li>
+  <li>block–modifier represents a different state or version of .block.</li>
+</ul>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h2 id="js-somename">2. JS-someName</h2>
 
-</div>
+<ul>
+  <li>CSS must not use js-* classes in selectors.
+Use the id attribute and js-* class names are reserved for JavaScript-only use. Application-specific data or content can be stored in data-* attributes.</li>
+</ul>
+
+<p>The example below includes a dedicated JavaScript utility class to which behaviour is bound. It is independent of any specific UI component.</p>
+
+<pre><code>&lt;a class="js-showProfile" data-username="necolas" href="{url}"&gt;View&lt;/a&gt;
+</code></pre>
+
+<h2 id="cms-somename">3. cms-someName</h2>
+<p>All css class name belongs to CMS should start with cms-*</p>
+
+<p>Eg:</p>
+
+<pre><code>&lt;div class="cms-homepage_banner"&gt;
+  Content from CMS
+&lt;/div&gt;
+</code></pre>
+
 
       </div>
     </div>
