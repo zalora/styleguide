@@ -5,8 +5,14 @@ rvm:
  - "1.9.3"
  - rbx
 
+# disable the default submodule logic
+git:
+ submodules: false
+ 
 script:
  - sass --update --sourcemap=none src/assets/_scss:src/assets/_scss/styles
 
 before_install:
  - gem install sass
+ - sed -i 's/git@github.com:/git:\/\/github.com\//' .gitmodules
+ - git submodule update --init --recursive
