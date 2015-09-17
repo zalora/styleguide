@@ -10,4 +10,3 @@ script:
 
 before_install:
  - gem install sass
- - git submodule update --init
