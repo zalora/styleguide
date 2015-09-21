@@ -355,7 +355,7 @@ td,
 th {
   padding: 0; }
 
-/* Transitions */
+/* Media queries */
 /* Keyframes & Animation*/
 /* Input placeholder */
 @-webkit-keyframes fadeIn {
@@ -479,9 +479,6 @@ a {
     outline-offset: -2px; }
   a.a-white {
     color: white; }
-    a.a-white:hover,
-    a.a-white:focus {
-      color: #c8c8c8; }
 
 figure {
   margin: 0; }
@@ -705,8 +702,7 @@ small, .small {
   font-size: 85%; }
 
 .container {
-  margin: 0 auto;
-  width: 996px; }
+  margin: 0 auto; }
   .container:before {
     display: table;
     content: " "; }
@@ -714,6 +710,13 @@ small, .small {
     display: table;
     content: " ";
     clear: both; }
+
+/* ====== Floats ====== */
+.lfloat {
+  float: left; }
+
+.rfloat {
+  float: right; }
 
 /* ====== Form styles ===== */
 input:invalid {
@@ -914,10 +917,10 @@ table th,
   line-height: 22px; }
 
 .success {
-  color: #6c8516; }
+  color: #00c8b4; }
 
 .error {
-  /* color: #820000; */ }
+  color: #ba4242; }
 
 /* border styles */
 .box-bdr, .ui-listLight .ui-listItem, .ui-tabViewNav > li, .cartTable .cartItems tr, .hdSimple, .categoryMenu, .fct-scroll {
@@ -1084,9 +1087,6 @@ A button is an awesome thing to get in trouble with. Hi Winn.
 ```
 */
 .btn {
-  -moz-transition: background-color 0.3s, color 0.2s;
-  -o-transition: background-color 0.3s, color 0.2s;
-  -webkit-transition: background-color 0.3s, color 0.2s;
   transition: background-color 0.3s, color 0.2s;
   color: #fff;
   background-color: #000;
@@ -1263,9 +1263,6 @@ input[type="email"],
 input[type="password"],
 select,
 textarea {
-  -moz-transition: border 0.3s;
-  -o-transition: border 0.3s;
-  -webkit-transition: border 0.3s;
   transition: border 0.3s;
   border: 1px solid #dfdfdf;
   padding: 8px;
@@ -1283,6 +1280,12 @@ textarea {
   textarea.error {
     border: 1px solid #FF8484;
     background: url("../../../images/local/checkout/red_error_icon.png") no-repeat right 10px center #fff; }
+  input[type="text"].disabled,
+  input[type="email"].disabled,
+  input[type="password"].disabled,
+  select.disabled,
+  textarea.disabled {
+    opacity: .6; }
 
 label {
   display: block; }
@@ -1321,9 +1324,6 @@ label {
     font-weight: 400; }
 
 .social-buttons.social-buttons--circles a {
-  -moz-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
   padding: 5px;
   border-radius: 999px;
