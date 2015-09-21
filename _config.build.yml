@@ -1,2 +1,2 @@
-baseurl: "/styleguide/" # the subpath of your site, e.g. /blog/
-url: "http://zalora.github.io/" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://styleguide.zalora.com" # the base hostname & protocol for your site
