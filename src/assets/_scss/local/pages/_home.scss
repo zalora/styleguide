@@ -6,27 +6,39 @@
     background-image: url(/assets/images/hero-small.jpg);
     background-size: cover;
     background-position: center center;
-    padding-top: 30%;
+    padding-top: 45%;
     padding-bottom: 15%;
 
     h1 {
         color: $colorLightPrimary;
         text-shadow: 0 1px 1px rgba(black, .3);
-    }
+        margin-left: 20%;
+        background-color: rgba(black, .3);
+        padding: 10px;
+        padding-top: 5px;
 
-    @include media($break-medium) {
-        h1 { font-size: 2em }
+        @include media($break-medium) {
+            font-size: 2em;
+            margin-left: 0;
+            background-color: transparent;
+            padding: 0;
+        }
     }
 
     @include media($break-big) {
         background-image: url(/assets/images/hero-large.jpg);
+        padding-top: 35%;
+
         h1 { font-size: 3em }
     }
 
     @include media($break-large) {
+        padding-top: 30%;
+
         h1 {
             font-size: 4em;
             max-width: 40%;
+            margin-left: 7%;
         }
     }
 }
