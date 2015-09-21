@@ -1,0 +1,25 @@
+//-------------------------------------
+// Header
+//-------------------------------------
+
+header {
+    background-color: $colorDarkPrimary;
+}
+
+.logo {
+    width: 151px;
+    height: 21px;
+    fill: $colorLightPrimary;
+}
+
+.tagline { color: $colorHighlightPositive }
+
+#menu-icon {
+    width: 20px;
+    height: 22px;
+
+    svg {
+        fill: $colorLightPrimary;
+    }
+}
+

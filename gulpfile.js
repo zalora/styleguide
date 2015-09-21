@@ -61,11 +61,11 @@ gulp.task("jekyll-rebuild", ["jekyll"], function () {
 
 gulp.task("watch", function () {
   gulp.watch([
+    "src/**/*.js",
     "src/**/*.md",
     "src/**/*.html",
     "src/**/*.xml",
-    "src/**/*.txt",
-    "src/**/*.js"
+    "src/**/*.txt"
   ], ["jekyll-rebuild"]);
 
   gulp.watch(["src/assets/_scss/global/**/*.scss"], ["hologram", "sass"]);

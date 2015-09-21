@@ -1,0 +1,41 @@
+//-------------------------------------
+// Landing Page
+//-------------------------------------
+
+.hero-stage {
+    background-image: url(http://placehold.it/1200x500);
+    background-size: cover;
+    background-position: center center;
+    padding-top: 30%;
+    padding-bottom: 15%;
+
+    @include media($break-medium) {
+        h1 { font-size: 2em }
+    }
+
+    @include media($break-big) {
+        h1 { font-size: 3em }
+    }
+
+    @include media($break-large) {
+        h1 {
+            font-size: 4em;
+            max-width: 60%;
+        }
+    }
+}
+
+// Quick nav
+.quick-nav {
+
+}
+
+.quick-nav__box {
+    img {
+        margin-right: $spaceMedium;
+    }
+
+    span {
+        font-size: $fontsizeXL;
+    }
+}

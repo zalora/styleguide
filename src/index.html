@@ -3,21 +3,25 @@ layout: default
 ---
 
 <div class="home">
+    <section class="hero-stage pal">
+        <h1 class="page-heading man">The Zalorian's styleguide to the universe</h1>
+    </section>
 
-  <h1 class="page-heading">Posts</h1>
+    <section class="quick-nav pal">
+        <h2>I'm interested in …</h2>
+        <nav class="quick-nav__box quick-nav__developers mbm">
+            <img src="http://placehold.it/70x70" alt="">
+            <span>Engineering</span>
+        </nav>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <nav class="quick-nav__box quick-nav__marketing mbm">
+            <img src="http://placehold.it/70x70" alt="">
+            <span>On-Site Marketing</span>
+        </nav>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+        <nav class="quick-nav__box quick-nav__press mbm">
+            <img src="http://placehold.it/70x70" alt="">
+            <span>Press</span>
+        </nav>
+    </section>
 </div>
