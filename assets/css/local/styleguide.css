@@ -19,6 +19,11 @@ body {
   width: 100vw;
   overflow-x: hidden; }
 
+@media screen and (min-width: 1025px) {
+  .page-mover {
+    max-width: 1200px;
+    margin: 0 auto; } }
+
 .svg-asset {
   width: 100%;
   height: 100%; }
@@ -35,10 +40,17 @@ header {
   color: #00c8b4; }
 
 #menu-icon {
+  padding: 10px;
   width: 20px;
-  height: 22px; }
+  height: 22px;
+  margin-top: -5px;
+  margin-bottom: -5px;
+  margin-right: -10px; }
   #menu-icon svg {
     fill: #fff; }
+  @media screen and (min-width: 769px) {
+    #menu-icon {
+      display: none; } }
 
 .site-nav {
   display: none;
@@ -196,21 +208,26 @@ header {
     color: #099; }
 
 .hero-stage {
-  background-image: url(http://placehold.it/1200x500);
+  background-image: url(/assets/images/hero-small.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 30%;
   padding-bottom: 15%; }
+  .hero-stage h1 {
+    color: #fff;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); }
   @media screen and (min-width: 481px) {
     .hero-stage h1 {
       font-size: 2em; } }
   @media screen and (min-width: 769px) {
-    .hero-stage h1 {
-      font-size: 3em; } }
+    .hero-stage {
+      background-image: url(/assets/images/hero-large.jpg); }
+      .hero-stage h1 {
+        font-size: 3em; } }
   @media screen and (min-width: 1025px) {
     .hero-stage h1 {
       font-size: 4em;
-      max-width: 60%; } }
+      max-width: 40%; } }
 
 .quick-nav__box img {
   margin-right: 12px; }
