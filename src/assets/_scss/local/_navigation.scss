@@ -2,6 +2,23 @@
 // Navigation
 //-------------------------------------
 
+#menu-icon {
+    padding: 10px;
+    width: 20px;
+    height: 22px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-right: -10px;
+
+    svg {
+        fill: $colorLightPrimary;
+    }
+
+    @include media($break-big) {
+        display: none;
+    }
+}
+
 .site-nav {
     display: none;
     width: 80%;

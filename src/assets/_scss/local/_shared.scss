@@ -7,6 +7,13 @@ body {
     overflow-x: hidden;
 }
 
+@include media($break-large) {
+    .page-mover {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
 .svg-asset {
     width: 100%;
     height: 100%;

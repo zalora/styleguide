@@ -3,24 +3,30 @@
 //-------------------------------------
 
 .hero-stage {
-    background-image: url(http://placehold.it/1200x500);
+    background-image: url(/assets/images/hero-small.jpg);
     background-size: cover;
     background-position: center center;
     padding-top: 30%;
     padding-bottom: 15%;
+
+    h1 {
+        color: $colorLightPrimary;
+        text-shadow: 0 1px 1px rgba(black, .3);
+    }
 
     @include media($break-medium) {
         h1 { font-size: 2em }
     }
 
     @include media($break-big) {
+        background-image: url(/assets/images/hero-large.jpg);
         h1 { font-size: 3em }
     }
 
     @include media($break-large) {
         h1 {
             font-size: 4em;
-            max-width: 60%;
+            max-width: 40%;
         }
     }
 }
