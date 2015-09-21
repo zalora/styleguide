@@ -41,16 +41,20 @@ header {
     fill: #fff; }
 
 .site-nav {
-  width: 90%;
+  display: none;
+  width: 80%;
   position: absolute;
   left: 100%; }
+  .site-nav.showing {
+    display: block; }
 
 .page-mover {
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s; }
   .page-mover.moved {
-    -webkit-transform: translateX(-90%);
-    transform: translateX(-90%); }
+    -webkit-transform: translateX(-80%);
+    transform: translateX(-80%);
+    position: fixed; }
 
 /**
  * Syntax highlighting styles
