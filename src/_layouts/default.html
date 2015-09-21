@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body>
+    <body class="{{ page.area }}">
         {% include svg-assets.html %}
 
         <div id="page-mover" class="page-mover container">
@@ -23,7 +23,9 @@
             </nav>
 
             <div class="page-content">
-                {{ content }}
+                <div class="page-content__wrapper pal">
+                    {{ content }}
+                </div>
             </div>
 
             {% include footer.html %}
