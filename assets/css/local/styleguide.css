@@ -271,6 +271,9 @@ footer {
   .highlight .il {
     color: #099; }
 
+body.homepage .page-content__wrapper.pal {
+  padding: 0; }
+
 .hero-stage {
   background-image: url(/assets/images/hero-small.jpg);
   background-size: cover;
