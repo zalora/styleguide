@@ -3,7 +3,21 @@
 //-------------------------------------
 
 header {
-    background-color: $colorDarkPrimary;
+    @include clearfix;
+
+    @include media($break-large) {
+        margin-top: 20px;
+    }
+
+    .header-wrapper {
+        background-color: $colorDarkPrimary;
+
+        @include media($break-large) {
+            width: 80%;
+            float: right;
+            box-sizing: border-box;
+        }
+    }
 }
 
 .logo {

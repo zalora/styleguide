@@ -4,16 +4,18 @@
     <body>
         {% include svg-assets.html %}
 
-        <div id="page-mover" class="page-mover">
-            <header class="phl pvm container">
-                <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="{{ site.baseurl }}/" alt="{{ site.title }}">
-                    <svg class="logo svg-asset"><use xlink:href="#zalora-logo" /></svg>
-                    <span class="tagline fontface-secondary">styleguide</span>
-                </a>
+        <div id="page-mover" class="page-mover container">
+            <header>
+                <div class="header-wrapper phl pvm container">
+                    <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="{{ site.baseurl }}/" alt="{{ site.title }}">
+                        <svg class="logo svg-asset"><use xlink:href="#zalora-logo" /></svg>
+                        <span class="tagline fontface-secondary">styleguide</span>
+                    </a>
 
-                <a href="#" id="menu-icon" class="rfloat ui-inlineBlock">
-                    <svg class="svg-asset"><use xlink:href="#burger" /></svg>
-                </a>
+                    <a href="#" id="menu-icon" class="rfloat ui-inlineBlock">
+                        <svg class="svg-asset"><use xlink:href="#burger" /></svg>
+                    </a>
+                </div>
             </header>
 
             <nav id="site-nav" class="site-nav">
@@ -27,7 +29,7 @@
             {% include footer.html %}
         </div>
 
-        <script src='{{ "/assets/js/vendor/fastclick.js" | prepend: site.baseurl }}'></script>
+        <script src="{{ "/assets/js/vendor/fastclick.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "/assets/js/styleguide.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "/assets/js/navigation.js" | prepend: site.baseurl }}"></script>
     </body>

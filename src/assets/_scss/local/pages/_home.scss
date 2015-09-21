@@ -6,34 +6,82 @@
     background-image: url(/assets/images/hero-small.jpg);
     background-size: cover;
     background-position: center center;
-    padding-top: 30%;
+    padding-top: 45%;
     padding-bottom: 15%;
 
     h1 {
         color: $colorLightPrimary;
         text-shadow: 0 1px 1px rgba(black, .3);
-    }
+        margin-left: 20%;
+        background-color: rgba(black, .3);
+        padding: 10px;
+        padding-top: 5px;
 
-    @include media($break-medium) {
-        h1 { font-size: 2em }
+        @include media($break-medium) {
+            font-size: 2em;
+            margin-left: 0;
+            background-color: transparent;
+            padding: 0;
+        }
     }
 
     @include media($break-big) {
         background-image: url(/assets/images/hero-large.jpg);
-        h1 { font-size: 3em }
+        padding-top: 35%;
+
+        h1 {
+            font-size: 3em;
+            max-width: 60%;
+        }
     }
 
     @include media($break-large) {
+        padding-top: 20%;
+
         h1 {
             font-size: 4em;
-            max-width: 40%;
+            margin-left: 7%;
         }
     }
 }
 
 // Quick nav
 .quick-nav {
+    @include clearfix;
 
+    @include media($break-large) {
+        .quick-nav__box {
+            width: 33%;
+            float: left;
+            text-align: center;
+            padding: $spaceLarge;
+            box-sizing: border-box;
+            margin-top: 50px;
+
+            span {
+                display: block;
+                font-size: $fontsizeXXXL;
+                color: $colorHighlightPositive;
+            }
+        }
+    }
+
+    .quick-nav__icon {
+        width: 70px;
+        height: 70px;
+
+        svg {
+            fill: none;
+            stroke: $colorDarkPrimary;
+            stroke-width: 2;
+        }
+
+        @include media($break-large) {
+            width: 120px;
+            height: 120px;
+            margin-bottom: $spaceLarge;
+        }
+    }
 }
 
 .quick-nav__box {
