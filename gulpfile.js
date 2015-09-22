@@ -30,7 +30,7 @@ gulp.task("sass", function () {
  * comments inside the global .scss files
  */
 
-gulp.task("clean:hologram", del.bind(null, ["src/docs/**/*"]));
+gulp.task("clean:hologram", del.bind(null, ["src/components/desktop/**/*"]));
 gulp.task("hologram", ["clean:hologram"], $.shell.task("hologram"));
 
 

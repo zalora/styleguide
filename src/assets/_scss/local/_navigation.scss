@@ -27,6 +27,7 @@
     left: 100%;
     min-height: 100vh;
     padding: 20px;
+    box-sizing: border-box;
     background-color: $colorLightSecondary;
 
     &.showing { display: block }
@@ -47,16 +48,44 @@
 
     ul {
         list-style: none;
-        padding: 0;
+        padding-left: 0;
         margin: 0;
     }
 
-    a {
-        text-transform: capitalize;
+    & > ul {
+        // 1. Level
+        & > li {
+            font-size: $fontsizeXXL;
+            margin-bottom: $spaceXLarge;
+            font-weight: 700;
+            line-height: 1.3;
 
-        &.active {
-            color: $colorHighlightPositive;
+            &:first-of-type { margin-bottom: 0 }
+
+            & > a { margin-bottom: $spaceLarge }
+
+            // 2. Level
+            & > ul {
+                a { margin-bottom: $spaceSmall }
+            }
+
+            & > ul > li {
+                font-size: $fontsizeM;
+                text-transform: uppercase;
+                letter-spacing: .1em;
+
+                & > ul > li {
+                    font-weight: 400;
+                    text-transform: capitalize;
+                    letter-spacing: .07em;
+                }
+            }
         }
+    }
+
+    a {
+        display: inline-block;
+        &.active { color: $colorHighlightPositive }
     }
 }
 
@@ -87,7 +116,7 @@
 }
 
 @include media($break-large) {
-    .site-nav     { width: 20% }
+    .site-nav     { width: 180px }
 
     .page-content,
     footer {

@@ -1,0 +1,21 @@
+- text: Home
+  url: /
+- text: Visual Identity
+  url: /design/
+  subitems:
+    - text: Logo usage
+      url: /design/logo-usage/
+    - text: Colors
+      url: /design/colors/
+- text: Web Components
+  url: /components/
+  subitems:
+    - text: Mobile
+      url: /components/mobile/
+    - text: Desktop
+      url: /components/desktop/typography.html
+      subitems:
+        - text: Typography
+          url: /components/desktop/typography.html
+        - text: Buttons
+          url: /components/desktop/buttons.html

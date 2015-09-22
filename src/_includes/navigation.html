@@ -1,33 +1,13 @@
-<!-- Main menu -->
-<ul class="site-nav__general">
-  {% for node in site.pages %}
-    {% if node.type != "docs" and node.title %}
+{% assign navurl = page.url | remove: 'index.html' %}
+<ul>
+{% for item in include.nav %}
     <li>
-      <a  class="page-link
-                pas
-                ui-inlineBlock
-                {% if page.url == node.url %}active{% endif %}"
-          href="{{ node.url | prepend: site.baseurl }}">
-        {{ node.title }}
-      </a>
+        <a href="{{ item.url }}" class="{% if item.url == navurl %}active{% endif %}"alt="{{ item.text }}">
+            {{ item.text }}
+        </a>
+        {% if item.subitems %}
+            {% include navigation.html nav=item.subitems %}
+        {% endif %}
     </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-<!-- Sub Menu for desktop styles -->
-<ul class="site-nav__desktop-docs">
-  {% for node in site.pages %}
-    {% if node.type == "docs" and node.area == "desktop-docs" and node.title %}
-    <li>
-      <a  class="page-link
-                pas
-                ui-inlineBlock
-                {% if page.url == node.url %}active{% endif %}"
-          href="{{ node.url | prepend: site.baseurl }}">
-        {{ node.title }}
-      </a>
-    </li>
-    {% endif %}
-  {% endfor %}
+{% endfor %}
 </ul>
