@@ -11,6 +11,13 @@ header {
 
     .header-wrapper {
         background-color: $colorDarkPrimary;
+        padding-left: $spaceLarge;
+        padding-right: $spaceLarge;
+
+        @include media($break-big) {
+            padding-left: $spaceXLarge;
+            padding-right: $spaceXLarge;
+        }
 
         @include media($break-large) {
             width: 80%;
