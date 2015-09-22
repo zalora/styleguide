@@ -1,0 +1,11 @@
+//-------------------------------------
+// Styles for all sub-pages
+//-------------------------------------
+
+.page {
+    padding: $spaceLarge;
+
+    @include media($break-big) {
+        padding: $spaceXLarge;
+    }
+}
