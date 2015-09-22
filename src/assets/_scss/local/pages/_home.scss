@@ -54,6 +54,11 @@ body.homepage .page-content__wrapper.pal {
     @include clearfix;
     padding-top: $spaceXLarge;
 
+    h2 {
+        position: relative;
+        top: -$spaceMedium;
+    }
+
     .quick-nav__box {
         margin-bottom: $spaceLarge;
 
