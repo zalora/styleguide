@@ -13,9 +13,7 @@ var gulp = require("gulp"),
 
 gulp.task("sass", function () {
   return gulp.src("src/assets/_scss/**/*.scss")
-    .pipe($.sass({
-      errLogToConsole: true
-    }))
+    .pipe($.sass().on('error', $.sass.logError))
     // Directory your CSS file goes to
     .pipe(gulp.dest("src/assets/css"))
     .pipe(gulp.dest("dist/assets/css"))
