@@ -429,6 +429,19 @@ body {
   color: #000;
   margin: 0; }
 
+/*doc
+---
+title: Headlines
+name: headlines
+category: typography
+---
+
+```html_example
+    <h1>Headline Level 1</h1>
+    <h2>Headline Level 2</h2>
+    <h3>Headline Level 3</h3>
+```
+*/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
@@ -1076,7 +1089,7 @@ table th,
 ---
 title: Button
 name: button
-category: basics
+category: buttons
 ---
 
 A button is an awesome thing to get in trouble with. Hi Winn.
@@ -1111,7 +1124,7 @@ A button is an awesome thing to get in trouble with. Hi Winn.
 ---
 title: Button Colors
 name: button-variations
-category: basics
+category: buttons
 ---
 ```html_example
 <button class="btn btn--secondary">Secondary</button>
@@ -1123,7 +1136,7 @@ category: basics
 ---
 title: Button Sizes
 name: button-sizes
-category: basics
+category: buttons
 ---
 ```html_example
 <button class="btn btn--small">Small</button>
@@ -1353,7 +1366,7 @@ label {
 ---
 title: Price Box
 name: price-box
-category: components
+category: elements
 ---
 ```html_example
 <div class="price-box">
