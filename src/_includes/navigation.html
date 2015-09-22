@@ -1,9 +1,15 @@
 <!-- Main menu -->
 <ul class="site-nav__general">
-  {% for page in site.pages %}
-    {% if page.type != "docs" and page.title %}
+  {% for node in site.pages %}
+    {% if node.type != "docs" and node.title %}
     <li>
-      <a class="page-link pas ui-inlineBlock" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      <a  class="page-link
+                pas
+                ui-inlineBlock
+                {% if page.url == node.url %}active{% endif %}"
+          href="{{ node.url | prepend: site.baseurl }}">
+        {{ node.title }}
+      </a>
     </li>
     {% endif %}
   {% endfor %}
@@ -11,10 +17,16 @@
 
 <!-- Sub Menu for desktop styles -->
 <ul class="site-nav__desktop-docs">
-  {% for page in site.pages %}
-    {% if page.type == "docs" and page.area == "desktop-docs" and page.title %}
+  {% for node in site.pages %}
+    {% if node.type == "docs" and node.area == "desktop-docs" and node.title %}
     <li>
-      <a class="page-link pas ui-inlineBlock" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+      <a  class="page-link
+                pas
+                ui-inlineBlock
+                {% if page.url == node.url %}active{% endif %}"
+          href="{{ node.url | prepend: site.baseurl }}">
+        {{ node.title }}
+      </a>
     </li>
     {% endif %}
   {% endfor %}
