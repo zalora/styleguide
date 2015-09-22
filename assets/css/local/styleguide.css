@@ -337,10 +337,24 @@ footer {
   .highlight .il {
     color: #099; }
 
-.page {
+.page__header {
+  background-image: radial-gradient(ellipse at top right, #e7f6f4 0%, #cdece9 100%); }
+  .page__header .page__header__title {
+    margin: 40px 0;
+    text-transform: uppercase; }
+    @media screen and (min-width: 1025px) {
+      .page__header .page__header__title {
+        margin-top: 120px;
+        font-size: 3em;
+        color: white;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3); } }
+
+.page__header,
+.page__content {
   padding: 20px; }
   @media screen and (min-width: 769px) {
-    .page {
+    .page__header,
+    .page__content {
       padding: 40px; } }
 
 body.homepage .page-content__wrapper.pal {
