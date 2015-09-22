@@ -52,20 +52,24 @@ body.homepage .page-content__wrapper.pal {
 // Quick nav
 .quick-nav {
     @include clearfix;
+    padding-top: $spaceXLarge;
 
-    @include media($break-large) {
-        .quick-nav__box {
+    .quick-nav__box {
+        margin-bottom: $spaceLarge;
+
+        span { color: $colorHighlightPositive }
+
+        @include media($break-large) {
             width: 33%;
             float: left;
             text-align: center;
             padding: $spaceLarge;
             box-sizing: border-box;
-            margin-top: 50px;
+            margin-bottom: 0;
 
             span {
                 display: block;
                 font-size: $fontsizeXXXL;
-                color: $colorHighlightPositive;
             }
         }
     }
@@ -73,6 +77,7 @@ body.homepage .page-content__wrapper.pal {
     .quick-nav__icon {
         width: 70px;
         height: 70px;
+        margin-right: $spaceMedium;
 
         svg {
             fill: none;
@@ -83,6 +88,7 @@ body.homepage .page-content__wrapper.pal {
         @include media($break-large) {
             width: 120px;
             height: 120px;
+            margin-right: 0;
             margin-bottom: $spaceLarge;
         }
     }
