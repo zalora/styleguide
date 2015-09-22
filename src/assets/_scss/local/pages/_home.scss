@@ -63,7 +63,22 @@ body.homepage .page-content__wrapper.pal {
     .quick-nav__box {
         margin-bottom: $spaceLarge;
 
-        span { color: $colorHighlightPositive }
+        span {
+            transition: border-color .2s;
+            color: $colorHighlightPositive;
+            border-bottom: 3px solid;
+            border-color: transparent;
+        }
+
+        & > a {
+            &:hover {
+                text-decoration: none;
+
+                span {
+                    border-color: $colorHighlightPositive;
+                }
+            }
+        }
 
         @include media($break-large) {
             text-align: center;
@@ -71,10 +86,13 @@ body.homepage .page-content__wrapper.pal {
             box-sizing: border-box;
             margin-bottom: 0;
 
-            span {
+            figure {
                 display: block;
-                font-size: $fontsizeXXXL;
+                margin-left: auto;
+                margin-right: auto;
             }
+
+            span { font-size: $fontsizeXXXL }
         }
     }
 
