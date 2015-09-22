@@ -16,8 +16,6 @@ body.homepage .page-content__wrapper.pal {
     h1 {
         color: $colorLightPrimary;
         text-shadow: 0 1px 1px rgba(black, .3);
-        margin-left: 20%;
-        background-color: rgba(black, .3);
         padding: 10px;
         padding-top: 5px;
 
@@ -40,18 +38,21 @@ body.homepage .page-content__wrapper.pal {
     }
 
     @include media($break-large) {
-        padding-top: 20%;
+        padding-top: 15%;
 
         h1 {
             font-size: 4em;
             margin-left: 7%;
         }
     }
+
+    @include media-height(800px) {
+        padding-top: 25%;
+    }
 }
 
 // Quick nav
 .quick-nav {
-    @include clearfix;
     padding-top: $spaceXLarge;
 
     h2 {
@@ -65,8 +66,6 @@ body.homepage .page-content__wrapper.pal {
         span { color: $colorHighlightPositive }
 
         @include media($break-large) {
-            width: 33%;
-            float: left;
             text-align: center;
             padding: $spaceLarge;
             box-sizing: border-box;
@@ -106,5 +105,21 @@ body.homepage .page-content__wrapper.pal {
 
     span {
         font-size: $fontsizeXL;
+    }
+}
+
+// Mission statement
+.mission-statement {
+    background-color: $colorDarkTertiary;
+    color: $colorLightPrimary;
+
+    .mission-statement__content {
+        h1 { margin: $spaceXLarge 0 }
+
+        @include media($break-big) {
+            padding-left: $spaceXLarge;
+
+            h1 { font-size: 3em }
+        }
     }
 }
