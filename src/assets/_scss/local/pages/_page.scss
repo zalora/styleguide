@@ -2,7 +2,25 @@
 // Styles for all sub-pages
 //-------------------------------------
 
-.page {
+.page__header {
+    // background-color: $colorHighlightPositiveReduct;
+    background-image: radial-gradient(ellipse at top right, lighten($colorHighlightPositiveReduct, 7%) 0%, $colorHighlightPositiveReduct 100%);
+
+    .page__header__title {
+        margin: $spaceXLarge 0;
+        text-transform: uppercase;
+
+        @include media($break-large) {
+            margin-top: $spaceXLarge * 3;
+            font-size: 3em;
+            color: white;
+            text-shadow: 0 1px 1px rgba(black, .3);
+        }
+    }
+}
+
+.page__header,
+.page__content {
     padding: $spaceLarge;
 
     @include media($break-big) {
