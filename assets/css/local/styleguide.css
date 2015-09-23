@@ -457,6 +457,19 @@ footer {
         .page__header p.image-container img,
         .page__content p.image-container img {
           margin: 0; } }
+  .page__header blockquote,
+  .page__content blockquote {
+    position: relative;
+    text-align: center; }
+    @media screen and (min-width: 1025px) {
+      .page__header blockquote,
+      .page__content blockquote {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto; } }
+    .page__header blockquote p,
+    .page__content blockquote p {
+      max-width: none; }
 
 body.homepage .page-content__wrapper.pal {
   padding: 0; }
