@@ -116,7 +116,7 @@ header .header-wrapper {
   position: absolute;
   top: 0;
   left: 100%;
-  height: 95vh;
+  height: 100vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding: 20px;
@@ -126,6 +126,8 @@ header .header-wrapper {
     display: block; }
   @media screen and (min-width: 769px) {
     .site-nav {
+      height: auto;
+      overflow-y: auto;
       position: relative;
       left: auto;
       display: block;
@@ -167,14 +169,16 @@ header .header-wrapper {
 
 .page-mover {
   -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s; }
+  transition: transform 0.5s;
+  width: 100vw; }
   .page-mover.moved {
     -webkit-transform: translateX(-80%);
     transform: translateX(-80%);
     position: fixed; }
   @media screen and (min-width: 769px) {
     .page-mover {
-      position: relative; } }
+      position: relative;
+      width: auto; } }
 
 @media screen and (min-width: 769px) {
   .site-nav,
@@ -420,12 +424,18 @@ footer {
     .page__header,
     .page__content {
       padding: 40px; } }
+  .page__header h1:not(:first-of-type),
+  .page__header h2:not(:first-of-type),
+  .page__content h1:not(:first-of-type), .page__content h2:not(:first-of-type) {
+    margin-top: 2em; }
   @media screen and (min-width: 769px) {
+    .page__header h1,
     .page__header h2,
-    .page__content h2 {
+    .page__content h1, .page__content h2 {
       font-size: 3em; }
+      .page__header h1:not(:first-of-type),
       .page__header h2:not(:first-of-type),
-      .page__content h2:not(:first-of-type) {
+      .page__content h1:not(:first-of-type), .page__content h2:not(:first-of-type) {
         margin-top: 4em; } }
   @media screen and (min-width: 769px) {
     .page__header h3,
@@ -554,7 +564,8 @@ h1.styleguide:not(:first-of-type) {
 
 .highlight {
   position: relative;
-  margin-top: 40px; }
+  margin-top: 40px;
+  max-width: none; }
   .highlight:before {
     content: "Code example";
     position: absolute;
@@ -564,9 +575,11 @@ h1.styleguide:not(:first-of-type) {
     font-size: 11px;
     font-weight: 700;
     color: #6d6e6e; }
-  .highlight pre {
-    padding: 12px;
-    background-color: #F4F4F4;
-    border-left: 4px solid #dfdfdf;
-    font-family: Inconsolata, Menlo, Monaco, monospace;
-    color: #6d6e6e; }
+
+pre {
+  padding: 12px;
+  background-color: #F4F4F4;
+  border-left: 4px solid #dfdfdf;
+  font-family: Inconsolata, Menlo, Monaco, monospace;
+  color: #6d6e6e;
+  -webkit-overflow-scrolling: touch; }
