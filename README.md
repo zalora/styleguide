@@ -26,6 +26,14 @@ Install npm packages with: ```npm install```
 
 Then run ```gulp``` to start developing. That will fire up a local web server and wait for you to edit any .html, .js, .md, .scss file.
 
+#### Deploying to Github pages
+
+To deploy the site simply run:
+
+```gulp deploy```
+
+from the root of the project and the compiled jekyll site will be pushed to the `gh-pages` branch and with this updated on the web.
+
 ## Maintaining Content
 
 Ok so there's basically two parts to this website:
@@ -45,5 +53,42 @@ To add or change pages navigate to `src` directory and look for a file ending in
 
 Update that file and get someone (i.e. Winn) to redeploy the site.
 
+#### Images and other assets
+
+All assets like **images** to display in the site live in:
+
+```
+- src/
+  - assets/
+    - images/
+      - content/
+```
+
+Please put your content in sub directory according to the navigation structure in which your page is gonna live in.
+
+Assets like **ZIP files** for **downloading** go into:
+
+```
+- src/
+  - assets/
+    - downloads/
+```
+
 ### Global styles
+
+All the files in 
+
+```
+- src/
+  - assets/
+    - scss/
+      - global/
+```
+
+are actually another git repository included into this one as a **submodule**. The [global scss](https://github.com/zalora/global-scss) repo hold all the basic styling for web projects at ZALORA. This, for example, is included in the ZALORA shop.
+
+Pages on the styleguide are automatically generated out of code comments in the `.scss` files themselves. 
+
+A comment looks like this: [_buttons.scss](https://github.com/zalora/global-scss/blob/master/components/_buttons.scss)
+
 
