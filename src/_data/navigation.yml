@@ -24,7 +24,7 @@
   url: /components/
   subitems:
     - text: Desktop
-      url: /components/desktop/typography.html
+      url: /components/desktop/
       subitems:
         - text: Typography
           url: /components/desktop/typography.html
@@ -34,7 +34,7 @@
   url: /onsite/
   subitems:
     - text: Desktop
-      url: /onsite/desktop/homepage.html
+      url: /onsite/desktop/
       subitems:
         - text: Homepage
           url: /onsite/desktop/homepage.html
