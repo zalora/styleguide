@@ -30,3 +30,11 @@ var removeClass = function (elem, className) {
         elem.className = newClass.replace(/^\s+|\s+$/g, '');
     }
 }
+
+// add class "has-image" to all paragraphs that contain images (in pages that use the "page" template)
+var paragraphsInMarkdownPage = document.querySelectorAll('.page__content p > img');
+console.log(paragraphsInMarkdownPage);
+
+for (i = 0; i < paragraphsInMarkdownPage.length; i++) {
+    addClass(paragraphsInMarkdownPage[i].parentNode, 'has-image');
+}

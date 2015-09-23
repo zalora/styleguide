@@ -146,7 +146,8 @@ header .header-wrapper {
     .site-nav > ul > li:first-of-type {
       margin-bottom: 0; }
     .site-nav > ul > li > a {
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      padding-right: 40%; }
     .site-nav > ul > li > ul a {
       margin-bottom: 5px; }
     .site-nav > ul > li > ul > li {
@@ -199,7 +200,11 @@ footer {
   background-color: #F4F4F4;
   min-height: 100px;
   box-sizing: border-box;
-  min-height: 200px; }
+  min-height: 200px;
+  padding: 20px; }
+  @media screen and (min-width: 769px) {
+    footer {
+      padding: 40px; } }
 
 /**
  * Syntax highlighting styles
@@ -415,12 +420,49 @@ footer {
     .page__header,
     .page__content {
       padding: 40px; } }
+  @media screen and (min-width: 769px) {
+    .page__header h2,
+    .page__content h2 {
+      font-size: 3em; }
+      .page__header h2:not(:first-of-type),
+      .page__content h2:not(:first-of-type) {
+        margin-top: 4em; } }
+  @media screen and (min-width: 769px) {
+    .page__header h3,
+    .page__content h3 {
+      font-size: 2em;
+      margin-top: 3em; } }
+  .page__header img,
+  .page__content img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 100%; }
+    @media screen and (min-width: 769px) {
+      .page__header img,
+      .page__content img {
+        margin-top: 40px;
+        margin-bottom: 40px; } }
+  @media screen and (min-width: 1025px) {
+    .page__header p,
+    .page__content p {
+      max-width: 70%; }
+      .page__header p:not(.in-column).has-image,
+      .page__content p:not(.in-column).has-image {
+        max-width: 100%; }
+      .page__header p.image-container,
+      .page__content p.image-container {
+        box-sizing: border-box;
+        padding: 80px;
+        border: 1px solid #F4F4F4; }
+        .page__header p.image-container img,
+        .page__content p.image-container img {
+          margin: 0; } }
 
 body.homepage .page-content__wrapper.pal {
   padding: 0; }
 
 .hero-stage {
-  background-image: url(/assets/images/hero-small.jpg);
+  background-image: url(/assets/images/content/home/hero-small.jpg);
   background-size: cover;
   background-position: center center;
   padding-top: 45%;
@@ -438,7 +480,7 @@ body.homepage .page-content__wrapper.pal {
         padding: 0; } }
   @media screen and (min-width: 769px) {
     .hero-stage {
-      background-image: url(/assets/images/hero-large.jpg);
+      background-image: url(/assets/images/content/home/hero-large.jpg);
       padding-top: 35%; }
       .hero-stage h1 {
         font-size: 3em;
