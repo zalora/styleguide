@@ -34,12 +34,12 @@
   url: /onsite/
   subitems:
     - text: Desktop
-      url: /onsite/desktop/
+      url: /onsite/desktop/homepage.html
       subitems:
         - text: Homepage
           url: /onsite/desktop/homepage.html
         - text: Segment Page
-          url: /onsite/desktop/segment.html
+          url: /onsite/desktop/segment-page.html
         - text: Banners
           url: /onsite/desktop/banners.html
     - text: "Mobile Web & App"
