@@ -4,6 +4,9 @@ layout: default
 <div class="page">
     <div class="page__header">
         <h1 class="page__header__title">{{ page.title }}</h1>
+        {% if page.download_url %}
+            <a href="page.download_url" class="btn btn--special">{{ page.download_title }}</a>
+        {% endif %}
     </div>
     <article class="page__content">
         {{ content }}
