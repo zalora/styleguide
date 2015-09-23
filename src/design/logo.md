@@ -3,6 +3,8 @@ layout: page
 title: Our Logo
 ---
 
+[Download Logos](/assets/downloads/zalora-logos.zip){: .btn .btn--medium }
+
 ## Master Logo
 
 Our Master Logo is our strongest visual branding element and is used as a signa- ture mark that represents our brand.
