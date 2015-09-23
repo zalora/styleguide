@@ -401,41 +401,22 @@ body.homepage .page-content__wrapper.pal {
     top: -12px; }
   .quick-nav .quick-nav__box {
     margin-bottom: 20px; }
-    .quick-nav .quick-nav__box span {
-      transition: border-color 0.2s;
-      color: #00c8b4;
-      border-bottom: 3px solid;
-      border-color: transparent; }
-    .quick-nav .quick-nav__box > a:hover {
-      text-decoration: none; }
-      .quick-nav .quick-nav__box > a:hover span {
-        border-color: #00c8b4; }
     @media screen and (min-width: 1025px) {
       .quick-nav .quick-nav__box {
         text-align: center;
-        padding: 20px;
-        box-sizing: border-box;
-        margin-bottom: 0; }
-        .quick-nav .quick-nav__box figure {
-          display: block;
-          margin-left: auto;
-          margin-right: auto; }
-        .quick-nav .quick-nav__box span {
-          font-size: 24px; } }
+        padding: 20px; } }
   .quick-nav .quick-nav__icon {
     width: 70px;
     height: 70px;
     margin-right: 12px; }
-    .quick-nav .quick-nav__icon svg {
-      fill: none;
-      stroke: #000;
-      stroke-width: 2; }
     @media screen and (min-width: 1025px) {
       .quick-nav .quick-nav__icon {
         width: 120px;
         height: 120px;
-        margin-right: 0;
-        margin-bottom: 20px; } }
+        display: block;
+        margin-bottom: 40px;
+        margin-left: auto;
+        margin-right: auto; } }
 
 .quick-nav__box img {
   margin-right: 12px; }
