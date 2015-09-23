@@ -1,12 +1,25 @@
 - text: Home
   url: /
-- text: Visual Identity
+- text: Corporate Identity
   url: /design/
   subitems:
-    - text: Logo usage
-      url: /design/logo-usage/
-    - text: Colors
-      url: /design/colors/
+    - text: Our Logo
+      url: /design/logo.html
+    - text: Brand Typefaces
+      url: /design/typefaces.html
+    - text: Colours
+      url: /design/colours.html
+    - text: Pictograms
+      url: /design/pictograms.html
+    - text: "DO's & DON'ts"
+      url: /design/dos-and-donts/
+      subitems:
+        - text: Copywriting
+          url: /design/dos-and-donts/copywriting.html
+        - text: Sale Campaign
+          url: /design/dos-and-donts/campaigns.html
+        - text: Imagery
+          url: /design/dos-and-donts/Imagery.html
 - text: Web Components
   url: /components/
   subitems:
@@ -17,3 +30,28 @@
           url: /components/desktop/typography.html
         - text: Buttons
           url: /components/desktop/buttons.html
+- text: Onsite Content
+  url: /onsite/
+  subitems:
+    - text: Desktop
+      url: /onsite/desktop/homepage.html
+      subitems:
+        - text: Homepage
+          url: /onsite/desktop/homepage.html
+        - text: Segment Page
+          url: /onsite/desktop/segment.html
+        - text: Banners
+          url: /onsite/desktop/banners.html
+    - text: "Mobile Web & App"
+      url: /onsite/mobile/
+      subitems:
+        - text: App Wireframe
+          url: /onsite/mobile/app-wireframe.html
+        - text: Typography
+          url: /onsite/mobile/typography.html
+        - text: Banners
+          url: /onsite/mobile/banners.html
+        - text: Mobile Web Banners
+          url: /onsite/mobile/web-banners.html
+        - text: Android Push
+          url: /onsite/mobile/android-push-notifications.html

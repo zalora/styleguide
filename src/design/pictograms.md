@@ -1,4 +1,4 @@
 ---
+title: Pictograms
 layout: page
-title: Colors
 ---

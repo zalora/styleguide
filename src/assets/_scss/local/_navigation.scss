@@ -65,15 +65,14 @@
             & > a { margin-bottom: $spaceLarge }
 
             // 2. Level
-            & > ul {
-                a { margin-bottom: $spaceSmall }
-            }
-
+            & > ul a { margin-bottom: $spaceSmall }
             & > ul > li {
                 font-size: $fontsizeM;
                 text-transform: uppercase;
                 letter-spacing: .1em;
 
+                // 3. Level
+                & > ul { margin-bottom: $spaceMedium }
                 & > ul > li {
                     font-weight: 400;
                     text-transform: capitalize;
