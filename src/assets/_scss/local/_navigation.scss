@@ -28,7 +28,7 @@
     height: 95vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    padding: 20px;
+    padding: $spaceLarge;
     box-sizing: border-box;
     background-color: $colorLightSecondary;
 
@@ -62,7 +62,10 @@
 
             &:first-of-type { margin-bottom: 0 }
 
-            & > a { margin-bottom: $spaceLarge }
+            & > a {
+                margin-bottom: $spaceLarge;
+                padding-right: 40%; // break words in new lines, cause thats the style :)
+            }
 
             // 2. Level
             & > ul a { margin-bottom: $spaceSmall }
