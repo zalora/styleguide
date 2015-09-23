@@ -9,6 +9,7 @@ h1.styleguide:not(:first-of-type) {
 .highlight {
     position: relative;
     margin-top: $spaceXLarge;
+    max-width: none;
 
     &:before {
         content: "Code example";
@@ -20,12 +21,13 @@ h1.styleguide:not(:first-of-type) {
         font-weight: 700;
         color: $colorDarkTertiary;
     }
+}
 
-    pre {
-        padding: $spaceMedium;
-        background-color: $colorLightSecondary;
-        border-left: 4px solid $colorMedium;
-        font-family: Inconsolata, Menlo, Monaco, monospace;
-        color: $colorDarkTertiary;
-    }
+pre {
+    padding: $spaceMedium;
+    background-color: $colorLightSecondary;
+    border-left: 4px solid $colorMedium;
+    font-family: Inconsolata, Menlo, Monaco, monospace;
+    color: $colorDarkTertiary;
+    -webkit-overflow-scrolling: touch;
 }
