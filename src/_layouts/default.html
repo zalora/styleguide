@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
-    {% include head.html %}
-    <body class="{{ page.area }}">
-        {% include svg-assets.html %}
+{% include head.html %}
 
-        <div id="page-mover" class="page-mover container">
-            <header>
-                <div class="header-wrapper pvm container">
-                    <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="{{ site.baseurl }}/" alt="{{ site.title }}">
-                        <svg class="logo svg-asset"><use xlink:href="#zalora-logo" /></svg>
-                        <span class="tagline fontface-secondary">styleguide</span>
-                    </a>
-
-                    <a href="#" id="menu-icon" class="rfloat ui-inlineBlock">
-                        <svg class="svg-asset"><use xlink:href="#burger" /></svg>
-                    </a>
-                </div>
-            </header>
-
-            <nav id="site-nav" class="site-nav">
-                {% include navigation.html nav=site.data.navigation %}
-            </nav>
-
-            <div class="page-content">
-                <div class="page-content__wrapper">
-                    {{ content }}
-                </div>
+<body class="{{ page.area }}">
+    {% include svg-assets.html %}
+    <div id="page-mover" class="page-mover container">
+        <header>
+            <div class="header-wrapper pvm container">
+                <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="{{ site.baseurl }}/" alt="{{ site.title }}">
+                    <svg class="logo svg-asset">
+                        <use xlink:href="#zalora-logo" />
+                    </svg>
+                    <span class="tagline fontface-secondary">styleguide</span>
+                </a>
+                <a href="#" id="menu-icon" class="rfloat ui-inlineBlock">
+                    <svg class="svg-asset">
+                        <use xlink:href="#burger" />
+                    </svg>
+                </a>
             </div>
-
-            {% include footer.html %}
+        </header>
+        <nav id="site-nav" class="site-nav">
+            {% include navigation.html nav=site.data.navigation %}
+        </nav>
+        <div class="page-content">
+            <div class="page-content__wrapper">
+                {{ content }}
+            </div>
         </div>
+        {% include footer.html %}
+    </div>
+    <script src="{{ " /assets/js/vendor/fastclick.js " | prepend: site.baseurl }}"></script>
+    <script src="{{ " /assets/js/styleguide.js " | prepend: site.baseurl }}"></script>
+    <script src="{{ " /assets/js/navigation.js " | prepend: site.baseurl }}"></script>
+</body>
 
-        <script src="{{ "/assets/js/vendor/fastclick.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/assets/js/styleguide.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/assets/js/navigation.js" | prepend: site.baseurl }}"></script>
-    </body>
 </html>
