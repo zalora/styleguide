@@ -25,7 +25,9 @@
     position: absolute;
     top: 0;
     left: 100%;
-    min-height: 100vh;
+    height: 95vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: 20px;
     box-sizing: border-box;
     background-color: $colorLightSecondary;
@@ -41,8 +43,6 @@
     }
 
     @include media($break-large) {
-        position: fixed;
-        top: 100px;
         min-height: 40vh;
     }
 
@@ -115,12 +115,13 @@
 }
 
 @include media($break-large) {
-    .site-nav     { width: 180px }
+    .site-nav     { width: 20% }
 
     .page-content,
     footer {
-        margin-left: 20%;
         width: 80%;
     }
+
+    footer { margin-left: 20% }
 }
 
