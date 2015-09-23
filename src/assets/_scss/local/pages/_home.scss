@@ -63,36 +63,9 @@ body.homepage .page-content__wrapper.pal {
     .quick-nav__box {
         margin-bottom: $spaceLarge;
 
-        span {
-            transition: border-color .2s;
-            color: $colorHighlightPositive;
-            border-bottom: 3px solid;
-            border-color: transparent;
-        }
-
-        & > a {
-            &:hover {
-                text-decoration: none;
-
-                span {
-                    border-color: $colorHighlightPositive;
-                }
-            }
-        }
-
         @include media($break-large) {
             text-align: center;
             padding: $spaceLarge;
-            box-sizing: border-box;
-            margin-bottom: 0;
-
-            figure {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            span { font-size: $fontsizeXXXL }
         }
     }
 
@@ -101,17 +74,13 @@ body.homepage .page-content__wrapper.pal {
         height: 70px;
         margin-right: $spaceMedium;
 
-        svg {
-            fill: none;
-            stroke: $colorDarkPrimary;
-            stroke-width: 2;
-        }
-
         @include media($break-large) {
             width: 120px;
             height: 120px;
-            margin-right: 0;
-            margin-bottom: $spaceLarge;
+            display: block;
+            margin-bottom: $spaceXLarge;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
