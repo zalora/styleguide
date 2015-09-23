@@ -1,0 +1,31 @@
+//-------------------------------------
+// Pages with code on them
+//-------------------------------------
+
+h1.styleguide:not(:first-of-type) {
+    margin-top: $spaceXLarge * 2;
+}
+
+.highlight {
+    position: relative;
+    margin-top: $spaceXLarge;
+
+    &:before {
+        content: "Code example";
+        position: absolute;
+        top: -7px;
+        right: $spaceMedium;
+        text-transform: uppercase;
+        font-size: $fontsizeS;
+        font-weight: 700;
+        color: $colorDarkTertiary;
+    }
+
+    pre {
+        padding: $spaceMedium;
+        background-color: $colorLightSecondary;
+        border-left: 4px solid $colorMedium;
+        font-family: Inconsolata, Menlo, Monaco, monospace;
+        color: $colorDarkTertiary;
+    }
+}
