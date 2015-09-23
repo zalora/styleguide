@@ -22,4 +22,45 @@
     @include media($break-big) {
         padding: $spaceXLarge;
     }
+
+    h2 {
+        @include media($break-big) {
+            font-size: 3em;
+            &:not(:first-of-type) { margin-top: 4em }
+        }
+    }
+
+    h3 {
+        @include media($break-big) {
+            font-size: 2em;
+            margin-top: 3em;
+        }
+    }
+
+    img {
+        margin-top: $spaceLarge;
+        margin-bottom: $spaceLarge;
+        max-width: 100%;
+
+        @include media($break-big) {
+            margin-top: $spaceXLarge;
+            margin-bottom: $spaceXLarge;
+        }
+    }
+
+    p {
+        @include media($break-large) {
+            max-width: 70%;
+
+            &:not(.in-column).has-image { max-width: 100% }
+
+            &.image-container {
+                box-sizing: border-box;
+                padding: $spaceXLarge * 2;
+                border: 1px solid $colorLightSecondary;
+
+                img { margin: 0 }
+            }
+        }
+    }
 }

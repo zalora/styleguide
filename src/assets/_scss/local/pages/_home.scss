@@ -7,7 +7,7 @@ body.homepage .page-content__wrapper.pal {
 }
 
 .hero-stage {
-    background-image: url(/assets/images/hero-small.jpg);
+    background-image: url(/assets/images/content/home/hero-small.jpg);
     background-size: cover;
     background-position: center center;
     padding-top: 45%;
@@ -28,7 +28,7 @@ body.homepage .page-content__wrapper.pal {
     }
 
     @include media($break-big) {
-        background-image: url(/assets/images/hero-large.jpg);
+        background-image: url(/assets/images/content/home/hero-large.jpg);
         padding-top: 35%;
 
         h1 {
