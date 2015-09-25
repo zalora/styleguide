@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Our Logo
-download_url: "/assets/downloads/zalora-logos.zip"
-download_title: "Download Logos"
+download-url: "/assets/downloads/zalora-logos.zip"
+download-title: "Download Logos"
 ---
 
 ## Master Logo

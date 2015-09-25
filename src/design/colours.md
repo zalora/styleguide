@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Colours
+download-url: 'https://github.com/zalora/global-scss/blob/master/_variables.scss'
+download-title: 'View colours on Github'
 ---
 
 ## Primary Colours
