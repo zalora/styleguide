@@ -1,0 +1,39 @@
+//-------------------------------------
+// Colours page
+//-------------------------------------
+
+// add classes for the variables available
+// Colors
+.colorLightPrimary              { background-color: $colorLightPrimary }
+.colorLightSecondary            { background-color: $colorLightSecondary }
+.colorMedium                    { background-color: $colorMedium }
+.colorDarkPrimary               { background-color: $colorDarkPrimary }
+.colorDarkSecondary             { background-color: $colorDarkSecondary }
+.colorDarkTertiary              { background-color: $colorDarkTertiary }
+.colorHighlightPositiveReduct   { background-color: $colorHighlightPositiveReduct }
+.colorHighlightPositive         { background-color: $colorHighlightPositive }
+.colorHighlightPositiveOnDark   { background-color: $colorHighlightPositiveOnDark }
+.colorHighlightNegative         { background-color: $colorHighlightNegative }
+.colorHighlightError            { background-color: $colorHighlightError }
+
+.color-palette {
+    .color-palette__color__sample {
+        padding-top: 50%;
+
+        &.border { border: 1px solid $colorMedium }
+    }
+
+    .color-palette__color__variablename {
+        font-size: $fontsizeS;
+        word-wrap: break-word;
+        max-width: 100%;
+
+        &:before {
+            content: "Sass variable:";
+            font-family: Apercu, Helvetica, Arial;
+            color: $colorDarkSecondary;
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+}

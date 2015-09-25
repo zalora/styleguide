@@ -28,5 +28,6 @@ $break-large: 1025px;
 // Import styles for individual pages
 @import
     "pages/page",
+    "pages/colours",
     "pages/home",
     "pages/code";
