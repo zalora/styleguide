@@ -18,6 +18,12 @@ This gets you up and running: ```bundle install```
 
 *If you don't have bundler installed, run:* ```gem install bundler``` first.
 
+### Global SCSS Submodule
+
+The project is dependent on the the [global scss](https://github.com/zalora/global-scss) repo that holds all the basic styling for web projects at ZALORA. 
+
+You would need to run ```git submodule init``` and ```git submodule update``` in order to begin.
+
 ### Gulp
 
 We use Gulp to run Hologram, Sass compilation and Jekyll rebuild. Browser Sync refreshes your Sass changes directly in the browser without reloading. Yaay! BONUS: Try connection to your local server with more than one browser, and navigation the page ;)
@@ -25,6 +31,7 @@ We use Gulp to run Hologram, Sass compilation and Jekyll rebuild. Browser Sync r
 Install npm packages with: ```npm install```
 
 Then run ```gulp``` to start developing. That will fire up a local web server and wait for you to edit any .html, .js, .md, .scss file.
+
 
 #### Deploying to Github pages
 
