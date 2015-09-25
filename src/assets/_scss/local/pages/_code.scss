@@ -11,10 +11,10 @@ h1.styleguide:not(:first-of-type) {
     margin-top: $spaceXLarge;
     max-width: none;
 
-    &:before {
+    &:after {
         content: "Code example";
         position: absolute;
-        top: -7px;
+        top: -8px;
         right: $spaceMedium;
         text-transform: uppercase;
         font-size: $fontsizeS;
