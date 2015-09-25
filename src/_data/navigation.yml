@@ -32,6 +32,8 @@
           url: /components/desktop/typography.html
         - text: Buttons
           url: /components/desktop/buttons.html
+        - text: Components
+          url: /components/desktop/components.html
 - text: Onsite Content
   url: /onsite/
   subitems:
