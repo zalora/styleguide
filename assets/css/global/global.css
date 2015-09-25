@@ -807,6 +807,10 @@ input:invalid {
   list-style-type: disc;
   margin-left: 13px; }
 
+.ui-listUnstyled {
+  list-style: none;
+  padding-left: 0; }
+
 /* inline-block and block element */
 .ui-inlineBlock {
   display: inline-block;
@@ -1102,7 +1106,7 @@ A button is an awesome thing to get in trouble with. Hi Winn.
   transition: background-color 0.3s, color 0.2s;
   color: #fff;
   background-color: #000;
-  border: 2px solid;
+  border: 1px solid;
   border-color: #000;
   box-sizing: border-box;
   text-transform: uppercase;
@@ -1290,7 +1294,7 @@ textarea {
   input[type="password"].error,
   select.error,
   textarea.error {
-    border: 1px solid #FF8484;
+    border: 1px solid #ba4242;
     background: url("../../../images/local/checkout/red_error_icon.png") no-repeat right 10px center #fff; }
   input[type="text"].disabled,
   input[type="email"].disabled,
