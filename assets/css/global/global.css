@@ -1096,7 +1096,7 @@ name: button-1
 category: buttons
 ---
 
-The base class for a button is `'.btn'`
+The base class for a button is `'.btn'`.
 
 This gives a button the shape and coolness it deserves for being a button in a ZALORA project.
 
@@ -1151,13 +1151,23 @@ category: buttons
 ```
 
 ### CTAs
-And then there are Call-to-action buttons, called `fluid` buttons. They take the full width of their parent contrainer;
+And then there are Call-to-action buttons, called `fluid` buttons. They take the full width of their parent contrainer.
 
 ```html_example
-<div style="width: 50%">
+<div style="width: 70%">
     <button class="btn btn--medium btn--fluid">I'm super fluid bro!</button>
 </div>
 ```
+
+#### More engagement
+Maximize user engagement with a tiny direction arrow!
+
+```html_example
+<div style="width: 70%">
+    <button class="btn btn--medium btn--fluid btn--cta">Tap me</button>
+</div>
+```
+
 
 */
   /*doc
@@ -1250,7 +1260,7 @@ category: buttons
 Input groups consist of a text input to the left and button directly next to it, with the same height.
 
 ```html_example
-<div class="btn-input-group" style="width: 50%;">
+<div class="btn-input-group">
     <input type="text" class="btn-input-group__input" placeholder="Hi there!" />
     <button class="btn btn-input-group__btn">Hook me up</button>
 </div>
@@ -1331,8 +1341,10 @@ input[type="email"],
 input[type="password"],
 select,
 textarea {
+  -webkit-appearance: none;
   transition: border 0.3s;
   border: 1px solid #dfdfdf;
+  border-radius: 0;
   padding: 8px;
   width: 100%; }
   input[type="text"]:focus,

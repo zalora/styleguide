@@ -511,9 +511,6 @@ footer {
 .colorHighlightNegative {
   background-color: #ba4242; }
 
-.colorHighlightError {
-  background-color: #FF8484; }
-
 .color-palette .color-palette__color__sample {
   padding-top: 50%; }
   .color-palette .color-palette__color__sample.border {
@@ -615,10 +612,10 @@ h1.styleguide:not(:first-of-type) {
   position: relative;
   margin-top: 40px;
   max-width: none; }
-  .highlight:before {
+  .highlight:after {
     content: "Code example";
     position: absolute;
-    top: -7px;
+    top: -8px;
     right: 12px;
     text-transform: uppercase;
     font-size: 11px;
