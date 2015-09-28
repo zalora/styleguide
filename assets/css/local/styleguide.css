@@ -20,7 +20,7 @@ body {
 
 @media screen and (min-width: 1025px) {
   .page-width-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     box-sizing: border-box; } }
 
@@ -111,6 +111,8 @@ header {
   top: 0;
   left: 100%;
   height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 20px;
   box-sizing: border-box;
   background-color: #F4F4F4; }
@@ -120,9 +122,20 @@ header {
     .site-nav {
       height: auto;
       overflow-y: auto;
+      overflow: visible;
       position: relative;
       left: auto;
-      display: block; } }
+      display: block;
+      padding-top: 40px; }
+      .site-nav:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #F4F4F4; } }
   @media screen and (min-width: 1025px) {
     .site-nav {
       min-height: 40vh; } }
@@ -167,26 +180,22 @@ header {
 @media screen and (min-width: 769px) {
   .site-nav,
   .page-content {
-    float: left;
-    box-sizing: border-box; }
+    display: table-cell;
+    vertical-align: top; }
   .site-nav {
-    width: 25%; }
-  .page-content {
-    width: 75%; } }
-
-@media screen and (min-width: 1025px) {
-  .site-nav {
-    width: 20%; }
+    width: 300px; }
   .page-content {
     width: 80%; } }
 
 footer {
   clear: left;
-  background-color: #F4F4F4;
+  background-color: #6d6e6e;
   min-height: 100px;
   box-sizing: border-box;
   min-height: 200px;
   padding: 20px; }
+  footer, footer a {
+    color: #F4F4F4; }
   @media screen and (min-width: 769px) {
     footer {
       padding: 40px; } }
@@ -429,7 +438,9 @@ footer {
   .page__header h1:first-of-type,
   .page__header h2:first-of-type,
   .page__content h1:first-of-type, .page__content h2:first-of-type {
-    margin-top: 0; }
+    margin-top: 0;
+    margin-bottom: .5em;
+    line-height: 1; }
   .page__header h1:not(:first-of-type),
   .page__header h2:not(:first-of-type),
   .page__content h1:not(:first-of-type), .page__content h2:not(:first-of-type) {
