@@ -49,7 +49,7 @@
             top: 0;
             right: 100%;
             display: block;
-            width: 100%;
+            width: 1000%;
             height: 100%;
             background-color: $colorLightSecondary;
         }
@@ -116,7 +116,7 @@
 
 // Put navigation and content side by side from big screens on
 @include media($break-big) {
-    .include-header-space
+    .include-header-space {
         display: table;
         table-layout: fixed;
     }
