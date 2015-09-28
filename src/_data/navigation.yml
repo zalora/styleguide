@@ -34,6 +34,8 @@
           url: /components/desktop/buttons.html
         - text: Components
           url: /components/desktop/components.html
+        - text: UI Helpers
+          url: /components/desktop/helpers.html
 - text: Onsite Content
   url: /onsite/
   subitems:
