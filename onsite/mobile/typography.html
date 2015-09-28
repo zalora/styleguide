@@ -95,7 +95,7 @@
 
     <div id="page-mover" class="page-mover container">
         <header>
-            <div class="header-wrapper pvm container">
+            <div class="header-wrapper pvm container page-width-container">
                 <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="/" alt="ZALORA styleguide">
                     <svg class="logo svg-asset">
                         <use xlink:href="#zalora-logo" />
@@ -109,8 +109,10 @@
                 </a>
             </div>
         </header>
-        <nav id="site-nav" class="site-nav">
-            
+
+        <div class="page-width-container">
+            <nav id="site-nav" class="site-nav">
+                
 <ul>
 
     <li>
@@ -239,6 +241,13 @@
         
     </li>
 
+    <li>
+        <a href="/components/desktop/helpers.html" class=""alt="UI Helpers">
+            UI Helpers
+        </a>
+        
+    </li>
+
 </ul>
 
         
@@ -346,10 +355,10 @@
 
 </ul>
 
-        </nav>
-        <div class="page-content">
-            <div class="page-content__wrapper">
-                <div class="page">
+            </nav>
+            <div class="page-content">
+                <div class="page-content__wrapper">
+                    <div class="page">
     <div class="page__header">
         <h1 class="page__header__title">Onsite Content: Mobile Typography</h1>
         
@@ -360,17 +369,20 @@
     </article>
 </div>
 
+                </div>
             </div>
         </div>
         <footer class="site-footer">
-    <nav class="footer-nav">
-        <ul class="media-list man">
-            <li><a href="mailto:lionel.tan@zalora.com">Contact Us</a></li>
-        </ul>
-    </nav>
-    <p>
-        <small>Copyright &copy; 2015 – All rights reserved ZALORA.</small>
-    </p>
+    <div class="page-width-container">
+        <nav class="footer-nav">
+            <ul class="media-list man">
+                <li><a href="mailto:lionel.tan@zalora.com">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>
+            <small>Copyright &copy; 2015 – All rights reserved ZALORA.</small>
+        </p>
+    </div>
 </footer>
 
     </div>

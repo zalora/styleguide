@@ -516,579 +516,6 @@ em {
   font-weight: 700;
   font-style: normal; }
 
-/* ==========================================================================
-   Spacing-specific utilities
-   ========================================================================== */
-/**
- * Used to adjust the default spacing between components
- * Use with great care!
- *
- * u-<type><direction><size>
- *
- * A = all
- * T = top
- * R = right
- * B = bottom
- * L = left
- * H = horizontal
- * V = vertical
- *
- * n = none
- * s = small
- * m = medium
- * l = large
- * xl = extra large
- */
-/* spacing helpers
-p,m = padding,margin
-a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
-s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
-*/
-.pts, .pvs, .pas {
-  padding-top: 5px; }
-
-.ptm, .pvm, .pam,
-.ptml, .pvml, .paml {
-  padding-top: 12px; }
-
-.ptl, .pvl, .pal {
-  padding-top: 20px; }
-
-.ptxl, .pvxl, .paxl {
-  padding-top: 40px; }
-
-.prs, .phs, .pas {
-  padding-right: 5px; }
-
-.prm, .phm, .pam,
-.prml, .phml, .paml {
-  padding-right: 12px; }
-
-.prl, .phl, .pal {
-  padding-right: 20px; }
-
-.prxl, .phxl, .paxl {
-  padding-right: 40px; }
-
-.pbs, .pvs, .pas {
-  padding-bottom: 5px; }
-
-.pbm, .pvm, .pam,
-.pbml, .pvml, .paml {
-  padding-bottom: 12px; }
-
-.pbl, .pvl, .pal {
-  padding-bottom: 20px; }
-
-.pbxl, .pvxl, .paxl {
-  padding-bottom: 40px; }
-
-.pls, .phs, .pas {
-  padding-left: 5px; }
-
-.plm, .phm, .pam,
-.plml, .phml, .paml {
-  padding-left: 12px; }
-
-.pll, .phl, .pal {
-  padding-left: 20px; }
-
-.plxl, .phxl, .paxl {
-  padding-left: 40px; }
-
-.mtn, .mvn, .man {
-  margin-top: 0px; }
-
-.mbn, .mvn, .man {
-  margin-bottom: 0px; }
-
-.mts, .mvs, .mas {
-  margin-top: 5px; }
-
-.mtm, .mvm, .mam,
-.mtml, .mvml, .maml {
-  margin-top: 12px; }
-
-.mtl, .mvl, .mal {
-  margin-top: 20px; }
-
-.mtxl, .mvxl, .maxl {
-  margin-top: 30px; }
-
-.mrs, .mhs, .mas {
-  margin-right: 5px; }
-
-.mrm, .mhm, .mam,
-.mrml, .mhml, .maml {
-  margin-right: 12px; }
-
-.mrl, .mhl, .mal {
-  margin-right: 20px; }
-
-.mrxl, .mhxl, .maxl {
-  margin-right: 30px; }
-
-.mbs, .mvs, .mas {
-  margin-bottom: 5px; }
-
-.mbm, .mvm, .mam,
-.mbml, .mvml, .maml {
-  margin-bottom: 12px; }
-
-.mbl, .mvl, .mal {
-  margin-bottom: 20px; }
-
-.mbxl, .mvxl, .maxl {
-  margin-bottom: 30px; }
-
-.mls, .mhs, .mas {
-  margin-left: 5px; }
-
-.mlm, .mhm, .mam,
-.mlml, .mhml, .maml {
-  margin-left: 12px; }
-
-.mll, .mhl, .mal {
-  margin-left: 20px; }
-
-/* ==========================================================================
-   States utilities
-   ========================================================================== */
-/**
- * State rules
- */
-.s-error .msgBox, .s-error.msgBox {
-  background-color: #00c7b4;
-  color: white;
-  font-weight: bold; }
-
-.s-success {
-  color: white; }
-  .s-success .msgBox, .s-success.msgBox {
-    background-color: #00c8b4; }
-
-/* Hide from both screenreaders and browsers: h5bp.com/u */
-.s-hidden {
-  display: none !important;
-  visibility: hidden; }
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.s-visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
-  .s-visuallyhidden.focusable:active, .s-visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto; }
-
-/* Extends the .s-visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
-/* Hide visually and from screenreaders, but maintain layout */
-.s-invisible {
-  visibility: hidden; }
-
-.hidden {
-  display: none; }
-  .hidden:hover {
-    display: block; }
-
-.hide {
-  display: none !important; }
-
-.show {
-  display: block !important; }
-
-.invisible {
-  visibility: hidden; }
-
-/* @TODO: 2015-09-01 this contains mostly helper classes and TODO statements to sort out later*/
-small, .small {
-  font-size: 85%; }
-
-.container {
-  margin: 0 auto; }
-  .container:before {
-    display: table;
-    content: " "; }
-  .container:after {
-    display: table;
-    content: " ";
-    clear: both; }
-
-/* ====== Floats ====== */
-.lfloat {
-  float: left; }
-
-.rfloat {
-  float: right; }
-
-/* ====== Form styles ===== */
-input:invalid {
-  background: #fff; }
-
-/* ====== UI styles ====== */
-/* Box Styles */
-/* Borders */
-.ui-border {
-  border: 1px solid #dfdfdf; }
-
-.ui-borderTop {
-  border-top: 1px solid #dfdfdf; }
-
-.ui-borderBottom {
-  border-bottom: 1px solid #dfdfdf; }
-
-.ui-borderLeft {
-  border-left: 1px solid #dfdfdf; }
-
-.ui-borderRight {
-  border-right: 1px solid #dfdfdf; }
-
-/* dotted border */
-/* dashed border */
-/* Default Grid */
-.ui-grid {
-  border: 0;
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.ui-gridFull {
-  display: table;
-  width: 100%; }
-
-.ui-gridBorder {
-  border: 1px solid #d3d3d3; }
-
-.ui-grid .vTop {
-  vertical-align: top; }
-
-.ui-grid .vMid {
-  vertical-align: middle; }
-
-.ui-grid .vBot {
-  vertical-align: bottom; }
-
-.ui-grid .hLeft {
-  text-align: left; }
-
-.ui-grid .hCent {
-  text-align: center; }
-
-.ui-grid .hRght {
-  text-align: right; }
-
-/* List Items */
-.ui-listItem {
-  display: block; }
-
-.ui-listHorizontal .ui-listItem {
-  display: inline-block;
-  /* IE7 hack to mimic inline-block */
-  *display: inline;
-  *zoom: 1; }
-
-.ie7 .ui-listHorizontal .ui-listItem {
-  display: block;
-  float: left;
-  margin-right: 5px; }
-
-.ui-listItemBorder .ui-listItem {
-  border: 1px solid; }
-
-.ui-listBulleted {
-  list-style-type: disc;
-  margin-left: 13px; }
-
-.ui-listUnstyled {
-  list-style: none;
-  padding-left: 0; }
-
-/* inline-block and block element */
-.ui-inlineBlock {
-  display: inline-block;
-  /* IE7 hack to mimic inline-block */
-  *display: inline;
-  *zoom: 1; }
-
-.ui-block {
-  display: block; }
-
-/* QuickView Modal Window */
-.ui-dialog {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 501;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#67676750,endColorstr=#67676750);
-  /* fallback for IE 8 and lower since rgba is not supprted */
-  background-color: rgba(103, 103, 103, 0.5); }
-  .ui-dialog .container {
-    position: relative;
-    padding: 36px 15px 20px;
-    background-color: #FFFFFF;
-    border: 1px solid #676767;
-    box-shadow: 0 0 15px #676767;
-    zoom: 1; }
-
-/* fixes the IE7 / IE8 unclickable overlay bug */
-.ui-dialogProcessing .container {
-  width: 50%;
-  min-height: 100px;
-  margin: 50px auto 0;
-  text-align: center; }
-
-/* ====== Typography ====== */
-.fsxs,
-.fss,
-table th,
-.fsm {
-  font-size: 11px; }
-
-.fsl {
-  font-size: 16px; }
-
-.fsxl {
-  font-size: 18px; }
-
-.fsxxl {
-  font-size: 22px; }
-
-.fsxxxl {
-  font-size: 24px; }
-
-/* Font Weight */
-.strong {
-  font-weight: bold; }
-
-.normal {
-  font-weight: normal; }
-
-/* Font Style */
-.italic {
-  font-style: italic; }
-
-/* hides text replaced by images */
-.hiddenText {
-  text-indent: -10000px;
-  overflow: hidden; }
-
-/* text-transform */
-.txtUpper, table th {
-  text-transform: uppercase; }
-
-.txtLower {
-  text-transform: lowercase; }
-
-/* text-align */
-.txtRight {
-  text-align: right; }
-
-.txtLeft {
-  text-align: left; }
-
-.txtCenter {
-  text-align: center; }
-
-/* word-wrap */
-.wordwrap {
-  word-wrap: break-word; }
-
-/* line height helper */
-.lhn {
-  line-height: 100%; }
-
-.lhxs {
-  line-height: 10px; }
-
-.lhs {
-  line-height: 11px; }
-
-.lhm {
-  line-height: 12px; }
-
-.lhml {
-  line-height: 14px; }
-
-.lhl {
-  line-height: 16px; }
-
-.lhxl {
-  line-height: 18px; }
-
-.lhmxl {
-  line-height: 20px; }
-
-.lhxxl {
-  line-height: 22px; }
-
-.success {
-  color: #00c8b4; }
-
-.error {
-  color: #ba4242; }
-
-/* border styles */
-.box-bdr, .ui-listLight .ui-listItem, .ui-tabViewNav > li, .cartTable .cartItems tr, .hdSimple, .categoryMenu, .fct-scroll {
-  border-color: #dfdfdf; }
-
-.ui-listMedium .ui-listItem {
-  border-color: #ccc; }
-
-.ui-listLight .ui-listItem.active-list-item {
-  border-color: #888; }
-
-.box-bdrDark, .prd-colorList li.active, .ui-listDark .ui-listItem {
-  border-color: #333; }
-
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0; }
-
-.affix {
-  position: fixed; }
-
-.l-menu.affix {
-  background: #fff;
-  border-top: medium none;
-  margin-top: 24px;
-  opacity: 0.85;
-  z-index: 90; }
-
-/* ====== Visual Layout Styles ====== */
-/* Page Background */
-.ui-page-bg {
-  background-color: #f6f6f6; }
-
-/* Links */
-/* Font color */
-.txtLight {
-  color: #888; }
-
-.txtGreyLight {
-  color: #6c6c6c; }
-
-.txtDark, .txtBlack {
-  color: #000; }
-
-.txtGray {
-  color: #666; }
-
-.txtUpper, table th {
-  text-transform: uppercase; }
-
-/* placeholder attribute */
-::-webkit-input-placeholder, :-moz-placeholder {
-  color: #b4b4b4; }
-
-/**
- * Box Modules
- */
-/* ====== Product Preview Module (ppv) ====== */
-.box {
-  position: relative;
-  display: block;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.box-hd,
-.box-bd,
-.box-ft {
-  padding: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* box border */
-.box-bdr {
-  border: 1px solid #dfdfdf; }
-
-.box-bdr2 {
-  border: 1px solid #999; }
-
-/* box background color */
-.box-bgcolor {
-  background: #fff; }
-
-.box-rounded {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px; }
-
-/*
-    link zu oocss
-*/
-.line, .lastUnit {
-  overflow: hidden;
-  *overflow: visible;
-  *zoom: 1; }
-
-.unit {
-  float: left; }
-
-.unitRight {
-  float: right; }
-
-.size1of1 {
-  float: none; }
-
-.size1of2 {
-  width: 50%; }
-
-.size48of100 {
-  width: 48%; }
-
-.size1of3 {
-  width: 33.33333%; }
-
-.size2of3 {
-  width: 66.66666%; }
-
-.size1of4 {
-  width: 25%; }
-
-.size3of4 {
-  width: 75%; }
-
-.size1of5 {
-  width: 20%; }
-
-.size2of5 {
-  width: 40%; }
-
-.size3of5 {
-  width: 60%; }
-
-.size4of5 {
-  width: 80%; }
-
-.size5of5 {
-  width: 85%; }
-
-.size1of6 {
-  width: 16.667%; }
-
-.lastUnit {
-  float: none;
-  width: auto;
-  _position: relative;
-  _left: -3px;
-  _margin-right: -3px; }
-
 /*doc
 ---
 title: Button
@@ -1134,9 +561,20 @@ category: buttons
 ---
 ```html_example
 <button class="btn btn--secondary">Secondary</button>
+<button class="btn btn--tertiary">Tertiary</button>
 <button class="btn btn--special">Special</button>
 <button class="btn btn--facebook">Facebook</button>
 ```
+
+### On dark background
+
+```html_example
+<div style="background-color: black; padding: 50px;">
+    <button class="btn btn--inverted">Primary button</button>
+    <button class="btn btn--secondary btn--inverted">Secondary button</button>
+</div>
+```
+
 */
   /*doc
 ---
@@ -1148,6 +586,7 @@ category: buttons
 <button class="btn btn--tiny">Tiny</button>
 <button class="btn btn--regular">Regular</button>
 <button class="btn btn--medium">Medium</button>
+<button class="btn btn--large">Large</button>
 ```
 
 ### CTAs
@@ -1189,14 +628,36 @@ Simply drop in a class of `js-loading` along with `<span/>` element and you get 
     text-decoration: none;
     color: #000;
     background-color: #fff; }
-  .btn.btn--secondary {
+  .btn.btn--inverted {
     background-color: #fff;
+    color: #000;
+    border-color: #fff; }
+    .btn.btn--inverted:hover {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff; }
+  .btn.btn--secondary {
+    background-color: transparent;
     color: #000;
     border-color: #000; }
     .btn.btn--secondary:hover {
       background-color: #000;
       color: #fff;
       border-color: #000; }
+    .btn.btn--secondary.btn--inverted {
+      color: #fff;
+      border-color: #fff; }
+      .btn.btn--secondary.btn--inverted:hover {
+        background-color: #fff;
+        color: #000;
+        border-color: #fff; }
+  .btn.btn--tertiary {
+    background-color: #6d6e6e;
+    color: #fff;
+    border-color: transparent; }
+    .btn.btn--tertiary:hover {
+      background-color: #fff;
+      color: #000; }
   .btn.btn--special {
     background-color: #265F63;
     color: white;
@@ -1228,7 +689,8 @@ Simply drop in a class of `js-loading` along with `<span/>` element and you get 
       background-position: 12px center;
       background-size: 24px 24px; }
   .btn.btn--large {
-    padding: 24px; }
+    padding: 24px;
+    font-size: 16px; }
   .btn.btn--fluid {
     width: 100%; }
   .btn.btn--cta:after {
@@ -1539,3 +1001,615 @@ This also works really nice with the [font size helper classes](/components/desk
 .media-list {
   padding-left: 0;
   list-style: none; }
+
+/* ==========================================================================
+   Spacing-specific utilities
+   ========================================================================== */
+/**
+ * Used to adjust the default spacing between components
+ * Use with great care!
+ *
+ * u-<type><direction><size>
+ *
+ * A = all
+ * T = top
+ * R = right
+ * B = bottom
+ * L = left
+ * H = horizontal
+ * V = vertical
+ *
+ * n = none
+ * s = small
+ * m = medium
+ * l = large
+ * xl = extra large
+ */
+/* spacing helpers
+p,m = padding,margin
+a,t,r,b,l,h,v = all,top,right,bottom,left,horizontal,vertical
+s,m,l,n = small(5px),medium(10px),large(20px),none(0px)
+*/
+.pts, .pvs, .pas {
+  padding-top: 5px; }
+
+.ptm, .pvm, .pam,
+.ptml, .pvml, .paml {
+  padding-top: 12px; }
+
+.ptl, .pvl, .pal {
+  padding-top: 20px; }
+
+.ptxl, .pvxl, .paxl {
+  padding-top: 40px; }
+
+.prs, .phs, .pas {
+  padding-right: 5px; }
+
+.prm, .phm, .pam,
+.prml, .phml, .paml {
+  padding-right: 12px; }
+
+.prl, .phl, .pal {
+  padding-right: 20px; }
+
+.prxl, .phxl, .paxl {
+  padding-right: 40px; }
+
+.pbs, .pvs, .pas {
+  padding-bottom: 5px; }
+
+.pbm, .pvm, .pam,
+.pbml, .pvml, .paml {
+  padding-bottom: 12px; }
+
+.pbl, .pvl, .pal {
+  padding-bottom: 20px; }
+
+.pbxl, .pvxl, .paxl {
+  padding-bottom: 40px; }
+
+.pls, .phs, .pas {
+  padding-left: 5px; }
+
+.plm, .phm, .pam,
+.plml, .phml, .paml {
+  padding-left: 12px; }
+
+.pll, .phl, .pal {
+  padding-left: 20px; }
+
+.plxl, .phxl, .paxl {
+  padding-left: 40px; }
+
+.mtn, .mvn, .man {
+  margin-top: 0px; }
+
+.mbn, .mvn, .man {
+  margin-bottom: 0px; }
+
+.mts, .mvs, .mas {
+  margin-top: 5px; }
+
+.mtm, .mvm, .mam,
+.mtml, .mvml, .maml {
+  margin-top: 12px; }
+
+.mtl, .mvl, .mal {
+  margin-top: 20px; }
+
+.mtxl, .mvxl, .maxl {
+  margin-top: 40px; }
+
+.mtxxl, .mvxxl, .maxxl {
+  margin-top: 90px; }
+
+.mrs, .mhs, .mas {
+  margin-right: 5px; }
+
+.mrm, .mhm, .mam,
+.mrml, .mhml, .maml {
+  margin-right: 12px; }
+
+.mrl, .mhl, .mal {
+  margin-right: 20px; }
+
+.mrxl, .mhxl, .maxl {
+  margin-right: 40px; }
+
+.mrxxl, .mhxxl, .maxxl {
+  margin-right: 40px; }
+
+.mbs, .mvs, .mas {
+  margin-bottom: 5px; }
+
+.mbm, .mvm, .mam,
+.mbml, .mvml, .maml {
+  margin-bottom: 12px; }
+
+.mbl, .mvl, .mal {
+  margin-bottom: 20px; }
+
+.mbxxl, .mvxxl, .maxxl {
+  margin-bottom: 90px; }
+
+.mbxl, .mvxl, .maxl {
+  margin-bottom: 40px; }
+
+.mls, .mhs, .mas {
+  margin-left: 5px; }
+
+.mlm, .mhm, .mam,
+.mlml, .mhml, .maml {
+  margin-left: 12px; }
+
+.mll, .mhl, .mal {
+  margin-left: 20px; }
+
+/* ==========================================================================
+   States utilities
+   ========================================================================== */
+/**
+ * State rules
+ */
+.s-error .msgBox, .s-error.msgBox {
+  background-color: #00c7b4;
+  color: white;
+  font-weight: bold; }
+
+.s-success {
+  color: white; }
+  .s-success .msgBox, .s-success.msgBox {
+    background-color: #00c8b4; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.s-hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.s-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .s-visuallyhidden.focusable:active, .s-visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* Extends the .s-visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/* Hide visually and from screenreaders, but maintain layout */
+.s-invisible {
+  visibility: hidden; }
+
+.hidden {
+  display: none; }
+  .hidden:hover {
+    display: block; }
+
+.hide {
+  display: none !important; }
+
+.show {
+  display: block !important; }
+
+.invisible {
+  visibility: hidden; }
+
+/* @TODO: 2015-09-01 this contains mostly helper classes and TODO statements to sort out later*/
+small, .small {
+  font-size: 85%; }
+
+.container {
+  margin: 0 auto; }
+  .container:before {
+    display: table;
+    content: " "; }
+  .container:after {
+    display: table;
+    content: " ";
+    clear: both; }
+
+/* ====== Floats ====== */
+.lfloat {
+  float: left; }
+
+.rfloat {
+  float: right; }
+
+/* ====== Form styles ===== */
+input:invalid {
+  background: #fff; }
+
+/* ====== UI styles ====== */
+/* Box Styles */
+/* Borders */
+.ui-border {
+  border: 1px solid #dfdfdf; }
+
+.ui-borderTop {
+  border-top: 1px solid #dfdfdf; }
+
+.ui-borderBottom {
+  border-bottom: 1px solid #dfdfdf; }
+
+.ui-borderLeft {
+  border-left: 1px solid #dfdfdf; }
+
+.ui-borderRight {
+  border-right: 1px solid #dfdfdf; }
+
+/* dotted border */
+/* dashed border */
+/* Default Grid */
+.ui-grid {
+  border: 0;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.ui-gridFull {
+  display: table;
+  width: 100%; }
+
+.ui-gridBorder {
+  border: 1px solid #d3d3d3; }
+
+.ui-grid .vTop {
+  vertical-align: top; }
+
+.ui-grid .vMid {
+  vertical-align: middle; }
+
+.ui-grid .vBot {
+  vertical-align: bottom; }
+
+.ui-grid .hLeft {
+  text-align: left; }
+
+.ui-grid .hCent {
+  text-align: center; }
+
+.ui-grid .hRght {
+  text-align: right; }
+
+/* List Items */
+.ui-listItem {
+  display: block; }
+
+.ui-listHorizontal .ui-listItem {
+  display: inline-block;
+  /* IE7 hack to mimic inline-block */
+  *display: inline;
+  *zoom: 1; }
+
+.ie7 .ui-listHorizontal .ui-listItem {
+  display: block;
+  float: left;
+  margin-right: 5px; }
+
+.ui-listItemBorder .ui-listItem {
+  border: 1px solid; }
+
+.ui-listBulleted {
+  list-style-type: disc;
+  margin-left: 13px; }
+
+.ui-listUnstyled {
+  list-style: none;
+  padding-left: 0; }
+
+/* inline-block and block element */
+.ui-inlineBlock {
+  display: inline-block;
+  /* IE7 hack to mimic inline-block */
+  *display: inline;
+  *zoom: 1; }
+
+.ui-block {
+  display: block; }
+
+/* QuickView Modal Window */
+.ui-dialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 501;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#67676750,endColorstr=#67676750);
+  /* fallback for IE 8 and lower since rgba is not supprted */
+  background-color: rgba(103, 103, 103, 0.5); }
+  .ui-dialog .container {
+    position: relative;
+    padding: 36px 15px 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #676767;
+    box-shadow: 0 0 15px #676767;
+    zoom: 1; }
+
+/* fixes the IE7 / IE8 unclickable overlay bug */
+.ui-dialogProcessing .container {
+  width: 50%;
+  min-height: 100px;
+  margin: 50px auto 0;
+  text-align: center; }
+
+/* ====== Typography ====== */
+/*doc
+---
+title: Font size helpers
+name: fontsize-helpers
+category: helpers
+---
+
+These are css helper classes ready to use for layouting directly in html.
+
+```html_example
+<p class="fss">Small</p>
+<p class="fsl">Medium</p>
+<p class="fsxl">Large</p>
+<p class="fssxxl">Extra Large</p>
+```
+*/
+.fsxs,
+.fss,
+table th,
+.fsm {
+  font-size: 11px; }
+
+.fsl {
+  font-size: 16px; }
+
+.fsxl {
+  font-size: 18px; }
+
+.fsxxl {
+  font-size: 22px; }
+
+.fsxxxl {
+  font-size: 24px; }
+
+/*doc
+---
+title: Stylisation Helpers
+name: style-helpers
+category: helpers
+---
+
+Helpers to style the appearance of text
+
+```html_example
+<p class="strong">Strong</p>
+<p class="normal">Normal</p>
+<p class="italic">Italic</p>
+```
+*/
+.strong {
+  font-weight: bold; }
+
+.normal {
+  font-weight: normal; }
+
+/* Font Style */
+.italic {
+  font-style: italic; }
+
+/* hides text replaced by images */
+.hiddenText {
+  text-indent: -10000px;
+  overflow: hidden; }
+
+/* text-transform */
+.txtUpper, table th {
+  text-transform: uppercase; }
+
+.txtLower {
+  text-transform: lowercase; }
+
+/* text-align */
+.txtRight {
+  text-align: right; }
+
+.txtLeft {
+  text-align: left; }
+
+.txtCenter {
+  text-align: center; }
+
+/* word-wrap */
+.wordwrap {
+  word-wrap: break-word; }
+
+/* line height helper */
+.lhn {
+  line-height: 100%; }
+
+.lhxs {
+  line-height: 10px; }
+
+.lhs {
+  line-height: 11px; }
+
+.lhm {
+  line-height: 12px; }
+
+.lhml {
+  line-height: 14px; }
+
+.lhl {
+  line-height: 16px; }
+
+.lhxl {
+  line-height: 18px; }
+
+.lhmxl {
+  line-height: 20px; }
+
+.lhxxl {
+  line-height: 22px; }
+
+.success {
+  color: #00c8b4; }
+
+.error {
+  color: #ba4242; }
+
+/* border styles */
+.box-bdr, .ui-listLight .ui-listItem, .ui-tabViewNav > li, .cartTable .cartItems tr, .hdSimple, .categoryMenu, .fct-scroll {
+  border-color: #dfdfdf; }
+
+.ui-listMedium .ui-listItem {
+  border-color: #ccc; }
+
+.ui-listLight .ui-listItem.active-list-item {
+  border-color: #888; }
+
+.box-bdrDark, .prd-colorList li.active, .ui-listDark .ui-listItem {
+  border-color: #333; }
+
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0; }
+
+.affix {
+  position: fixed; }
+
+.l-menu.affix {
+  background: #fff;
+  border-top: medium none;
+  margin-top: 24px;
+  opacity: 0.85;
+  z-index: 90; }
+
+/* ====== Visual Layout Styles ====== */
+/* Page Background */
+.ui-page-bg {
+  background-color: #f6f6f6; }
+
+/* Links */
+/* Font color */
+.txtLight {
+  color: #888; }
+
+.txtGreyLight {
+  color: #6c6c6c; }
+
+.txtDark, .txtBlack {
+  color: #000; }
+
+.txtGray {
+  color: #666; }
+
+.txtUpper, table th {
+  text-transform: uppercase; }
+
+/* placeholder attribute */
+::-webkit-input-placeholder, :-moz-placeholder {
+  color: #b4b4b4; }
+
+/**
+ * Box Modules
+ */
+/* ====== Product Preview Module (ppv) ====== */
+.box {
+  position: relative;
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.box-hd,
+.box-bd,
+.box-ft {
+  padding: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* box border */
+.box-bdr {
+  border: 1px solid #dfdfdf; }
+
+.box-bdr2 {
+  border: 1px solid #999; }
+
+/* box background color */
+.box-bgcolor {
+  background: #fff; }
+
+.box-rounded {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+
+/*
+    link zu oocss
+*/
+.line, .lastUnit {
+  overflow: hidden;
+  *overflow: visible;
+  *zoom: 1; }
+
+.unit {
+  float: left; }
+
+.unitRight {
+  float: right; }
+
+.size1of1 {
+  float: none; }
+
+.size1of2 {
+  width: 50%; }
+
+.size48of100 {
+  width: 48%; }
+
+.size1of3 {
+  width: 33.33333%; }
+
+.size2of3 {
+  width: 66.66666%; }
+
+.size1of4 {
+  width: 25%; }
+
+.size3of4 {
+  width: 75%; }
+
+.size1of5 {
+  width: 20%; }
+
+.size2of5 {
+  width: 40%; }
+
+.size3of5 {
+  width: 60%; }
+
+.size4of5 {
+  width: 80%; }
+
+.size5of5 {
+  width: 85%; }
+
+.size1of6 {
+  width: 16.667%; }
+
+.lastUnit {
+  float: none;
+  width: auto;
+  _position: relative;
+  _left: -3px;
+  _margin-right: -3px; }

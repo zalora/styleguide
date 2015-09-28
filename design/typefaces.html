@@ -95,7 +95,7 @@
 
     <div id="page-mover" class="page-mover container">
         <header>
-            <div class="header-wrapper pvm container">
+            <div class="header-wrapper pvm container page-width-container">
                 <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="/" alt="ZALORA styleguide">
                     <svg class="logo svg-asset">
                         <use xlink:href="#zalora-logo" />
@@ -109,8 +109,10 @@
                 </a>
             </div>
         </header>
-        <nav id="site-nav" class="site-nav">
-            
+
+        <div class="page-width-container">
+            <nav id="site-nav" class="site-nav">
+                
 <ul>
 
     <li>
@@ -239,6 +241,13 @@
         
     </li>
 
+    <li>
+        <a href="/components/desktop/helpers.html" class=""alt="UI Helpers">
+            UI Helpers
+        </a>
+        
+    </li>
+
 </ul>
 
         
@@ -346,24 +355,20 @@
 
 </ul>
 
-        </nav>
-        <div class="page-content">
-            <div class="page-content__wrapper">
-                <div class="page">
+            </nav>
+            <div class="page-content">
+                <div class="page-content__wrapper">
+                    <div class="page">
     <div class="page__header">
         <h1 class="page__header__title">Typefaces</h1>
         
-            <a href="/assets/downloads/zalora-fonts.zip" class="btn btn--special">Download Fontfiles</a>
+            <a href="/assets/downloads/zalora-fonts.zip" class="btn">Download Fontfiles</a>
         
     </div>
     <article class="page__content">
         <h2 id="apercu">Aperçu</h2>
 
 <p>The ZALORA brand typeface is Aperçu. It is as much a representation of the brand as is our logo. It is the vehicle that carries our message.</p>
-
-<blockquote>
-  <p>Uppercase tracking should always be set to a minimum of <strong>130</strong>. Lowercase/sentence case tracking should always be fixed at <strong>75</strong>.</p>
-</blockquote>
 
 <h3 id="about-apercu">About Aperçu</h3>
 
@@ -374,11 +379,11 @@ is distinct, modern and also neutral enough to use across the collaterals which 
 
 <p>Uppercase tracking should always be set to a minimum of <strong>130</strong>. Lowercase/sentence case tracking should always be fixed at <strong>75</strong>.</p>
 
-<p style="overflow-x: hidden; line-height: 1.2;">
-    <span style="font-size: 160px;">Aperçu</span>
-    <span style="font-size: 60px;">Regular</span>
-    <span style="font-size: 60px; font-weight: 700;">Bold</span>
-    <span style="font-size: 40px;">1234567890</span>
+<p class="example-container">
+    <span style="font-size: 100px; line-height: 1.1;">Aperçu</span><br />
+    <span style="font-size: 30px;">Regular</span>
+    <span style="font-size: 30px; font-weight: 700;">Bold</span><br />
+    <span style="font-size: 20px;">1234567890</span>
 </p>
 
 <h2 id="baskerville">Baskerville</h2>
@@ -393,20 +398,16 @@ is distinct, modern and also neutral enough to use across the collaterals which 
 
 <p>We only use Baskerville Italic for low- ercase/sentence case. Tracking should always fixed at 0.</p>
 
-<p style="overflow-x: hidden; font-family: Baskerville; font-style: italic; line-height: 1.2;">
-    <span style="font-size: 120px;">Baskerville</span>
-    <span style="font-size: 60px;">Italic</span>
+<p class="example-container" style="font-family: Baskerville; font-style: italic; line-height: 1.2;">
+    <span style="font-size: 80px;">Baskerville</span><br />
+    <span style="font-size: 30px;">Italic</span>
 </p>
-
-<blockquote>
-  <p>We use Baskerville Italic for lowercase/sentence case only. Tracking is fixed at 0.</p>
-</blockquote>
 
 <h2 id="breakdown-of-messaging">Breakdown of Messaging</h2>
 
 <p>The messaging on our onsite banners can be broken down into 3 elements.</p>
 
-<p style="text-align: center; line-height: 1.2; margin-top: 80px;">
+<p class="example-container" style="text-align: center; line-height: 1.2; margin-top: 80px;">
     <span style="display: block; font-size: 1.2em; text-transform: uppercase; letter-spacing: 0.13em; font-weight: bold; margin-bottom: 20px;">
         <span class="fsl" style="color: #00acec;">1.</span>
         Uppercase tracking 200
@@ -421,32 +422,35 @@ is distinct, modern and also neutral enough to use across the collaterals which 
     </span>
 </p>
 
-<h3 id="title">1. Title</h3>
+<h4 id="title">1. Title</h4>
 
 <p>The title is a unique selling point (USP) and should communicate a short, sharp message before the headline. Titles should be kept to a maximum of four words.</p>
 
-<h3 id="headline">2. Headline</h3>
+<h4 id="headline">2. Headline</h4>
 
 <p>The headline should be brief and engaging. It should be easy to digest and relevant for the chosen content and visual.</p>
 
-<h3 id="body-copy">3. Body Copy</h3>
+<h4 id="body-copy">3. Body Copy</h4>
 
 <p>The body copy is to elaborate and give meaning to the headline. It should be relevant to the headline and the chosen visual.</p>
 
     </article>
 </div>
 
+                </div>
             </div>
         </div>
         <footer class="site-footer">
-    <nav class="footer-nav">
-        <ul class="media-list man">
-            <li><a href="mailto:lionel.tan@zalora.com">Contact Us</a></li>
-        </ul>
-    </nav>
-    <p>
-        <small>Copyright &copy; 2015 – All rights reserved ZALORA.</small>
-    </p>
+    <div class="page-width-container">
+        <nav class="footer-nav">
+            <ul class="media-list man">
+                <li><a href="mailto:lionel.tan@zalora.com">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>
+            <small>Copyright &copy; 2015 – All rights reserved ZALORA.</small>
+        </p>
+    </div>
 </footer>
 
     </div>
