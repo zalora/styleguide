@@ -5,6 +5,9 @@
 header {
     @include clearfix;
     background-color: $colorDarkPrimary;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 
     .header-wrapper {
         padding-left: $spaceLarge;

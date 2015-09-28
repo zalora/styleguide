@@ -26,6 +26,8 @@
     top: 0;
     left: 100%;
     height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding: $spaceLarge;
     box-sizing: border-box;
     background-color: $colorLightSecondary;
@@ -35,9 +37,22 @@
     @include media($break-big) {
         height: auto;
         overflow-y: auto;
+        overflow: visible;
         position: relative;
         left: auto;
         display: block;
+        padding-top: $spaceXLarge;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 100%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: $colorLightSecondary;
+        }
     }
 
     @include media($break-large) {
@@ -51,14 +66,21 @@
     }
 
     li {
-        font-weight: 700;
         margin-bottom: $spaceLarge;
+        text-transform: uppercase;
+        padding-top: $spaceSmall;
+        padding-bottom: $spaceSmall;
+        line-height: 1;
+        font-weight: 700;
 
         ul {
+            margin-top: $spaceSmall;
+
             li {
                 font-weight: 400;
                 margin-bottom: 0;
                 padding-left: $spaceMedium;
+                text-transform: none;
 
                 ul {
                     li {
@@ -94,17 +116,17 @@
 
 // Put navigation and content side by side from big screens on
 @include media($break-big) {
-    .site-nav,
-    .page-content {
-        float: left;
-        box-sizing: border-box;
+    .include-header-space
+        display: table;
+        table-layout: fixed;
     }
 
-    .site-nav     { width: 25% }
-    .page-content { width: 75% }
-}
+    .site-nav,
+    .page-content {
+        display: table-cell;
+        vertical-align: top;
+    }
 
-@include media($break-large) {
     .site-nav     { width: 20% }
     .page-content { width: 80% }
 }
