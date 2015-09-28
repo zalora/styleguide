@@ -2,52 +2,43 @@
 // Landing Page
 //-------------------------------------
 
-body.homepage .page-content__wrapper.pal {
-    padding: 0;
-}
-
 .hero-stage {
-    background-image: url(/assets/images/content/home/hero-small.jpg);
-    background-size: cover;
-    background-position: center center;
     padding-top: 45%;
     padding-bottom: 15%;
+    padding: $spaceLarge;
+
+    .welcome {
+        font-size: 3em;
+        line-height: .8;
+
+        @include media($break-big) {
+            font-size: 6em;
+        }
+    }
 
     h1 {
-        color: $colorLightPrimary;
-        text-shadow: 0 1px 1px rgba(black, .3);
-        padding: 10px;
-        padding-top: 5px;
+        color: $colorMedium;
 
-        @include media($break-medium) {
-            font-size: 2em;
-            margin-left: 0;
-            background-color: transparent;
-            padding: 0;
+        span {
+            // display: inline-block;
+            color: $colorDarkPrimary;
+
+            span {
+                border-bottom: 2px solid $colorHighlightPositive;
+            }
         }
     }
 
     @include media($break-big) {
-        background-image: url(/assets/images/content/home/hero-large.jpg);
-        padding-top: 35%;
+        padding: $spaceXLarge;
 
         h1 {
-            font-size: 3em;
-            max-width: 60%;
+            font-size: 2em;
         }
     }
 
     @include media($break-large) {
-        padding-top: 15%;
-
-        h1 {
-            font-size: 4em;
-            margin-left: 7%;
-        }
-    }
-
-    @include media-height(800px) {
-        padding-top: 25%;
+        h1 { font-size: 3em }
     }
 }
 
