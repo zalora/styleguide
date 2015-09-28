@@ -1,7 +1,7 @@
 - text: Home
   url: /
 - text: Corporate Identity
-  url: /design/
+  url: /
   subitems:
     - text: Our Logo
       url: /design/logo.html
