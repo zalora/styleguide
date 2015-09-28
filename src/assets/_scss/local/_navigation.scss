@@ -26,8 +26,6 @@
     top: 0;
     left: 100%;
     height: 100vh;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch;
     padding: $spaceLarge;
     box-sizing: border-box;
     background-color: $colorLightSecondary;
@@ -40,8 +38,6 @@
         position: relative;
         left: auto;
         display: block;
-        border-left: 1px solid $colorLightSecondary;
-        background-color: transparent;
     }
 
     @include media($break-large) {
@@ -54,34 +50,20 @@
         margin: 0;
     }
 
-    & > ul {
-        // 1. Level
-        & > li {
-            font-size: $fontsizeXXL;
-            margin-bottom: $spaceXLarge;
-            font-weight: 700;
-            line-height: 1.3;
+    li {
+        font-weight: 700;
+        margin-bottom: $spaceLarge;
 
-            &:first-of-type { margin-bottom: 0 }
+        ul {
+            li {
+                font-weight: 400;
+                margin-bottom: 0;
+                padding-left: $spaceMedium;
 
-            & > a {
-                margin-bottom: $spaceLarge;
-                padding-right: 40%; // break words in new lines, cause thats the style :)
-            }
-
-            // 2. Level
-            & > ul a { margin-bottom: $spaceSmall }
-            & > ul > li {
-                font-size: $fontsizeM;
-                text-transform: uppercase;
-                letter-spacing: .1em;
-
-                // 3. Level
-                & > ul { margin-bottom: $spaceMedium }
-                & > ul > li {
-                    font-weight: 400;
-                    text-transform: capitalize;
-                    letter-spacing: .07em;
+                ul {
+                    li {
+                        font-size: $fontsizeS;
+                    }
                 }
             }
         }
@@ -89,7 +71,7 @@
 
     a {
         display: inline-block;
-        &.active { color: $colorHighlightPositive }
+        &.active { color: $colorHighlightPositiveOnDark }
     }
 }
 
@@ -124,12 +106,6 @@
 
 @include media($break-large) {
     .site-nav     { width: 20% }
-
-    .page-content,
-    footer {
-        width: 80%;
-    }
-
-    footer { margin-left: 20% }
+    .page-content { width: 80% }
 }
 

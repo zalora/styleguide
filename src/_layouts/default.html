@@ -6,7 +6,7 @@
     {% include svg-assets.html %}
     <div id="page-mover" class="page-mover container">
         <header>
-            <div class="header-wrapper pvm container">
+            <div class="header-wrapper pvm container page-width-container">
                 <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="{{ site.baseurl }}/" alt="{{ site.title }}">
                     <svg class="logo svg-asset">
                         <use xlink:href="#zalora-logo" />
@@ -20,12 +20,15 @@
                 </a>
             </div>
         </header>
-        <nav id="site-nav" class="site-nav">
-            {% include navigation.html nav=site.data.navigation %}
-        </nav>
-        <div class="page-content">
-            <div class="page-content__wrapper">
-                {{ content }}
+
+        <div class="page-width-container">
+            <nav id="site-nav" class="site-nav">
+                {% include navigation.html nav=site.data.navigation %}
+            </nav>
+            <div class="page-content">
+                <div class="page-content__wrapper">
+                    {{ content }}
+                </div>
             </div>
         </div>
         {% include footer.html %}

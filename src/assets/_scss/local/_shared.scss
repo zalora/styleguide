@@ -8,9 +8,10 @@ body {
 }
 
 @include media($break-large) {
-    .page-mover {
-        max-width: 1200px;
+    .page-width-container {
+        max-width: 1100px;
         margin: 0 auto;
+        box-sizing: border-box;
     }
 }
 
