@@ -28,6 +28,9 @@ body {
   width: 100%;
   height: 100%; }
 
+.include-header-space {
+  padding-top: 56px; }
+
 .page-content {
   margin-bottom: 100px; }
 
@@ -68,7 +71,10 @@ img.has-border {
     width: 100%; }
 
 header {
-  background-color: #000; }
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
   header:after {
     content: "";
     display: table;
@@ -395,11 +401,15 @@ footer {
       .page__content h1 {
         font-size: 4em; } }
   .page__header h2,
-  .page__content h2 {
+  .page__header h1.styleguide,
+  .page__content h2,
+  .page__content h1.styleguide {
     font-size: 2em; }
     @media screen and (min-width: 769px) {
       .page__header h2,
-      .page__content h2 {
+      .page__header h1.styleguide,
+      .page__content h2,
+      .page__content h1.styleguide {
         font-size: 2.8em; } }
   .page__header h3,
   .page__content h3 {
