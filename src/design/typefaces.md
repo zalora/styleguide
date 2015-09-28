@@ -5,7 +5,7 @@ download-url: "/assets/downloads/zalora-fonts.zip"
 download-title: "Download Fontfiles"
 ---
 
-## Aperçu
+## Primary Typeface
 
 The ZALORA brand typeface is Aperçu. It is as much a representation of the brand as is our logo. It is the vehicle that carries our message.
 
@@ -25,7 +25,7 @@ Uppercase tracking should always be set to a minimum of **130**. Lowercase/sente
     <span style="font-size: 20px;">1234567890</span>
 </p>
 
-## Baskerville
+## Supporting Typeface
 
 Our supporting typeface is Baskerville Italic. We use only the regular weight in Italic styling.
 
