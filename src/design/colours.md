@@ -57,10 +57,6 @@ Colours used to highlight elements and/or to give positive or negative feedback 
         <code class="mts ui-inlineBlock color-palette__color__variablename">$colorHighlightPositive</code>
     </li>
     <li class="grid__col grid__col--narrow color-palette__color">
-        <div class="mrm color-palette__color__sample colorHighlightPositiveOnDark"></div>
-        <code class="mts ui-inlineBlock color-palette__color__variablename">$colorHighlightPositiveOnDark</code>
-    </li>
-    <li class="grid__col grid__col--narrow color-palette__color">
         <div class="mrm color-palette__color__sample colorHighlightNegative"></div>
         <code class="mts ui-inlineBlock color-palette__color__variablename">$colorHighlightNegative</code>
     </li>
