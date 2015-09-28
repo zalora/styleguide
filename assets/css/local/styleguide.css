@@ -187,9 +187,7 @@ header {
     display: table-cell;
     vertical-align: top; }
   .site-nav {
-    width: 20%; }
-  .page-content {
-    width: 80%; } }
+    width: 220px; } }
 
 footer {
   clear: left;
