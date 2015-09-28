@@ -131,14 +131,21 @@ header {
     padding-left: 0;
     margin: 0; }
   .site-nav li {
-    font-weight: 700;
-    margin-bottom: 20px; }
-    .site-nav li ul li {
-      font-weight: 400;
-      margin-bottom: 0;
-      padding-left: 12px; }
-      .site-nav li ul li ul li {
-        font-size: 11px; }
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 1;
+    font-weight: 700; }
+    .site-nav li ul {
+      margin-top: 5px; }
+      .site-nav li ul li {
+        font-weight: 400;
+        margin-bottom: 0;
+        padding-left: 12px;
+        text-transform: none; }
+        .site-nav li ul li ul li {
+          font-size: 11px; }
   .site-nav a {
     display: inline-block; }
     .site-nav a.active {
