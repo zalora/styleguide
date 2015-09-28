@@ -425,7 +425,7 @@ body {
   font-size: 13px;
   line-height: 1.6;
   font-family: 'Apercu', Arial, sans-serif;
-  letter-spacing: .05em;
+  letter-spacing: .075em;
   color: #000;
   margin: 0; }
 
@@ -1392,6 +1392,29 @@ label {
 .form-horizontal .form-horizontal__input.fluid {
   width: 100%; }
 
+/*doc
+---
+title: Titlebar
+name: titlebar
+category: components
+---
+
+Titlebars
+
+This component is used in many areas of the shop, for example:
+
+- On my account pages
+- To host breadcrumps
+- In the catalog to show the number of search results
+
+Titlebars are used in conjunction with the [spacing helper classes](/components/desktop/spacing-helpers.html).
+
+```html_example
+<div class="title-bar pal">
+    Hi there! I'm a title-bar.
+</div>
+```
+*/
 .title-bar {
   line-height: 1;
   background-color: #dfdfdf;
@@ -1434,8 +1457,11 @@ label {
 ---
 title: Price Box
 name: price-box
-category: elements
+category: components
 ---
+
+Price boxes are a common way to display a price of an item. Note the containers for reduced and special prices:
+
 ```html_example
 <div class="price-box">
   <div class="price-box__regular-price">
@@ -1449,6 +1475,20 @@ category: elements
   </div>
 </div>
 ```
+
+This also works really nice with the [font size helper classes](/components/desktop/font-size-helpers.html):
+
+```html_example
+<div class="price-box fsxxl">
+  <div class="price-box__old-price">
+    <span>$80</span>
+  </div>
+  <div class="price-box__special-price">
+    <span>$10</span>
+  </div>
+</div>
+```
+
 */
 .price-box .price-box__old-price {
   color: #dfdfdf;
