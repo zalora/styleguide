@@ -163,7 +163,7 @@ header {
   .site-nav a {
     display: inline-block; }
     .site-nav a.active {
-      color: #02BDAB; }
+      color: #00c8b4; }
 
 .page-mover {
   -webkit-transition: -webkit-transform 0.5s;
@@ -406,10 +406,8 @@ footer {
       padding: 40px; } }
   .page__header h1,
   .page__header h2,
-  .page__header h3,
   .page__content h1,
-  .page__content h2,
-  .page__content h3 {
+  .page__content h2 {
     font-weight: 700; }
   .page__header h1,
   .page__content h1 {
@@ -484,6 +482,40 @@ footer {
     margin-left: 0;
     padding-left: 1em;
     border-left: 1px solid #dfdfdf; }
+  .page__header .pictogram-list,
+  .page__content .pictogram-list {
+    list-style: none;
+    padding-left: 0; }
+    .page__header .pictogram-list:after,
+    .page__content .pictogram-list:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .page__header .pictogram-list li,
+    .page__content .pictogram-list li {
+      float: left;
+      width: calc(33.3333% - 10px);
+      height: 60px;
+      padding-top: 100%;
+      position: relative;
+      box-sizing: border-box;
+      padding: 12px;
+      border: 1px solid #dfdfdf;
+      margin-right: 10px;
+      margin-bottom: 10px; }
+      @media screen and (min-width: 769px) {
+        .page__header .pictogram-list li,
+        .page__content .pictogram-list li {
+          width: calc(16.6% - 10px); } }
+      .page__header .pictogram-list li img,
+      .page__content .pictogram-list li img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        max-height: 70%;
+        max-width: 100%;
+        margin-top: 0;
+        margin-bottom: 0; }
 
 .colorLightPrimary {
   background-color: #fff; }
@@ -509,9 +541,6 @@ footer {
 .colorHighlightPositive {
   background-color: #00c8b4; }
 
-.colorHighlightPositiveOnDark {
-  background-color: #02BDAB; }
-
 .colorHighlightNegative {
   background-color: #ba4242; }
 
@@ -531,42 +560,30 @@ footer {
     display: block;
     text-transform: uppercase; }
 
-body.homepage .page-content__wrapper.pal {
-  padding: 0; }
-
 .hero-stage {
-  background-image: url(/assets/images/content/home/hero-small.jpg);
-  background-size: cover;
-  background-position: center center;
   padding-top: 45%;
-  padding-bottom: 15%; }
+  padding-bottom: 15%;
+  padding: 20px; }
+  .hero-stage .welcome {
+    font-size: 3em;
+    line-height: .8; }
+    @media screen and (min-width: 769px) {
+      .hero-stage .welcome {
+        font-size: 6em; } }
   .hero-stage h1 {
-    color: #fff;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-    padding: 10px;
-    padding-top: 5px; }
-    @media screen and (min-width: 481px) {
-      .hero-stage h1 {
-        font-size: 2em;
-        margin-left: 0;
-        background-color: transparent;
-        padding: 0; } }
+    color: #dfdfdf; }
+    .hero-stage h1 span {
+      color: #000; }
+      .hero-stage h1 span span {
+        border-bottom: 2px solid #00c8b4; }
   @media screen and (min-width: 769px) {
     .hero-stage {
-      background-image: url(/assets/images/content/home/hero-large.jpg);
-      padding-top: 35%; }
+      padding: 40px; }
       .hero-stage h1 {
-        font-size: 3em;
-        max-width: 60%; } }
+        font-size: 2em; } }
   @media screen and (min-width: 1025px) {
-    .hero-stage {
-      padding-top: 15%; }
-      .hero-stage h1 {
-        font-size: 4em;
-        margin-left: 7%; } }
-  @media screen and (min-height: 800px) {
-    .hero-stage {
-      padding-top: 25%; } }
+    .hero-stage h1 {
+      font-size: 3em; } }
 
 .quick-nav {
   padding-top: 40px; }
