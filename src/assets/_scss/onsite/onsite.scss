@@ -1,5 +1,19 @@
 /* General Styles Start */
 
+
+/*doc
+---
+title: Example
+name: example
+category: example-page
+---
+
+This is some text that goes along with your html example
+
+```html_example
+<p>Whatever kinda stuff here</p>
+```
+*/
 .cms-container {
     width: 996px;
     margin: 0 auto;
@@ -63,12 +77,11 @@
 /* SIS Specific Styles */
 /*doc
 ---
-title: Homepage
+title: Shop in Shop
 name: 1. Section Heading
-category: Homepage
+category: Shop in Shop
 ---
 
-blabla
 ```html_example
     <div class="cms-full txtCenter">
 	  <div class="cms-sis-section-heading">
