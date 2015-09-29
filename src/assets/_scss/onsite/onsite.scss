@@ -1,19 +1,5 @@
 /* General Styles Start */
 
-
-/*doc
----
-title: Example
-name: example
-category: example-page
----
-
-This is some text that goes along with your html example
-
-```html_example
-<p>Whatever kinda stuff here</p>
-```
-*/
 .cms-container {
     width: 996px;
     margin: 0 auto;
@@ -223,7 +209,7 @@ hallo
 /*doc
 ---
 title: Skinny Banners
-name: sb-1-full-width-skinny 
+name: sb-1-full-width-skinny
 category: Skinny Banners
 ---
 
@@ -237,7 +223,7 @@ category: Skinny Banners
 </div>
 ```
 */
-/* Full Width Skinny */ 
+/* Full Width Skinny */
 
 .cms-sb-text{
     font-size: 13px;
@@ -287,7 +273,7 @@ category: Skinny Banners
 /*doc
 ---
 title: Half Skinnies
-name: sb-2-half-width-skinny 
+name: sb-2-half-width-skinny
 category: Skinny Banners
 ---
 
@@ -298,7 +284,7 @@ category: Skinny Banners
 			<span class="cms-sb-highlight">TOPSHOP IS NOW ON ZALORA &gt;</span>
 		</div>
 	</div>
-	
+
 	<div class="cms-sb-half-right txtCenter cms-animate">
 		<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1">
 			TOPMAN IS NOW ON ZALORA &gt;

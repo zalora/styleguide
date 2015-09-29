@@ -23,11 +23,11 @@
 - text: Code
   url: /components/
   subitems:
-    - text: Naming conventions
-      url: /engineering/naming-conventions.html
     - text: Desktop
       url: /components/desktop/
       subitems:
+        - text: Naming conventions
+          url: /engineering/naming-conventions.html
         - text: Typography
           url: /components/desktop/typography.html
         - text: Buttons
