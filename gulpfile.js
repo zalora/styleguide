@@ -50,12 +50,12 @@ gulp.task("hologram", ["clean:hologram"], function() {
  */
 
 // Runs the build command for Jekyll to compile the site locally
-gulp.task("jekyll", $.shell.task("jekyll build"));
+gulp.task("jekyll:dev", ["hologram"], $.shell.task("jekyll build"));
 // This will build the site with the production settings
 gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
 
 
-gulp.task("jekyll-rebuild", ["jekyll"], function () {
+gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   browserSync.reload();
 });
 
@@ -69,18 +69,19 @@ gulp.task("jekyll-rebuild", ["jekyll"], function () {
  */
 
 gulp.task("watch", function () {
-	
+
   // just run sass task for local files
   gulp.watch(["src/assets/_scss/local/**/*.scss"], ["sass"]);
 
   // run hologram rebuild for files that contain documentation
-  gulp.watch(["src/assets/_scss/global/**/*.scss"], ["hologram", "sass", "jekyll-rebuild"]);
-  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["hologram", "sass", "jekyll-rebuild"]);
-  
+  gulp.watch(["src/assets/_scss/global/**/*.scss"], ["sass", "jekyll-rebuild"]);
+  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["sass", "jekyll-rebuild"]);
+
   gulp.watch([
     "src/**/*.js",
     "src/**/*.md",
     "src/**/*.html",
+    "!src/components/**/*.html",
     "src/**/*.xml",
     "src/**/*.txt"
   ], ["jekyll-rebuild"]);
@@ -95,7 +96,7 @@ gulp.task("watch", function () {
  * the viewport synchronized between them.
  */
 
-gulp.task("serve:dev", ["sass", "jekyll"], function () {
+gulp.task("serve:dev", ["sass", "jekyll:dev"], function () {
   browserSync({
     notify: true,
     // tunnel: "",
