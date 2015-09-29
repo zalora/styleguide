@@ -31,17 +31,11 @@ gulp.task("sass", function () {
 
 gulp.task("clean:hologram", del.bind(null, ["src/components/**/*"]));
 
-gulp.task("hologram", ["clean:hologram"], function() {
+gulp.task("hologram-rebuild", ["clean:hologram"], function() {
+  // Grabs all Hologram config files and
+  // executes Hologram for each of them
   return gulp.src('hologram_*.yml', { read: false })
-    .pipe($.shell([
-      'hologram <%= f(file.path) %>'
-    ], {
-      templateData: {
-        f: function (s) {
-          return s
-        }
-      }
-    }))
+    .pipe($.shell('hologram <%= file.path %>'));
 });
 
 
@@ -49,13 +43,20 @@ gulp.task("hologram", ["clean:hologram"], function() {
  * Jekyll
  */
 
-// Runs the build command for Jekyll to compile the site locally
-gulp.task("jekyll:dev", ["hologram"], $.shell.task("jekyll build"));
 // This will build the site with the production settings
-gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
+gulp.task("jekyll:prod", ["hologram-rebuild"], $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
 
-
+// Runs the build command for Jekyll to compile the site locally
+gulp.task("jekyll:dev", $.shell.task("jekyll build"));
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
+  browserSync.reload();
+});
+
+
+// Runs the build command for Jekyll,
+// but waits for hologram to finish
+gulp.task("jekyll:dev-hologram", ["hologram-rebuild"], $.shell.task("jekyll build"));
+gulp.task("hologram-jekyll-rebuild", ["jekyll:dev-hologram"], function() {
   browserSync.reload();
 });
 
@@ -69,19 +70,21 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
  */
 
 gulp.task("watch", function () {
-
   // just run sass task for local files
   gulp.watch(["src/assets/_scss/local/**/*.scss"], ["sass"]);
 
   // run hologram rebuild for files that contain documentation
-  gulp.watch(["src/assets/_scss/global/**/*.scss"], ["sass", "jekyll-rebuild"]);
-  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["sass", "jekyll-rebuild"]);
+  gulp.watch([
+    "src/assets/_scss/onsite/**/*.scss",
+    "src/assets/_scss/global/**/*.scss",
+    "src/assets/_scss/mobile/**/*.css"
+  ], ["sass", "hologram-jekyll-rebuild"]);
 
   gulp.watch([
     "src/**/*.js",
     "src/**/*.md",
     "src/**/*.html",
-    "!src/components/**/*.html",
+    "!src/components/**/*.html", // Exclude this, because jekyll-rebuild gets triggered by "hologram-jekyll-rebuild" above
     "src/**/*.xml",
     "src/**/*.txt"
   ], ["jekyll-rebuild"]);
@@ -96,7 +99,7 @@ gulp.task("watch", function () {
  * the viewport synchronized between them.
  */
 
-gulp.task("serve:dev", ["sass", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["sass", "jekyll:dev-hologram"], function () {
   browserSync({
     notify: true,
     // tunnel: "",
