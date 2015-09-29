@@ -26,12 +26,23 @@ gulp.task("sass", function () {
 /**
  * Hologram
  *
- * this generates the html files from the
- * comments inside the global .scss files
+ * this generates the html files from code comments
  */
 
-gulp.task("clean:hologram", del.bind(null, ["src/components/desktop/**/*"]));
-gulp.task("hologram", ["clean:hologram"], $.shell.task("hologram"));
+gulp.task("clean:hologram", del.bind(null, ["src/components/**/*"]));
+
+gulp.task("hologram", ["clean:hologram"], function() {
+  return gulp.src('hologram_*.yml', { read: false })
+    .pipe($.shell([
+      'hologram <%= f(file.path) %>'
+    ], {
+      templateData: {
+        f: function (s) {
+          return s
+        }
+      }
+    }))
+});
 
 
 /**
