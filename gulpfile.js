@@ -13,7 +13,7 @@ var gulp = require("gulp"),
 
 gulp.task("sass", function () {
   return gulp.src("src/assets/_scss/**/*.scss")
-    .pipe($.sass().on('error', $.sass.logError))
+    .pipe($.sass({outputStyle: 'compressed'}).on('error', $.sass.logError))
     // Directory your CSS file goes to
     .pipe(gulp.dest("src/assets/css"))
     .pipe(gulp.dest("dist/assets/css"))
@@ -82,7 +82,7 @@ gulp.task("watch", function () {
 
   // run hologram rebuild for files that contain documentation
   gulp.watch(["src/assets/_scss/global/**/*.scss"], ["hologram", "sass"]);
-  gulp.watch(["src/assets/_scss/onsite/**/*.css"], ["hologram"]);
+  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["hologram", "sass"]);
 });
 
 /**
