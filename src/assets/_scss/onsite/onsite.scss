@@ -78,7 +78,7 @@ This is some text that goes along with your html example
 /*doc
 ---
 title: Shop in Shop
-name: 1. Section Heading
+name: sis-1-section-heading
 category: Shop in Shop
 ---
 
@@ -135,35 +135,39 @@ category: Shop in Shop
 /*doc
 ---
 title: Homepage
-name: Hero Banner with Gender CTAs
+name: hp-1-hero-banner-with-gender-cta
 category: Homepage
 ---
 
+hallo
+
 ```html_example
-    <div class="cms-container">
-		<div class="cms-row">
-			<div class="cms-full">
-				<div class="cms-unisex-banner">
-					<a href="#">
-						<div class="cms-half cms-banner-lhs txtLeft">
-							<div class="cms-hero-cta cms-animate">Shop Women ></div>
-						</div>
-					</a>
-					<a href="#">
-						<div class="cms-half cms-banner-rhs txtRight">
-							<div class="cms-hero-cta cms-animate">Shop Men ></div>
-						</div>
-					</a>
-				</div>
+<div class="cms-container">
+	<div class="cms-row">
+		<div class="cms-full">
+			<div class="cms-unisex-banner">
+				<a href="#">
+					<div class="cms-half cms-banner-lhs txtLeft">
+						<div class="cms-hero-cta cms-animate">Shop Women ></div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="cms-half cms-banner-rhs txtRight">
+						<div class="cms-hero-cta cms-animate">Shop Men ></div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
+</div>
 ```
-```css_example
-	.cms-unisex-banner {
-		background:url(http://static02-ec-sg.zalora.com/cms/outlet/orignal_outlet-hp_banner.jpg);
-	}
+
 ```
+.cms-unisex-banner {
+	background:url(http://static02-ec-sg.zalora.com/cms/outlet/orignal_outlet-hp_banner.jpg);
+}
+```
+
 */
 .cms-half {
     float: left;
@@ -219,20 +223,18 @@ category: Homepage
 /*doc
 ---
 title: Skinny Banners
-name: 1.Full Width Skinny 
+name: sb-1-full-width-skinny 
 category: Skinny Banners
 ---
 
 ```html_example
-    <div class="cms-sb-full cms-align-center cms-animate">
-
-		<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1 ">
-			<span class="cms-sb-highlight">X Jul 2015 - X Aug 2015</span>
-			Fashion Fever Week: The Ultimate Summer Savings
-			<span class="cms-sb-highlight">Up to 70% OFF!</span>
-		</div>
-
+<div class="cms-sb-full txtCenter cms-animate">
+	<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1 ">
+		<span class="cms-sb-highlight">X Jul 2015 - X Aug 2015</span>
+		Fashion Fever Week: The Ultimate Summer Savings
+		<span class="cms-sb-highlight">Up to 70% OFF!</span>
 	</div>
+</div>
 ```
 */
 /* Full Width Skinny */ 
@@ -284,24 +286,25 @@ category: Skinny Banners
 /* Half Skinnies */
 /*doc
 ---
-title: Skinny Banners
-name: 2.Half Width Skinny 
+title: Half Skinnies
+name: sb-2-half-width-skinny 
 category: Skinny Banners
 ---
 
 ```html_example
-    <div class="cms-sb-container">
-		<div class="cms-sb-half-left cms-align-center cms-animate">
-			<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1">
-				<span class="cms-sb-highlight">TOPSHOP IS NOW ON ZALORA ></span>
-			</div>
-		</div>
-		<div class="cms-sb-half-right cms-align-center cms-animate">
-			<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1">
-				TOPMAN IS NOW ON ZALORA >
-			</div>
+<div class="cms-sb-container">
+	<div class="cms-sb-half-left txtCenter cms-animate">
+		<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1">
+			<span class="cms-sb-highlight">TOPSHOP IS NOW ON ZALORA &gt;</span>
 		</div>
 	</div>
+	
+	<div class="cms-sb-half-right txtCenter cms-animate">
+		<div class="cms-sb-text cms-text cms-text-bold cms-text-upper cms-text-ls-1">
+			TOPMAN IS NOW ON ZALORA &gt;
+		</div>
+	</div>
+</div>
 ```
 */
 .cms-sb-half-left:hover{
