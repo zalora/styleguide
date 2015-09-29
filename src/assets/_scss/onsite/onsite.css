@@ -5,15 +5,16 @@
 ---
 title: Example
 name: example
-category: example-page
+category: Segment Page
 ---
 
-This is some text that goes along with your html example
+This is some text that goes along with your html example. Blabla.
 
 ```html_example
-<p>Whatever kinda stuff here</p>
+<p class="hi">Whatever kinda stuff here</p>
 ```
 */
+
 .cms-container {
     width: 996px;
     margin: 0 auto;
@@ -22,6 +23,7 @@ This is some text that goes along with your html example
     margin-left: 0;
     margin-right: 0
 }
+
 .cms-full {
     position: relative;
     min-height: 1px;

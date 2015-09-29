@@ -40,9 +40,9 @@
       url: /onsite/
       subitems:
         - text: Homepage
-          url: /onsite/homepage.html
+          url: /components/onsite/homepage.html
         - text: Segment Page
-          url: /onsite/segment-page.html
+          url: /components/onsite/segment_page.html
 - text: Graphics
   url: /graphics/
   subitems:
