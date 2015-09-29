@@ -1,3 +1,6 @@
 [submodule "src/assets/_scss/global"]
 	path = src/assets/_scss/global
 	url = git@github.com:zalora/global-scss.git
+[submodule "src/assets/_scss/mobile"]
+	path = src/assets/_scss/mobile
+	url = git@github.com:zalora/mobile-scss.git
