@@ -69,6 +69,14 @@ gulp.task("jekyll-rebuild", ["jekyll"], function () {
  */
 
 gulp.task("watch", function () {
+	
+  // just run sass task for local files
+  gulp.watch(["src/assets/_scss/local/**/*.scss"], ["sass"]);
+
+  // run hologram rebuild for files that contain documentation
+  gulp.watch(["src/assets/_scss/global/**/*.scss"], ["hologram", "sass", "jekyll-rebuild"]);
+  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["hologram", "sass", "jekyll-rebuild"]);
+  
   gulp.watch([
     "src/**/*.js",
     "src/**/*.md",
@@ -76,13 +84,6 @@ gulp.task("watch", function () {
     "src/**/*.xml",
     "src/**/*.txt"
   ], ["jekyll-rebuild"]);
-
-  // just run sass task for local files
-  gulp.watch(["src/assets/_scss/local/**/*.scss"], ["sass"]);
-
-  // run hologram rebuild for files that contain documentation
-  gulp.watch(["src/assets/_scss/global/**/*.scss"], ["hologram", "sass"]);
-  gulp.watch(["src/assets/_scss/onsite/**/*.scss"], ["hologram", "sass"]);
 });
 
 /**
