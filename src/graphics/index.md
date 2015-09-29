@@ -1,5 +1,5 @@
 ---
-title: Onsite Content
+title: Graphics
 layout: page
 ---
 

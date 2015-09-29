@@ -12,7 +12,7 @@
     - text: Pictograms
       url: /design/pictograms.html
     - text: "DO's & DON'ts"
-      url: /design/dos-and-donts/
+      url: /design/dos-and-donts/copywriting.html
       subitems:
         - text: Copywriting
           url: /design/dos-and-donts/copywriting.html
@@ -20,7 +20,7 @@
           url: /design/dos-and-donts/campaigns.html
         - text: Imagery
           url: /design/dos-and-donts/Imagery.html
-- text: Web Components
+- text: Code
   url: /components/
   subitems:
     - text: Naming conventions
@@ -36,28 +36,37 @@
           url: /components/desktop/components.html
         - text: UI Helpers
           url: /components/desktop/helpers.html
-- text: Onsite Content
-  url: /onsite/
-  subitems:
-    - text: Desktop
-      url: /onsite/desktop/homepage.html
+    - text: Onsite
+      url: /onsite/
       subitems:
         - text: Homepage
-          url: /onsite/desktop/homepage.html
+          url: /onsite/homepage.html
         - text: Segment Page
-          url: /onsite/desktop/segment-page.html
+          url: /onsite/segment-page.html
+- text: Graphics
+  url: /graphics/
+  subitems:
+    - text: Desktop
+      url: /graphics/desktop/homepage.html
+      subitems:
+        - text: Homepage
+          url: /graphics/desktop/homepage.html
+        - text: Segment Page
+          url: /graphics/desktop/segment-page.html
         - text: Banners
-          url: /onsite/desktop/banners.html
+          url: /graphics/desktop/banners.html
+        - text: Creative Resources
+          url: /graphics/desktop/resources.html
     - text: "Mobile Web & App"
-      url: /onsite/mobile/
+      url: /graphics/mobile/
       subitems:
         - text: App Wireframe
-          url: /onsite/mobile/app-wireframe.html
+          url: /graphics/mobile/app-wireframe.html
         - text: Typography
-          url: /onsite/mobile/typography.html
+          url: /graphics/mobile/typography.html
         - text: Banners
-          url: /onsite/mobile/banners.html
+          url: /graphics/mobile/banners.html
         - text: Mobile Web Banners
-          url: /onsite/mobile/web-banners.html
+          url: /graphics/mobile/web-banners.html
         - text: Android Push
-          url: /onsite/mobile/android-push-notifications.html
+          url: /graphics/mobile/android-push-notifications.html
