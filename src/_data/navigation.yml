@@ -23,6 +23,8 @@
 - text: Code
   url: /components/
   subitems:
+    - text: Mobile
+      url: /components/mobile/index.html
     - text: Desktop
       url: /components/desktop/
       subitems:
@@ -43,6 +45,8 @@
           url: /components/onsite/homepage.html
         - text: Segment Page
           url: /components/onsite/segment_page.html
+        - text: Shop in Shop
+          url: /components/onsite/shop_in_shop.html
         - text: Skinny Banners
           url: /components/onsite/skinny_banners.html
 - text: Graphics

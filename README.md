@@ -20,9 +20,21 @@ This gets you up and running: ```bundle install```
 
 ### Global SCSS Submodule
 
-The project is dependent on the the [global scss](https://github.com/zalora/global-scss) repo that holds all the basic styling for web projects at ZALORA. 
+This project includes two submodules:
 
-You would need to run ```git submodule init``` and ```git submodule update``` in order to begin.
+- [Global scss](https://github.com/zalora/global-scss)
+- [Mobile scss](https://github.com/zalora/mobile-scss)
+
+Clone the repo with the `recursive` flag to also get the contents of the submodules, like this:
+
+`git clone --recursive git@github.com:zalora/styleguide.git`
+
+To update the submodules later run:
+
+`git submodule foreach git pull origin master`
+
+For further reading on submodules: [Git-Tools-Submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
 
 ### Gulp
 
@@ -83,7 +95,7 @@ Assets like **ZIP files** for **downloading** go into:
 
 ### Global styles
 
-All the files in 
+All the files in
 
 ```
 - src/
@@ -94,7 +106,7 @@ All the files in
 
 are actually another git repository included into this one as a **submodule**. The [global scss](https://github.com/zalora/global-scss) repo hold all the basic styling for web projects at ZALORA. This, for example, is included in the ZALORA shop.
 
-Pages on the styleguide are automatically generated out of code comments in the `.scss` files themselves. 
+Pages on the styleguide are automatically generated out of code comments in the `.scss` files themselves.
 
 A comment looks like this: [_buttons.scss](https://github.com/zalora/global-scss/blob/master/components/_buttons.scss)
 
