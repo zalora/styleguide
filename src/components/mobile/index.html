@@ -6,7 +6,7 @@ title: Index
 <p class="styleguide">The mobile site is structured on a fluid gruid system, with the choice to display up to four columns.</p><p class="styleguide">Because mobile devices vary in screen dimensions, the grid will fill the width of the device up to 800px.</p>
 <h1 id="styleguide-1_1_0" class="styleguide">Container</h1>
 <p class="styleguide">First rule of fight club: everything must be inside a <em>.container</em>.</p><p class="styleguide">The container regulates the size and form of the content. It also keeps everything centered, grounded and balanced.</p><div class="codeExample">
-  <div class="exampleOutput">
+  <div class="exampleOutputMobile">
     <div class="container">
     <!-- All content goes here -->
 </div>
@@ -16,6 +16,61 @@ title: Index
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
     <span class="c">&lt;!-- All content goes here --&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="styleguide-1_2_0" class="styleguide">Surfaces</h1>
+<p class="styleguide">All content on the mobile site is displayed on a surface. Surfaces set the default margins and padding, and give the page its basic shape.</p><p class="styleguide">Surfaces must be used with the grid system (See section 1.3). In the examples below, each surface has a <code class="styleguide">&lt;div class=&quot;full&quot;&gt;...&lt;/div&gt;</code> inside it. This is the HTML markup for a one-column layout with the grid system. Content may not be displayed correctly if the grid system is not used.</p>
+<h1 id="styleguide-1_2_1" class="styleguide">Desk</h1>
+<p class="styleguide">This will have 6px padding on both sides, and its background will be the gray of the site.</p><p class="styleguide">Content on the desk includes the site footer, product filter buttons, or other <code class="styleguide">&lt;aside&gt;</code>-like elements.</p><div class="codeExample">
+  <div class="exampleOutputMobile">
+    <div class="desk">
+    <div class="full">This is the desk.</div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desk"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>This is the desk.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="styleguide-1_2_2" class="styleguide">Paper</h1>
+<p class="styleguide">This surface is a rectangle with a white background and 6px padding on both sides.</p><p class="styleguide">Most of the content on the site will be on a paper surface.</p><div class="codeExample">
+  <div class="exampleOutputMobile">
+    <div class="paper">
+    <div class="full">This is paper.</div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>This is paper.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="styleguide-1_2_3" class="styleguide">Well</h1>
+<p class="styleguide">The well is a surface inset into the desk.</p><p class="styleguide">This is useful for auxiliary content, like filter and sorting options.
+When combined with CSS transitions, it looks like a panel in the desk
+is opening.</p><div class="codeExample">
+  <div class="exampleOutputMobile">
+    <div class="well">
+    <div class="full">Don't fall in the well!</div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>Don't fall in the well!<span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
