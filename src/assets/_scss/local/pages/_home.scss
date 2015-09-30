@@ -6,39 +6,25 @@
     padding-top: 45%;
     padding-bottom: 15%;
     padding: $spaceLarge;
+    background-color: $colorHighlightPositive;
 
-    .welcome {
-        font-size: 3em;
-        line-height: .8;
+    @include media($break-big) { padding: 10% 0 }
 
-        @include media($break-big) {
-            font-size: 6em;
-        }
+    .logo {
+        width: 70%;
+        height: 50px;
+
+        @include media($break-big) { height: 70px }
     }
 
     h1 {
-        color: $colorMedium;
+        text-align: center;
+        color: $colorLightPrimary;
 
-        span {
-            // display: inline-block;
-            color: $colorDarkPrimary;
-
-            span {
-                border-bottom: 2px solid $colorHighlightPositive;
-            }
+        @include media($break-big) {
+            margin-top: $spaceLarge;
+            font-size: 3em;
         }
-    }
-
-    @include media($break-big) {
-        padding: $spaceXLarge;
-
-        h1 {
-            font-size: 2em;
-        }
-    }
-
-    @include media($break-large) {
-        h1 { font-size: 3em }
     }
 }
 

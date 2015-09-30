@@ -1,7 +1,7 @@
 - text: Home
   url: /
 - text: Corporate Identity
-  url: /
+  url: /design/logo.html
   subitems:
     - text: Our Logo
       url: /design/logo.html
@@ -21,7 +21,7 @@
         - text: Imagery
           url: /design/dos-and-donts/Imagery.html
 - text: Code
-  url: /components/
+  url: /engineering/
   subitems:
     - text: Mobile
       url: /components/mobile/scaffolding.html

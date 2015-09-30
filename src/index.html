@@ -5,13 +5,13 @@ area: homepage
 
 <div class="home">
     <section class="hero-stage pal">
-        <span class="welcome">
-            Welcome!
-        </span>
+        <div class="txtCenter">
+            <svg class="logo svg-asset">
+                <use xlink:href="#zalora-logo" />
+            </svg>
+        </div>
 
-        <h1>
-            This is the <span>ZALORA <span>Styleguide</span></span>
-        </h1>
+        <h1 class="man">styleguide</h1>
     </section>
 
     <section class="quick-nav pal mvxl grid">
@@ -25,13 +25,12 @@ area: homepage
 
         <nav class="grid__col grid__col--thirds quick-nav__box quick-nav__marketing mbm ui-grid ">
             <figure class="quick-nav__icon ui-inlineBlock vMid">
-                <svg class="svg-asset"><use xlink:href="#icon-marketing" /></svg>
+                <svg class="svg-asset"><use xlink:href="#icon-graphics" /></svg>
             </figure>
             <a href="{{ "/onsite" | prepend: site.baseurl }}" class="btn btn--secondary">Graphics</a>
         </nav>
 
         <nav class="grid__col grid__col--thirds quick-nav__box quick-nav__press mbm ui-grid ">
-
             <figure class="quick-nav__icon ui-inlineBlock vMid">
                 <svg class="svg-asset"><use xlink:href="#icon-media" /></svg>
             </figure>
