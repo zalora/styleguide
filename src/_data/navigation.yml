@@ -24,7 +24,7 @@
   url: /components/
   subitems:
     - text: Mobile
-      url: /components/mobile/
+      url: /components/mobile/scaffolding.html
       subitems:
         - text: Scaffolding
           url: /components/mobile/scaffolding.html
@@ -35,7 +35,7 @@
         - text: Typography
           url: /components/mobile/typography.html
     - text: Desktop
-      url: /components/desktop/
+      url: /engineering/naming-conventions.html
       subitems:
         - text: Naming conventions
           url: /engineering/naming-conventions.html
