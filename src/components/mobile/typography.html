@@ -1,0 +1,224 @@
+---
+layout: page
+title: Typography
+---
+<h1 id="styleguide-4_0_0" class="styleguide">Typography</h1>
+<p class="styleguide">Text on mobile devices has a much more limited range than on desktop.</p><p class="styleguide">This section introduces semantic typography optimized for legibility on a mobile device.</p>
+<h1 id="styleguide-4_1_0" class="styleguide">Headings</h1>
+<p class="styleguide">The traditional HTML headings are used on ZALORA for SEO purposes and are left unstyled.</p><p class="styleguide">Therefore use the following classes to style headings: <code class="styleguide">.h1</code> through <code class="styleguide">.h6</code>.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <h1 class="h1">Heading 1</h1>
+<h2 class="h2">Heading 2</h2>
+<h3 class="h3">Heading 3</h3>
+<h4 class="h4">Heading 4</h4>
+<h5 class="h5">Heading 5</h5>
+<h6 class="h6">Heading 6</h6>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>Heading 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>Heading 2<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>Heading 3<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>Heading 4<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>Heading 5<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>Heading 6<span class="nt">&lt;/h6&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_2_0" class="styleguide">Sections</h1>
+<p class="styleguide">Zalora is built with HTML 5, and content should be divided with <em>&lt;section&gt;</em> tags.</p><p class="styleguide">Sections have a bottom margin that space them from their sibling elements.
+Use <code class="styleguide">&amp;&lt;section&gt;</code>s over grid elements for semantically dividing content.
+Grid elements are useful when you want to split your content into columns.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <div class="full">
+    <section>
+        This is one section here
+    </section>
+    <section>
+        This is another.
+    </section>
+</div>
+<div class="half">
+    <section>
+        This is one section in column one.
+    </section>
+    <section>
+        This is another right below.
+    </section>
+</div>
+<div class="half">
+    <section>
+        Here we are in column two.
+    </section>
+    <section>
+        And another one below.
+    </section>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        This is one section here
+    <span class="nt">&lt;/section&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        This is another.
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        This is one section in column one.
+    <span class="nt">&lt;/section&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        This is another right below.
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        Here we are in column two.
+    <span class="nt">&lt;/section&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        And another one below.
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_3_0" class="styleguide">Body copy</h1>
+<p class="styleguide">Zalora mobile&#39;s default <code class="styleguide">font-size</code> is <strong>14px</strong>, with a <code class="styleguide">line-height</code> of <strong>19px</strong>. This is applied to the <code class="styleguide">&lt;body&gt;</code> and all paragraphs. Paragraphs <code class="styleguide">&lt;p&gt;</code> and <code class="styleguide">&lt;section&gt;</code>s receive a bottom margin of half their line-height by default.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <div class="full">
+    <p>Praesent enim nunc, bibendum a interdum sed, vestibulum eget eros. Pellentesque eleifend enim eu urna tristique consequat. Pellentesque ut nisi in tellus placerat lobortis. Curabitur aliquet blandit turpis, a suscipit augue porta ac. Sed sed ipsum turpis.</p>
+    <p>Cras tortor sapien, volutpat a lacinia in, blandit ac velit. Etiam dictum odio lacus, eget porta nisl. Fusce condimentum euismod fermentum. Sed nec mauris erat, ac varius mi.</p>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Praesent enim nunc, bibendum a interdum sed, vestibulum eget eros. Pellentesque eleifend enim eu urna tristique consequat. Pellentesque ut nisi in tellus placerat lobortis. Curabitur aliquet blandit turpis, a suscipit augue porta ac. Sed sed ipsum turpis.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Cras tortor sapien, volutpat a lacinia in, blandit ac velit. Etiam dictum odio lacus, eget porta nisl. Fusce condimentum euismod fermentum. Sed nec mauris erat, ac varius mi.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_3_1" class="styleguide">Font sizes</h1>
+<p class="styleguide">There are five available text sizes on the mobile site:</p><ul class="styleguide"><li>Extra Small  <code class="styleguide">.font-xsmall</code></li>
+<li>Small        <code class="styleguide">.font-small</code></li>
+<li>Regular</li>
+<li>Large        <code class="styleguide">.font-large</code></li>
+<li>Extra Large  <code class="styleguide">.font-xlarge</code></li>
+</ul><p class="styleguide">No special markup is needed for regular text.</p><p class="styleguide">If you apply these classes to a wrapper element, all inner elements except
+headings and buttons will respond. For buttons, use the button size classes.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <div class="full">
+    <section>
+        <p class="font-xlarge">Extra large text</p>
+        <p class="font-large">Large text</p>
+        <p>Regular text</p>
+        <p class="font-small">Small text</p>
+        <p class="font-xsmall">Extra small text</p>
+    </section>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-xlarge"</span><span class="nt">&gt;</span>Extra large text<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-large"</span><span class="nt">&gt;</span>Large text<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Regular text<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-small"</span><span class="nt">&gt;</span>Small text<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"font-xsmall"</span><span class="nt">&gt;</span>Extra small text<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_4_0" class="styleguide">Text Emphasis - Style</h1>
+<p class="styleguide">Emphasize text by making it italic with <code class="styleguide">&lt;em&gt;</code>, or bold with <code class="styleguide">&lt;strong&gt;</code>.</p><p class="styleguide">Or change the case with <em>text-upper</em> or <code class="styleguide">text-lower</code>.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <p><em>This is italic text</em></p>
+<p><strong>This is bold text</strong></p>
+<p class="text-upper">This text is in uppercase</p>
+<p class="text-lower">This text is in lowercase</p>
+<p class="text-2em">This text is vertically aligned in the middle with 0.5em padding in top and bottom</p>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;p&gt;&lt;em&gt;</span>This is italic text<span class="nt">&lt;/em&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>This is bold text<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-upper"</span><span class="nt">&gt;</span>This text is in uppercase<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-lower"</span><span class="nt">&gt;</span>This text is in lowercase<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-2em"</span><span class="nt">&gt;</span>This text is vertically aligned in the middle with 0.5em padding in top and bottom<span class="nt">&lt;/p&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_4_1" class="styleguide">Text Emphasis - Color</h1>
+<p class="styleguide">Use color to convey meaning about the content.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <p class="text-muted">This is muted text</p>
+<p class="text-muted-2">This is muted text 2</p>
+<p class="text-muted-3">This is muted text 3</p>
+<p class="text-red">This is red text</p>
+<p class="text-wine">This is wine text</p>
+<p class="text-white">This is white text</p>
+<p class="text-gray">This is gray text</p>
+<p class="text-black">This is black text</p>
+<p class="text-success">This is success text</p>
+<p class="text-info">This is informational text</p>
+<p class="text-attention">This is important text</p>
+<p class="text-attention-inverted">This is important text inverted</p>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>This is muted text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-muted-2"</span><span class="nt">&gt;</span>This is muted text 2<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-muted-3"</span><span class="nt">&gt;</span>This is muted text 3<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-red"</span><span class="nt">&gt;</span>This is red text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-wine"</span><span class="nt">&gt;</span>This is wine text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-white"</span><span class="nt">&gt;</span>This is white text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-gray"</span><span class="nt">&gt;</span>This is gray text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-black"</span><span class="nt">&gt;</span>This is black text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>This is success text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-info"</span><span class="nt">&gt;</span>This is informational text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-attention"</span><span class="nt">&gt;</span>This is important text<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-attention-inverted"</span><span class="nt">&gt;</span>This is important text inverted<span class="nt">&lt;/p&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-4_5_0" class="styleguide">Thematic Break</h1>
+<p class="styleguide">Use <code class="styleguide">&lt;hr&gt;</code> to represent a thematic break between content.</p><div class="codeExample">
+    <div class="exampleOutputMobile">
+        <section>
+    <p>Here is some content</p>
+</section>
+<hr>
+<section>
+    <p>Here is some other content</p>
+</section>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Here is some content<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;hr&gt;</span>
+<span class="nt">&lt;section&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Here is some other content<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/section&gt;</span></pre>
+        </div>
+    </div>
+</div>

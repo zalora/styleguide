@@ -25,6 +25,15 @@
   subitems:
     - text: Mobile
       url: /components/mobile/
+      subitems:
+        - text: Scaffolding
+          url: /components/mobile/scaffolding.html
+        - text: Buttons
+          url: /components/mobile/buttons.html
+        - text: Forms
+          url: /components/mobile/forms.html
+        - text: Typography
+          url: /components/mobile/typography.html
     - text: Desktop
       url: /components/desktop/
       subitems:
