@@ -10,33 +10,6 @@ var examples = document.querySelectorAll('.exampleOutputMobile'),
         <head> \
             <title>I am an iframe</title> \
             <link rel="stylesheet" href="http://styleguide.zalora.com/assets/css/mobile/styleguide.css"> \
-            <style> \
-                .example .container .full, \
-                .example .container .half, \
-                .example .container .one-third, \
-                .example .container .two-thirds, \
-                .example .container .one-quarter, \
-                .example .container .three-quarters { \
-                    padding: 10px 2px; \
-                } \
-                .highlightgrid .full, \
-                .highlightgrid .half, \
-                .highlightgrid .one-third, \
-                .highlightgrid .two-thirds, \
-                .highlightgrid .one-quarter, \
-                .highlightgrid .three-quarters { \
-                    border: 1px solid #A6C9A3; \
-                    background-color: #DAFFD6; \
-                } \
-                .centergrid .full, \
-                .centergrid .half, \
-                .centergrid .one-third, \
-                .centergrid .two-thirds, \
-                .centergrid .one-quarter, \
-                .centergrid .three-quarters { \
-                    text-align: center; \
-                } \
-            </style> \
         </head> \
         <body>';
     iframeTemplateFoot = '</body>';
