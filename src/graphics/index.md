@@ -3,4 +3,4 @@ title: Graphics
 layout: page
 ---
 
-Welcome to Onsite Content
+Welcome all Designer Folks!

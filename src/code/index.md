@@ -25,4 +25,4 @@ The same goes for mobile UI Components. Styling and components for mobile live i
 
 <a class="btn" href="/components/mobile/scaffolding.html">Mobile UI Components</a>
 
-![ZALORA Global Styles Setup](/assets/images/content/engineering/setup-illustration.svg)
+![ZALORA Global Styles Setup](/assets/images/content/code/setup-illustration.svg)

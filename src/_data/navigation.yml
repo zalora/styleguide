@@ -21,8 +21,10 @@
         - text: Imagery
           url: /design/dos-and-donts/Imagery.html
 - text: Code
-  url: /engineering/
+  url: /code/
   subitems:
+    - text: Naming conventions
+      url: /code/naming-conventions.html
     - text: Mobile
       url: /components/mobile/scaffolding.html
       subitems:
@@ -35,14 +37,12 @@
         - text: Typography
           url: /components/mobile/typography.html
     - text: Desktop
-      url: /engineering/naming-conventions.html
+      url: /components/desktop/buttons.html
       subitems:
-        - text: Naming conventions
-          url: /engineering/naming-conventions.html
-        - text: Typography
-          url: /components/desktop/typography.html
         - text: Buttons
           url: /components/desktop/buttons.html
+        - text: Typography
+          url: /components/desktop/typography.html
         - text: Components
           url: /components/desktop/components.html
         - text: UI Helpers
