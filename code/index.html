@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Naming conventions</title>
+  <title>A place for Code</title>
   <meta name="description" content="This is the ZALORA styleguide project. It collects and showcases everything design related to ensure brand consistency throughout the company
 ">
   <meta name="robots" content="noindex,follow">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="/assets/css/global/global.css">
   <link rel="stylesheet" href="/assets/css/onsite/onsite.css">
   <link rel="stylesheet" href="/assets/css/local/styleguide.css">
-  <link rel="canonical" href="http://styleguide.zalora.com/engineering/naming-conventions.html">
+  <link rel="canonical" href="http://styleguide.zalora.com/code/">
   <link rel="alternate" type="application/rss+xml" title="ZALORA styleguide" href="http://styleguide.zalora.com/feed.xml" />
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
 </head>
@@ -231,12 +231,19 @@
     </li>
 
     <li>
-        <a href="/engineering/" class=""alt="Code">
+        <a href="/code/" class="active"alt="Code">
             Code
         </a>
         
             
 <ul>
+
+    <li>
+        <a href="/code/naming-conventions.html" class=""alt="Naming conventions">
+            Naming conventions
+        </a>
+        
+    </li>
 
     <li>
         <a href="/components/mobile/scaffolding.html" class=""alt="Mobile">
@@ -280,7 +287,7 @@
     </li>
 
     <li>
-        <a href="/engineering/naming-conventions.html" class="active"alt="Desktop">
+        <a href="/components/desktop/buttons.html" class=""alt="Desktop">
             Desktop
         </a>
         
@@ -288,8 +295,8 @@
 <ul>
 
     <li>
-        <a href="/engineering/naming-conventions.html" class="active"alt="Naming conventions">
-            Naming conventions
+        <a href="/components/desktop/buttons.html" class=""alt="Buttons">
+            Buttons
         </a>
         
     </li>
@@ -297,13 +304,6 @@
     <li>
         <a href="/components/desktop/typography.html" class=""alt="Typography">
             Typography
-        </a>
-        
-    </li>
-
-    <li>
-        <a href="/components/desktop/buttons.html" class=""alt="Buttons">
-            Buttons
         </a>
         
     </li>
@@ -410,13 +410,6 @@
         
     </li>
 
-    <li>
-        <a href="/graphics/desktop/resources.html" class=""alt="Creative Resources">
-            Creative Resources
-        </a>
-        
-    </li>
-
 </ul>
 
         
@@ -482,45 +475,31 @@
                 <div class="page-content__wrapper">
                     <div class="page">
     <div class="page__header">
-        <h1 class="page__header__title">Naming conventions</h1>
+        <h1 class="page__header__title">A place for Code</h1>
         
     </div>
     <article class="page__content">
-        <h2 id="block-element-and-modifier">1. Block, Element, and Modifier</h2>
+        <h2 id="hi-there">Hi there!</h2>
 
-<p>We follow BEM methodology, meaning Block, Element, and Modifier.</p>
+<p>You’re a coder and we love you – you’ve come to the right place.</p>
 
-<pre><code>.block {}
-.block__element {}
-.block--modifier {}
-</code></pre>
+<h3 id="what-is-this">What is this?</h3>
 
-<h4 id="explanation">Explanation</h4>
+<p>The ZALORA styleguide gives you an overview of available UI Components on our Desktop and Mobile platforms. Think of it as a Bootstrap Framework.</p>
 
-<ul>
-  <li>block represents the higher level of an abstraction or component.</li>
-  <li>block__element represents a descendant of .block that helps form .block as a whole.</li>
-  <li>block–modifier represents a different state or version of .block.</li>
-</ul>
+<p class="example-container"><img src="/assets/images/content/code/setup-illustration.svg" alt="ZALORA Global Styles Setup" /></p>
 
-<h2 id="js-somename">2. JS-someName</h2>
+<h3 id="desktop">Desktop</h3>
 
-<p>CSS must not use <code>js-* classes in selectors.
-Use the id attribute and </code>js-* class names are reserved for JavaScript-only use. Application-specific data or content can be stored in data-* attributes.</p>
+<p>We keep available UI components and global styling for desktop platforms in an extra Github repository called <a href="http://github.com/zalora/global-scss">global-scss</a> which is included as a git submodule in our shop.</p>
 
-<p>The example below includes a dedicated JavaScript utility class to which behaviour is bound. It is independent of any specific UI component.</p>
+<p><a class="btn" href="/components/desktop/">Desktop UI Components</a></p>
 
-<pre><code>&lt;a class="js-showProfile" data-username="necolas" href="{url}"&gt;View&lt;/a&gt;
-</code></pre>
+<h3 id="mobile">Mobile</h3>
 
-<h2 id="cms-somename">3. cms-someName</h2>
+<p>The same goes for mobile UI Components. Styling and components for mobile live in <a href="http://github.com/zalora/mobile-scss">mobile-scss</a> and also get included as a submodule in the shop.</p>
 
-<p>All css class name belongs to CMS should start with <code>cms-*</code>. For example:</p>
-
-<pre><code>&lt;div class="cms-homepage_banner"&gt;
-  Content from CMS
-&lt;/div&gt;
-</code></pre>
+<p><a class="btn" href="/components/mobile/scaffolding.html">Mobile UI Components</a></p>
 
 
     </article>
