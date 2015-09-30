@@ -77,7 +77,7 @@ gulp.task("watch", function () {
   gulp.watch([
     "src/assets/_scss/onsite/**/*.scss",
     "src/assets/_scss/global/**/*.scss",
-    "src/assets/_scss/mobile/**/*.css"
+    "src/assets/_scss/mobile/**/*.scss"
   ], ["sass", "hologram-jekyll-rebuild"]);
 
   gulp.watch([

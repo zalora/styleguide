@@ -1,0 +1,14 @@
+//-------------------------------------
+// Stuff for the mobile styleguide in here
+//-------------------------------------
+
+.exampleOutputMobile {
+    background: url(/assets/images/phone-frame.svg) top left no-repeat;
+    padding: 48px 12px;
+
+    iframe {
+        border: none;
+        width: 238px;
+        height: 348px;
+    }
+}

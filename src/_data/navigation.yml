@@ -24,7 +24,7 @@
   url: /components/
   subitems:
     - text: Mobile
-      url: /components/mobile/index.html
+      url: /components/mobile/
     - text: Desktop
       url: /components/desktop/
       subitems:
