@@ -11,6 +11,10 @@
             text-align: center;
             padding: $spaceLarge;
         }
+
+        .btn {
+            min-width: 140px;
+        }
     }
 
     .quick-nav__icon {
@@ -43,6 +47,7 @@
 .mission-statement {
     background-color: $colorDarkTertiary;
     color: $colorLightPrimary;
+    padding: $spaceLarge;
 
     .mission-statement__content {
         h1 { margin: $spaceXLarge 0 }
