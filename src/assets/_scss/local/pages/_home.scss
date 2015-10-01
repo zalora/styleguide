@@ -2,41 +2,8 @@
 // Landing Page
 //-------------------------------------
 
-.hero-stage {
-    padding-top: 45%;
-    padding-bottom: 15%;
-    padding: $spaceLarge;
-    background-color: $colorHighlightPositive;
-
-    @include media($break-big) { padding: 10% 0 }
-
-    .logo {
-        width: 70%;
-        height: 50px;
-
-        @include media($break-big) { height: 70px }
-    }
-
-    h1 {
-        text-align: center;
-        color: $colorLightPrimary;
-
-        @include media($break-big) {
-            margin-top: $spaceLarge;
-            font-size: 3em;
-        }
-    }
-}
-
 // Quick nav
 .quick-nav {
-    padding-top: $spaceXLarge;
-
-    h2 {
-        position: relative;
-        top: -$spaceMedium;
-    }
-
     .quick-nav__box {
         margin-bottom: $spaceLarge;
 

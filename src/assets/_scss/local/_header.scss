@@ -21,5 +21,10 @@ header {
     fill: $colorLightPrimary;
 }
 
-.tagline { color: $colorHighlightPositive }
+.tagline {
+    color: $colorLightPrimary;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    margin-left: $spaceSmall;
+}
 
