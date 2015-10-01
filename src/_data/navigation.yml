@@ -72,18 +72,14 @@
           url: /graphics/desktop/homepage.html
         - text: Segment Page
           url: /graphics/desktop/segment-page.html
-        - text: Banners
-          url: /graphics/desktop/banners.html
-        - text: Creative Resources
-          url: /graphics/desktop/resources.html
+        - text: Skinny Banners
+          url: /graphics/desktop/skinny-banners.html 
     - text: "Mobile Web & App"
       url: /graphics/mobile/
       subitems:
         - text: App Wireframe
           url: /graphics/mobile/app-wireframe.html
-        - text: Typography
-          url: /graphics/mobile/typography.html
-        - text: Banners
+        - text: App Banners
           url: /graphics/mobile/banners.html
         - text: Mobile Web Banners
           url: /graphics/mobile/web-banners.html
