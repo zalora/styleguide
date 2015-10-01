@@ -1,0 +1,31 @@
+@import "../global/variables";
+
+.example {
+    .full,
+    .half,
+    .one-third,
+    .two-thirds,
+    .one-quarter,
+    .three-quarters { padding: 10px 2px }
+}
+
+.highlightgrid {
+    .full,
+    .half,
+    .one-third,
+    .two-thirds,
+    .one-quarter,
+    .three-quarters {
+        border: 1px solid $colorHighlightPositive;
+        background-color: $colorHighlightPositiveReduct;
+    }
+}
+
+.centergrid {
+    .full,
+    .half,
+    .one-third,
+    .two-thirds,
+    .one-quarter,
+    .three-quarters { text-align: center }
+}

@@ -36,3 +36,12 @@ pre {
     color: $colorDarkTertiary;
     -webkit-overflow-scrolling: touch;
 }
+
+.grid-example {
+    .unit {
+        padding: $spaceSmall;
+        background-color: $colorHighlightPositiveReduct;
+        border: 1px solid $colorHighlightPositive;
+        box-sizing: border-box;
+    }
+}
