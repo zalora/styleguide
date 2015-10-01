@@ -193,30 +193,8 @@
     </li>
 
     <li>
-        <a href="/design/dos-and-donts/copywriting.html" class=""alt="DO's & DON'ts">
-            DO's & DON'ts
-        </a>
-        
-            
-<ul>
-
-    <li>
-        <a href="/design/dos-and-donts/copywriting.html" class=""alt="Copywriting">
-            Copywriting
-        </a>
-        
-    </li>
-
-    <li>
-        <a href="/design/dos-and-donts/campaigns.html" class=""alt="Sale Campaign">
-            Sale Campaign
-        </a>
-        
-    </li>
-
-    <li>
-        <a href="/design/dos-and-donts/Imagery.html" class=""alt="Imagery">
-            Imagery
+        <a href="/design/dos-and-donts/dos-and-donts.html" class=""alt="Do's & Don'ts">
+            Do's & Don'ts
         </a>
         
     </li>
@@ -226,25 +204,13 @@
         
     </li>
 
-</ul>
-
-        
-    </li>
-
     <li>
-        <a href="/code/" class=""alt="Code">
+        <a href="/engineering/" class=""alt="Code">
             Code
         </a>
         
             
 <ul>
-
-    <li>
-        <a href="/code/naming-conventions.html" class=""alt="Naming conventions">
-            Naming conventions
-        </a>
-        
-    </li>
 
     <li>
         <a href="/components/mobile/scaffolding.html" class="active"alt="Mobile">
@@ -288,12 +254,19 @@
     </li>
 
     <li>
-        <a href="/components/desktop/buttons.html" class=""alt="Desktop">
+        <a href="/engineering/naming-conventions.html" class=""alt="Desktop">
             Desktop
         </a>
         
             
 <ul>
+
+    <li>
+        <a href="/engineering/naming-conventions.html" class=""alt="Naming conventions">
+            Naming conventions
+        </a>
+        
+    </li>
 
     <li>
         <a href="/components/desktop/buttons.html" class=""alt="Buttons">
@@ -419,8 +392,8 @@
     </li>
 
     <li>
-        <a href="/graphics/desktop/banners.html" class=""alt="Banners">
-            Banners
+        <a href="/graphics/desktop/skinny-banners.html" class=""alt="Skinny Banners">
+            Skinny Banners
         </a>
         
     </li>
@@ -446,15 +419,8 @@
     </li>
 
     <li>
-        <a href="/graphics/mobile/typography.html" class=""alt="Typography">
-            Typography
-        </a>
-        
-    </li>
-
-    <li>
-        <a href="/graphics/mobile/banners.html" class=""alt="Banners">
-            Banners
+        <a href="/graphics/mobile/banners.html" class=""alt="App Banners">
+            App Banners
         </a>
         
     </li>
@@ -498,7 +464,7 @@
 <p class="styleguide">The mobile site is structured on a fluid gruid system, with the choice to display up to four columns.</p><p class="styleguide">Because mobile devices vary in screen dimensions, the grid will fill the width of the device up to 800px.</p>
 <h1 id="styleguide-1_1_0" class="styleguide">Container</h1>
 <p class="styleguide">First rule of fight club: everything must be inside a <code class="styleguide">.container</code>.</p><p class="styleguide">The container regulates the size and form of the content. It also keeps everything centered, grounded and balanced.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="container">
     <!-- All content goes here -->
 </div>
@@ -517,7 +483,7 @@
 <p class="styleguide">All content on the mobile site is displayed on a surface. Surfaces set the default margins and padding, and give the page its basic shape.</p><p class="styleguide">Surfaces must be used with the grid system (See section 1.3). In the examples below, each surface has a <code class="styleguide">&lt;div class=&quot;full&quot;&gt;...&lt;/div&gt;</code> inside it. This is the HTML markup for a one-column layout with the grid system. Content may not be displayed correctly if the grid system is not used.</p>
 <h1 id="styleguide-1_2_1" class="styleguide">Desk</h1>
 <p class="styleguide">This will have 6px padding on both sides, and its background will be the gray of the site.</p><p class="styleguide">Content on the desk includes the site footer, product filter buttons, or other <code class="styleguide">&lt;aside&gt;</code>-like elements.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="desk">
     <div class="full">This is the desk.</div>
 </div>
@@ -534,7 +500,7 @@
 
 <h1 id="styleguide-1_2_2" class="styleguide">Paper</h1>
 <p class="styleguide">This surface is a rectangle with a white background and 6px padding on both sides.</p><p class="styleguide">Most of the content on the site will be on a paper surface.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="paper">
     <div class="full">This is paper.</div>
 </div>
@@ -553,7 +519,7 @@
 <p class="styleguide">The well is a surface inset into the desk.</p><p class="styleguide">This is useful for auxiliary content, like filter and sorting options.
 When combined with CSS transitions, it looks like a panel in the desk
 is opening.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="well">
     <div class="full">Don't fall in the well!</div>
 </div>
@@ -571,7 +537,7 @@ is opening.</p><div class="codeExample">
 <h1 id="styleguide-1_2_4" class="styleguide">Carbon</h1>
 <p class="styleguide">This fills the screen and has a darker background than the desk.
 Use it to emphasize content.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="carbon">
     <div class="full">Pay attention.</div>
 </div>
@@ -591,7 +557,7 @@ Use it to emphasize content.</p><div class="codeExample">
 additional padding because it has a border.</p><p class="styleguide">There are times when you want text in neighboring surfaces to have the same
 left and right padding. Add the class <code class="styleguide">z-content</code> to the surface element to
 make sure text lines up on all surfaces.</p><p class="styleguide">This can be used on any surface, but it won&#39;t have any effect on <code class="styleguide">.paper</code>.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="carbon">
     <p>Without z-content, it looks like this</p>
 </div>
@@ -624,7 +590,7 @@ make sure text lines up on all surfaces.</p><p class="styleguide">This can be us
     </div>
 </div>
 <div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="carbon z-content">
     <p>With z-content, it looks like this</p>
 </div>
@@ -671,7 +637,7 @@ make sure text lines up on all surfaces.</p><p class="styleguide">This can be us
 <p class="styleguide">All content should be in a grid element. Unexpected things may happen if content is placed outside of a grid element.</p>
 <h3>Important Note</h3>
 <p class="styleguide">This grid system does not use floats. This is to reduce the amount of markup required on the mobile site, and to reduce reflow/repaint complexity.</p><p class="styleguide">Because of this, IT IS REQUIRED that there is whitespace between the grid elements. In other words, <em>&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;</em> is BAD. <em>&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt; &lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;</em> is GOOD</p><p class="styleguide">It is enough to have a line break between grid elements. This notice is important if the HTML is minimized at some point.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="full">One column</div>
 <div class="half">1 of 2</div> <div class="half">2 of 2</div>
 <div class="one-third">1 of 3</div> <div class="one-third">2 of 3</div> <div class="one-third">3 of 3</div>
@@ -692,12 +658,15 @@ make sure text lines up on all surfaces.</p><p class="styleguide">This can be us
     </div>
 </div>
 
+<blockquote>
+<p class="styleguide">highlightgrid centergrid</p></blockquote>
+
 <h1 id="styleguide-1_3_1" class="styleguide">Grid Content Positioning</h1>
 <p class="styleguide">The content inside the grid cell can be positioned by adding any of the following classes:</p><ul class="styleguide"><li>.align-left - This is the default alignment</li>
 <li>.align-center</li>
 <li>.align-right</li>
 </ul><p class="styleguide">This works for any block level element.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="full align-left">
     <p>Aligned left.</p>
     <p>This is default.</p>
@@ -734,13 +703,16 @@ make sure text lines up on all surfaces.</p><p class="styleguide">This can be us
     </div>
 </div>
 
+<blockquote>
+<p class="styleguide">highlightgrid</p></blockquote>
+
 <h1 id="styleguide-1_3_2" class="styleguide">Grid Cell Positioning</h1>
 <p class="styleguide">The grid cell itself can be positioned vertically. This works when there is
 more than one column.</p><ul class="styleguide"><li>.align-top - This is the default alignment</li>
 <li>.align-middle</li>
 <li>.align-bottom</li>
 </ul><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="one-third align-center align-top">
     <p>Fill it up</p>
     <p>Fill it up</p>
@@ -786,7 +758,7 @@ more than one column.</p><ul class="styleguide"><li>.align-top - This is the def
 elements, or give them some <em>.breathing-room</em>. <em>.breathing-room</em> gives twice
 as much space as <em>.thick</em>. Be aware that <em>.thick</em> uses padding, and <em>breathing-room</em>
 uses margins. Keep this in mind because this difference has implications on the design.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="paper">
     <div class="full thick">
         <div>Hello</div>
@@ -833,7 +805,7 @@ achieved with the following classes:</p><ul class="styleguide"><li><em>.table</e
 </ul><p class="styleguide">These tables can be used on any element.</p><p class="styleguide"><strong>NOTE:</strong> Unfortunately, table elements cannot be aligned with the alignment
 classes. The only way to satisfactorily align them is to give them full width.
 Set the class <em>table-full</em> on the table element to be able to align it.</p><div class="codeExample">
-    <div class="exampleOutputMobile">
+    <div class="exampleOutputMobile example">
         <div class="paper">
     <div class="table">
         <p class="row">
