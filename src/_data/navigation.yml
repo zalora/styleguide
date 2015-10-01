@@ -41,12 +41,12 @@
       subitems:
         - text: Buttons
           url: /components/desktop/buttons.html
-        - text: Typography
-          url: /components/desktop/typography.html
         - text: Components
           url: /components/desktop/components.html
         - text: UI Helpers
           url: /components/desktop/helpers.html
+        - text: Grid
+          url: /components/desktop/grid.html
     - text: Onsite
       url: /onsite/
       subitems:
@@ -74,8 +74,6 @@
           url: /graphics/desktop/segment-page.html
         - text: Banners
           url: /graphics/desktop/banners.html
-        - text: Creative Resources
-          url: /graphics/desktop/resources.html
     - text: "Mobile Web & App"
       url: /graphics/mobile/
       subitems:
