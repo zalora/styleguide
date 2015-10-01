@@ -26,6 +26,11 @@ h1.styleguide:not(:first-of-type) {
 .exampleOutput {
 	@include clearfix;
 	overflow-x: auto;
+
+    &.example-container {
+        margin-top: $spaceLarge;
+        margin-bottom: $spaceMedium;
+    }
 }
 
 pre {

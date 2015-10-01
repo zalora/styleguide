@@ -1,39 +1,81 @@
 ---
 layout: page
-title: helpers
+title: Helpers
 ---
-<h1 id="fontsize-helpers" class="styleguide">Font size helpers</h1>
-<p class="styleguide">These are css helper classes ready to use for layouting directly in html.</p><div class="codeExample">
+<h1 id="fontsize-helpers" class="styleguide">Adding borders to things</h1>
+<p class="styleguide">Use this with caution, but we have helpers to add borders to things:</p><div class="codeExample">
   <div class="exampleOutput">
-    <p class="fss">Small</p>
-<p class="fsl">Medium</p>
-<p class="fsxl">Large</p>
-<p class="fsxxl">Extra Large</p>
+    <p class="ui-border">I have a border around me</p>
+<p class="ui-borderLeft">I have a border to the left</p>
+<p class="ui-borderTop">I have a border on top if me</p>
+<p class="ui-borderRight">I have a border to my right</p>
+<p class="ui-borderBottom">Sitting on borders is so much fun</p>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fss"</span><span class="nt">&gt;</span>Small<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fsl"</span><span class="nt">&gt;</span>Medium<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fsxl"</span><span class="nt">&gt;</span>Large<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"fsxxl"</span><span class="nt">&gt;</span>Extra Large<span class="nt">&lt;/p&gt;</span></pre>
+      <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ui-border"</span><span class="nt">&gt;</span>I have a border around me<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ui-borderLeft"</span><span class="nt">&gt;</span>I have a border to the left<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ui-borderTop"</span><span class="nt">&gt;</span>I have a border on top if me<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ui-borderRight"</span><span class="nt">&gt;</span>I have a border to my right<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ui-borderBottom"</span><span class="nt">&gt;</span>Sitting on borders is so much fun<span class="nt">&lt;/p&gt;</span></pre>
     </div>
   </div>
 </div>
 
-<h1 id="style-helpers" class="styleguide">Stylisation Helpers</h1>
+<blockquote>
+<p class="styleguide">example-container</p></blockquote>
+
+<h1 id="layout-helpers" class="styleguide">Basic layouting</h1>
+<p class="styleguide">If you have to move stuff around, just apply some of your favorite layout helpers:</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="container">
+  <span class="lfloat">I'm floating left</span>
+  <span class="rfloat">More oldschool - let's float to the right</span>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"lfloat"</span><span class="nt">&gt;</span>I'm floating left<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"rfloat"</span><span class="nt">&gt;</span>More oldschool - let's float to the right<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<blockquote>
+<p class="styleguide">example-container</p></blockquote>
+
+<h1 id="style-helpers" class="styleguide">Stylisation</h1>
 <p class="styleguide">Helpers to style the appearance of text</p><div class="codeExample">
   <div class="exampleOutput">
     <p class="strong">Strong</p>
 <p class="normal">Normal</p>
 <p class="italic">Italic</p>
+<p class="txtUpper">All Caps</p>
+<p class="txtLower">LOWERCASE</p>
+<p class="txtCenter">Centered</p>
+<p class="txtRight">Right aligned</p>
+<p class="success">Yay!</p>
+<p class="error">Nooo :/</p>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"strong"</span><span class="nt">&gt;</span>Strong<span class="nt">&lt;/p&gt;</span>
 <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"normal"</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/p&gt;</span>
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>Italic<span class="nt">&lt;/p&gt;</span></pre>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>Italic<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"txtUpper"</span><span class="nt">&gt;</span>All Caps<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"txtLower"</span><span class="nt">&gt;</span>LOWERCASE<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"txtCenter"</span><span class="nt">&gt;</span>Centered<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"txtRight"</span><span class="nt">&gt;</span>Right aligned<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>Yay!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"error"</span><span class="nt">&gt;</span>Nooo :/<span class="nt">&lt;/p&gt;</span></pre>
     </div>
   </div>
 </div>
+
+<blockquote>
+<p class="styleguide">example-container</p></blockquote>

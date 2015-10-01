@@ -65,19 +65,19 @@
 
             // &:not(.in-column).has-image { max-width: 100% }
         }
+    }
 
-        &.example-container {
-            box-sizing: border-box;
-            padding: $spaceMedium;
-            border: 1px solid $colorMedium;
-            margin-top: $spaceXLarge;
-            margin-bottom: $spaceXXLarge;
+    .example-container {
+        box-sizing: border-box;
+        padding: $spaceMedium;
+        border: 1px solid $colorMedium;
+        margin-top: $spaceXLarge;
+        margin-bottom: $spaceXXLarge;
 
-            img { margin: 0 }
+        img { margin: 0 }
 
-            @include media($break-big) {
-                padding: $spaceXLarge;
-            }
+        @include media($break-big) {
+            padding: $spaceXLarge;
         }
     }
 

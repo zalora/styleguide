@@ -14,8 +14,10 @@
     - text: "Do's & Don'ts"
       url: /design/dos-and-donts/dos-and-donts.html
 - text: Code
-  url: /engineering/
+  url: /code/
   subitems:
+    - text: Naming conventions
+      url: /code/naming-conventions.html
     - text: Mobile
       url: /components/mobile/scaffolding.html
       subitems:
@@ -28,10 +30,8 @@
         - text: Typography
           url: /components/mobile/typography.html
     - text: Desktop
-      url: /engineering/naming-conventions.html
+      url: /components/desktop/buttons.html
       subitems:
-        - text: Naming conventions
-          url: /engineering/naming-conventions.html
         - text: Buttons
           url: /components/desktop/buttons.html
         - text: Components
@@ -41,7 +41,7 @@
         - text: Grid
           url: /components/desktop/grid.html
     - text: Onsite
-      url: /onsite/
+      url: /components/onsite/homepage.html
       subitems:
         - text: Homepage
           url: /components/onsite/homepage.html
@@ -58,15 +58,6 @@
 - text: Graphics
   url: /graphics/
   subitems:
-    - text: Desktop
-      url: /graphics/desktop/homepage.html
-      subitems:
-        - text: Homepage
-          url: /graphics/desktop/homepage.html
-        - text: Segment Page
-          url: /graphics/desktop/segment-page.html
-        - text: Skinny Banners
-          url: /graphics/desktop/skinny-banners.html
     - text: "Mobile Web & App"
       url: /graphics/mobile/
       subitems:
@@ -78,3 +69,13 @@
           url: /graphics/mobile/web-banners.html
         - text: Android Push
           url: /graphics/mobile/android-push-notifications.html
+    - text: Desktop
+      url: /graphics/desktop/homepage.html
+      subitems:
+        - text: Homepage
+          url: /graphics/desktop/homepage.html
+        - text: Segment Page
+          url: /graphics/desktop/segment-page.html
+        - text: Skinny Banners
+          url: /graphics/desktop/skinny-banners.html
+
