@@ -58,6 +58,10 @@
           url: /components/onsite/shop_in_shop.html
         - text: Skinny Banners
           url: /components/onsite/skinny_banners.html
+        - text: Cross Catalog Banners
+          url: /components/onsite/cross_catalog_banners.html 
+        - text: Coding Guidelines
+          url: /engineering/onsite-coding-guidelines/onsite-coding-guidelines.html         
 - text: Graphics
   url: /graphics/
   subitems:
