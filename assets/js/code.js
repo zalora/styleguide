@@ -1,10 +1,6 @@
 /**
- * ZALORA styleguide
  * Creates iframes on mobile styleguide doc to be able to scope css styles
  */
-
-console.log("--- init iframes");
-
 var examples = document.querySelectorAll('.exampleOutputMobile'),
     iframeTemplateHead = '\
         <head> \
@@ -30,4 +26,15 @@ for (i = 0; i < examples.length; i++) {
 
     // Add iframe into the appropriate place into the document
     example.appendChild(iframe);
+}
+
+/**
+ * Grab extra classnames from below rendered code examples
+ * and add them to example container
+ */
+
+var codeExamples = document.getElementsByClassName('codeExample');
+
+for (i = 0; i < codeExamples.length; i++) {
+    console.log(codeExamples[i]).nextElementSibling;
 }
