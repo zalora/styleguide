@@ -21,10 +21,8 @@
         - text: Imagery
           url: /design/dos-and-donts/Imagery.html
 - text: Code
-  url: /code/
+  url: /engineering/
   subitems:
-    - text: Naming conventions
-      url: /code/naming-conventions.html
     - text: Mobile
       url: /components/mobile/scaffolding.html
       subitems:
@@ -37,16 +35,18 @@
         - text: Typography
           url: /components/mobile/typography.html
     - text: Desktop
-      url: /components/desktop/buttons.html
+      url: /engineering/naming-conventions.html
       subitems:
+        - text: Naming conventions
+          url: /engineering/naming-conventions.html
+        - text: Typography
+          url: /components/desktop/typography.html
         - text: Buttons
           url: /components/desktop/buttons.html
         - text: Components
           url: /components/desktop/components.html
         - text: UI Helpers
           url: /components/desktop/helpers.html
-        - text: Grid
-          url: /components/desktop/grid.html
     - text: Onsite
       url: /onsite/
       subitems:
@@ -72,16 +72,14 @@
           url: /graphics/desktop/homepage.html
         - text: Segment Page
           url: /graphics/desktop/segment-page.html
-        - text: Banners
-          url: /graphics/desktop/banners.html
+        - text: Skinny Banners
+          url: /graphics/desktop/skinny-banners.html 
     - text: "Mobile Web & App"
       url: /graphics/mobile/
       subitems:
         - text: App Wireframe
           url: /graphics/mobile/app-wireframe.html
-        - text: Typography
-          url: /graphics/mobile/typography.html
-        - text: Banners
+        - text: App Banners
           url: /graphics/mobile/banners.html
         - text: Mobile Web Banners
           url: /graphics/mobile/web-banners.html
