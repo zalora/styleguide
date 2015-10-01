@@ -4,6 +4,10 @@
 
 // Quick nav
 .quick-nav {
+    padding: $spaceLarge;
+
+    @include media($break-big) { padding: $spaceXLarge }
+
     .quick-nav__box {
         margin-bottom: $spaceLarge;
 
@@ -12,9 +16,11 @@
             padding: $spaceLarge;
         }
 
-        .btn {
-            min-width: 140px;
-        }
+        img { margin-right: $spaceMedium }
+
+        span { font-size: $fontsizeXL }
+
+        .btn { min-width: 140px }
     }
 
     .quick-nav__icon {
@@ -33,21 +39,15 @@
     }
 }
 
-.quick-nav__box {
-    img {
-        margin-right: $spaceMedium;
-    }
-
-    span {
-        font-size: $fontsizeXL;
-    }
-}
-
 // Mission statement
 .mission-statement {
     background-color: $colorDarkTertiary;
     color: $colorLightPrimary;
     padding: $spaceLarge;
+
+    @include media($break-big) {
+        padding: $spaceXLarge;
+    }
 
     .mission-statement__content {
         h1 { margin: $spaceXLarge 0 }
