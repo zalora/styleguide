@@ -12,7 +12,7 @@
     - text: Pictograms
       url: /design/pictograms.html
     - text: "Do's & Don'ts"
-      url: /design/dos-and-donts/dos-and-donts.html
+      url: /design/dos-and-donts.html
 - text: Code
   url: /code/
   subitems:

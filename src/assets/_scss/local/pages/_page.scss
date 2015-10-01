@@ -78,6 +78,9 @@
 
         @include media($break-big) {
             padding: $spaceXLarge;
+
+            &.max-half { max-width: 50% }
+            &.max-third { max-width: 33.333% }
         }
     }
 
@@ -123,5 +126,32 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    .example-good,
+    .example-bad {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            padding-left: $spaceLarge + 10px;
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 20px 20px;
+            margin-bottom: $spaceMedium;
+        }
+    }
+
+    .example-good {
+        li { background-image: url(/assets/images/icon_check.svg) }
+        em { color: $colorHighlightPositive }
+    }
+
+    .example-bad {
+        li {
+            background-image: url(/assets/images/icon_error.svg);
+            background-size: 18px 18px;
+        }
+        em { color: $colorHighlightNegative }
     }
 }
