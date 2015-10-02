@@ -27,3 +27,7 @@ The same goes for mobile UI Components. Styling and components for mobile live i
 
 <a class="btn" href="/components/mobile/scaffolding.html">Mobile UI Components</a>
 
+
+### Bamboo Deployment
+
+Now the builds are automated.
