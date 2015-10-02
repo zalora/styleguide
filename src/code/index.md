@@ -19,7 +19,7 @@ The ZALORA styleguide gives you an overview of available UI Components on our De
 
 We keep available UI components and global styling for desktop platforms in an extra Github repository called [global-scss](http://github.com/zalora/global-scss) which is included as a git submodule in our shop.
 
-<a class="btn" href="/components/desktop/">Desktop UI Components</a>
+<a class="btn" href="/components/desktop/buttons.html">Desktop UI Components</a>
 
 ### Mobile
 
