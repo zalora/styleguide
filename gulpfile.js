@@ -128,3 +128,7 @@ gulp.task('deploy', ['build'], function() {
   return gulp.src('./dist/**/*')
     .pipe($.ghPages());
 });
+
+gulp.task('bamboo_deploy', ['deploy'], function() {
+    process.exit(0);
+});
