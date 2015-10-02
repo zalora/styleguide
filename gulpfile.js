@@ -126,6 +126,9 @@ gulp.task("build", ["sass", "jekyll:prod"]);
 
 gulp.task('deploy', ['build'], function() {
   return gulp.src('./dist/**/*')
-    .pipe($.ghPages())
-    .pipe(process.exit(0));
+    .pipe($.ghPages());
+});
+
+gulp.task('bamboo_deploy', ['deploy'], function() {
+    process.exit(0);
 });
