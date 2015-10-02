@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Scaffolding</title>
+  <meta name="description" content="This is the ZALORA styleguide project. It collects and showcases everything design related to ensure brand consistency throughout the company
+">
+  <meta name="robots" content="noindex,follow">
+
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/global/global.css">
+  <link rel="stylesheet" href="/assets/css/onsite/onsite.css">
+  <link rel="stylesheet" href="/assets/css/local/styleguide.css">
+  <link rel="canonical" href="http://styleguide.zalora.com/components/mobile/scaffolding.html">
+  <link rel="alternate" type="application/rss+xml" title="ZALORA styleguide" href="http://styleguide.zalora.com/feed.xml" />
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
+</head>
+
+
+<body class="">
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="zalora-logo" viewBox="0 0 154 21">
+        <polygon points="18.523,1.054 18.518,0.265 0.719,0.265 0.719,1.93 15.282,1.93 0,20.07 0,20.735 18.626,20.735
+        18.626,19.07 3.248,19.07" />
+        <path d="M36.263,0.118l-9.709,20.617h2.081l3.269-6.956h9.838l3.269,6.956h2.081L37.383,0.118H36.263z
+        M40.963,12.114h-8.281l4.126-8.833L40.963,12.114z" />
+        <polygon points="58.669,0.265 56.686,0.265 56.686,20.735 68.87,20.735 68.87,19.07 58.669,19.07   " />
+        <path d="M88.688,0c-6.217,0-11.087,4.612-11.087,10.5c0,5.888,4.87,10.5,11.087,10.5
+        c6.251,0,11.147-4.612,11.147-10.5C99.836,4.612,94.939,0,88.688,0z M88.749,19.188c-5.071,0-9.044-3.816-9.044-8.688
+        c0-4.872,3.973-8.688,9.044-8.688c5.037,0,8.983,3.816,8.983,8.688C97.732,15.372,93.786,19.188,88.749,19.188z" />
+        <path d="M119.743,10.567c2.457-0.985,3.702-2.642,3.702-4.93c0-3.363-2.628-5.371-7.031-5.371h-5.487v20.469h1.983
+        v-9.638h2.596c2.432,0,3.181,0.348,5.592,4.042l3.658,5.597h2.33l-4.854-7.242C121.318,12.157,120.58,11.136,119.743,10.567z
+        M112.909,1.93h3.171c3.392,0,5.26,1.327,5.26,3.736c0,2.428-1.846,3.765-5.199,3.765h-3.231V1.93z" />
+        <path d="M144.291,0.118h-1.121l-9.709,20.617h2.081l3.269-6.956h9.838l3.269,6.956H154L144.291,0.118z
+        M147.871,12.114h-8.281l4.126-8.833L147.871,12.114z" />
+    </symbol>
+
+    <symbol id="burger" viewBox="0 0 60 50">
+        <rect x="0" y="0" width="60" height="10"></rect>
+        <rect x="0" y="20" width="60" height="10"></rect>
+        <rect x="0" y="40" width="60" height="10"></rect>
+    </symbol>
+
+    <symbol id="icon-media" viewBox="0 0 42 49">
+        <path fill="none" stroke="#000" stroke-miterlimit="10" d="M.6.45h40.77v48H.6z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M.907 25.125h40.26V26H.907z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M18 31.5V41l8-4.75z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M32.322 8L22.1 19l-8.178-9S1.912 21.885 1.144 23.5c-.77 1.615.044 1 .044 1l12.734-13 8.178 9 10.222-11 8.845 7.833v-1.026L32.322 8z"/><circle fill-rule="evenodd" clip-rule="evenodd" cx="7.25" cy="7.25" r="2.25"/>
+    </symbol>
+
+    <symbol id="icon-engineering" viewBox="0 0 52 54">
+        <g><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M1.917 28.623h25.465l7.77 23.387L50.797 1.25z"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M1.917 28.623h25.465l7.77 23.387L50.797 1.25z"/></g><path fill-rule="evenodd" clip-rule="evenodd" d="M30 19.662h5.47l1.67 4.838L40.5 14z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16.7 39.853l7.134-8.372.762.65-7.135 8.372z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M13.275 36.934l4.54-5.327.76.648-4.54 5.328z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M20.125 42.772l4.54-5.328.76.65-4.54 5.327z"/>
+    </symbol>
+
+    <symbol id="icon-graphics" viewBox="0 0 46 49">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.148 35.77L18.48 33.1c-.162-.165-.426-.165-.59 0-.162.163-.162.427 0 .592l2.668 2.67-1.694 1.698-2.667-2.672c-.163-.164-.427-.164-.59 0-.165.164-.165.43 0 .593l2.664 2.672-1.917 1.925-2.667-2.672c-.163-.164-.427-.164-.59 0-.163.163-.163.427 0 .592l2.667 2.67-2.225 2.23-4.847-4.858c-.162-.165-.428-.165-.59 0-.16.163-.16.43 0 .592l4.848 4.857-3.158 3.163-8-8.115 14.037-13.734-.68-.684L.387 39.058l9.376 9.276L22.91 35.37l-.682-.682-1.08 1.082zm15.56-31.393l8.128 7.653-2.598 2.602-2.864-2.868c-.162-.164-.426-.164-.59 0-.163.164-.163.43 0 .592l2.865 2.868-1.695 1.698-2.865-2.87c-.162-.16-.427-.16-.59 0-.162.165-.162.43 0 .593l2.862 2.868-1.92 1.924-2.864-2.868c-.16-.165-.426-.165-.59 0-.162.162-.162.428 0 .59l2.864 2.87-1.854 1.858-4.85-4.857c-.162-.163-.426-.163-.59 0-.162.165-.162.43 0 .593l4.848 4.857-2.684 2.693-2.865-2.868c-.163-.164-.426-.164-.593 0-.163.164-.163.43 0 .592l2.863 2.868-.953.954.682.682 15.036-15.49-9.246-8.728-14.54 14.457.68.685 13.92-13.948zm-30.29-1.41L0 9.328l34.19 34.323 10.327 3.55-3.91-9.982L6.417 2.967zm-4.89 6.38l4.89-4.643L11.55 9.81 6.84 14.533 1.527 9.346zm33.34 33.273L7.69 15.388l4.715-4.724L39.58 37.898l3.143 7.746-7.856-3.024z"/><g><path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M24.42 15.242c2.12-1.38 2.774-4.078 1.138-7.8-1.633-3.72-.637-6.738-.154-7.056-3.015 1.32-11.817 5.707-5.758 14.442.025.01.05.015.074.025-.54 1.877-1.277 4.598-1.367 5.512-.69 7.063 1.286 28.02 2.82 28.02 2.26-.16 4.613-20.86 4.298-27.936-.038-.856-.626-3.412-1.05-5.208z"/><path fill="none" stroke="#000" stroke-miterlimit="10" d="M24.42 15.242c2.12-1.38 2.774-4.078 1.138-7.8-1.633-3.72-.637-6.738-.154-7.056-3.015 1.32-11.817 5.707-5.758 14.442.025.01.05.015.074.025-.54 1.877-1.277 4.598-1.367 5.512-.69 7.063 1.286 28.02 2.82 28.02 2.26-.16 4.613-20.86 4.298-27.936-.038-.856-.626-3.412-1.05-5.208z"/></g>
+    </symbol>
+</svg>
+
+    <div id="page-mover" class="page-mover container">
+        <header>
+            <div class="header-wrapper pvm container page-width-container">
+                <a class="site-title lfloat ui-inlineBlock ui-grid vBot mts" href="/" alt="ZALORA styleguide">
+                    <svg class="logo svg-asset">
+                        <use xlink:href="#zalora-logo" />
+                    </svg>
+                    <span class="tagline fontface-secondary">styleguide</span>
+                </a>
+                <a href="#" id="menu-icon" class="rfloat ui-inlineBlock">
+                    <svg class="svg-asset">
+                        <use xlink:href="#burger" />
+                    </svg>
+                </a>
+            </div>
+        </header>
+
+        <div class="page-width-container include-header-space">
+            <nav id="site-nav" class="site-nav">
+                
+<ul>
+
+    <li>
+        <a href="/" class=""alt="Home">
+            Home
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/design/logo.html" class=""alt="Corporate Identity">
+            Corporate Identity
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/design/logo.html" class=""alt="Our Logo">
+            Our Logo
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/design/typefaces.html" class=""alt="Brand Typefaces">
+            Brand Typefaces
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/design/colours.html" class=""alt="Colours">
+            Colours
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/design/pictograms.html" class=""alt="Pictograms">
+            Pictograms
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/design/dos-and-donts.html" class=""alt="Do's & Don'ts">
+            Do's & Don'ts
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+    <li>
+        <a href="/code/" class=""alt="Code">
+            Code
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/code/naming-conventions.html" class=""alt="Naming conventions">
+            Naming conventions
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/mobile/scaffolding.html" class="active"alt="Mobile">
+            Mobile
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/components/mobile/scaffolding.html" class="active"alt="Scaffolding">
+            Scaffolding
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/mobile/buttons.html" class=""alt="Buttons">
+            Buttons
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/mobile/forms.html" class=""alt="Forms">
+            Forms
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/mobile/typography.html" class=""alt="Typography">
+            Typography
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+    <li>
+        <a href="/components/desktop/buttons.html" class=""alt="Desktop">
+            Desktop
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/components/desktop/buttons.html" class=""alt="Buttons">
+            Buttons
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/desktop/components.html" class=""alt="Components">
+            Components
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/desktop/helpers.html" class=""alt="UI Helpers">
+            UI Helpers
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/desktop/grid.html" class=""alt="Grid">
+            Grid
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+    <li>
+        <a href="/components/onsite/homepage.html" class=""alt="Onsite">
+            Onsite
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/components/onsite/homepage.html" class=""alt="Homepage">
+            Homepage
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/onsite/segment_page.html" class=""alt="Segment Page">
+            Segment Page
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/onsite/shop_in_shop.html" class=""alt="Shop in Shop">
+            Shop in Shop
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/onsite/skinny_banners.html" class=""alt="Skinny Banners">
+            Skinny Banners
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/components/onsite/cross_catalog_banners.html" class=""alt="Cross Catalog Banners">
+            Cross Catalog Banners
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/engineering/onsite-coding-guidelines/onsite-coding-guidelines.html" class=""alt="Coding Guidelines">
+            Coding Guidelines
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+    <li>
+        <a href="/graphics/" class=""alt="Graphics">
+            Graphics
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/graphics/mobile/" class=""alt="Mobile Web & App">
+            Mobile Web & App
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/graphics/mobile/app-wireframe.html" class=""alt="App Wireframe">
+            App Wireframe
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/graphics/mobile/banners.html" class=""alt="App Banners">
+            App Banners
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/graphics/mobile/web-banners.html" class=""alt="Mobile Web Banners">
+            Mobile Web Banners
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/graphics/mobile/android-push-notifications.html" class=""alt="Android Push">
+            Android Push
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+    <li>
+        <a href="/graphics/desktop/homepage.html" class=""alt="Desktop">
+            Desktop
+        </a>
+        
+            
+<ul>
+
+    <li>
+        <a href="/graphics/desktop/homepage.html" class=""alt="Homepage">
+            Homepage
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/graphics/desktop/segment-page.html" class=""alt="Segment Page">
+            Segment Page
+        </a>
+        
+    </li>
+
+    <li>
+        <a href="/graphics/desktop/skinny-banners.html" class=""alt="Skinny Banners">
+            Skinny Banners
+        </a>
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+</ul>
+
+        
+    </li>
+
+</ul>
+
+            </nav>
+            <div class="page-content">
+                <div class="page-content__wrapper">
+                    <div class="page">
+    <div class="page__header">
+        <h1 class="page__header__title">Scaffolding</h1>
+        
+    </div>
+    <article class="page__content">
+        <h1 id="styleguide-1_0_0" class="styleguide">Scaffolding</h1>
+<p class="styleguide">The mobile site is structured on a fluid gruid system, with the choice to display up to four columns.</p><p class="styleguide">Because mobile devices vary in screen dimensions, the grid will fill the width of the device up to 800px.</p>
+<h1 id="styleguide-1_1_0" class="styleguide">Container</h1>
+<p class="styleguide">First rule of fight club: everything must be inside a <code class="styleguide">.container</code>.</p><p class="styleguide">The container regulates the size and form of the content. It also keeps everything centered, grounded and balanced.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="container">
+    <!-- All content goes here -->
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- All content goes here --&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_2_0" class="styleguide">Surfaces</h1>
+<p class="styleguide">All content on the mobile site is displayed on a surface. Surfaces set the default margins and padding, and give the page its basic shape.</p><p class="styleguide">Surfaces must be used with the grid system (See section 1.3). In the examples below, each surface has a <code class="styleguide">&lt;div class=&quot;full&quot;&gt;...&lt;/div&gt;</code> inside it. This is the HTML markup for a one-column layout with the grid system. Content may not be displayed correctly if the grid system is not used.</p>
+<h1 id="styleguide-1_2_1" class="styleguide">Desk</h1>
+<p class="styleguide">This will have 6px padding on both sides, and its background will be the gray of the site.</p><p class="styleguide">Content on the desk includes the site footer, product filter buttons, or other <code class="styleguide">&lt;aside&gt;</code>-like elements.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="desk">
+    <div class="full">This is the desk.</div>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desk"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>This is the desk.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_2_2" class="styleguide">Paper</h1>
+<p class="styleguide">This surface is a rectangle with a white background and 6px padding on both sides.</p><p class="styleguide">Most of the content on the site will be on a paper surface.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="paper">
+    <div class="full">This is paper.</div>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>This is paper.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_2_3" class="styleguide">Well</h1>
+<p class="styleguide">The well is a surface inset into the desk.</p><p class="styleguide">This is useful for auxiliary content, like filter and sorting options.
+When combined with CSS transitions, it looks like a panel in the desk
+is opening.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="well">
+    <div class="full">Don't fall in the well!</div>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>Don't fall in the well!<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_2_4" class="styleguide">Carbon</h1>
+<p class="styleguide">This fills the screen and has a darker background than the desk.
+Use it to emphasize content.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="carbon">
+    <div class="full">Pay attention.</div>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carbon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>Pay attention.<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_2_5" class="styleguide">Surface Spacing</h1>
+<p class="styleguide">All the surfaces have a left and right padding. However, <code class="styleguide">.paper</code> has
+additional padding because it has a border.</p><p class="styleguide">There are times when you want text in neighboring surfaces to have the same
+left and right padding. Add the class <code class="styleguide">z-content</code> to the surface element to
+make sure text lines up on all surfaces.</p><p class="styleguide">This can be used on any surface, but it won&#39;t have any effect on <code class="styleguide">.paper</code>.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="carbon">
+    <p>Without z-content, it looks like this</p>
+</div>
+<div class="desk">
+    <p>Without z-content, it looks like this</p>
+</div>
+<div class="well">
+    <p>Without z-content, it looks like this</p>
+</div>
+<div class="paper">
+    <p>Without z-content, it looks like this</p>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carbon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Without z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desk"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Without z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Without z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Without z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+<div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="carbon z-content">
+    <p>With z-content, it looks like this</p>
+</div>
+<div class="desk z-content">
+    <p>With z-content, it looks like this</p>
+</div>
+<div class="well z-content">
+    <p>With z-content, it looks like this</p>
+</div>
+<div class="paper z-content">
+    <p>With z-content, it looks like this</p>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"carbon z-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>With z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"desk z-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>With z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well z-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>With z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper z-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>With z-content, it looks like this<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_3_0" class="styleguide">Well</h1>
+<p class="styleguide">The mobile site supports up to four fluid columns. The columns will fill the width of the device up to 800px. This covers all handheld devices and many small tablets.</p><p class="styleguide">To use the grid, create a <em>div</em> and set its class to one of the following divisions:</p><ul class="styleguide"><li>full</li>
+<li>half</li>
+<li>two-thirds</li>
+<li>one-third</li>
+<li>three-quarters</li>
+<li>one-quarter</li>
+</ul>
+<h3>Nesting</h3>
+<p class="styleguide">Grid elements should not be nested.</p>
+<h3>Usage</h3>
+<p class="styleguide">All content should be in a grid element. Unexpected things may happen if content is placed outside of a grid element.</p>
+<h3>Important Note</h3>
+<p class="styleguide">This grid system does not use floats. This is to reduce the amount of markup required on the mobile site, and to reduce reflow/repaint complexity.</p><p class="styleguide">Because of this, IT IS REQUIRED that there is whitespace between the grid elements. In other words, <em>&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;</em> is BAD. <em>&lt;div class=&quot;half&quot;&gt;...&lt;/div&gt; &lt;div class=&quot;half&quot;&gt;...&lt;/div&gt;</em> is GOOD</p><p class="styleguide">It is enough to have a line break between grid elements. This notice is important if the HTML is minimized at some point.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="full">One column</div>
+<div class="half">1 of 2</div> <div class="half">2 of 2</div>
+<div class="one-third">1 of 3</div> <div class="one-third">2 of 3</div> <div class="one-third">3 of 3</div>
+<div class="one-third">1/3</div> <div class="two-thirds">2/3</div>
+<div class="one-quarter">1 of 4</div> <div class="one-quarter">2 of 4</div> <div class="one-quarter">3 of 4</div> <div class="one-quarter">4 of 4</div>
+<div class="one-quarter">1/4</div> <div class="three-quarters">3/4</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full"</span><span class="nt">&gt;</span>One column<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>1 of 2<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>2 of 2<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>1 of 3<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>2 of 3<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>3 of 3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third"</span><span class="nt">&gt;</span>1/3<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"two-thirds"</span><span class="nt">&gt;</span>2/3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-quarter"</span><span class="nt">&gt;</span>1 of 4<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-quarter"</span><span class="nt">&gt;</span>2 of 4<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-quarter"</span><span class="nt">&gt;</span>3 of 4<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-quarter"</span><span class="nt">&gt;</span>4 of 4<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-quarter"</span><span class="nt">&gt;</span>1/4<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"three-quarters"</span><span class="nt">&gt;</span>3/4<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<blockquote>
+<p class="styleguide">highlightgrid centergrid</p></blockquote>
+
+<h1 id="styleguide-1_3_1" class="styleguide">Grid Content Positioning</h1>
+<p class="styleguide">The content inside the grid cell can be positioned by adding any of the following classes:</p><ul class="styleguide"><li>.align-left - This is the default alignment</li>
+<li>.align-center</li>
+<li>.align-right</li>
+</ul><p class="styleguide">This works for any block level element.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="full align-left">
+    <p>Aligned left.</p>
+    <p>This is default.</p>
+    <p>Not impressive.</p>
+</div>
+<div class="full align-center">
+    <p>This must be important.</p>
+    <p>It's in the middle!</p>
+</div>
+<div class="full align-right">
+    <p>Now we're talking.</p>
+    <p>Position your elements anywhere</p>
+</div>
+<div class="one-third align-left">Left</div> <div class="one-third align-center">Center</div> <div class="one-third align-right">Right</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full align-left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Aligned left.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is default.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Not impressive.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full align-center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This must be important.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>It's in the middle!<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full align-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Now we're talking.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Position your elements anywhere<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-left"</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-center"</span><span class="nt">&gt;</span>Center<span class="nt">&lt;/div&gt;</span> <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-right"</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<blockquote>
+<p class="styleguide">highlightgrid</p></blockquote>
+
+<h1 id="styleguide-1_3_2" class="styleguide">Grid Cell Positioning</h1>
+<p class="styleguide">The grid cell itself can be positioned vertically. This works when there is
+more than one column.</p><ul class="styleguide"><li>.align-top - This is the default alignment</li>
+<li>.align-middle</li>
+<li>.align-bottom</li>
+</ul><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="one-third align-center align-top">
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+</div>
+<div class="one-third align-center align-middle">
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+</div>
+<div class="one-third align-right align-bottom">
+    <p>Fill it up</p>
+    <p>Fill it up</p>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-center align-top"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-center align-middle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"one-third align-right align-bottom"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Fill it up<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_3_4" class="styleguide">Spacing</h1>
+<p class="styleguide">The grid elements have very little vertical space between them.</p><p class="styleguide">To increase the vertical space between elements, you can use <em>.thick</em> grid
+elements, or give them some <em>.breathing-room</em>. <em>.breathing-room</em> gives twice
+as much space as <em>.thick</em>. Be aware that <em>.thick</em> uses padding, and <em>breathing-room</em>
+uses margins. Keep this in mind because this difference has implications on the design.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="paper">
+    <div class="full thick">
+        <div>Hello</div>
+    </div>
+    <div class="full thick">
+        <div>Bonjour</div>
+    </div>
+    <hr>
+    <div class="full breathing-room">
+        <div>Hello</div>
+    </div>
+    <div class="full breathing-room">
+        <div>Bonjour</div>
+    </div>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full thick"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>Hello<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full thick"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>Bonjour<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;hr&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full breathing-room"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>Hello<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"full breathing-room"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div&gt;</span>Bonjour<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<h1 id="styleguide-1_4_0" class="styleguide">Table Layout</h1>
+<p class="styleguide">On a shopping site, it&#39;s common to see data layed out as a table. This can be
+achieved with the following classes:</p><ul class="styleguide"><li><em>.table</em></li>
+<li><em>.row</em></li>
+<li><em>.cell</em></li>
+</ul><p class="styleguide">These tables can be used on any element.</p><p class="styleguide"><strong>NOTE:</strong> Unfortunately, table elements cannot be aligned with the alignment
+classes. The only way to satisfactorily align them is to give them full width.
+Set the class <em>table-full</em> on the table element to be able to align it.</p><div class="codeExample">
+    <div class="exampleOutputMobile example">
+        <div class="paper">
+    <div class="table">
+        <p class="row">
+            <span class="cell">One Label</span>
+            <span class="cell">Value</span>
+        </p>
+        <p class="row">
+            <span class="cell">Another Label&nbsp;</span>
+            <span class="cell">Value</span>
+        </p>
+    </div>
+</div>
+<!-- Different structure, same table -->
+<div class="paper">
+    <section class="table">
+        <div class="row">
+            <p class="cell">A third label&nbsp;</p>
+            <p class="cell">Value</p>
+        </div>
+        <div class="row">
+            <p class="cell">Last Label</p>
+            <p class="cell">Value</p>
+        </div>
+    </section>
+</div>
+<!-- Aligned right -->
+<div class="paper align-right">
+    <section class="table table-full">
+        <div class="row">
+            <p class="cell">A third label&nbsp;</p>
+            <p class="cell">Value</p>
+        </div>
+        <div class="row">
+            <p class="cell">Last Label</p>
+            <p class="cell">Value</p>
+        </div>
+    </section>
+</div>
+
+    </div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>One Label<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Another Label<span class="ni">&amp;nbsp;</span><span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Different structure, same table --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>A third label<span class="ni">&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Last Label<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="c">&lt;!-- Aligned right --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"paper align-right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;section</span> <span class="na">class=</span><span class="s">"table table-full"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>A third label<span class="ni">&amp;nbsp;</span><span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Last Label<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"cell"</span><span class="nt">&gt;</span>Value<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/section&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+    </article>
+</div>
+
+                </div>
+            </div>
+        </div>
+        <footer class="site-footer">
+    <div class="page-width-container">
+        <nav class="footer-nav">
+            <ul class="media-list man">
+                <li><a href="mailto:lionel.tan@zalora.com">Contact Us</a></li>
+            </ul>
+        </nav>
+        <p>
+            <small>Copyright &copy; 2015 – All rights reserved ZALORA.</small>
+        </p>
+    </div>
+</footer>
+
+    </div>
+    <script src=" /assets/js/vendor/fastclick.js "></script>
+    <script src=" /assets/js/styleguide.js "></script>
+    <script src=" /assets/js/navigation.js "></script>
+    <script src=" /assets/js/code.js "></script>
+</body>
+
+</html>
