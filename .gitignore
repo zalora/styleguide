@@ -4,3 +4,4 @@ node_modules
 src/assets/css/*
 .publish
 Gemfile.lock
+src/.jekyll-metadata
