@@ -394,10 +394,11 @@
 
 <p>We follow BEM methodology, meaning Block, Element, and Modifier.</p>
 
-<pre><code>.block {}
+<div class="highlighter-rouge"><pre class="highlight"><code>.block {}
 .block__element {}
 .block--modifier {}
 </code></pre>
+</div>
 
 <h4 id="explanation">Explanation</h4>
 
@@ -409,22 +410,24 @@
 
 <h2 id="js-somename">2. JS-someName</h2>
 
-<p>CSS must not use <code>js-* classes in selectors.
+<p>CSS must not use <code class="highlighter-rouge">js-* classes in selectors.
 Use the id attribute and </code>js-* class names are reserved for JavaScript-only use. Application-specific data or content can be stored in data-* attributes.</p>
 
 <p>The example below includes a dedicated JavaScript utility class to which behaviour is bound. It is independent of any specific UI component.</p>
 
-<pre><code>&lt;a class="js-showProfile" data-username="necolas" href="{url}"&gt;View&lt;/a&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;a class="js-showProfile" data-username="necolas" href="{url}"&gt;View&lt;/a&gt;
 </code></pre>
+</div>
 
 <h2 id="cms-somename">3. cms-someName</h2>
 
-<p>All css class name belongs to CMS should start with <code>cms-*</code>. For example:</p>
+<p>All css class name belongs to CMS should start with <code class="highlighter-rouge">cms-*</code>. For example:</p>
 
-<pre><code>&lt;div class="cms-homepage_banner"&gt;
+<div class="highlighter-rouge"><pre class="highlight"><code>&lt;div class="cms-homepage_banner"&gt;
   Content from CMS
 &lt;/div&gt;
 </code></pre>
+</div>
 
 
     </article>
