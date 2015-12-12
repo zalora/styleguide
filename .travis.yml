@@ -1,12 +1,12 @@
 language: ruby
 rvm:
- - "1.9.3"
+ - 2.1
  - rbx
 
 # disable the default submodule logic
 git:
  submodules: false
- 
+
 script:
  - sass --update --sourcemap=none src/assets/_scss:src/assets/_scss/styles
 
