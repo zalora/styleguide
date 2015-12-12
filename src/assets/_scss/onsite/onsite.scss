@@ -71,7 +71,7 @@ category: Shop in Shop
 ```html_example
 <div class="cms-full txtCenter">
   <div class="cms-sis-section-heading">
-	What's Trending
+    What's Trending
   </div>
 </div>
 ```
@@ -221,28 +221,28 @@ category: Homepage
 
 ```html_example
 <div class="cms-container">
-	<div class="cms-row">
-		<div class="cms-full">
-			<div class="cms-unisex-banner">
-				<a href="#">
-					<div class="cms-half cms-banner-lhs txtLeft">
-						<div class="cms-hero-cta cms-animate">Shop Women ></div>
-					</div>
-				</a>
-				<a href="#">
-					<div class="cms-half cms-banner-rhs txtRight">
-						<div class="cms-hero-cta cms-animate">Shop Men ></div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
+    <div class="cms-row">
+        <div class="cms-full">
+            <div class="cms-unisex-banner">
+                <a href="#">
+                    <div class="cms-half cms-banner-lhs txtLeft">
+                        <div class="cms-hero-cta cms-animate">Shop Women ></div>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="cms-half cms-banner-rhs txtRight">
+                        <div class="cms-hero-cta cms-animate">Shop Men ></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 ```
 
 ```
 .cms-unisex-banner {
-	background:url(http://static02-ec-sg.zalora.com/cms/outlet/orignal_outlet-hp_banner.jpg);
+    background:url(http://static02-ec-sg.zalora.com/cms/outlet/orignal_outlet-hp_banner.jpg);
 }
 ```
 
@@ -281,10 +281,10 @@ category: Homepage
     color: #000;
     opacity: 0.7;
 
-	font-family: "Apercu", arial, sans-serif;
+    font-family: "Apercu", arial, sans-serif;
     font-size: 14px;
-	font-weight: 700;
-	letter-spacing: 2px;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 .cms-hero-cta:hover {
@@ -423,18 +423,18 @@ a:hover .cms-hover-content {
 /* Skinny Banner */
 /*doc
 ---
-title: Skinny Banners
+title: Full Width Skinny
 name: sb-1-full-width-skinny
 category: Skinny Banners
 ---
 
 ```html_example
 <div class="cms-sb-full txtCenter cms-animate">
-	<div class="cms-sb-text">
-		<span class="cms-sb-highlight">X Jul 2015 - X Aug 2015</span>
-		Fashion Fever Week: The Ultimate Summer Savings
-		<span class="cms-sb-highlight">Up to 70% OFF!</span>
-	</div>
+    <div class="cms-sb-text">
+        <span class="cms-sb-highlight">X Jul 2015 - X Aug 2015</span>
+        Fashion Fever Week: The Ultimate Summer Savings
+        <span class="cms-sb-highlight">Up to 70% OFF!</span>
+    </div>
 </div>
 ```
 */
@@ -498,17 +498,17 @@ category: Skinny Banners
 
 ```html_example
 <div class="cms-sb-container">
-	<div class="cms-sb-half-left txtCenter cms-animate">
-		<div class="cms-sb-text">
-			<span class="cms-sb-highlight">TOPSHOP IS NOW ON ZALORA &gt;</span>
-		</div>
-	</div>
+    <div class="cms-sb-half-left txtCenter cms-animate">
+        <div class="cms-sb-text">
+            <span class="cms-sb-highlight">TOPSHOP IS NOW ON ZALORA &gt;</span>
+        </div>
+    </div>
 
-	<div class="cms-sb-half-right txtCenter cms-animate">
-		<div class="cms-sb-text">
-			TOPMAN IS NOW ON ZALORA &gt;
-		</div>
-	</div>
+    <div class="cms-sb-half-right txtCenter cms-animate">
+        <div class="cms-sb-text">
+            TOPMAN IS NOW ON ZALORA &gt;
+        </div>
+    </div>
 </div>
 ```
 */
@@ -705,4 +705,528 @@ category: Cross Catalog Banners
 
 .cms-ccb .cms-ccb-inner-left a:hover {
     border-bottom: none;
+}
+
+.cms-skinny-tooltip-left {
+    position: absolute;
+    z-index: 2;
+    margin-left: 0;
+    margin-top: 46px;
+    width: 456px;
+    padding: 15px 20px;
+    height: auto;
+    background: #ccc;
+    font-family: 'Apercu', arial, sans-serif;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+}
+
+.cms-arrow-tooltip-left {
+    position: absolute;
+    z-index: 2;
+    margin-left: 225px;
+    margin-top: 36px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 13px solid #ccc;
+    display: none;
+}
+
+.cms-sb-full-width-tooltip {
+    position: absolute;
+    z-index: 2;
+    margin-left: 240px;
+    margin-top: 10px;
+    width: 456px;
+    padding: 15px 20px;
+    height: auto;
+    background: #ccc;
+    font-family: Apercu, Arial, sans-serif;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+}
+
+.cms-sb-full-width-arrow-tooltip {
+    position: absolute;
+    z-index: 2;
+    margin-left: 480px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 13px solid #ccc;
+    display: none;
+}
+
+.cms-skinny-tooltip-right {
+    position: absolute;
+    z-index: 2;
+    margin-left: 500px;
+    margin-top: 46px;
+    width: 456px;
+    padding: 15px 20px;
+    height: auto;
+    background: #ccc;
+    font-family: 'Apercu', arial, sans-serif;
+    font-size: 12px;
+    display: none;
+    text-align: center;
+}
+
+.cms-arrow-tooltip-right {
+    position: absolute;
+    z-index: 2;
+    margin-left: 740px;
+    margin-top: 36px;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-bottom: 13px solid #ccc;
+    display: none;
+}
+/* Skinny Colors */
+/*doc
+---
+title: Sky Blue Skinny
+name: sb-3-full-width-skinny-skyblue
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-skyblue txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-skyblue {
+    background: #D8E6FF;
+}
+
+/*doc
+---
+title: Mint Skinny
+name: sb-3-full-width-skinny-mint
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-mint txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-mint {
+    background: #CFFFF0;
+}
+
+/*doc
+---
+title: Lilac Skinny
+name: sb-3-full-width-skinny-lilac
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-lilac txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-lilac {
+    background: #F2E6F7;
+}
+
+/*doc
+---
+title: Cotton Candy Skinny
+name: sb-3-full-width-skinny-cottoncandy
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-cottoncandy txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-cottoncandy {
+    background: #FFEFF3;
+}
+
+/*doc
+---
+title: Salmon Skinny
+name: sb-3-full-width-skinny-salmon
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-salmon txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-salmon {
+    background: #FFE2D9;
+}
+
+/*doc
+---
+title: Rose Skinny
+name: sb-3-full-width-skinny-rose
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-rose txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-rose {
+    background: #FFCFCA;
+}
+
+/*doc
+---
+title: Aluminium Skinny
+name: sb-3-full-width-skinny-aluminium
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-aluminium txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-aluminium {
+    background: #DDD;
+}
+
+/*doc
+---
+title: Powder Blue Skinny
+name: sb-3-full-width-skinny-powderblue
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-powderblue txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-powderblue {
+    background: #A7C4E2;
+}
+
+/*doc
+---
+title: Pine Skinny
+name: sb-3-full-width-skinny-pine
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-pine txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-pine {
+    background: #6BBAB7;
+}
+
+/*doc
+---
+title: Heather Skinny
+name: sb-3-full-width-skinny-heather
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-heather txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-heather {
+    background: #CDBCC8;
+}
+
+/*doc
+---
+title: Blush Skinny
+name: sb-3-full-width-skinny-blush
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-blush txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-blush {
+    background: #FFC5D5;
+}
+
+.cms-sb-peach {
+    background: #FFAB89;
+}
+
+/*doc
+---
+title: Rosewood Skinny
+name: sb-3-full-width-skinny-rosewood
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-rosewood txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-rosewood {
+    background: #F19E98;
+}
+
+/*doc
+---
+title: Storm Skinny
+name: sb-3-full-width-skinny-storm
+category: Skinny Banners
+---
+
+```html_example
+<div class="cms-sb-full cms-sb-storm txtCenter cms-animate">
+    <div class="cms-sb-text">
+        12:12 Overload your carts now
+    </div>
+</div>
+```
+*/
+.cms-sb-storm {
+    background: #AAA;
+}
+
+.cms-sb-highlight-red {
+    color: red;
+}
+
+/*doc
+---
+title: Optional SIS grid
+name: sis-3-grid
+category: Shop in Shop
+---
+
+```html_example
+<div class="cms-container">
+    <div class="cms-row">
+        <div class="cms-full txtCenter">
+            <!-- Women Col 1 -->
+            <div class="lfloat">
+                <a href="/women/all-products/?cmpgn_one=xmasformom">
+                    <div class="cms-small-cat">
+                        <img src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_forMom.jpg" src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_forMom.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        For Awesome Moms
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+                <a href="/men/all-products/?cmpgn_one=xmasforbf">
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-25"></div>
+                    <div class="cms-large-cat">
+                        <img src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_forBF_WOMEN.jpg" src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_forBF_WOMEN.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        For The Boyfriend
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Women Col 2 -->
+            <div class="lfloat cms-spacer-3grid">
+                <a href="/women/all-products/?cmpgn_one=wxmasforme">
+                    <div class="cms-large-cat">
+                        <img src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_TomeFromme_WOMEN.jpg" src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_TomeFromme_WOMEN.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        To me, From Me
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+                <a href="/women/all-products/?cmpgn_one=wxmasforbff">
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-25"></div>
+                    <div class="cms-small-cat">
+                        <img src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_BFF_WOMEN.jpg" src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_BFF_WOMEN.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        For My Bestie
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Women Col 3 -->
+            <div class="lfloat cms-spacer-3grid">
+                <a href="/men/all-products/?cmpgn_one=xmasfordad">
+                    <div class="cms-small-cat">
+                        <img src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_Fordad.jpg" src="http://zstaticsg02-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_Fordad.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        For Cool Dads
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+                <a href="/women/all-products/?cmpgn_one=wxmassecretsanta">
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-35"></div>
+                    <div class="cms-spacer-25"></div>
+                    <div class="cms-large-cat">
+                        <img src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_SECSANTA.jpg" src="http://zstaticsg01-a.akamaihd.net/cms/campaign/christmas/orignal_XMAS_LP_SECSANTA.jpg">
+                    </div>
+                    <div class="cms-for-name">
+                        From Secret Santa
+                        <div class="cms-spacer-15"></div>
+                        <div class="cms-underline-cta">
+                            Shop Now &gt;
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+```
+*/
+.cms-small-cat {
+    width: 322px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.cms-row .cms-full .cms-small-cat img {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 322px;
+    height: 300px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.cms-row .cms-full .cms-small-cat img:hover {
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.cms-large-cat {
+    width: 322px;
+    height: 558px;
+    overflow: hidden;
+}
+
+.cms-row .cms-full .cms-large-cat img {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    width: 322px;
+    height: 558px;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.cms-row .cms-full .cms-large-cat img:hover {
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    cursor: pointer;
+}
+
+.cms-for-name {
+    position: absolute;
+    z-index: 2;
+    margin-top: -20px;
+    margin-left: 17px;
+    text-align: center;
+    width: 288px;
+    padding-top: 20px;
+    font-family: "Apercu", arial, sans-serif;
+    line-height: 1.6em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 16px;
+    color: #000;
+    background: #fff;
+    text-transform: uppercase;
+}
+
+.cms-underline-cta {
+    display: inline-block;
+    font-family: "Apercu", arial, sans-serif;
+    line-height: 1.6em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 14px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #fff;
+    -webkit-transition: all .35s ease;
+    -moz-transition: all .35s ease;
+    -o-transition: all .35s ease;
+    -ms-transition: all .35s ease;
+    transition: all .35s ease;
 }
