@@ -7,7 +7,7 @@ download-title: 'View colours on Github'
 
 ## Primary Colours
 
-Our base colour palette is monochrome (black and white).
+Our base colour palette is monochrome.
 
 <ul class="color-palette ui-listUnstyled grid">
     <li class="grid__col grid__col--narrow color-palette__color">
