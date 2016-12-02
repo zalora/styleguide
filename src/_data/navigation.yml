@@ -21,6 +21,10 @@
     - text: Mobile
       url: /components/mobile/scaffolding.html
       subitems:
+        - text: Grid
+          url: /components/mobile/grid.html
+        - text: Colours
+          url: /components/mobile/colours.html
         - text: Scaffolding
           url: /components/mobile/scaffolding.html
         - text: Buttons
@@ -29,6 +33,8 @@
           url: /components/mobile/forms.html
         - text: Typography
           url: /components/mobile/typography.html
+        - text: Components
+          url: /components/mobile/components.html
     - text: Desktop
       url: /components/desktop/buttons.html
       subitems:
