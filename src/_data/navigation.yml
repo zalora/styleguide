@@ -22,19 +22,13 @@
       url: /components/mobile/scaffolding.html
       subitems:
         - text: Grid
-          url: /components/mobile/grid.html
+          url: /components/mobile/grid-mobile.html
         - text: Colours
-          url: /components/mobile/colours.html
-        - text: Scaffolding
-          url: /components/mobile/scaffolding.html
+          url: /components/mobile/colours-mobile.html
         - text: Buttons
-          url: /components/mobile/buttons.html
-        - text: Forms
-          url: /components/mobile/forms.html
-        - text: Typography
-          url: /components/mobile/typography.html
+          url: /components/mobile/buttons-mobile.html
         - text: Components
-          url: /components/mobile/components.html
+          url: /components/mobile/components-mobile.html
     - text: Desktop
       url: /components/desktop/buttons.html
       subitems:

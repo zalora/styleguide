@@ -13,7 +13,11 @@
 .colorHighlightPositiveReduct   { background-color: $colorHighlightPositiveReduct }
 .colorHighlightPositive         { background-color: $colorHighlightPositive }
 .colorHighlightNegative         { background-color: $colorHighlightNegative }
-
+.colorPositiveDark              { background-color:#00B09F }
+.colorPositiveLight             { background-color:#D4ECE7 }
+.colorNeutral                   { background-color:#9DABAE }
+.colorNegativeDark              { background-color:#BA4242 }
+.colorNegativeLight             { background-color:#FF8484 }
 .color-palette {
     .color-palette__color__sample {
         padding-top: 50%;

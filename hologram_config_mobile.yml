@@ -2,7 +2,7 @@
 # All paths should be relative to there
 
 # The directory containing the source files to parse recursively
-source: ./src/assets/_scss/mobile
+source: ./src/assets/_scss/global/mobile
 
 # The directory that hologram will build to
 destination: ./src/components/mobile
