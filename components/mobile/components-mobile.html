@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Mobile App Wireframe</title>
+  <title>Components-Mobile</title>
   <meta name="description" content="This is the ZALORA styleguide project. It collects and showcases everything design related to ensure brand consistency throughout the company
 ">
   <meta name="robots" content="noindex,follow">
@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="/assets/css/global/mobile/global.css">
   <link rel="stylesheet" href="/assets/css/onsite/onsite.css">
   <link rel="stylesheet" href="/assets/css/local/styleguide.css">
-  <link rel="canonical" href="http://styleguide.zalora.com/graphics/mobile/app-wireframe.html">
+  <link rel="canonical" href="http://styleguide.zalora.com/components/mobile/components-mobile.html">
   <link rel="alternate" type="application/rss+xml" title="ZALORA styleguide" href="http://styleguide.zalora.com/feed.xml" />
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png" />
 </head>
@@ -180,7 +180,7 @@
     </li>
 
     <li>
-        <a href="/components/mobile/components-mobile.html" class=""alt="Components">
+        <a href="/components/mobile/components-mobile.html" class="active"alt="Components">
             Components
         </a>
         
@@ -309,7 +309,7 @@
 <ul>
 
     <li>
-        <a href="/graphics/mobile/app-wireframe.html" class="active"alt="App Wireframe">
+        <a href="/graphics/mobile/app-wireframe.html" class=""alt="App Wireframe">
             App Wireframe
         </a>
         
@@ -387,11 +387,99 @@
                 <div class="page-content__wrapper">
                     <div class="page">
     <div class="page__header">
-        <h1 class="page__header__title">Mobile App Wireframe</h1>
+        <h1 class="page__header__title">Components-Mobile</h1>
         
     </div>
     <article class="page__content">
-        <p class="example-container"><img src="/assets/images/content/onsite/desktop/mobile-app-wireframe.jpg" alt="App Wireframe" /></p>
+        <h1 id="mobile-components-1" class="styleguide">Price</h1>
+<p class="styleguide">Price boxes are a common way to display a price of an item. Note the containers for reduced and special prices:</p><div class="codeExample">
+    <div class="exampleOutput">
+    	<div>
+<strong> Without Discount </strong>
+    <br/>
+    <span class="price-box"> $15 <span>
+</div>
+<div class="price-box">
+<strong> With Discount </strong>
+    <br/>
+    <span class="price-box__special-price"> $10 </span>
+    <br/>
+    <span class="price-box__old-price"> $15 </span>
+</div>
+
+  	</div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;strong&gt;</span> Without Discount <span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;br/&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price-box"</span><span class="nt">&gt;</span> $15 <span class="nt">&lt;span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"price-box"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;strong&gt;</span> With Discount <span class="nt">&lt;/strong&gt;</span>
+    <span class="nt">&lt;br/&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price-box__special-price"</span><span class="nt">&gt;</span> $10 <span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;br/&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price-box__old-price"</span><span class="nt">&gt;</span> $15 <span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<blockquote>
+<p class="styleguide">example-container</p></blockquote>
+
+<h1 id="mobile-components-2" class="styleguide">Pagination</h1>
+<p class="styleguide">Pagination</p><p class="styleguide">This component is used mainly in the catalog of the shop, for example:</p><div class="codeExample">
+    <div class="exampleOutput">
+    	<section>
+  <ul class="pagination mbs">
+    <li class="mrxs">
+      <span title="1" class=" current" data-url="/women/clothing/?page=1">1</span>
+    </li>
+    <li class="mrxs">
+      <a title="2" class="" data-url="/women/clothing/?page=2">2</a>
+    </li>
+    <li class="mrxs">
+      <a title="3" class="" data-url="/women/clothing/?page=3">3</a>
+    </li>
+    <li class="mrxs">
+      <a title="4" class="" data-url="/women/clothing/?page=4">4</a>
+    </li>
+    <li class="mrxs">
+      <a title="5" class="" data-url="/women/clothing/?page=5">5</a>
+    </li>
+  </ul>
+</section>
+
+  	</div>
+    <div class="codeBlock">
+        <div class="highlight">
+            <pre><span class="nt">&lt;section&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"pagination mbs"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mrxs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;span</span> <span class="na">title=</span><span class="s">"1"</span> <span class="na">class=</span><span class="s">" current"</span> <span class="na">data-url=</span><span class="s">"/women/clothing/?page=1"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/span&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mrxs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">title=</span><span class="s">"2"</span> <span class="na">class=</span><span class="s">""</span> <span class="na">data-url=</span><span class="s">"/women/clothing/?page=2"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mrxs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">title=</span><span class="s">"3"</span> <span class="na">class=</span><span class="s">""</span> <span class="na">data-url=</span><span class="s">"/women/clothing/?page=3"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mrxs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">title=</span><span class="s">"4"</span> <span class="na">class=</span><span class="s">""</span> <span class="na">data-url=</span><span class="s">"/women/clothing/?page=4"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"mrxs"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">title=</span><span class="s">"5"</span> <span class="na">class=</span><span class="s">""</span> <span class="na">data-url=</span><span class="s">"/women/clothing/?page=5"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/section&gt;</span></pre>
+        </div>
+    </div>
+</div>
+
+<blockquote>
+<p class="styleguide">example-container</p></blockquote>
 
     </article>
 </div>
