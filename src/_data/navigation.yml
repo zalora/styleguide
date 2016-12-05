@@ -19,7 +19,7 @@
     - text: Naming conventions
       url: /code/naming-conventions.html
     - text: Mobile
-      url: /components/mobile/scaffolding.html
+      url: /components/mobile/grid-mobile.html
       subitems:
         - text: Grid
           url: /components/mobile/grid-mobile.html
