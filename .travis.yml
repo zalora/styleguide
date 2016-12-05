@@ -1,7 +1,6 @@
 language: ruby
 rvm:
  - 2.1
- - rbx
 
 # disable the default submodule logic
 git:
