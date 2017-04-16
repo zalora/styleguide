@@ -38,9 +38,12 @@ For further reading on submodules: [Git-Tools-Submodules](https://git-scm.com/bo
 
 ### Gulp
 
-We use Gulp to run Hologram, Sass compilation and Jekyll rebuild. Browser Sync refreshes your Sass changes directly in the browser without reloading. Yaay! BONUS: Try connection to your local server with more than one browser, and navigation the page ;)
+We use Gulp to run Hologram, Sass compilation and Jekyll rebuild. We use Ruby bundler to maintain Hologram and Jekyll dependencies. Browser Sync refreshes your Sass changes directly in the browser without reloading. Yaay! BONUS: Try connection to your local server with more than one browser, and navigation the page ;)
+
+The environment required for this project is maintained in Dockerfile. Its corresponding Docker image is published to Docker Hub under zalora/styleguide. The Docker image includes all the dependencies you need for development. To start your development, attach your styleguide checkout as a volume under ```/root/styleguide```, then initialise the dependencies as shown below.
 
 Install npm packages with: ```npm install```
+Install Jekyll and Hologram dependencies with ```gem install bundler;bundle install;```
 
 Then run ```gulp``` to start developing. That will fire up a local web server and wait for you to edit any .html, .js, .md, .scss file.
 
@@ -52,7 +55,7 @@ We love PRs, please fork this repo and do a PR if there is something you need to
 
 from the root of the project and the compiled jekyll site will be pushed to the `gh-pages` branch and with this updated on the web.
 
-Jenkins uses the Dockerfile maintained in this repo to run ```gulp ci_deploy``` to publish the latest Jekyll site. 
+Jenkins uses the Dockerfile maintained in this repo to run ```gulp ci_deploy``` to publish the latest Jekyll site. Its corresponding Docker image is published to Docker Hub under zalora/styleguide. The image includes all the dependencies you need for development. To start your development, attach your styleguide checkout under ```/root/styleguide```, install npm and bundle as shown above, than you are ready to go!
 
 
 ## Maintaining Content
