@@ -47,10 +47,13 @@ Then run ```gulp``` to start developing. That will fire up a local web server an
 
 #### Deploying to Github pages
 
-To deploy the site, make a pull request to ```master``` and watch Bamboo do magic!
+To deploy the site, make a pull request to ```master``` and watch Jenkins do magic!
 We love PRs, please fork this repo and do a PR if there is something you need to change.
 
 from the root of the project and the compiled jekyll site will be pushed to the `gh-pages` branch and with this updated on the web.
+
+Jenkins uses the Dockerfile maintained in this repo to run ```gulp ci_deploy``` to publish the latest Jekyll site. 
+
 
 ## Maintaining Content
 
