@@ -21,6 +21,8 @@ RUN sh install.sh
 
 RUN rbenv install 2.3.0 && rbenv global 2.3.0
 
+RUN npm install -g npm gulp
+
 # Rehash the built-in command map so that it uses the latest npm we installed here.
 RUN hash -r
 
