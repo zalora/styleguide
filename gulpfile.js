@@ -35,7 +35,7 @@ gulp.task("hologram-rebuild", ["clean:hologram"], function() {
   // Grabs all Hologram config files and
   // executes Hologram for each of them
   return gulp.src('hologram_*.yml', { read: false })
-    .pipe($.shell('hologram <%= file.path %>'));
+    .pipe($.shell('bundle exec hologram <%= file.path %>'));
 });
 
 
@@ -44,10 +44,10 @@ gulp.task("hologram-rebuild", ["clean:hologram"], function() {
  */
 
 // This will build the site with the production settings
-gulp.task("jekyll:prod", ["hologram-rebuild"], $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
+gulp.task("jekyll:prod", ["hologram-rebuild"], $.shell.task("bundle exec jekyll build --config _config.yml,_config.build.yml"));
 
 // Runs the build command for Jekyll to compile the site locally
-gulp.task("jekyll:dev", $.shell.task("jekyll build"));
+gulp.task("jekyll:dev", $.shell.task("bundel exec jekyll build"));
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   browserSync.reload();
 });
@@ -55,7 +55,7 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
 
 // Runs the build command for Jekyll,
 // but waits for hologram to finish
-gulp.task("jekyll:dev-hologram", ["hologram-rebuild"], $.shell.task("jekyll build"));
+gulp.task("jekyll:dev-hologram", ["hologram-rebuild"], $.shell.task("bundle exec jekyll build"));
 gulp.task("hologram-jekyll-rebuild", ["jekyll:dev-hologram"], function() {
   browserSync.reload();
 });
@@ -129,6 +129,6 @@ gulp.task('deploy', ['build'], function() {
     .pipe($.ghPages());
 });
 
-gulp.task('bamboo_deploy', ['deploy'], function() {
+gulp.task('ci_deploy', ['deploy'], function() {
     process.exit(0);
 });
