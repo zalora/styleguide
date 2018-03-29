@@ -1,8 +1,6 @@
 ---
 title: Typefaces
 layout: page
-download-url: "/assets/downloads/zalora-fonts.zip"
-download-title: "Download Fontfiles"
 ---
 
 ## Primary Typeface
@@ -23,23 +21,6 @@ Uppercase tracking should always be set to a minimum of **130**. Lowercase/sente
     <span style="font-size: 30px;">Regular</span>
     <span style="font-size: 30px; font-weight: 700;">Bold</span><br>
     <span style="font-size: 20px;">1234567890</span>
-</p>
-
-## Supporting Typeface
-
-Our supporting typeface is Baskerville Italic. We use only the regular weight in Italic styling.
-
-### About Baskerville italic
-
-This is a classic and elegant serif font that complements well with our primary typeface Aperçu, a modern sans-serif. This should be used on selectively and sparingly. Think of it as the special occa- sion scarf in your drawer that you whip out once in awhile when your outfit feels like it’s lacking that certain pizzazz.
-
-### Stylisation
-
-We only use Baskerville Italic for low- ercase/sentence case. Tracking should always fixed at 0.
-
-<p class="example-container" style="font-family: Baskerville; font-style: italic; line-height: 1.2;">
-    <span style="font-size: 80px;">Baskerville</span><br>
-    <span style="font-size: 30px;">Italic</span>
 </p>
 
 ## Breakdown of Messaging
