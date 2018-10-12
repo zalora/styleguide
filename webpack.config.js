@@ -7,10 +7,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: path.resolve(__dirname, 'src/index.js'),
+    mode: 'development',
+    entry: {
+        index: [
+            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+            './src/index.js'
+        ]
+    },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js'
+        path: path.resolve(__dirname, 'public'),
+        filename: '[name].js',
+        publicPath: '/',
+        hotUpdateChunkFilename: '.hot/[id].[hash].hot-update.js',
+        hotUpdateMainFilename: '.hot/[hash].hot-update.json'
     },
     module: {
         noParse: /\.elm$/,
@@ -24,6 +33,10 @@ module.exports = {
                 ]
             },
             {
+                test: /\.md$/,
+                use: 'raw-loader'
+            },
+            {
                 test: /\.elm$/,
                 exclude: [/elm-stuff/, /node_modules/],
                 use: [
@@ -31,7 +44,9 @@ module.exports = {
                     {
                         loader: 'elm-webpack-loader',
                         options: {
-                            cwd: __dirname
+                            cwd: __dirname,
+                            debug:
+                                process.env.ELM_DEBUGGER === 'false' ? false : true
                         }
                     }
                 ]
@@ -49,18 +64,16 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: 'public/index.html'
+            template: 'index.html'
         }),
         new CopyWebpackPlugin([
             {
                 from: 'src/assets/',
                 to: 'assets'
             }
-        ])
+        ]),
+        new webpack.HotModuleReplacementPlugin(),
     ],
-    devServer: {
-        port: 9000,
-        contentBase: path.join(__dirname, 'dist'),
-        stats: { colors: true }
-    }
+
+
 };
