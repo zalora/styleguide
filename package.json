@@ -1,0 +1,26 @@
+{
+  "name": "sanji",
+  "version": "1.0.0",
+  "description": "New portal for ZALORA styleguide",
+  "main": "index.html",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --hot --inline",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
+  },
+  "author": "Yichang Li",
+  "devDependencies": {
+    "copy-webpack-plugin": "^4.5.3",
+    "css-loader": "^1.0.0",
+    "elm-hot-webpack-loader": "^1.0.2",
+    "elm-webpack-loader": "^5.0.0",
+    "fast-sass-loader": "^1.4.6",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.9.3",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}

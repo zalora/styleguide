@@ -1,0 +1,3 @@
+[submodule "src/global"]
+	path = src/global
+	url = git@github.com:zalora/global-scss.git
