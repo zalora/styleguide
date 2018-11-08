@@ -1,8 +1,8 @@
 {
-  "name": "sanji",
+  "name": "styleguide",
   "version": "1.0.0",
-  "description": "New portal for ZALORA styleguide",
-  "main": "index.html",
+  "description": "New portal for ZALORA style",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "start": "nodemon index.js --exec babel-node --presets @babel/preset-env"

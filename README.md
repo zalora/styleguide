@@ -1,6 +1,6 @@
-# Sanji
+# Styleguide
 
-This project is for our new style guide!
+A new portal for our new [style](https://github.com/zalora/style).
 
 ## Requirements
 
