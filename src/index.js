@@ -8,6 +8,7 @@ import CodeMirrorMode from 'codemirror/mode/htmlmixed/htmlmixed';
 import hljs from 'highlight.js/lib/highlight';
 import xml from 'highlight.js/lib/languages/xml';
 import 'highlight.js/styles/atom-one-light.css'
+import path from 'path';
 
 
 const node = document.getElementById('root');
@@ -20,24 +21,5 @@ app.ports.highlight.subscribe(function (classname) {
         hljs.initHighlighting();
     }, 50)
 });
-
-// document.onreadystatechange = () => {
-//     if (document.readyState === 'interactive') {
-//         const $playground = document.getElementById('playground__editor');
-//         const codeMirror = CodeMirror.fromTextArea(
-//             $playground,
-//             {
-//                 mode: 'htmlmixed',
-//                 theme: 'material',
-//                 lineNumbers: true
-//             }
-//         );
-//         codeMirror.on('change', (cm, changes) => {
-//             const node = document.getElementById('playground__preview');
-//             node.innerHTML = codeMirror.getValue();
-//         });
-
-//     }
-// };
 
 registerServiceWorker();

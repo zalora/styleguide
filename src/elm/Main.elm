@@ -1,20 +1,20 @@
-module Main exposing (Model, Msg(..), init, main, update, view)
+port module Main exposing (Model, Msg(..), init, main, update, view)
 
 -- import CodeMirror exposing (..)
 
 import AppState exposing (AppState(..))
 import Browser
+import Dict exposing (Dict)
 import Html exposing (Attribute, Html, a, code, div, h1, input, li, pre, text, textarea, ul)
 import Html.Attributes exposing (attribute, class, placeholder, type_)
 import Html.Events exposing (on, onClick, onInput, stopPropagationOn, targetValue)
 import Http
-import Json.Decode as Decode exposing (Decoder, list, string)
-import Json.Decode.Pipeline exposing (required, resolve)
+import Json.Decode as Decode exposing (Decoder, dict, list, string)
+import Json.Decode.Pipeline exposing (hardcoded, required, resolve)
 import Json.Encode as Encode exposing (string)
 import Markdown exposing (toHtml)
 import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
 import Markdown.Config exposing (HtmlOption(..), Options)
-import Port exposing (highlight)
 import Url.Builder as Builder
 
 
@@ -25,15 +25,16 @@ import Url.Builder as Builder
 
 type alias Model =
     { code : String
-    , activeDoc : Maybe Doc
-    , docList : List String
+    , activeDocContent : Maybe String
+    , activeDocName : Maybe String
+    , docList : Dict String (List File)
     , appState : AppState Http.Error
     }
 
 
-type alias Doc =
+type alias File =
     { name : String
-    , content : String
+    , path : String
     }
 
 
@@ -74,7 +75,7 @@ mainView model =
     div []
         [ navBar
         , sideMenu <| .docList model
-        , article <| .activeDoc model
+        , article <| .activeDocContent model
         ]
 
 
@@ -84,26 +85,34 @@ navBar =
         [ h1 [] [ text "Zalora Styleguide 2.0" ] ]
 
 
-sideMenu : List String -> Html Msg
+sideMenu : Dict String (List File) -> Html Msg
 sideMenu docs =
     div [ class "sidebar" ]
         [ div [ class "sidebar__search" ]
             [ input [ class "sidebar__search--input", type_ "input", placeholder "Type to search" ] [] ]
-        , fileList docs
+        , sideMenuList docs
         ]
 
 
-fileList : List String -> Html Msg
-fileList docnames =
+sideMenuList : Dict String (List File) -> Html Msg
+sideMenuList docMap =
     let
-        item : String -> Html Msg
-        item name =
-            li [ onClick (SelectFile name), class "sidebar__filename" ] [ text <| String.replace ".md" "" name ]
+        subList : ( String, List File ) -> Html Msg
+        subList ( category, fileList ) =
+            div []
+                [ a [] [ text category ]
+                , ul [] <|
+                    List.map (\i -> item i) fileList
+                ]
+
+        item : File -> Html Msg
+        item file =
+            li [ onClick (SelectFile file), class "sidebar__filename", attribute "data-path" <| .path file ] [ text <| .name file ]
     in
-    ul [] <| List.map (\name -> item name) docnames
+    ul [] <| List.map (\s -> subList s) (Dict.toList docMap)
 
 
-article : Maybe Doc -> Html msg
+article : Maybe String -> Html msg
 article doc =
     let
         options : Options
@@ -134,7 +143,7 @@ article doc =
     in
     case doc of
         Just value ->
-            .content value
+            value
                 |> Block.parse (Just options)
                 |> List.map customHtmlBlock
                 |> List.concat
@@ -149,15 +158,15 @@ article doc =
 
 
 type Msg
-    = InitView (Result Http.Error (List String))
-    | SelectFile String
-    | FileLoaded (Result Http.Error Doc)
+    = InitView (Result Http.Error (Dict String (List File)))
+    | SelectFile File
+    | FileLoaded (Result Http.Error String)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
-        { activeDoc, appState } =
+        { appState } =
             model
     in
     case msg of
@@ -172,17 +181,18 @@ update msg model =
         FileLoaded data ->
             case data of
                 Ok doc ->
-                    ( { model | activeDoc = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
+                    ( { model | activeDocContent = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
 
                 Err error ->
-                    ( { model | appState = AppState.toFailure error appState }, Cmd.none )
+                    ( { model | activeDocContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
 
-        SelectFile filename ->
-            ( { model | appState = AppState.toLoading appState }, loadFile filename )
+        SelectFile file ->
+            ( { model | activeDocName = Just (.name file), appState = AppState.toLoading appState }, loadFile file )
 
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
+    -- receivedFile (\doc -> FileLoaded doc)
     Sub.none
 
 
@@ -193,34 +203,34 @@ subscriptions _ =
 init : ( Model, Cmd Msg )
 init =
     let
+        fileDecoder : Decoder File
+        fileDecoder =
+            Decode.succeed File
+                |> required "name" Decode.string
+                |> required "path" Decode.string
+
         cmd =
-            Decode.list Decode.string
-                |> Http.get "/docList"
+            Decode.dict (Decode.list fileDecoder)
+                |> Http.get "/postList.json"
                 |> Http.send InitView
     in
     ( { code = ""
-      , activeDoc = Nothing
-      , docList = []
+      , activeDocContent = Nothing
+      , activeDocName = Nothing
+      , docList = Dict.fromList []
       , appState = AppState.init
       }
     , cmd
     )
 
 
-loadFile : String -> Cmd Msg
-loadFile filename =
+loadFile : File -> Cmd Msg
+loadFile file =
     let
         url =
-            Builder.absolute [ "file" ] [ Builder.string "name" filename ]
-
-        docDecoder : Decoder Doc
-        docDecoder =
-            Decode.succeed Doc
-                |> required "name" Decode.string
-                |> required "content" Decode.string
+            Builder.relative [ .path file ] []
     in
-    docDecoder
-        |> Http.get url
+    Http.getString url
         |> Http.send FileLoaded
 
 
@@ -236,3 +246,15 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
+
+
+
+---- PORT -----
+
+
+port highlight : String -> Cmd msg
+
+
+
+-- port loadFile : File -> Cmd msg
+-- port receivedFile : (Doc -> msg) -> Sub msg

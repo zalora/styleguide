@@ -1,0 +1,18 @@
+{
+    "Assets": [
+        {
+            "name": "Color",
+            "path": "./../posts/File3.md"
+        }
+    ],
+    "Components": [
+        {
+            "name": "Button",
+            "path": "./../posts/Code.md"
+        },
+        {
+            "name": "Table",
+            "path": "./../posts/TofC.md"
+        }
+    ]
+}

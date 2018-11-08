@@ -10,7 +10,6 @@ module.exports = {
     mode: 'development',
     entry: {
         index: [
-            'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
             './src/index.js'
         ]
     },
@@ -72,7 +71,6 @@ module.exports = {
                 to: 'assets'
             }
         ]),
-        new webpack.HotModuleReplacementPlugin(),
     ],
 
 

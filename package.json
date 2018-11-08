@@ -5,12 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "nodemon index.js --exec babel-node --presets @babel/preset-env"
+    "start": "webpack-dev-server --port 9000 --hot --inline"
   },
   "author": "Yichang Li",
   "devDependencies": {
     "@babel/core": "^7.1.2",
-    "@babel/node": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "copy-webpack-plugin": "^4.5.3",
     "css-loader": "^1.0.0",
@@ -21,17 +20,13 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.4",
     "node-sass": "^4.9.3",
-    "nodemon": "^1.18.5",
     "raw-loader": "^0.5.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-middleware": "^3.4.0",
-    "webpack-dev-server": "^3.1.9",
-    "webpack-hot-middleware": "^2.24.3"
+    "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
     "codemirror": "^5.40.2",
-    "express": "^4.16.4",
     "highlight.js": "^9.13.1"
   }
 }
