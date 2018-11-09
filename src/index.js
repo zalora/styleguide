@@ -22,4 +22,42 @@ app.ports.highlight.subscribe(function (classname) {
     }, 50)
 });
 
+app.ports.setPreview.subscribe(function (code) {
+    const node = document.getElementById('playground__preview');
+    node.innerHTML = code;
+})
+
+customElements.define('code-editor', class extends HTMLElement {
+    constructor() {
+        super();
+        this._editorValue = '';
+    }
+
+    get editorValue() {
+        return this._editorValue;
+    }
+
+    set editorValue(value) {
+        if (this._editorValue === value) return
+        this._editorValue = value;
+        if (!this._editor) return;
+        this._editor.setValue(value);
+    }
+
+    connectedCallback() {
+        this._editor = CodeMirror(this, {
+            indentUnit: 4,
+            mode: 'htmlmixed',
+            lineNumbers: true,
+            theme: 'material',
+            value: this._editorValue
+        })
+
+        this._editor.on('changes', () => {
+            this._editorValue = this._editor.getValue();
+            this.dispatchEvent(new CustomEvent('editorChanged'))
+        })
+    }
+})
+
 registerServiceWorker();

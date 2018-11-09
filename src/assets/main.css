@@ -2,31 +2,59 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   color: #333;
   margin: 0;
+  font-size: 16px;
+}
+
+
+.navbar { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header header header' 
+    'sidebar main main main main main main main';
+  grid-gap: 10px;
+  grid-template-rows: 100px 1fr;
+  height: 100vh;
 }
 
 .navbar {
-  position: relative;
   background-color: black;
   color: white;
   padding: 10px;
 }
 
 .sidebar {
-  position: absolute;
-  top: 100px;
-  bottom: 0;
-  left: 0;
-  width: 300px;
   color: #333;
   border-right: 1px solid #ddd;
 }
 
-.sidebar__filename {
+.sidebar__filename,
+.sidebar__filename--active {
   list-style: none;
   font-size: 18px;
   font-weight: 500;
   padding: 10px 0;
 }
+
+.sidebar__filename--active {
+  color: teal;
+  font-weight: 800;
+}
+
+.sidebar__category {
+  font-size: 24px;
+  font-weight: 500;
+  color: gray;
+}
+
+.sidebar__filename:hover, 
+.sidebar__category:hover{
+  cursor: pointer;
+}
+
 .sidebar__search{
   padding: 1rem 15px;
 }
@@ -40,20 +68,29 @@ body {
   font-size: 1rem;
 }
 
-.article {
-  position: absolute;
-  top: 100px;
-  left: 300px;
-  right: 0;
+.main {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.article,
+.playground {
   margin: 30px;
 }
 
 .playground {
-  position: absolute;
-  left: 300px;
-  bottom: 0;
-  right: 0;
-  margin: 30px;
+  font-size: 18px;
+}
+
+.playground__wrapper {
+  border: 1px solid #eee;
+  border-radius: .5rem;
+}
+
+.playground__preview {
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: scroll;
 }
 
 .filename:hover {
@@ -62,7 +99,7 @@ body {
 
 .example {
   border: 1px solid #eee;
-  border-radius: 10px;
+  border-radius: .5rem;
   padding: 15px 0;
 }
 
@@ -75,27 +112,92 @@ body {
   padding: 15px 15px 0 15px;
 }
 
-.btn {
-  transition: background-color .3s, color .2s;
-  color: #fff;
-  background-color: #000;
-  border: 1px solid;
-  border-color: #000;
-  box-sizing: border-box;
-  text-transform: uppercase;
+
+/* Loading icon for fun */
+
+.loading__icon {
   display: inline-block;
-  padding: 12px;
-  font-size: 12px;
-  line-height: 10px;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  letter-spacing: 1px;
-  margin: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+}
+.loading__icon div {
+  animation: loading__icon 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 32px 32px;
+}
+.loading__icon div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  margin: -3px 0 0 -3px;
+}
+.loading__icon div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.loading__icon div:nth-child(1):after {
+  top: 50px;
+  left: 50px;
+}
+.loading__icon div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.loading__icon div:nth-child(2):after {
+  top: 54px;
+  left: 45px;
+}
+.loading__icon div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.loading__icon div:nth-child(3):after {
+  top: 57px;
+  left: 39px;
+}
+.loading__icon div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.loading__icon div:nth-child(4):after {
+  top: 58px;
+  left: 32px;
+}
+.loading__icon div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.loading__icon div:nth-child(5):after {
+  top: 57px;
+  left: 25px;
+}
+.loading__icon div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.loading__icon div:nth-child(6):after {
+  top: 54px;
+  left: 19px;
+}
+.loading__icon div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.loading__icon div:nth-child(7):after {
+  top: 50px;
+  left: 14px;
+}
+.loading__icon div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.loading__icon div:nth-child(8):after {
+  top: 45px;
+  left: 10px;
+}
+@keyframes loading__icon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
