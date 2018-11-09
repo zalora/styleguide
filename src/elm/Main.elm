@@ -192,7 +192,6 @@ update msg model =
 
 subscriptions : Model -> Sub Msg
 subscriptions _ =
-    -- receivedFile (\doc -> FileLoaded doc)
     Sub.none
 
 
@@ -211,7 +210,7 @@ init =
 
         cmd =
             Decode.dict (Decode.list fileDecoder)
-                |> Http.get "/postList.json"
+                |> Http.get "/pages/categoryPostMap.json"
                 |> Http.send InitView
     in
     ( { code = ""
@@ -253,8 +252,3 @@ main =
 
 
 port highlight : String -> Cmd msg
-
-
-
--- port loadFile : File -> Cmd msg
--- port receivedFile : (Doc -> msg) -> Sub msg

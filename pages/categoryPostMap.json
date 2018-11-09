@@ -2,17 +2,17 @@
     "Assets": [
         {
             "name": "Color",
-            "path": "./../posts/File3.md"
+            "path": "/pages/Assets/Color.md"
         }
     ],
     "Components": [
         {
             "name": "Button",
-            "path": "./../posts/Code.md"
+            "path": "/pages/Components/Button.md"
         },
         {
-            "name": "Table",
-            "path": "./../posts/TofC.md"
+            "name": "List",
+            "path": "/pages/Components/List.md"
         }
     ]
 }
