@@ -1,20 +1,22 @@
-module Main exposing (Model, Msg(..), init, main, update, view)
+port module Main exposing (Model, Msg(..), init, main, update, view)
 
 -- import CodeMirror exposing (..)
 
 import AppState exposing (AppState(..))
 import Browser
-import Html exposing (Attribute, Html, a, code, div, h1, input, li, pre, text, textarea, ul)
-import Html.Attributes exposing (attribute, class, placeholder, type_)
+import CodeEditor exposing (codeEditor, editorValue, onEditorChanged)
+import Dict exposing (Dict)
+import Html exposing (Attribute, Html, a, code, div, h1, input, li, pre, section, text, textarea, ul)
+import Html.Attributes exposing (attribute, class, id, placeholder, type_)
 import Html.Events exposing (on, onClick, onInput, stopPropagationOn, targetValue)
 import Http
-import Json.Decode as Decode exposing (Decoder, list, string)
-import Json.Decode.Pipeline exposing (required, resolve)
+import Json.Decode as Decode exposing (Decoder, dict, list, string)
+import Json.Decode.Pipeline exposing (hardcoded, required, resolve)
 import Json.Encode as Encode exposing (string)
 import Markdown exposing (toHtml)
 import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
 import Markdown.Config exposing (HtmlOption(..), Options)
-import Port exposing (highlight)
+import UI exposing (loading)
 import Url.Builder as Builder
 
 
@@ -25,15 +27,16 @@ import Url.Builder as Builder
 
 type alias Model =
     { code : String
-    , activeDoc : Maybe Doc
-    , docList : List String
+    , activeDocContent : Maybe String
+    , activeDocName : Maybe String
+    , docList : Dict String (List File)
     , appState : AppState Http.Error
     }
 
 
-type alias Doc =
+type alias File =
     { name : String
-    , content : String
+    , path : String
     }
 
 
@@ -49,7 +52,7 @@ view model =
     in
     case appState of
         InitLoading ->
-            div [] [ text "init loading" ]
+            div [] [ UI.loading ]
 
         Loaded maybeError ->
             div []
@@ -59,22 +62,22 @@ view model =
 
                     Nothing ->
                         text ""
-                , mainView model
+                , viewContainer model
                 ]
 
         Loading ->
-            div [] [ text "loading..." ]
+            div [] [ UI.loading ]
 
         LoadingError error ->
             div [] [ text <| Debug.toString error ]
 
 
-mainView : Model -> Html Msg
-mainView model =
-    div []
+viewContainer : Model -> Html Msg
+viewContainer model =
+    div [ class "grid-container" ]
         [ navBar
-        , sideMenu <| .docList model
-        , article <| .activeDoc model
+        , sideMenu model
+        , mainContent model
         ]
 
 
@@ -84,26 +87,81 @@ navBar =
         [ h1 [] [ text "Zalora Styleguide 2.0" ] ]
 
 
-sideMenu : List String -> Html Msg
-sideMenu docs =
+sideMenu : Model -> Html Msg
+sideMenu model =
     div [ class "sidebar" ]
         [ div [ class "sidebar__search" ]
             [ input [ class "sidebar__search--input", type_ "input", placeholder "Type to search" ] [] ]
-        , fileList docs
+        , sideMenuList model
         ]
 
 
-fileList : List String -> Html Msg
-fileList docnames =
+sideMenuList : Model -> Html Msg
+sideMenuList model =
+    ul [] <| List.map (\s -> categoryList s (.activeDocName model)) (Dict.toList <| .docList model)
+
+
+categoryList : ( String, List File ) -> Maybe String -> Html Msg
+categoryList ( category, fileList ) activeFile =
     let
-        item : String -> Html Msg
-        item name =
-            li [ onClick (SelectFile name), class "sidebar__filename" ] [ text <| String.replace ".md" "" name ]
+        isActiveFile : File -> Maybe String -> Bool
+        isActiveFile file activeFileName =
+            .name file == Maybe.withDefault "" activeFileName
     in
-    ul [] <| List.map (\name -> item name) docnames
+    div []
+        [ a [ class "sidebar__category" ] [ text category ]
+        , ul [] <|
+            List.map (\i -> categoryItem i <| isActiveFile i activeFile) fileList
+        ]
 
 
-article : Maybe Doc -> Html msg
+categoryItem : File -> Bool -> Html Msg
+categoryItem file isActive =
+    let
+        className =
+            if isActive then
+                "sidebar__filename--active"
+
+            else
+                "sidebar__filename"
+    in
+    li [ onClick (SelectFile file), class className, attribute "data-path" <| .path file ] [ text <| .name file ]
+
+
+mainContent : Model -> Html Msg
+mainContent model =
+    div [ class "main" ] <|
+        case .activeDocContent model of
+            Just value ->
+                [ article value
+                , playground <| .code model
+                ]
+
+            Nothing ->
+                [ text "Welcome to our new styleguide!" ]
+
+
+playground : String -> Html Msg
+playground code =
+    section [ class "playground" ]
+        [ h1 [] [ text "Playground" ]
+        , div [ class "playground__wrapper" ]
+            [ div
+                [ id "playground__preview"
+                , class "playground__preview"
+                , attribute "data-html" code
+                ]
+                []
+            , codeEditor
+                [ class "playground__editor"
+                , CodeEditor.editorValue code
+                , CodeEditor.onEditorChanged CodeChanged
+                ]
+            ]
+        ]
+
+
+article : String -> Html msg
 article doc =
     let
         options : Options
@@ -132,16 +190,11 @@ article doc =
                         Nothing
                         block
     in
-    case doc of
-        Just value ->
-            .content value
-                |> Block.parse (Just options)
-                |> List.map customHtmlBlock
-                |> List.concat
-                |> div [ class "article" ]
-
-        Nothing ->
-            div [ class "article" ] [ text "Welcome to our new styleguide!" ]
+    doc
+        |> Block.parse (Just options)
+        |> List.map customHtmlBlock
+        |> List.concat
+        |> div [ class "article" ]
 
 
 
@@ -149,15 +202,16 @@ article doc =
 
 
 type Msg
-    = InitView (Result Http.Error (List String))
-    | SelectFile String
-    | FileLoaded (Result Http.Error Doc)
+    = InitView (Result Http.Error (Dict String (List File)))
+    | SelectFile File
+    | FileLoaded (Result Http.Error String)
+    | CodeChanged String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
-        { activeDoc, appState } =
+        { appState } =
             model
     in
     case msg of
@@ -172,13 +226,16 @@ update msg model =
         FileLoaded data ->
             case data of
                 Ok doc ->
-                    ( { model | activeDoc = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
+                    ( { model | activeDocContent = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
 
                 Err error ->
-                    ( { model | appState = AppState.toFailure error appState }, Cmd.none )
+                    ( { model | activeDocContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
 
-        SelectFile filename ->
-            ( { model | appState = AppState.toLoading appState }, loadFile filename )
+        SelectFile file ->
+            ( { model | activeDocName = Just (.name file), appState = AppState.toLoading appState }, loadFile file )
+
+        CodeChanged code ->
+            ( { model | code = code }, setPreview code )
 
 
 subscriptions : Model -> Sub Msg
@@ -193,34 +250,34 @@ subscriptions _ =
 init : ( Model, Cmd Msg )
 init =
     let
+        fileDecoder : Decoder File
+        fileDecoder =
+            Decode.succeed File
+                |> required "name" Decode.string
+                |> required "path" Decode.string
+
         cmd =
-            Decode.list Decode.string
-                |> Http.get "/docList"
+            Decode.dict (Decode.list fileDecoder)
+                |> Http.get "/pages/categoryPostMap.json"
                 |> Http.send InitView
     in
-    ( { code = ""
-      , activeDoc = Nothing
-      , docList = []
+    ( { code = "<!-- try to write some html code here -->"
+      , activeDocContent = Nothing
+      , activeDocName = Nothing
+      , docList = Dict.fromList []
       , appState = AppState.init
       }
     , cmd
     )
 
 
-loadFile : String -> Cmd Msg
-loadFile filename =
+loadFile : File -> Cmd Msg
+loadFile file =
     let
         url =
-            Builder.absolute [ "file" ] [ Builder.string "name" filename ]
-
-        docDecoder : Decoder Doc
-        docDecoder =
-            Decode.succeed Doc
-                |> required "name" Decode.string
-                |> required "content" Decode.string
+            Builder.relative [ .path file ] []
     in
-    docDecoder
-        |> Http.get url
+    Http.getString url
         |> Http.send FileLoaded
 
 
@@ -236,3 +293,13 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
+
+
+
+---- PORT -----
+
+
+port highlight : String -> Cmd msg
+
+
+port setPreview : String -> Cmd msg

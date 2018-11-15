@@ -1,0 +1,18 @@
+{
+    "Assets": [
+        {
+            "name": "Color",
+            "path": "/pages/Assets/Color.md"
+        }
+    ],
+    "Components": [
+        {
+            "name": "Button",
+            "path": "/pages/Components/Button.md"
+        },
+        {
+            "name": "List",
+            "path": "/pages/Components/List.md"
+        }
+    ]
+}
