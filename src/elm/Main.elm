@@ -30,6 +30,7 @@ type alias Model =
     , activeDocContent : Maybe String
     , activeDocName : Maybe String
     , docList : Dict String (List File)
+    , shownDocList : Dict String (List File)
     , appState : AppState Http.Error
     }
 
@@ -91,14 +92,14 @@ sideMenu : Model -> Html Msg
 sideMenu model =
     div [ class "sidebar" ]
         [ div [ class "sidebar__search" ]
-            [ input [ class "sidebar__search--input", type_ "input", placeholder "Type to search" ] [] ]
+            [ input [ class "sidebar__search--input", type_ "input", placeholder "Type to search", onInput SearchArticle ] [] ]
         , sideMenuList model
         ]
 
 
 sideMenuList : Model -> Html Msg
 sideMenuList model =
-    ul [] <| List.map (\s -> categoryList s (.activeDocName model)) (Dict.toList <| .docList model)
+    ul [] <| List.map (\s -> categoryList s (.activeDocName model)) (Dict.toList <| .shownDocList model)
 
 
 categoryList : ( String, List File ) -> Maybe String -> Html Msg
@@ -206,19 +207,20 @@ type Msg
     | SelectFile File
     | FileLoaded (Result Http.Error String)
     | CodeChanged String
+    | SearchArticle String
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
-        { appState } =
+        { appState, docList } =
             model
     in
     case msg of
         InitView data ->
             case data of
-                Ok docList ->
-                    ( { model | docList = docList, appState = AppState.toSuccess appState }, Cmd.none )
+                Ok value ->
+                    ( { model | docList = value, shownDocList = value, appState = AppState.toSuccess appState }, Cmd.none )
 
                 Err error ->
                     ( { model | appState = AppState.toFailure error appState }, Cmd.none )
@@ -236,6 +238,9 @@ update msg model =
 
         CodeChanged code ->
             ( { model | code = code }, setPreview code )
+
+        SearchArticle input ->
+            ( { model | shownDocList = filterCategoriesAndFiles input docList }, Cmd.none )
 
 
 subscriptions : Model -> Sub Msg
@@ -265,6 +270,7 @@ init =
       , activeDocContent = Nothing
       , activeDocName = Nothing
       , docList = Dict.fromList []
+      , shownDocList = Dict.fromList []
       , appState = AppState.init
       }
     , cmd
@@ -279,6 +285,27 @@ loadFile file =
     in
     Http.getString url
         |> Http.send FileLoaded
+
+
+filterCategoriesAndFiles : String -> Dict String (List File) -> Dict String (List File)
+filterCategoriesAndFiles keyword docList =
+    let
+        map : String -> ( String, List File ) -> ( String, List File )
+        map input categoryFileMap =
+            if String.contains (String.toLower input) (String.toLower <| Tuple.first categoryFileMap) then
+                categoryFileMap
+
+            else
+                Tuple.mapSecond (filterFile input) categoryFileMap
+
+        filterFile input fileList =
+            fileList
+                |> List.filter (\f -> String.contains (String.toLower input) (String.toLower <| .name f))
+    in
+    Dict.toList docList
+        |> List.map (\list -> map keyword list)
+        |> List.filter (\list -> List.length (Tuple.second list) /= 0)
+        |> Dict.fromList
 
 
 
