@@ -5,6 +5,9 @@ body {
   font-size: 16px;
 }
 
+img {
+  width: 100%;
+}
 
 .navbar { grid-area: header; }
 .sidebar { grid-area: sidebar; }
@@ -17,6 +20,7 @@ body {
     'sidebar main main main main main main main';
   grid-gap: 10px;
   grid-template-rows: 100px 1fr;
+  grid-template-columns: 300px 1fr;
   height: 100vh;
 }
 
@@ -112,6 +116,31 @@ body {
   padding: 15px 15px 0 15px;
 }
 
+
+.u-bg-primary {
+  background-color: #00c8b4;
+}
+
+.c-swatch {
+  width: 150px;
+  box-shadow: 0 10px 20px 0 rgba(4,68,77,.15);
+}
+.c-swatch__color {
+  height: 130px;
+}
+.c-swatch__info {
+  background-color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.c-swatch__info__name {
+  display: block;
+  color: #2f3941;
+  line-height: 1.66667;
+  font-weight: 600;
+  font-size: 12px;
+}
 
 /* Loading icon for fun */
 

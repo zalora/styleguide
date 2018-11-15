@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -16,7 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'public'),
         filename: '[name].js',
-        publicPath: '/',
+        publicPath: '/public',
         hotUpdateChunkFilename: '.hot/[id].[hash].hot-update.js',
         hotUpdateMainFilename: '.hot/[hash].hot-update.json'
     },
@@ -62,15 +61,9 @@ module.exports = {
             chunkFilename: '[id].css'
         }),
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: 'index.html'
+            filename: '../index.html',
+            template: '_template/index.html'
         }),
-        new CopyWebpackPlugin([
-            {
-                from: 'src/assets/',
-                to: 'assets'
-            }
-        ]),
     ],
 
 
