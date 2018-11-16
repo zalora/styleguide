@@ -3,8 +3,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -60,17 +58,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].css',
             chunkFilename: '[id].css'
-        }),
-        new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: '_template/index.html'
-        }),
-        new CopyWebpackPlugin(
-            [
-                { from: 'pages', to: 'pages' },
-                { from: 'img', to: 'img' }
-            ],
-            { copyUnmodified: true }),
+        })
     ],
 
 
