@@ -4,6 +4,11 @@
 3. [Third Example](#third-example)
 
 ## Example
+
+This is an example of using image from github repo
+![This is an example image](/img/example.png)
+
+
 ## Example2
 ## Third Example
 

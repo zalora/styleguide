@@ -6,24 +6,38 @@ import CodeMirrorTheme from 'codemirror/theme/material.css';
 import CodeMirrorMode from 'codemirror/mode/htmlmixed/htmlmixed';
 import hljs from 'highlight.js/lib/highlight';
 import xml from 'highlight.js/lib/languages/xml';
-import 'highlight.js/styles/atom-one-light.css'
+import 'highlight.js/styles/atom-one-light.css';
+import 'zalora-style';
 
 
 const node = document.getElementById('root');
 
 const app = Elm.Main.init({ node: node });
 
-app.ports.highlight.subscribe(function (classname) {
-    setTimeout(() => {
-        hljs.registerLanguage('xml', xml);
-        hljs.initHighlighting();
-    }, 50)
-});
 
-app.ports.setPreview.subscribe(function (code) {
-    const node = document.getElementById('playground__preview');
-    node.innerHTML = code;
-})
+customElements.define('code-snippet', class extends HTMLElement {
+    constructor() {
+        super();
+        this._innerCode = '';
+    }
+
+    get innerCode() {
+        return this._innerCode;
+    }
+
+    set innerCode(code) {
+        if (this._innerCode === code) return
+        this._innerCode = code;
+    }
+
+    connectedCallback() {
+        console.log(this._innerCode);
+
+        this.innerText = this._innerCode;
+        hljs.registerLanguage('xml', xml);
+        hljs.highlightBlock(this);
+    }
+});
 
 customElements.define('code-editor', class extends HTMLElement {
     constructor() {
@@ -53,7 +67,9 @@ customElements.define('code-editor', class extends HTMLElement {
 
         this._editor.on('changes', () => {
             this._editorValue = this._editor.getValue();
-            this.dispatchEvent(new CustomEvent('editorChanged'))
+            const node = document.getElementById('playground__preview');
+            node.innerHTML = this._editorValue;
+            this.dispatchEvent(new CustomEvent('editorChanged'));
         })
     }
-})
+});

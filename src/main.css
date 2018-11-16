@@ -9,6 +9,15 @@ img {
   width: 100%;
 }
 
+code {
+  background-color: #F4F4F4;
+  padding: 2px;
+}
+
+li {
+ line-height: 2rem;
+}
+
 .navbar { grid-area: header; }
 .sidebar { grid-area: sidebar; }
 .main { grid-area: main; }
@@ -116,25 +125,21 @@ img {
   padding: 15px 15px 0 15px;
 }
 
-
-.u-bg-primary {
-  background-color: #00c8b4;
-}
-
-.c-swatch {
+.swatch {
+  display: inline-block;
   width: 150px;
   box-shadow: 0 10px 20px 0 rgba(4,68,77,.15);
 }
-.c-swatch__color {
+.swatch__color {
   height: 130px;
 }
-.c-swatch__info {
+.swatch__info {
   background-color: #fff;
   padding: 10px;
   text-transform: uppercase;
 }
 
-.c-swatch__info__name {
+.swatch__info__name {
   display: block;
   color: #2f3941;
   line-height: 1.66667;
