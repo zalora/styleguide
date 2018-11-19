@@ -7,6 +7,9 @@ body {
 img {
   width: 100%; }
 
+code {
+  background-color: #F4F4F4; }
+
 .navbar {
   grid-area: header; }
 

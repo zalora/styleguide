@@ -1,7 +1,10 @@
-module UI exposing (loading)
+module UI exposing (article, loading, navBar)
 
-import Html exposing (Html, div)
+import Html exposing (Html, div, h1, text)
 import Html.Attributes exposing (class)
+import Markdown exposing (toHtml)
+import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
+import Markdown.Config exposing (HtmlOption(..), Options)
 
 
 loading : Html msg
@@ -16,3 +19,45 @@ loading =
         , div [] []
         , div [] []
         ]
+
+
+navBar : Html msg
+navBar =
+    div [ class "navbar" ]
+        [ h1 [] [ text "Zalora Styleguide" ] ]
+
+
+article : String -> Html msg
+article file =
+    let
+        options : Options
+        options =
+            { softAsHardLineBreak = False
+            , rawHtml = ParseUnsafe
+            }
+
+        customHtmlBlock : Block b i -> List (Html msg)
+        customHtmlBlock block =
+            let
+                toHtmlCodeblock str =
+                    "```html\n" ++ str ++ "\n```"
+            in
+            case block of
+                Block.CodeBlock codeblock codestr ->
+                    [ div [ class "example" ]
+                        [ div [ class "example__preview" ] <| Markdown.toHtml (Just options) codestr
+                        , div [ class "example__codeblock" ] <| Markdown.toHtml Nothing (toHtmlCodeblock codestr)
+                        ]
+                    ]
+
+                _ ->
+                    Block.defaultHtml
+                        (Just customHtmlBlock)
+                        Nothing
+                        block
+    in
+    file
+        |> Block.parse (Just options)
+        |> List.map customHtmlBlock
+        |> List.concat
+        |> div [ class "article" ]
