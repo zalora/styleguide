@@ -85,7 +85,7 @@ viewContainer model =
 navBar : Html msg
 navBar =
     div [ class "navbar" ]
-        [ h1 [] [ text "Zalora Styleguide 2.0" ] ]
+        [ h1 [] [ text "Zalora Styleguide" ] ]
 
 
 sideMenu : Model -> Html Msg
@@ -228,7 +228,7 @@ update msg model =
         FileLoaded data ->
             case data of
                 Ok doc ->
-                    ( { model | activeDocContent = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
+                    ( { model | activeDocContent = Just doc, shownDocList = docList, appState = AppState.toSuccess appState }, highlight "test" )
 
                 Err error ->
                     ( { model | activeDocContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
