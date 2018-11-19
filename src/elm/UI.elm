@@ -2,6 +2,7 @@ module UI exposing (article, loading, navBar)
 
 import Html exposing (Html, div, h1, text)
 import Html.Attributes exposing (class)
+import Json.Encode exposing (string)
 import Markdown exposing (toHtml)
 import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
 import Markdown.Config exposing (HtmlOption(..), Options)
@@ -38,15 +39,11 @@ article file =
 
         customHtmlBlock : Block b i -> List (Html msg)
         customHtmlBlock block =
-            let
-                toHtmlCodeblock str =
-                    "```html\n" ++ str ++ "\n```"
-            in
             case block of
                 Block.CodeBlock codeblock codestr ->
                     [ div [ class "example" ]
                         [ div [ class "example__preview" ] <| Markdown.toHtml (Just options) codestr
-                        , div [ class "example__codeblock" ] <| Markdown.toHtml Nothing (toHtmlCodeblock codestr)
+                        , div [ class "example__codeblock" ] [ codeSnippet [ innerCode codestr ] ]
                         ]
                     ]
 
@@ -61,3 +58,14 @@ article file =
         |> List.map customHtmlBlock
         |> List.concat
         |> div [ class "article" ]
+
+
+codeSnippet : List (Html.Attribute msg) -> Html msg
+codeSnippet attributes =
+    Html.node "code-snippet" attributes []
+
+
+innerCode : String -> Html.Attribute msg
+innerCode code =
+    Html.Attributes.property "innerCode" <|
+        Json.Encode.string code

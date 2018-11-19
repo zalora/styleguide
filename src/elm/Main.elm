@@ -13,7 +13,6 @@ import Http
 import Json.Decode as Decode exposing (Decoder, dict, list, string)
 import Json.Decode.Pipeline exposing (hardcoded, required, resolve)
 import Json.Encode as Encode exposing (string)
-import Port exposing (highlight, setPreview)
 import UI exposing (article, loading, navBar)
 import Url.Builder as Builder
 
@@ -153,7 +152,7 @@ update msg model =
         FileLoaded data ->
             case data of
                 Ok file ->
-                    ( { model | activeFileContent = Just file, shownfileList = fileList, appState = AppState.toSuccess appState }, highlight "test" )
+                    ( { model | activeFileContent = Just file, shownfileList = fileList, appState = AppState.toSuccess appState }, Cmd.none )
 
                 Err error ->
                     ( { model | activeFileContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
@@ -162,7 +161,7 @@ update msg model =
             ( { model | activeFileName = Just (.name file), appState = AppState.toLoading appState }, loadFile file )
 
         CodeChanged code ->
-            ( { model | code = code }, setPreview code )
+            ( { model | code = code }, Cmd.none )
 
         SearchArticle input ->
             ( { model | shownfileList = filterCategoriesAndFiles input fileList }, Cmd.none )

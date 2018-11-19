@@ -11,6 +11,11 @@ img {
 
 code {
   background-color: #F4F4F4;
+  padding: 2px;
+}
+
+li {
+ line-height: 2rem;
 }
 
 .navbar { grid-area: header; }
