@@ -4,6 +4,16 @@ body {
   margin: 0;
   font-size: 16px; }
 
+img {
+  width: 100%; }
+
+code {
+  background-color: #F4F4F4;
+  padding: 2px; }
+
+li {
+  line-height: 2rem; }
+
 .navbar {
   grid-area: header; }
 
@@ -18,6 +28,7 @@ body {
   grid-template-areas: 'header header header header header header header header'  'sidebar main main main main main main main';
   grid-gap: 10px;
   grid-template-rows: 100px 1fr;
+  grid-template-columns: 300px 1fr;
   height: 100vh; }
 
 .navbar {
@@ -96,6 +107,26 @@ body {
 
 .example__codeblock {
   padding: 15px 15px 0 15px; }
+
+.swatch {
+  display: inline-block;
+  width: 150px;
+  box-shadow: 0 10px 20px 0 rgba(4, 68, 77, 0.15); }
+
+.swatch__color {
+  height: 130px; }
+
+.swatch__info {
+  background-color: #fff;
+  padding: 10px;
+  text-transform: uppercase; }
+
+.swatch__info__name {
+  display: block;
+  color: #2f3941;
+  line-height: 1.66667;
+  font-weight: 600;
+  font-size: 12px; }
 
 /* Loading icon for fun */
 .loading__icon {
@@ -786,4 +817,211 @@ hue-6-2: #c18401
 
 .hljs-link {
   text-decoration: underline; }
+
+.u-bg-white {
+  background-color: #fff; }
+
+.u-text-white {
+  color: #fff; }
+
+.u-border-white {
+  border-color: #fff; }
+
+.u-bg-black {
+  background-color: #000; }
+
+.u-text-black {
+  color: #000; }
+
+.u-border-black {
+  border-color: #000; }
+
+.u-bg-grey-100 {
+  background-color: #262626; }
+
+.u-text-grey-100 {
+  color: #262626; }
+
+.u-border-grey-100 {
+  border-color: #262626; }
+
+.u-bg-grey-80 {
+  background-color: #474747; }
+
+.u-text-grey-80 {
+  color: #474747; }
+
+.u-border-grey-80 {
+  border-color: #474747; }
+
+.u-bg-grey-60 {
+  background-color: #737373; }
+
+.u-text-grey-60 {
+  color: #737373; }
+
+.u-border-grey-60 {
+  border-color: #737373; }
+
+.u-bg-grey-20 {
+  background-color: #dedede; }
+
+.u-text-grey-20 {
+  color: #dedede; }
+
+.u-border-grey-20 {
+  border-color: #dedede; }
+
+.u-bg-grey-10 {
+  background-color: #f4f4f4; }
+
+.u-text-grey-10 {
+  color: #f4f4f4; }
+
+.u-border-grey-10 {
+  border-color: #f4f4f4; }
+
+.u-bg-green-10 {
+  background-color: #d9f7d2; }
+
+.u-text-green-10 {
+  color: #d9f7d2; }
+
+.u-border-green-10 {
+  border-color: #d9f7d2; }
+
+.u-bg-green-60 {
+  background-color: #2e8618; }
+
+.u-text-green-60 {
+  color: #2e8618; }
+
+.u-border-green-60 {
+  border-color: #2e8618; }
+
+.u-bg-green-80 {
+  background-color: #1d680a; }
+
+.u-text-green-80 {
+  color: #1d680a; }
+
+.u-border-green-80 {
+  border-color: #1d680a; }
+
+.u-bg-green-90 {
+  background-color: #1b510e; }
+
+.u-text-green-90 {
+  color: #1b510e; }
+
+.u-border-green-90 {
+  border-color: #1b510e; }
+
+.u-bg-red-10 {
+  background-color: #fde4e4; }
+
+.u-text-red-10 {
+  color: #fde4e4; }
+
+.u-border-red-10 {
+  border-color: #fde4e4; }
+
+.u-bg-red-60 {
+  background-color: #b81818; }
+
+.u-text-red-60 {
+  color: #b81818; }
+
+.u-border-red-60 {
+  border-color: #b81818; }
+
+.u-bg-red-80 {
+  background-color: #9e0d0d; }
+
+.u-text-red-80 {
+  color: #9e0d0d; }
+
+.u-border-red-80 {
+  border-color: #9e0d0d; }
+
+.u-bg-red-90 {
+  background-color: #840f0f; }
+
+.u-text-red-90 {
+  color: #840f0f; }
+
+.u-border-red-90 {
+  border-color: #840f0f; }
+
+.u-bg-yellow-10 {
+  background-color: #fef7e2; }
+
+.u-text-yellow-10 {
+  color: #fef7e2; }
+
+.u-border-yellow-10 {
+  border-color: #fef7e2; }
+
+.u-bg-yellow-60 {
+  background-color: #fbc622; }
+
+.u-text-yellow-60 {
+  color: #fbc622; }
+
+.u-border-yellow-60 {
+  border-color: #fbc622; }
+
+.u-bg-yellow-80 {
+  background-color: #fab005; }
+
+.u-text-yellow-80 {
+  color: #fab005; }
+
+.u-border-yellow-80 {
+  border-color: #fab005; }
+
+.u-bg-yellow-90 {
+  background-color: #f08c00; }
+
+.u-text-yellow-90 {
+  color: #f08c00; }
+
+.u-border-yellow-90 {
+  border-color: #f08c00; }
+
+.u-bg-teal-10 {
+  background-color: #d6e6e7; }
+
+.u-text-teal-10 {
+  color: #d6e6e7; }
+
+.u-border-teal-10 {
+  border-color: #d6e6e7; }
+
+.u-bg-teal-60 {
+  background-color: #297e84; }
+
+.u-text-teal-60 {
+  color: #297e84; }
+
+.u-border-teal-60 {
+  border-color: #297e84; }
+
+.u-bg-teal-80 {
+  background-color: #31696d; }
+
+.u-text-teal-80 {
+  color: #31696d; }
+
+.u-border-teal-80 {
+  border-color: #31696d; }
+
+.u-bg-teal-90 {
+  background-color: #305558; }
+
+.u-text-teal-90 {
+  color: #305558; }
+
+.u-border-teal-90 {
+  border-color: #305558; }
 

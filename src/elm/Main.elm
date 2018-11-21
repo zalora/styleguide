@@ -1,36 +1,30 @@
-port module Main exposing (Model, Msg(..), init, main, update, view)
-
--- import CodeMirror exposing (..)
+module Main exposing (Model, Msg(..), init, main, update, view)
 
 import AppState exposing (AppState(..))
 import Browser
-import CodeEditor exposing (codeEditor, editorValue, onEditorChanged)
+import CodeEditor exposing (playground)
 import Dict exposing (Dict)
-import Html exposing (Attribute, Html, a, code, div, h1, input, li, pre, section, text, textarea, ul)
-import Html.Attributes exposing (attribute, class, id, placeholder, type_)
+import Html exposing (Attribute, Html, a, code, div, input, li, pre, text, textarea, ul)
+import Html.Attributes exposing (attribute, class, placeholder, type_)
 import Html.Events exposing (on, onClick, onInput, stopPropagationOn, targetValue)
 import Http
 import Json.Decode as Decode exposing (Decoder, dict, list, string)
 import Json.Decode.Pipeline exposing (hardcoded, required, resolve)
 import Json.Encode as Encode exposing (string)
-import Markdown exposing (toHtml)
-import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
-import Markdown.Config exposing (HtmlOption(..), Options)
-import UI exposing (loading)
+import UI exposing (article, loading, navBar)
 import Url.Builder as Builder
 
 
 
--- import String exposing (String, repl)
 ---- MODEL ----
 
 
 type alias Model =
     { code : String
-    , activeDocContent : Maybe String
-    , activeDocName : Maybe String
-    , docList : Dict String (List File)
-    , shownDocList : Dict String (List File)
+    , activeFileContent : Maybe String
+    , activeFileName : Maybe String
+    , fileList : Dict String (List File)
+    , shownfileList : Dict String (List File)
     , appState : AppState Http.Error
     }
 
@@ -82,45 +76,29 @@ viewContainer model =
         ]
 
 
-navBar : Html msg
-navBar =
-    div [ class "navbar" ]
-        [ h1 [] [ text "Zalora Styleguide 2.0" ] ]
-
-
 sideMenu : Model -> Html Msg
 sideMenu model =
     div [ class "sidebar" ]
         [ div [ class "sidebar__search" ]
             [ input [ class "sidebar__search--input", type_ "input", placeholder "Type to search", onInput SearchArticle ] [] ]
-        , sideMenuList model
+        , ul [] <| List.map (\s -> categoryList s (.activeFileName model)) (Dict.toList <| .shownfileList model)
         ]
-
-
-sideMenuList : Model -> Html Msg
-sideMenuList model =
-    ul [] <| List.map (\s -> categoryList s (.activeDocName model)) (Dict.toList <| .shownDocList model)
 
 
 categoryList : ( String, List File ) -> Maybe String -> Html Msg
 categoryList ( category, fileList ) activeFile =
-    let
-        isActiveFile : File -> Maybe String -> Bool
-        isActiveFile file activeFileName =
-            .name file == Maybe.withDefault "" activeFileName
-    in
     div []
         [ a [ class "sidebar__category" ] [ text category ]
         , ul [] <|
-            List.map (\i -> categoryItem i <| isActiveFile i activeFile) fileList
+            List.map (\i -> categoryItem i activeFile) fileList
         ]
 
 
-categoryItem : File -> Bool -> Html Msg
-categoryItem file isActive =
+categoryItem : File -> Maybe String -> Html Msg
+categoryItem file activeFile =
     let
         className =
-            if isActive then
+            if .name file == Maybe.withDefault "" activeFile then
                 "sidebar__filename--active"
 
             else
@@ -132,70 +110,14 @@ categoryItem file isActive =
 mainContent : Model -> Html Msg
 mainContent model =
     div [ class "main" ] <|
-        case .activeDocContent model of
+        case .activeFileContent model of
             Just value ->
                 [ article value
-                , playground <| .code model
+                , playground (.code model) CodeChanged
                 ]
 
             Nothing ->
                 [ text "Welcome to our new styleguide!" ]
-
-
-playground : String -> Html Msg
-playground code =
-    section [ class "playground" ]
-        [ h1 [] [ text "Playground" ]
-        , div [ class "playground__wrapper" ]
-            [ div
-                [ id "playground__preview"
-                , class "playground__preview"
-                , attribute "data-html" code
-                ]
-                []
-            , codeEditor
-                [ class "playground__editor"
-                , CodeEditor.editorValue code
-                , CodeEditor.onEditorChanged CodeChanged
-                ]
-            ]
-        ]
-
-
-article : String -> Html msg
-article doc =
-    let
-        options : Options
-        options =
-            { softAsHardLineBreak = False
-            , rawHtml = ParseUnsafe
-            }
-
-        customHtmlBlock : Block b i -> List (Html msg)
-        customHtmlBlock block =
-            let
-                toHtmlCodeblock str =
-                    "```html\n" ++ str ++ "\n```"
-            in
-            case block of
-                Block.CodeBlock codeblock codestr ->
-                    [ div [ class "example" ]
-                        [ div [ class "example__preview" ] <| Markdown.toHtml (Just options) codestr
-                        , div [ class "example__codeblock" ] <| Markdown.toHtml Nothing (toHtmlCodeblock codestr)
-                        ]
-                    ]
-
-                _ ->
-                    Block.defaultHtml
-                        (Just customHtmlBlock)
-                        Nothing
-                        block
-    in
-    doc
-        |> Block.parse (Just options)
-        |> List.map customHtmlBlock
-        |> List.concat
-        |> div [ class "article" ]
 
 
 
@@ -213,34 +135,69 @@ type Msg
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     let
-        { appState, docList } =
+        { appState, fileList } =
             model
     in
     case msg of
         InitView data ->
             case data of
                 Ok value ->
-                    ( { model | docList = value, shownDocList = value, appState = AppState.toSuccess appState }, Cmd.none )
+                    ( { model | fileList = value, shownfileList = value, appState = AppState.toSuccess appState }, Cmd.none )
 
                 Err error ->
                     ( { model | appState = AppState.toFailure error appState }, Cmd.none )
 
         FileLoaded data ->
             case data of
-                Ok doc ->
-                    ( { model | activeDocContent = Just doc, appState = AppState.toSuccess appState }, highlight "test" )
+                Ok file ->
+                    ( { model | activeFileContent = Just file, shownfileList = fileList, appState = AppState.toSuccess appState }, Cmd.none )
 
                 Err error ->
-                    ( { model | activeDocContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
+                    ( { model | activeFileContent = Just "Fail to load content", appState = AppState.toFailure error appState }, Cmd.none )
 
         SelectFile file ->
-            ( { model | activeDocName = Just (.name file), appState = AppState.toLoading appState }, loadFile file )
+            ( { model | activeFileName = Just (.name file), appState = AppState.toLoading appState }, loadFile file )
 
         CodeChanged code ->
-            ( { model | code = code }, setPreview code )
+            ( { model | code = code }, Cmd.none )
 
         SearchArticle input ->
-            ( { model | shownDocList = filterCategoriesAndFiles input docList }, Cmd.none )
+            ( { model | shownfileList = filterCategoriesAndFiles input fileList }, Cmd.none )
+
+
+loadFile : File -> Cmd Msg
+loadFile file =
+    let
+        url =
+            Builder.relative [ .path file ] []
+    in
+    Http.getString url
+        |> Http.send FileLoaded
+
+
+filterCategoriesAndFiles : String -> Dict String (List File) -> Dict String (List File)
+filterCategoriesAndFiles keyword fileList =
+    let
+        map : String -> ( String, List File ) -> ( String, List File )
+        map input categoryFileMap =
+            if String.contains (String.toLower input) (String.toLower <| Tuple.first categoryFileMap) then
+                categoryFileMap
+
+            else
+                Tuple.mapSecond (filterFile input) categoryFileMap
+
+        filterFile input list =
+            list
+                |> List.filter (\f -> String.contains (String.toLower input) (String.toLower <| .name f))
+    in
+    Dict.toList fileList
+        |> List.map (\list -> map keyword list)
+        |> List.filter (\list -> List.length (Tuple.second list) /= 0)
+        |> Dict.fromList
+
+
+
+---- SUBSCRIPTIONS ----
 
 
 subscriptions : Model -> Sub Msg
@@ -267,45 +224,14 @@ init =
                 |> Http.send InitView
     in
     ( { code = "<!-- try to write some html code here -->"
-      , activeDocContent = Nothing
-      , activeDocName = Nothing
-      , docList = Dict.fromList []
-      , shownDocList = Dict.fromList []
+      , activeFileContent = Nothing
+      , activeFileName = Nothing
+      , fileList = Dict.fromList []
+      , shownfileList = Dict.fromList []
       , appState = AppState.init
       }
     , cmd
     )
-
-
-loadFile : File -> Cmd Msg
-loadFile file =
-    let
-        url =
-            Builder.relative [ .path file ] []
-    in
-    Http.getString url
-        |> Http.send FileLoaded
-
-
-filterCategoriesAndFiles : String -> Dict String (List File) -> Dict String (List File)
-filterCategoriesAndFiles keyword docList =
-    let
-        map : String -> ( String, List File ) -> ( String, List File )
-        map input categoryFileMap =
-            if String.contains (String.toLower input) (String.toLower <| Tuple.first categoryFileMap) then
-                categoryFileMap
-
-            else
-                Tuple.mapSecond (filterFile input) categoryFileMap
-
-        filterFile input fileList =
-            fileList
-                |> List.filter (\f -> String.contains (String.toLower input) (String.toLower <| .name f))
-    in
-    Dict.toList docList
-        |> List.map (\list -> map keyword list)
-        |> List.filter (\list -> List.length (Tuple.second list) /= 0)
-        |> Dict.fromList
 
 
 
@@ -320,13 +246,3 @@ main =
         , update = update
         , subscriptions = subscriptions
         }
-
-
-
----- PORT -----
-
-
-port highlight : String -> Cmd msg
-
-
-port setPreview : String -> Cmd msg

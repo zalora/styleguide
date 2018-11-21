@@ -25,6 +25,7 @@
     "webpack-dev-server": "^3.1.9"
   },
   "dependencies": {
+    "@zalora/style": "1.0.0",
     "codemirror": "^5.40.2",
     "highlight.js": "^9.13.1"
   }
