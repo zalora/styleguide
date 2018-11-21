@@ -1,17 +1,16 @@
 # Button
 
-## test button
+## Buttons
 
 Just some random text here for tesing
 
 ```html
-<button>test</button>
-
-<button class="btn"> Primary </button>
+<button class="btn btn--primary"> Primary </button>
+<button class="btn btn--special"> Special </button>
 ```
 
-## test link
+## Link
 
 ```html
-<a href="#">Link</a>
+<a href="#" class="btn--link">Link</a>
 ```
