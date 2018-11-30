@@ -7,8 +7,7 @@ import CodeMirrorMode from 'codemirror/mode/htmlmixed/htmlmixed';
 import hljs from 'highlight.js/lib/highlight';
 import xml from 'highlight.js/lib/languages/xml';
 import 'highlight.js/styles/atom-one-light.css';
-import 'zalora-style';
-
+import '@zalora/style';
 
 const node = document.getElementById('root');
 

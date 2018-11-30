@@ -1,6 +1,4 @@
-port module Main exposing (Model, Msg(..), init, main, update, view)
-
--- import CodeMirror exposing (..)
+module Main exposing (Model, Msg(..), init, main, update, view)
 
 import AppState exposing (AppState(..))
 import Browser
