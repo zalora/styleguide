@@ -27,7 +27,6 @@
   "dependencies": {
     "@zalora/style": "1.0.0",
     "codemirror": "^5.40.2",
-    "highlight.js": "^9.13.1",
-    "zalora-style": "^1.0.4"
+    "highlight.js": "^9.13.1"
   }
 }
