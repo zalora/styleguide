@@ -9,7 +9,6 @@ import xml from 'highlight.js/lib/languages/xml';
 import 'highlight.js/styles/atom-one-light.css';
 import '@zalora/style';
 
-
 const node = document.getElementById('root');
 
 const app = Elm.Main.init({ node: node });
