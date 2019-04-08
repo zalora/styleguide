@@ -8,10 +8,15 @@ A new portal for our new [style](https://github.com/zalora/style).
 
 ## Usage
 
-    npm run start
+    npm run build
+    npm start
 
 ## How to add a new page
 
-1. Create a markdown file in the corresponding sub-folder in `pages` folder  
-2. Update `staticFilesMap.json` in `pages` folder
+1. Create a markdown file in the corresponding sub-folder (`components` or `guides` ) in `pages` folder  
+2. Update `fileList.json` in `pages` folder
+
+**Note that:**
+ - Only files in `fileList.json` will be shown
+ - The order of files follows the order of file names in `fileList.json`
 

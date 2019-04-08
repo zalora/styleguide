@@ -77,7 +77,8 @@ module.exports = (env, argv) => [{
         contentBase: path.join(__dirname, '/'),
         hot: true,
         inline: true,
-        port: 9001
+        port: 9001,
+        open: true,
     },
     optimization: {
         minimizer: [
