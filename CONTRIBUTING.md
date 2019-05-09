@@ -4,6 +4,7 @@
 - [Project Structure](#project-structure)
 - [Writing Markdown](#writing-markdown)
 - [Template of component guideline](#template-of-component-guideline)
+- [Development Flow](#development-flow)
 
 ## Project Structure
 The basic repo layout includes:
