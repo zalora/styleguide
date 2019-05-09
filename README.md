@@ -13,4 +13,3 @@ A new portal for our new [style](https://github.com/zalora/style).
 
 ## Contributing
 Feel free to contribute the content of our styleguide by kindly following our [contributing](CONTRIBUTING.md) guideline.
-
