@@ -10,7 +10,7 @@ When activated, tooltips display a text label identifying an element, such as a 
 
 ### Principles
 
-1. **Activated** (if it is meant to be permanent information, refer to Badge).
+1. **Activated** (if it is meant to be permanent information, refer to Label).
 2. **Paired** with the element it describes
 3. **Short** text only (for longer messages, refer to Pop Up)
 
