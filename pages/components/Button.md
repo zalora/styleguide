@@ -1,106 +1,77 @@
 # Button
+indicates a possible user action. 
+Should be visible and inform the users on what will happen when they click on it. 
+<insert component> -- added by the developer
 
-## What is button?
+# Type
+  * Primary button
+The main to action button. Should appear once per screen and not every screen need a primary button. 
+  * Outline button
+A secondary action button. For another option rather than the primary call to action. 
+  * Apply button
+Only use for the active state of the apply button. The initial state will be the disabled state and only after users start typing it changes to this button. 
+  * Disable button
+Users need to complete an action before the button is usable. Mostly use with the primary and apply button. 
+  * Text link
+Use to navigating to another page. 
+  * Subtle
+If in one group of content there are more than 3 links use this link. 
+  * Negative button 
+Only appears as a final confirmation for a destructive action such as deleting. 
 
-Button should be visible and should inform users on what will happen when they click/tap on it.
-Button can contain a combination of text and icon while links are always text.
+# Usage
+Do:
+  * Horizontal align the icon and text within the button. 
+  * Use with form and as a call to action button. 
 
-![Facebook button](./img/Button/fb.png "Continue with Facebook")
+Don't:
+  * Use gradient colour for the button.
+  * Place another button below if there is enough space next to it. 
+  * Use no meaningful icon. 
 
-Icon: Should have meaning and help user to identify the use of the button.
-Text: Should indicates some form of action. 
+# Anatomy
+A button can contain text only, icon only or the combination of text and icon. 
+<insert component> -- added by the developer 
+Icon: meaningful and help users to understand the button faster.
+Text: should indicate an action.
 
-For web we use it in:
-- add to wishlist
-- sign in with facebook
-- can’t find yur size
-- add new address
+General button: 
+<insert component> -- added by the developer 
+There are 2 sizes of a button, 48 px and 40 px.
 
-For IOS app we use it in:
-- scan QR Code
-- inside my account (login,order,etc)
-- login with facebook
-- see more in cart breakdown
+And in term of the length, there also 2 types of button:
+  * Full-width button
+  * Fixed width button
 
-For Android app we use it in:
-- inside my account (login,order,etc)
-- login with facebook
-- see more in cart breakdown
+Icon button:
+  * Used for external and internal branding.
+  * Used in a limited space but must have a universal meaning across the regions.
+  * Don't use more than one icon in one button. 
 
-We use icon: for branding (external, internal). For consistency between all platform. And the icon should be universal enough for people to recognise across regions.
-For mobile: Icon will be used when the space is limited or for indicate a quick action (ex: wishlist)
+Text and icon button:
+  * Horizontal align the icon and text within the button. 
+  * Use a centre align.  
 
-## Writing in Button
-Make it as short as possible but also clearly explaining the result of the button.
+# Write for button
+  * Make it as short as possible but also clearly explaining the result of the button.
+  * Concise and fit within a single line.
+  * Between two to five words.
+  * Free from any punctuation.
+  * In title case regardless of platform.
 
-## Button Copy Guidelines
-Text within buttons should always be:
-- Concise and fit within a single line
-- Between two to five words
-- Free from any punctuation
-- In title case, regardless of platform (i.e. Android, iOS, web)
+A copy should:
+  * Always start with a verb and continue with the subject. The subject will help to add context. 
+  * Use impactful verbs to grab users attention.
 
-Generally, button copy falls within these two categories:
+<insert component> -- added by the developer
+ ---> the image  **continue** instead of next, **discover** instead of find out. Good example: Add New Address. Poor example: + Address. 
 
-1. Action (e.g. CTA)
-Copy should always start with a verb, followed by the subject. Unless it’s obvious what the subject is (for instance, placing an “Edit” button next to a delivery address), always include the subject in the button (e.g. “Edit Profile”) for added context.
-
-Don’t be afraid to use impactful verbs (e.g. “Continue” instead of “Next”, “Discover” instead of “Find Out:”) to grab the audience’s attention.
-
-Good example: 
-“Add New Address”
-
-2. Acknowledgement 
-Copy should do the following:
-- Be a follow-up of the preceding text within the window or page
-- Confirm the previous action performed by the user 
-- Guide the user towards the next page/action upon clicking the button
-
-As much as possible, avoid using “OK” as it’s too ambiguous and leaves excessive blank space within the button. 
-
-Good example:
-Title - “Credit Card Details Saved!”
-Button 1 - “Add Another Card”
-Button 2 - “View Saved Card(s)”
-
-![Button acknowledgement](./img/Button/wording.png "Button acknowledgement")
-
-## Button Order. 
-Positive action should be in the right side. 
-Positive action should be differentiated from negative actions e.g. more eye catching colour or bold text.
-![Button order](./img/Button/order.png "Button order")
-
-## Button Variation
-
-1. <button class="btn btn--primary"> Primary Button</button>  is the primary CTA for an action or highlight the strongest call to action on a page.
-Primay button should appear once per screen and not every screen needs a primary button.
-**Example**: Add to Bag, Continue. And the exception is in Wishlist, because have primary action
-in every list and list like accordion (in order tracking screen).
-
-2. <button class="btn btn--outline"> Outline Button</button> If you have another option rather than primary CTA, you should use this.
-In the screen you already have primary button, you should use this button. Use this in button
-with banner. Example: Continue shopping, Cancel, Back
-
-3. <button class="btn btn--special"> Special Button</button> We will use this for the active state for apply button. However, the default state should be the disable button when the field not in use. 
-
-4. <button class="btn btn--primary is-disabled"> Disable Button </button>Use when another action has to be completed before the button is usable. Mostly use with primary button, only for apply field using with the special teal button.  
-
-5. <button class="btn btn--link">Link Buttons</button> are used to navigate to another page and should open in the current window unless: terms and conditon page or the destination is an external site.
-
-6. <button class="btn btn--subtle">Subtle</button>If in one paragraphy you have more than 3 link, you can use <button class="btn btn--subtle">Subtle</button> for link button. ex: breadcrumbs
-
-7. <button class="btn btn--danger">Danger Button</button>Indicates what critical for zalora user. Only appear on dialog.
-The danger button appears as a final confirmation for a destructive action such as deleting. Use mostly in confirmation modals. ex: delete credit card
+# Order
+  * Full-width button: for the main action users should take. 
+  * Side by side button: mostly instep. When the next and previous step is equally important. The right one must be a positive action. 
+  *  Top bottom button: for a longer text. The top one must be a positive action. 
 
 
-```html
-<button class="btn btn--primary"> Primary </button>
-<button class="btn btn--outline"> Outline Button</button>
-<button class="btn btn--special"> Special </button>
-<button class="btn btn--primary is-disabled"> Disabled Button</button>
-<button class="btn btn--link">Link Buttons</button>
-<button class="btn btn--subtle">Subtle</button>
-<button class="btn btn--danger">Danger Button</button>
-```
+# Demo -- added by the developer
 
-## Button size
+# Related components
