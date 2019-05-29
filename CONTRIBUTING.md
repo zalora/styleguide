@@ -37,8 +37,6 @@ Feel free to add emoji to your markdown :)
 You can just copy the emoji you like and paste to your markdown file. *Noted that: different operating system may have different set of emoji. To deliver the best experience to all of our audiences, please only use common emoji in your file.*
 
 
-
-
 ## Template of component guideline
 ```
 # <component name>

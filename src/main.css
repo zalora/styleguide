@@ -48,9 +48,15 @@ main {
 }
 
 .sideMenu {
-  border-right: 1px solid #f4f4f4;
   padding-top: 2rem;
-  padding-right: 1rem;
+  border-bottom: 1px solid #f4f4f4;
+}
+@media only screen and (min-width: 600px) {
+  .sideMenu {
+    border-bottom: 0 none;
+    border-right: 1px solid #f4f4f4;
+    padding-right: 1rem;
+  }
 }
 
 .footer {
@@ -101,6 +107,7 @@ main {
   padding: 15px 15px 0 15px;
 }
 
+/* Color Swatch */
 .swatch {
   display: inline-block;
   width: 150px;
@@ -121,6 +128,16 @@ main {
   line-height: 1.66667;
   font-weight: 600;
   font-size: 12px;
+}
+
+/* Table */
+table {
+  border: 1px solid #dedede;
+  border-spacing: 0;
+}
+th, td {
+  padding: 14px 40px 14px 16px;
+  border-bottom: 1px solid #dedede;
 }
 
 /* Loading icon for fun */
