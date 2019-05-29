@@ -1,9 +1,10 @@
 module Page.Article exposing (Model, Msg, init, update, view)
 
 import AppState exposing (AppState(..))
+import Array
 import Browser.Dom as Dom
 import Browser.Navigation as Nav
-import Html exposing (Attribute, Html, a, button, div, input, label, li, main_, text, ul)
+import Html exposing (Attribute, Html, a, button, div, input, label, li, main_, table, tbody, td, text, th, thead, tr, ul)
 import Html.Attributes exposing (class, classList, for, id, property, style, type_)
 import Html.Events exposing (onClick, onInput)
 import Http exposing (Error, expectJson, expectString, get)
@@ -13,6 +14,7 @@ import Markdown exposing (toHtml)
 import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
 import Markdown.Config exposing (HtmlOption(..), Options)
 import Maybe exposing (withDefault)
+import Regex
 import Route exposing (href)
 import String exposing (contains, isEmpty, toLower)
 import Url.Builder exposing (absolute)
@@ -122,6 +124,26 @@ listItem category fileName isActive =
 article : Maybe String -> Html msg
 article content =
     let
+        tableRegex : Regex.Regex
+        tableRegex =
+            withDefault Regex.never <| Regex.fromString " *\\|(.+)\n *\\|( *[-:]+[-| :]*)\n((?: *\\|.*(?:\n|$))*)\n*"
+
+        leftAlign : Regex.Regex
+        leftAlign =
+            withDefault Regex.never <| Regex.fromString ":-+[^-:]"
+
+        rightAlign : Regex.Regex
+        rightAlign =
+            withDefault Regex.never <| Regex.fromString "[^:-]-+:"
+
+        centerAlign : Regex.Regex
+        centerAlign =
+            withDefault Regex.never <| Regex.fromString ":-+:"
+
+        leadingTrailingDivider : Regex.Regex
+        leadingTrailingDivider =
+            withDefault Regex.never <| Regex.fromString "^\\||\\|$"
+
         options : Options
         options =
             { softAsHardLineBreak = False
@@ -138,6 +160,80 @@ article content =
                         ]
                     ]
 
+                Block.Paragraph blk inlineList ->
+                    case Regex.contains tableRegex blk of
+                        True ->
+                            let
+                                tableRows : List String
+                                tableRows =
+                                    String.split "\n" blk
+                                        |> List.map (\str -> Regex.replace leadingTrailingDivider (\_ -> "") str)
+
+                                tableAlignment : Array.Array String
+                                tableAlignment =
+                                    List.drop 1 tableRows
+                                        |> List.head
+                                        |> withDefault ""
+                                        |> String.split "|"
+                                        |> List.map
+                                            (\align ->
+                                                if Regex.contains leftAlign align then
+                                                    "left"
+
+                                                else if Regex.contains rightAlign align then
+                                                    "right"
+
+                                                else if Regex.contains centerAlign align then
+                                                    "center"
+
+                                                else
+                                                    "left"
+                                            )
+                                        |> Array.fromList
+
+                                tableHeader : Html msg
+                                tableHeader =
+                                    List.head tableRows
+                                        |> withDefault ""
+                                        |> String.split "|"
+                                        |> Array.fromList
+                                        |> Array.indexedMap
+                                            (\i a ->
+                                                th
+                                                    [ style "text-align" (withDefault "left" <| Array.get i tableAlignment) ]
+                                                    (toHtml Nothing a)
+                                            )
+                                        |> Array.toList
+                                        |> tr []
+
+                                tableBody : Html msg
+                                tableBody =
+                                    let
+                                        tableBodyRow : String -> Html msg
+                                        tableBodyRow str =
+                                            String.split "|" str
+                                                |> Array.fromList
+                                                |> Array.indexedMap
+                                                    (\i a ->
+                                                        td
+                                                            [ style "text-align" (withDefault "left" <| Array.get i tableAlignment) ]
+                                                            (toHtml Nothing a)
+                                                    )
+                                                |> Array.toList
+                                                |> tr []
+                                    in
+                                    List.drop 2 tableRows
+                                        |> List.map (\s -> tableBodyRow s)
+                                        |> tbody []
+                            in
+                            [ table [] [ thead [] [ tableHeader ], tableBody ] ]
+
+                        False ->
+                            Block.defaultHtml
+                                (Just customHtmlBlock)
+                                Nothing
+                                block
+
                 _ ->
                     Block.defaultHtml
                         (Just customHtmlBlock)
@@ -148,7 +244,7 @@ article content =
         |> Block.parse (Just options)
         |> List.map customHtmlBlock
         |> List.concat
-        |> div [ class "col-sm-4 col-md-6 col-l-10" ]
+        |> div [ class "col-sm-4 col-md-6 col-l-10 u-padding-horizontal-l" ]
 
 
 
