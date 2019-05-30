@@ -8,11 +8,11 @@ Zalora/Style has a dynamic number of columns. Depends on the size of the screen,
 Use the grid system to build consistent layout between pages and maximize the experience for users with a variety of screen sizes. 
 
 
-## Fluid container, columns, margins and gutters
+## Fluid container, Column, Margin and Gutter
 
 Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-width(1344px)** in its grid system. A fluid container is a container that is always expanded to the **full-width** of the screen. But in Zalora/Style, the container won't go smaller than 320px, or larger than 1344px. It helps us to remain consistency layout between divices.
 
-![columns-gutters-margins-figure-caption](./img/Grid/grid_composition.png)
+![columns-gutters-margins-figure-caption](./img/Grid/grid_composition.png "Figure with captions of columns, gutters, margins and fluid container")
 
 ## Breakpoints
 
@@ -21,7 +21,8 @@ A breakpoint is the range of predetermined screen sizes that have specific layou
 The following video is a demonstration from [Material Design](https://material.io/design/layout/responsive-layout-grid.html#) about how breakpoints help to arrange layout on diffent size of screens.
 
 <video controls autoplay>
-<source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" type="video/mp4"/> </video>
+    <source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" type="video/mp4">
+</video>
 
 Zalora/Style defines 4 breakpoints: small, medium, large and extra large:
 
@@ -351,3 +352,4 @@ Move columns to the right using `.offset-{breakpoint}-{#}` classes. These classe
     </div>
 </section>
 ```
+
