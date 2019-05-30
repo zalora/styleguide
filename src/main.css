@@ -17,6 +17,10 @@ main {
   margin: 0;
 }
 
+video {
+  width: 90%;
+}
+
 /* Nav */
 .navbar {
   position: relative;
