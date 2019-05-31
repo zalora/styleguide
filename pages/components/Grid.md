@@ -8,7 +8,7 @@ Zalora/Style has a dynamic number of columns. Depends on the size of the screen,
 Use the grid system to build consistent layout between pages and maximize the experience for users with a variety of screen sizes. 
 
 
-## Fluid container, Column, Margin and Gutter
+## Fluid container, columns, margins and gutters
 
 Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-width(1344px)** in its grid system. A fluid container is a container that is always expanded to the **full-width** of the screen. But in Zalora/Style, the container won't go smaller than 320px, or larger than 1344px. It helps us to remain consistency layout between divices.
 
@@ -23,6 +23,7 @@ The following video is a demonstration from [Material Design](https://material.i
 <video controls autoplay>
     <source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" type="video/mp4">
 </video>
+
 
 Zalora/Style defines 4 breakpoints: small, medium, large and extra large:
 
@@ -42,6 +43,7 @@ By applying the breakpoint, we can adjust the layout of a page into diffent scre
 Zalora/Style's grid system is built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Below is an example and an in-depth look at how the grid comes together.
 
 You may need some background knowledge of flexbox to follow the guidelines below. This [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) is a good place for you to get know the background, terminology, guidelines and code snippets.
+
 ### Auto layout
 You can fix the width of columns and make the rest columns share the available space evenly. Or you can adjust a column's width based on its content.
 #### Equal width
@@ -351,5 +353,16 @@ Move columns to the right using `.offset-{breakpoint}-{#}` classes. These classe
         </div>
     </div>
 </section>
+
+### Equal width
+
+```html
+<div class="container--fluid is-debug">
+    <div class="row">
+        <span class="col">1</span>
+        <span class="col">2</span>
+        <span class="col">3</span>
+    </div>
+</div>
 ```
 
