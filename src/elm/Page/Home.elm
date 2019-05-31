@@ -2,7 +2,6 @@ module Page.Home exposing (view)
 
 import Html exposing (Html, code, div, h1, h4, li, main_, p, strong, text, ul)
 import Html.Attributes exposing (class, tabindex)
-import Util exposing (codeSnippet)
 
 
 

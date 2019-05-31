@@ -31,9 +31,12 @@ customElements.define('code-snippet', class extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerText = this._innerCode;
         hljs.registerLanguage('xml', xml);
-        hljs.highlightBlock(this);
+        hljs.configure({
+            useBR: true
+          })
+        const value = hljs.highlight("xml", this._innerCode).value;
+        this.innerHTML = '<pre><code class="xlm hljs">' +hljs.fixMarkup(value)+ '</code></pre>';;
     }
 });
 

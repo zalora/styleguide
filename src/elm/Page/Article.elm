@@ -117,8 +117,10 @@ sideMenu model =
 
 listItem : String -> String -> Bool -> Html msg
 listItem category fileName isActive =
-    li [ classList [ ( "list__item--single", True ), ( "u-font-weight-bold", isActive ) ] ]
-        [ a [ class "u-text-grey-100", Route.href <| getCategoryRoute category fileName ] [ text fileName ] ]
+    li [ classList [ ( "list__item", True ), ( "u-font-weight-bold", isActive ) ] ]
+        [ a [ class "listItem__text", Route.href <| getCategoryRoute category fileName ]
+            [ div [ class "listItemText__title" ] [ text fileName ] ]
+        ]
 
 
 article : Maybe String -> Html msg
@@ -244,7 +246,7 @@ article content =
         |> Block.parse (Just options)
         |> List.map customHtmlBlock
         |> List.concat
-        |> div [ class "col-sm-4 col-md-6 col-l-10 u-padding-horizontal-l" ]
+        |> div [ class "col-sm-4 col-md-6 col-l-10 u-padding-l" ]
 
 
 
