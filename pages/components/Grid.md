@@ -44,13 +44,158 @@ You may need some background knowledge of flexbox to follow the guidelines below
 ### Equal width
 
 ```html
-<div class="container--fluid is-debug">
+<section class="container--fluid is-debug">
     <div class="row">
-        <span class="col">1</span>
-        <span class="col">2</span>
-        <span class="col">3</span>
+        <span class="col">
+            col
+        </span>
+        <span class="col">
+            col
+        </span>
+        <span class="col">
+            col
+        </span>
     </div>
-</div>
+    <div class="row">
+        <span class="col">
+            col
+        </span>
+        <span class="col">
+            col
+        </span>
+    </div>
+</section>
 ```
+
+#### Break into multiple lines
+There is a util class `w-100` for you to break equal-width columns into multiple lines
+
+```html
+<section class="container--fluid is-debug">
+    <div class="row">
+        <span class="col">
+            col
+        </span>
+        <span class="col">
+            col
+        </span>
+        <span class="w-100"></span>
+        <span class="col">
+            col
+        </span>
+        <span class="col">
+            col
+        </span>
+    </div>
+</section>
+```
+
+### Grid with breakpoints
+The column widths apply at all breapoints (i.e. col-`sm`-1 is applied to all screens that is `sm` and up).
+You may also have multiple width defined. It causes the layout to change at the defined breakpoint. E.g. a column can be defined as `col-sm-4 col-lg-6`=> when the screen is smaller than `lg` the column takes 100% of the row, while when the screen is `lg` and up, the column takes 6/12 (1/2) of the screen.
+
+```html
+<section class="container--fluid is-debug">
+    <div class="row">
+        <span class="col-md">
+            col-md
+        </span>
+        <span class="col-md">
+            col-md
+        </span>
+        <span class="col-md">
+            col-md
+        </span>
+    </div>
+    <div class="row">
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+    </div>
+    <div class="row">
+        <span class="col-sm-4 col-lg-6">
+            col-sm-4 col-lg-6
+        </span>
+        <span class="col-sm-4 col-lg-6">
+            col-sm-4 col-lg-6
+        </span>
+    </div>
+</section>
+```
+### Auto layout
+You can fix the width of columns and make the rest columns share the available space evenly. Or you can adjust a column's width based on its content.
+
+#### Setting one column width
+In many layouts you may want to fix the width of one column and have the rest columns automatically resize around it.
+
+```html
+<section class="container--fluid is-debug">
+    <div class="row">
+        <span class="col">
+            col
+        </span>
+        <span class="col-sm-2">
+            col-sm-2 (take 50% of the row for sm or up)
+        </span>
+        <span class="col">
+            col
+        </span>
+    </div>
+    <div class="row">
+        <span class="col">
+            col
+        </span>
+        <span class="col-lg-4">
+            col-lg-4 (take 33% of the row for lg or up)
+        </span>
+        <span class="col">
+            col
+        </span>
+    </div>
+</section>
+```
+
+#### Variable width content
+Use `col-{breakpoint}-auto` to make the column's width based on the natural width of their content.
+
+```html
+<section class="container--fluid is-debug">
+    <div class="row">
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+        <span class="col-sm-auto">
+            col-md-auto
+        </span>
+        <span class="col-sm-1">
+            col-sm-1
+        </span>
+    </div>
+    <div class="row">
+        <span class="col">
+            col
+        </span>
+        <span class="col-sm-auto">
+            col-sm-auto
+        </span>
+        <span class="col">
+            col
+        </span>
+    </div>
+</section>
+```
+
+
+
+
 
 ## Demo
