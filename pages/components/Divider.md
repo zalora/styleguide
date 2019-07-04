@@ -1,72 +1,64 @@
 # Divider
 A divider is a line to group content to help users scan the content faster. 
-
-# Type
-There are two types of a divider, based on the visual and the function. 
-
-Based on visual:
-_Thin divider_
-  * To group related / same level content.
-  * To divide the title and the content. 
-<insert component> -- added by developer 
-(Correct)  --> image
-Cart screen. Make a clear grouping per item in one seller. 
-(Correct) --> image
-Filter screen. Differentiate and create a hierarchy to the title and the content.
-(Wrong) --> image
-PDV screen. If you need to group text-only information is better to play with the spacing rather than put divider too much.
+<insert component>
 
 
-_Thick divider_
-  * To group unrelated / different level content.  
-<insert component> -- added by developer 
-(Correct)  --> image
-Cart screen. Make a clear grouping per seller. 
-(Correct)  --> image
-PDV screen. Divide the information between the information about the item and item suggestion. 
-(Wrong) --> image
-Wishlist screen. The item here is the same level so use a thin divider.
+
+## Type
+There are two types of a divider:
+
+**Thin divider**
+: To group related / same level content.
+
+![thin divider in the cart screen](./img/divider/thindivider_cart.png)
+
+**Correct.** On the cart screen, the divider makes a clear grouping per item in one seller. 
+
+![wrong thin divider in the pdv screen](./img/divider/wrongthindivider_pdv.png)
+
+**Wrong.** If you need to group text-only information is better to play with the spacing rather than put too much divider.
 
 
-Based on function:
-_Full bleed divider_
-Separate and divide the content into two sections. 
-<insert component> -- added by developer 
- --> image
-Filter screen. Full bleed divider with thin divider
---> Image
-PDV screen. Full bleed divider with thick divider
 
-_Middle divider_
-To group related / same level content.
-A middle divider cannot pair with thick divider because it has the opposite function. 
-<insert component> -- added by developer 
- --> image
-Wishlist screen. Middle divider with thin divider. 
+**Thick divider**
+: To group unrelated / different level content.
 
-## Usage
-Do:
+![thick divider in the cart screen](./img/divider/thickdivider_cart.png)
+
+**Correct.** On the cart screen, the divider makes a clear grouping per seller. 
+
+![thick divider in the pdv screen](./img/divider/thickdivider_pdv.png)
+
+**Correct.** On the PDV screen, the divider devide the information between the information about the item and item suggestion.
+
+![wrong thick divider in the wishlist screen](./img/divider/wrongthickdivider_wishlist.png)
+**Wrong.** On the wishlist screen, the item here has the same level so it should use a thin divider.
+
+
+
+## The Usage
+Use a divider for:
   * Differentiate / group the content.
-  * Need to create hierarchy and divide the content into two sections.
+  * Create a hierarchy and divide the content into two sections.
+
 Don't:
   * Use too many dividers because it can confuse the users.
   * Make a random length for the divider. 
   * Stack a divider.
 
+
+
 ## Anatomy
-<insert component> -- added by developer 
- --> image thin divider primary
- --> image thin divider secondary
- --> image thick divider primary
+![Divider specification](./img/divider/Divider_spec.png)
 
-| Type | Colour | Thick (px) |
-| :-------------: |:-------------:| :-------------:|
-| primary divider     | #DEDEDE | 1px |
-| secondary divider      | #F4F4F4  | 1px |
-| thick divider | #F4F4F4  | 8px |
+| Type | Colour | Thick (px) | Margin (left right) |
+| :---------: |:---------:| :--------:| :---------:|
+| primary divider | #DEDEDE | 1px | 16px |
+| secondary divider | #F4F4F4  | 1px | 16px |
+| thick divider | #F4F4F4  | 8px | no margin |
 
-A stand-alone divider.
-Must have a minimum of 8 px space of the margin top and bottom. 
+Remember,  if you use a divider to group the content, you should have a minimum of 8 px space of the margin top and bottom. 
 
-Divider as a part of the components. 
-Can be used with or without space follow the other components need.
+
+
+## Demo

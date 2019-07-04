@@ -1,49 +1,59 @@
 # Checkbox
-is a selection control that allows users to select no option,  a single option or multiple options.
+A checkbox is a selection control that allows users to select multiple options, single or no option at all. 
 
-<insert component> -- added by the developer 
+<insert component>
 
-# Type and State:
-<insert component> -- added by the developer 
-  * Filter checkbox: 
-	  * The default state is all options selected.
-	  * Must have an apply and cancel button.
-	  * Using a check icon and only can be used for filter screen. 
-  * Acknowledgment (agree with terms and conditions):
-	  * The default state is not selected. 
-	  * Using a normal checkbox.
-* Marketing purpose (subscribe newsletter):
-	  * The default state is selected.
-	  * Using a normal checkbox.
 
-# Usage
+## Type and State:
+
+![Filter checkmark](./img/checkbox/Filtercheckmark.png)
+
+**Filter checkmark**
+* Using a specific check icon and for filter only.  
+* For this checkmark, the default state means opt-in all option. And the active state means select some option. 
+
+![General checkbox](./img/checkbox/Generalcheckbox.png)
+
+**Checkbox**
+* For an acknowledgement (like terms and conditions) : the default state is not checked.
+* For a marketing purpose (subscribe newsletter) : the default state is checked. 
+
+
+
+## Usage
 Do:
-  * Multiple selections for the option given. 
-  * Contextual, not too far away from the action.
+  * For multiple selections for the option given. 
+  * Contextual, not too far away from the related content.
 
 Don't:
   * Put background colour for selected option.
 
-# Anatomy
- <insert component> -- added by the developer 
-  * The radio icon should be on the left side.
-1. Option: select another option will not affect the current selection.
-2. Selection: indicates the desired option. 
-For mobile can use the native interaction behaviour like a ripple effect. 
 
 
-# Write for radio button
+## Anatomy
+![Checkbox Specification](./img/checkbox/Checkboxspec.png)
+
+ The icon should be on the left side. And native behaviour like ripple can be applied for the mobile platform. 
+
+
+
+## Write for radio button
   * Use a positive and active wording.
   * Start with a capital letter.  
   * Don't end it with punctuation. 
   * Keep the text in a single line. 
   * All options should be distinct from each other and not vague or misleading.
 
-# Order
+
+
+## Order
 Be listed according to logical order, whether is an alphabetical, most popular or time-based order. 
 
-# Demo -- added by the developer
 
 
-# Related components
+## Demo
+
+
+
+## Related components
 Radio button
