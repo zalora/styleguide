@@ -1,20 +1,23 @@
 # Button
 A button is indicates a possible user action. Should be visible and inform the users on what will happen when they click on it. 
 
-<insert component>
-
-
 
 ## Type
-  * **Primary button**
-    <insert component>
+  * **Primary button** 
     
     The main to action button. Should appear once per screen and not every screen need a primary button. 
 
+    ```html
+    <button class="btn btn--primary">Primary</button>
+    ```
+
   * **Outline button**
-    <insert component>
     
     A secondary action button. For another option other than the primary call to action. 
+
+    ```html
+    <button class="btn btn--outline">Outline</button>
+    ```
 
   * **Apply button**
     <insert component>
@@ -22,24 +25,36 @@ A button is indicates a possible user action. Should be visible and inform the u
     Only use for the active state of the apply button. The initial state will be the disabled state and only after users start typing it changes to this button. 
 
   * **Disable button**
-    <insert component>
     
     Users need to complete an action before the button is active. Mostly use with the primary and apply button. 
+    
+    ```html
+    <button class="btn btn--special is-disabled">Disabled</button>
+    ```
 
   * **Text link**
-    <insert component>
     
     Use to navigating to another page. 
 
+    ```html
+    <button class="btn btn--link">Hyperlink</button>
+    ```
+
   * **Subtle**
-    <insert component>
     
     If in one group of content there are more than 3 links use subtle.
 
+    ```html
+    <button class="btn btn--subtle">Subtle</button>
+    ```
+
   * **Negative button**
-    <insert component>
 
     Only appears as a final confirmation for a destructive action such as deleting. 
+
+    ```html
+    <button class="btn btn--danger">Danger</button>
+    ```
 
 
 
