@@ -10,9 +10,9 @@ import Page.Home as Home
 import Page.NotFound as NotFound
 import Page.Playground as Playground exposing (Msg, init, update, view)
 import Route exposing (Route, fromUrl)
+import UI exposing (pageFooter)
 import Url exposing (Url)
 import Url.Builder exposing (absolute)
-import Util exposing (pageFooter)
 
 
 
@@ -45,7 +45,7 @@ view model =
             case .page model of
                 HomePage ->
                     { title = "Home"
-                    , view = Home.view :: [ Util.pageFooter ]
+                    , view = Home.view :: [ UI.pageFooter ]
                     }
 
                 ArticlePage article ->
@@ -60,7 +60,7 @@ view model =
 
                 NotFoundPage ->
                     { title = "Not Found"
-                    , view = NotFound.view :: [ Util.pageFooter ]
+                    , view = NotFound.view :: [ UI.pageFooter ]
                     }
 
                 EmptyPage ->

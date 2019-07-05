@@ -1,7 +1,7 @@
 module Page.Home exposing (view)
 
-import Html exposing (Html, code, div, h1, h4, li, main_, p, strong, text, ul)
-import Html.Attributes exposing (class, tabindex)
+import Html exposing (Html, code, div, h1, h4, img, li, main_, p, strong, text, ul)
+import Html.Attributes exposing (class, src, tabindex)
 
 
 
@@ -11,9 +11,13 @@ import Html.Attributes exposing (class, tabindex)
 view : Html msg
 view =
     main_ [ class "container--fluid", tabindex -1 ]
-        [ h1 [ class "row justify-content-center u-margin-top-xl" ] [ text "ZALORA Style" ]
+        [ h1
+            [ class "row justify-content-center align-items-center u-margin-vertical-xl" ]
+            [ text "ZALORA Style"
+            , img [ src "/assets/palatte.png" ] []
+            ]
         , h4 [ class "row justify-content-center u-text-center" ] [ text "Style is built in a scalable, reusable way that ensures consistency, low cost of changes and a balance between creativity and efficiency. Start to build a responsive, mobile-first project with Style today!" ]
-        , div [ class "divider" ] []
+        , div [ class "divider u-margin-vertical-xl" ] []
         , div [ class "row" ]
             [ div [ class "col-sm-4 col-lg" ]
                 [ h4 [] [ text "Installation" ]

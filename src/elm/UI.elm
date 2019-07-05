@@ -1,4 +1,4 @@
-module Util exposing (codePreview, codeSnippet, loading, menuIcon, pageFooter)
+module UI exposing (codePreview, codeSnippet, loading, menuIcon, pageFooter)
 
 import Html exposing (Html, a, div, footer, text)
 import Html.Attributes exposing (class, href)
