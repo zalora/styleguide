@@ -13,6 +13,7 @@ import List exposing (head)
 import Markdown exposing (toHtml)
 import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
 import Markdown.Config exposing (HtmlOption(..), Options)
+import Markdown.Inline as Inline exposing (Inline)
 import Maybe exposing (withDefault)
 import Regex
 import Route exposing (href)
@@ -34,6 +35,13 @@ type alias Model =
     , appState : AppState Http.Error
     , compact : Bool
     , searchValue : String
+    }
+
+
+type alias ImgMetadata =
+    { class : String
+    , tag : String
+    , caption : String
     }
 
 
@@ -152,12 +160,75 @@ article content =
             , rawHtml = ParseUnsafe
             }
 
+        customHtmlInline : Inline i -> Html msg
+        customHtmlInline inline =
+            case inline of
+                Inline.Image url maybeTitle inlines ->
+                    case maybeTitle of
+                        Just title ->
+                            let
+                                className =
+                                    if String.startsWith "Do[" title then
+                                        "figure-caption__tag do"
+
+                                    else if String.startsWith "Don't[" title then
+                                        "figure-caption__tag dont"
+
+                                    else
+                                        ""
+
+                                tag =
+                                    if String.startsWith "Do[" title then
+                                        "Do"
+
+                                    else if String.startsWith "Don't[" title then
+                                        "Don't"
+
+                                    else
+                                        ""
+
+                                caption =
+                                    if String.startsWith "Do[" title then
+                                        String.slice 3 -1 title
+
+                                    else if String.startsWith "Don't[" title then
+                                        String.slice 6 -1 title
+
+                                    else
+                                        title
+                            in
+                            Html.figure [ class "col-sm-4 col-md-3 col-lg-5 offset-lg-1 figure" ]
+                                [ Html.img
+                                    [ Html.Attributes.alt (Inline.extractText inlines)
+                                    , Html.Attributes.src url
+                                    ]
+                                    []
+                                , Html.figcaption []
+                                    [ Html.div [ class className ] [ text tag ]
+                                    , Html.div [ class "figure-caption__text" ] [ text caption ]
+                                    ]
+                                ]
+
+                        Nothing ->
+                            Html.div
+                                [ class "lightbox" ]
+                                [ Html.img
+                                    [ class "lightbox__img"
+                                    , Html.Attributes.alt (Inline.extractText inlines)
+                                    , Html.Attributes.src url
+                                    ]
+                                    []
+                                ]
+
+                _ ->
+                    Inline.defaultHtml (Just customHtmlInline) inline
+
         customHtmlBlock : Block b i -> List (Html msg)
         customHtmlBlock block =
             case block of
                 Block.CodeBlock codeblock codestr ->
                     [ div [ class "example" ]
-                        [ div [ class "example__preview" ] <| Markdown.toHtml (Just options) codestr
+                        [ div [ class "example__preview" ] [ Util.codePreview codestr ]
                         , div [ class "example__codeblock" ] [ Util.codeSnippet codestr ]
                         ]
                     ]
@@ -233,13 +304,13 @@ article content =
                         False ->
                             Block.defaultHtml
                                 (Just customHtmlBlock)
-                                Nothing
+                                (Just customHtmlInline)
                                 block
 
                 _ ->
                     Block.defaultHtml
                         (Just customHtmlBlock)
-                        Nothing
+                        (Just customHtmlInline)
                         block
     in
     withDefault "" content

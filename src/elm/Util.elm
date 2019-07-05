@@ -1,4 +1,4 @@
-module Util exposing (codeSnippet, loading, menuIcon, pageFooter)
+module Util exposing (codePreview, codeSnippet, loading, menuIcon, pageFooter)
 
 import Html exposing (Html, a, div, footer, text)
 import Html.Attributes exposing (class, href)
@@ -31,13 +31,18 @@ loading =
 
 codeSnippet : String -> Html msg
 codeSnippet code =
-    Html.node "code-snippet" [ innerCode code ] []
+    Html.node "code-snippet" [ property "innerCode" code ] []
 
 
-innerCode : String -> Html.Attribute msg
-innerCode code =
-    Html.Attributes.property "innerCode" <|
+property : String -> String -> Html.Attribute msg
+property propertyName code =
+    Html.Attributes.property propertyName <|
         Json.Encode.string code
+
+
+codePreview : String -> Html msg
+codePreview code =
+    Html.node "code-preview" [ property "srcdoc" code ] []
 
 
 pageFooter : Html msg
