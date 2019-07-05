@@ -23,6 +23,10 @@ You can copy the [template](#template-of-component-guideline) below to start you
 
 The template is in markdown format. Not familiar with markdown? No worries, here is the [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+Currently only [basic markdown syntax](https://www.markdownguide.org/basic-syntax) and [table](https://www.markdownguide.org/extended-syntax/#tables) is supported. 
+
+📌Tip: Creating tables with hyphens and pipes can be tedious. To speed up the process, try using the [Markdown Tables Generator](http://www.tablesgenerator.com/markdown_tables). Build a table using the graphical interface, and then copy the generated Markdown-formatted text into your file.
+
 ### Adding image to your markdown file
 Adding image to your markdown file, may not be that straitforward if the image you want to include does not has an url. We also believe it's better that you add the images in styleguide repository. So that the project has the full control of it's assets. 
 

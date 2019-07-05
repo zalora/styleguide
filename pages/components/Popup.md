@@ -1,9 +1,22 @@
 # Pop Up
 A pop up is a modal that informs the user about important information and requires a decision within the context of the page. 
 
-<insert component> 
-
-<br>
+```html
+    <div class="container--fluid">
+        <button class="btn btn-primary" onclick="showPopup()">Show
+            popup</button>
+        <div class="popup__backdrop" id="backdrop">
+            <section class="popup" id="popup">
+                <header class="popup__title">Title <i class="popupTitle__dismiss" onclick="hidePopup()"></i></header>
+                <p class="popup__body">Please put your text description in here.</p>
+                <footer class="popup__footer--compressed">
+                    <button class="btn btn--outline popup__action--secondary" onclick="hidePopup()">Secondary</button>
+                    <button class="btn btn--primary popup__action--primary" onclick="hidePopup()">Primary</button>
+                </footer>
+            </section>
+        </div>
+    </div>
+```
 
 ## Behaviour
 When the popup show, it blocks the user to interact with the main page until they confirm, dismiss or take the required action. With pop up, it makes the users focus on a single task. 
@@ -12,12 +25,8 @@ When the popup show, it blocks the user to interact with the main page until the
 
 Pop up has several ways to be dismissed. By clicking the cancel button, tap on the close icon (x) or by tapping outside the popup. 
 
-<br>
-
 ## Usage
 Only to inform important information that requires specific user action, decision or acknowledgement. 
-
-<br>
 
 ## Anatomy
 
@@ -34,21 +43,8 @@ Only to inform important information that requires specific user action, decisio
 
 Scrollable content is permitted only for terms and conditions.
 
-<br>
-
 ## Placement 
 Popup should be placed center align and in the middle of the screen to make the user focus on the message. 
 
-<br>
-
-
 ## Order and alignment
 The placement of the button on popup should be side by side if possible. But it can be stack as well to accommodate the longer text. 
-
-<br>
-
-## Implementation
-
-<br>
-
-## Demo

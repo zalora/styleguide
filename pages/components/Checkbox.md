@@ -1,31 +1,56 @@
 # Checkbox
 A checkbox is a selection control that allows users to select multiple options, single or no option at all. 
 
-<insert component>
+```html
+<div class="checkbox">
+    <input id="checkbox-1" type="checkbox">
+    <label class="click__target" for="checkbox-1">Checkbox 1</label>
+</div>
+
+<div class="checkbox">
+    <input id="checkbox-2" type="checkbox">
+    <label for="checkbox-2">Checkbox 2</label>
+    <span class="checkbox__helper">description</span>
+</div>
+ 
+```
 
 
-## Type and State:
+## Type and State
 
-![Filter checkmark](./img/checkbox/Filtercheckmark.png)
-
-**Filter checkmark**
-* Using a specific check icon and for filter only.  
-* For this checkmark, the default state means opt-in all option. And the active state means select some option. 
-
-![General checkbox](./img/checkbox/Generalcheckbox.png)
-
-**Checkbox**
+### Checkbox
 * For an acknowledgement (like terms and conditions) : the default state is not checked.
 * For a marketing purpose (subscribe newsletter) : the default state is checked. 
 
+![General checkbox](./img/checkbox/Generalcheckbox.png)
 
+### Filter checkmark
+* Using a specific check icon and for filter only.  
+* For this checkmark, the default state means opt-in all option. And the active state means select some option. 
+
+![Filter checkmark](./img/checkbox/Filtercheckmark.png)
+
+To change the normal checkbox to filter checkbox, you just need to change the class name from `checkbox` to `filterCheckbox`
+
+```html
+<div class="filterCheckbox">
+    <input id="filter-1" type="checkbox">
+    <label for="filter-1">Filter 1</label>
+</div>
+<div class="filterCheckbox">
+    <input id="filter-2" type="checkbox">
+    <label for="filter-2">Filter 2</label>
+    <span class="filterCheckbox__helper">description</span>
+</div>
+          
+```
 
 ## Usage
-Do:
+<span class="u-text-positive">Do</span>
   * For multiple selections for the option given. 
   * Contextual, not too far away from the related content.
 
-Don't:
+<span class="u-text-urgent">Don't</span>
   * Put background colour for selected option.
 
 
@@ -33,7 +58,7 @@ Don't:
 ## Anatomy
 ![Checkbox Specification](./img/checkbox/Checkboxspec.png)
 
- The icon should be on the left side. And native behaviour like ripple can be applied for the mobile platform. 
+The icon should be on the left side. And native behaviour like ripple can be applied for the mobile platform. 
 
 
 
@@ -46,14 +71,5 @@ Don't:
 
 
 
-## Order
-Be listed according to logical order, whether is an alphabetical, most popular or time-based order. 
-
-
-
-## Demo
-
-
-
 ## Related components
-Radio button
+[Radio button](/#/components/Radio%20Button)

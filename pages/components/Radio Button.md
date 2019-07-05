@@ -1,17 +1,29 @@
 # Radio Button
 A radio button is a selection control that allows users to select only one of the options given. 
 
-<insert component>
-
-
+```html
+<div class="radio">
+    <input id="radio-1" type="radio" name="radio-test">
+    <label class="click__target" for="radio-1">Radio 1</label>
+</div>
+<div class="radio">
+    <input id="radio-2" type="radio" name="radio-test">
+    <label for="radio-2">Radio 2</label>
+</div>
+<div class="radio is-disabled">
+    <input id="radio-3" type="radio" name="radio-test">
+    <label for="radio-3">Radio 3</label>
+    <span class="radio__helper">Discription</span>
+</div>
+```
 
 ## Usage
-Do:
+<span class="u-text-positive">Do</span>
   * Single select from the options given.
   * Auto selects the neutral or the safest selection option. The exception only for gender selection on the signup screen.
   * Show all the options and don't hide it.
 
-Don't:
+<span class="u-text-urgent">Don't</span>
   * Put a background colour for the selection. 
   * Use radio button for multiple selections.
 
@@ -43,23 +55,10 @@ Don't:
 
 Be listed according to logical order, whether is an alphabetical, most popular or time-based order. 
 
-![Radio button list](./img/radiobutton/Radiobuttonlist.png)
+![Radio button list](./img/radiobutton/Radiobuttonlist.png "Radio button for sort. The order is based on the most popular option.")
 
-Radio button for sort. The order is based on the most popular option. 
-
-![Radio button side by side](./img/radiobutton/Sidebysideradiobutton.png)
-
-Radio button on sign up screen. The order is based on the alphabet. 
-
-
-
-## Implementation
-
-
-
-## Demo
-
+![Radio button side by side](./img/radiobutton/Sidebysideradiobutton.png "Radio button on sign up screen. The order is based on the alphabet.")
 
 
 ## Related components
-Checkbox
+[Checkbox](/#/components/Checkbox)

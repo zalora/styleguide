@@ -1,8 +1,7 @@
 code {
-  background-color: #F4F4F4;
-  line-height: 2;
-  padding: 0 1rem;
+  padding: 0 .25rem;
   margin: .5rem 0;
+  color: #297e84;
 }
 
 .code--block {
@@ -13,8 +12,87 @@ img {
   max-height: 100%;
   max-width: 100%;
 }
+
+img::after {
+  content: attr(title);
+}
+
 main {
   margin: 0;
+}
+
+video {
+  width: 90%;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+li > p:first-child {
+  display: inline-block;
+}
+
+p {
+  margin-block-start: .5em;
+  margin-block-end: .5em;
+}
+
+h2 {
+  margin-top: 80px;
+}
+
+h3 {
+  margin-top: 48px;
+}
+
+h4 {
+  margin-top: 32px;
+}
+
+
+.figure{
+  margin-inline-end: 0;
+  max-width: 375px;
+  margin-top: 32px;
+}
+
+.figure img {
+  border: 1px solid #f4f4f4;
+}
+
+.row .figure:first-child{
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+.figure-caption__tag.do {
+  font-weight: 500;
+  color: #2e8618;
+  border-top: 8px solid #2e8618;
+}
+
+.figure-caption__tag.dont {
+  font-weight: 500;
+  color: #b81818;
+  border-top: 8px solid #b81818;
+}
+
+.figure-caption__text {
+  color: #737373;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.lightbox {
+  width: 100%;
+  border: 1px solid #eee;
+  background: #f4f4f4;
+}
+
+.lightbox__img {
+  margin: 8px auto;
+  display: block;
 }
 
 /* Nav */
@@ -72,7 +150,7 @@ main {
 }
 
 .playground__wrapper {
-  border: 1px solid #eee;
+  border: 1px solid #f4f4f4;
   border-radius: .5rem;
 }
 
@@ -95,45 +173,50 @@ main {
 .example {
   border: 1px solid #eee;
   border-radius: 2px;
-  padding: 15px 0;
 }
 
 .example__preview {
   border-bottom: 1px solid #eee;
-  padding: 0 15px 15px 15px;
+  padding: 15px;
 }
 
 .example__codeblock {
-  padding: 15px 15px 0 15px;
+  padding: 15px;
+  background: #f4f4f4;
+}
+
+.example__codeblock .hljs {
+  background: #f4f4f4;
 }
 
 /* Color Swatch */
-.swatch {
-  display: inline-block;
-  width: 150px;
-  box-shadow: 0 10px 20px 0 rgba(4,68,77,.15);
-}
+
 .swatch__color {
-  height: 130px;
-}
-.swatch__info {
-  background-color: #fff;
-  padding: 10px;
-  text-transform: uppercase;
+  display: inline-block;
+  height: 128px;
+  width:128px;
+  padding: 8px;
+  box-shadow: 0 8px 16px 0 rgba(4,68,77,.15);
+  margin-right: 32px;
 }
 
 .swatch__info__name {
   display: block;
-  color: #2f3941;
+  text-transform: uppercase;
   line-height: 1.66667;
   font-weight: 600;
   font-size: 12px;
+}
+
+.swatch__group {
+  margin-top: 32px;
 }
 
 /* Table */
 table {
   border: 1px solid #dedede;
   border-spacing: 0;
+  width: 100%;
 }
 th, td {
   padding: 14px 40px 14px 16px;
@@ -249,4 +332,7 @@ th, td {
   .articleListToggle {
     display: none !important;
   }
+}
+.articleList {
+  overflow: hidden;
 }
