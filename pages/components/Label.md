@@ -1,16 +1,24 @@
  # Label
  
+ ```html
+<div class="label--general">General</div>
+<div class="label--success">Success</div>
+<div class="label--alert">Alert</div>
+<div class="label--warning">Warning</div>
+<div class="label--new">New</div>
+ ```
+
  ## Usage
  
  Use labels to highlight a status through quick recognition. 
  
  |  Label | Color | Usage |
  | :---- |:---- |:---- |
- | [Insert label 'General'] | grey | Use for neutral information such as non-returnable, non-exchangeable. |
- | [Insert label 'Success'] | green | Use for success feedback like 'available', 'done', 'approved', 'added'. |
- | [Insert label 'Alert'] | red | Use for failure states like 'error', 'decline', 'failed'. |
- | [Insert label 'Warning'] | yellow | Use for warning state. |
- | [Insert label 'New' | teal | Use for temporary labels that need to grab attention, e.g. highligthing a new feature.|
+ | <div class="label--general">General</div> | grey | Use for neutral information such as non-returnable, non-exchangeable. |
+ | <div class="label--success">Success</div> | green | Use for success feedback like 'available', 'done', 'approved', 'added'. |
+ | <div class="label--alert">Alert</div> | red | Use for failure states like 'error', 'decline', 'failed'. |
+ | <div class="label--warning">Warning</div> | yellow | Use for warning state. |
+ | <div class="label--new">New</div> | teal | Use for temporary labels that need to grab attention, e.g. highligthing a new feature.|
  
  For counts, e.g. 'items in cart', use Badge instead.
  
@@ -36,7 +44,3 @@
 * If text length > 184px, the text will be truncated with an ellipsis. Since there is no way to see the full content beyond the ellipsis, make sure to keep the text shorter than that!
 
 ![truncated label](./img/Label/truncated_label.png "Truncated label")
-
-### Implementation
-
-### Demo
