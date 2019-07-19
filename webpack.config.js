@@ -7,6 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = (env, argv) => [{
     entry: {
@@ -16,7 +17,7 @@ module.exports = (env, argv) => [{
     },
     output: {
         filename:  argv.mode === "production" ? "[name].[hash].js" : "index.js",
-        publicPath: '/',
+        publicPath: '',
     },
     module: {
         noParse: /\.elm$/,
@@ -41,7 +42,7 @@ module.exports = (env, argv) => [{
                     {
                         loader: 'elm-webpack-loader',
                         options: {
-                            debug: true
+                            debug: argv.mode === 'production' ? false : true
                         }
                     }
                 ]
@@ -53,6 +54,7 @@ module.exports = (env, argv) => [{
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin(
             {
                 title: "Style",

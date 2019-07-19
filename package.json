@@ -6,13 +6,16 @@
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "docs": "buildbranch gh-pages dist '' no-verify"
   },
   "author": "Yichang Li",
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "@zalora/style": "^1.4.0",
+    "@zalora/style": "^3.2.3",
+    "buildbranch": "^2.0.1",
+    "clean-webpack-plugin": "^2.0.2",
     "codemirror": "^5.40.2",
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "^1.0.0",

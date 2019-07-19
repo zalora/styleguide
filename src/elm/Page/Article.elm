@@ -3,20 +3,19 @@ module Page.Article exposing (Model, Msg, init, update, view)
 import AppState exposing (AppState(..))
 import Browser.Dom as Dom
 import Browser.Navigation as Nav
-import Html exposing (Attribute, Html, a, button, div, input, label, li, main_, text, ul)
-import Html.Attributes exposing (class, classList, for, id, property, style, type_)
+import Html exposing (Attribute, Html)
+import Html.Attributes as Attr
 import Html.Events exposing (onClick, onInput)
 import Http exposing (Error, expectJson, expectString, get)
 import Json.Decode as Decode exposing (Decoder, list, string)
 import List exposing (head)
-import Markdown exposing (toHtml)
-import Markdown.Block as Block exposing (Block, CodeBlock, defaultHtml)
-import Markdown.Config exposing (HtmlOption(..), Options)
+import Markdown.Block
+import MarkdownUtil
 import Maybe exposing (withDefault)
 import Route exposing (href)
-import String exposing (contains, isEmpty, toLower)
+import String
+import UI
 import Url.Builder exposing (absolute)
-import Util exposing (codeSnippet, loading, menuIcon)
 
 
 
@@ -32,6 +31,13 @@ type alias Model =
     , appState : AppState Http.Error
     , compact : Bool
     , searchValue : String
+    }
+
+
+type alias ImgMetadata =
+    { class : String
+    , tag : String
+    , caption : String
     }
 
 
@@ -56,7 +62,7 @@ init category maybeTitle =
       , searchValue = ""
       }
     , Http.get
-        { url = "/pages/" ++ category ++ "/fileList.json"
+        { url = "pages/" ++ category ++ "/fileList.json"
         , expect = expectJson InitView decoder
         }
     )
@@ -74,17 +80,17 @@ view model =
     in
     case appState of
         InitLoading ->
-            main_ [] [ loading ]
+            Html.main_ [] [ UI.loading ]
 
         Loaded maybeError ->
-            main_ []
+            Html.main_ []
                 [ case maybeError of
                     Just error ->
-                        text <| "Error: " ++ Debug.toString error
+                        Html.text <| "Error: " ++ Debug.toString error
 
                     Nothing ->
-                        main_ []
-                            [ div [ class "row u-padding-horizontal-m" ]
+                        Html.main_ []
+                            [ Html.div [ Attr.class "row u-padding-horizontal-m" ]
                                 [ sideMenu model
                                 , article <| .content model
                                 ]
@@ -92,63 +98,55 @@ view model =
                 ]
 
         Loading ->
-            main_ [] [ loading ]
+            Html.main_ [] [ UI.loading ]
 
         LoadingError error ->
-            main_ [] [ text <| Debug.toString error ]
+            Html.main_ [] [ Html.text <| Debug.toString error ]
 
 
 sideMenu : Model -> Html Msg
 sideMenu model =
-    div [ class "col-sm-4 col-md-2 col-l-2 sideMenu" ]
-        [ div [ class "row justify-content-between" ]
-            [ div [ class "textField col" ]
-                [ input [ id "searchArticle", classList [ ( "has-value", not (isEmpty <| .searchValue model) ) ], type_ "text", onInput SearchArticle ] []
-                , label [ for "searchArticle" ] [ text "Search ..." ]
+    Html.div [ Attr.class "col-sm-4 col-md-2 col-l-2 sideMenu" ]
+        [ Html.div [ Attr.class "row justify-content-between" ]
+            [ Html.div [ Attr.class "textField col" ]
+                [ Html.input
+                    [ Attr.id "searchArticle"
+                    , Attr.classList [ ( "has-value", not (String.isEmpty <| .searchValue model) ) ]
+                    , Attr.type_ "text"
+                    , onInput SearchArticle
+                    ]
+                    []
+                , Html.label [ Attr.for "searchArticle" ] [ Html.text "Search ..." ]
                 ]
-            , button [ class "btn btn--outline articleListToggle", onClick ToggleArticleList ] [ Util.menuIcon ]
+            , Html.button
+                [ Attr.class "btn btn--outline articleListToggle"
+                , onClick ToggleArticleList
+                ]
+                [ UI.menuIcon ]
             ]
         , List.map (\s -> listItem (.category model) s (s == withDefault "" (.title model))) (.shownFileList model)
-            |> ul [ class "list collapse__target articleList", showList <| .compact model ]
+            |> Html.ul
+                [ Attr.class "list collapse__target articleList"
+                , showList <| .compact model
+                ]
         ]
 
 
 listItem : String -> String -> Bool -> Html msg
 listItem category fileName isActive =
-    li [ classList [ ( "list__item--single", True ), ( "u-font-weight-bold", isActive ) ] ]
-        [ a [ class "u-text-grey-100", Route.href <| getCategoryRoute category fileName ] [ text fileName ] ]
+    Html.li [ Attr.classList [ ( "list__item", True ), ( "u-font-weight-bold", isActive ) ] ]
+        [ Html.a [ Attr.class "listItem__text", Route.href <| getCategoryRoute category fileName ]
+            [ Html.div [ Attr.class "listItemText__title" ] [ Html.text fileName ] ]
+        ]
 
 
 article : Maybe String -> Html msg
 article content =
-    let
-        options : Options
-        options =
-            { softAsHardLineBreak = False
-            , rawHtml = ParseUnsafe
-            }
-
-        customHtmlBlock : Block b i -> List (Html msg)
-        customHtmlBlock block =
-            case block of
-                Block.CodeBlock codeblock codestr ->
-                    [ div [ class "example" ]
-                        [ div [ class "example__preview" ] <| Markdown.toHtml (Just options) codestr
-                        , div [ class "example__codeblock" ] [ Util.codeSnippet codestr ]
-                        ]
-                    ]
-
-                _ ->
-                    Block.defaultHtml
-                        (Just customHtmlBlock)
-                        Nothing
-                        block
-    in
     withDefault "" content
-        |> Block.parse (Just options)
-        |> List.map customHtmlBlock
+        |> Markdown.Block.parse (Just MarkdownUtil.options)
+        |> List.map MarkdownUtil.customHtmlBlock
         |> List.concat
-        |> div [ class "col-sm-4 col-md-6 col-l-10" ]
+        |> Html.div [ Attr.class "col-sm-4 col-md-6 col-l-10 u-padding-l" ]
 
 
 
@@ -180,7 +178,7 @@ update msg model =
                                         Just name ->
                                             ( Just name
                                             , Http.get
-                                                { url = "/pages/" ++ category ++ "/" ++ name ++ ".md"
+                                                { url = "pages/" ++ category ++ "/" ++ name ++ ".md"
                                                 , expect = expectString FileLoaded
                                                 }
                                             )
@@ -191,7 +189,7 @@ update msg model =
                                 Just fileName ->
                                     ( Just fileName
                                     , Http.get
-                                        { url = "/pages/" ++ category ++ "/" ++ fileName ++ ".md"
+                                        { url = "pages/" ++ category ++ "/" ++ fileName ++ ".md"
                                         , expect = expectString FileLoaded
                                         }
                                     )
@@ -218,17 +216,17 @@ update msg model =
 
 fileFilter : String -> List String -> List String
 fileFilter input fileList =
-    List.filter (\file -> contains (toLower input) (toLower file)) fileList
+    List.filter (\file -> String.contains (String.toLower input) (String.toLower file)) fileList
 
 
 showList : Bool -> Attribute msg
 showList display =
     case display of
         True ->
-            style "height" "100%"
+            Attr.style "height" "100%"
 
         False ->
-            style "height" "0"
+            Attr.style "height" "0"
 
 
 getCategoryRoute : String -> String -> Route.Route

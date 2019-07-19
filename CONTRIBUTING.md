@@ -4,6 +4,10 @@
 - [Project Structure](#project-structure)
 - [Writing Markdown](#writing-markdown)
 - [Template of component guideline](#template-of-component-guideline)
+<<<<<<< HEAD
+=======
+- [Development Flow](#development-flow)
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8
 
 ## Project Structure
 The basic repo layout includes:
@@ -22,6 +26,13 @@ You can copy the [template](#template-of-component-guideline) below to start you
 
 The template is in markdown format. Not familiar with markdown? No worries, here is the [cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
+<<<<<<< HEAD
+=======
+Currently only [basic markdown syntax](https://www.markdownguide.org/basic-syntax) and [table](https://www.markdownguide.org/extended-syntax/#tables) is supported. 
+
+📌Tip: Creating tables with hyphens and pipes can be tedious. To speed up the process, try using the [Markdown Tables Generator](http://www.tablesgenerator.com/markdown_tables). Build a table using the graphical interface, and then copy the generated Markdown-formatted text into your file.
+
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8
 ### Adding image to your markdown file
 Adding image to your markdown file, may not be that straitforward if the image you want to include does not has an url. We also believe it's better that you add the images in styleguide repository. So that the project has the full control of it's assets. 
 
@@ -36,8 +47,11 @@ Feel free to add emoji to your markdown :)
 You can just copy the emoji you like and paste to your markdown file. *Noted that: different operating system may have different set of emoji. To deliver the best experience to all of our audiences, please only use common emoji in your file.*
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8
 ## Template of component guideline
 ```
 # <component name>
@@ -45,12 +59,20 @@ Describe what the component is and when it is used. Keep it short.
 
 <insert component> -- added by developer
 
+<<<<<<< HEAD
 ### Usage
+=======
+## Usage
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8
 Describe use cases and when not to use the component
 Ref to *related component* (if applicable)
 Include design *principles* (if applicable)
 
+<<<<<<< HEAD
 ### Anatomy
+=======
+## Anatomy
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8
 <image shows the composition of the component with annotations> 
 Ref [Banners - Material Design](https://material.io/design/components/banners.html#anatomy)
 list of the anatomies
@@ -59,6 +81,7 @@ Breakdown of anatomies
 (Describe every part in detail, e.g. definition, usage, principle)
 Noted that: for component containing text, we should always have a section talk about the writing (e.g. length restriction and tone)
 
+<<<<<<< HEAD
 ### List the variation of the component (if applicable)
 
 ### (Optional) Placement 
@@ -69,3 +92,26 @@ Describe where the component should be placed
 ### Implementation -- added by developer
 ### Demo -- added by developer
 ```
+=======
+## List the variation of the component (if applicable)
+
+## (Optional) Placement 
+Describe where the component should be placed
+
+## (Optional) Order and alignment
+
+## Implementation -- added by developer
+## Demo -- added by developer
+```
+
+## Development Flow
+* Create a new topic branch with the name of the component and date, e.g. `button-09052019`
+
+* Create the markdown file in `pages` folder and add images to `img` if it is required.
+
+* Push your branch to github
+
+* Open a Pull Request and descrip what has been done in the PR
+
+* Request review
+>>>>>>> 1c5cad53544be26e2ec576aefdfb13f9823448b8

@@ -31,9 +31,32 @@ customElements.define('code-snippet', class extends HTMLElement {
     }
 
     connectedCallback() {
-        this.innerText = this._innerCode;
         hljs.registerLanguage('xml', xml);
-        hljs.highlightBlock(this);
+        hljs.configure({
+            useBR: true
+          })
+        const value = hljs.highlight("xml", this._innerCode).value;
+        this.innerHTML = '<pre><code class="xlm hljs">' +hljs.fixMarkup(value)+ '</code></pre>';
+    }
+});
+
+customElements.define('code-preview', class extends HTMLElement {
+    constructor() {
+        super();
+        this._srcdoc = '';
+    }
+
+    get srcdoc() {
+        return this._srcdoc;
+    }
+
+    set srcdoc(codestr) {
+        if (this._srcdoc === codestr) return
+        this._srcdoc = codestr;
+    }
+
+    connectedCallback() {
+        this.innerHTML = this._srcdoc;
     }
 });
 
@@ -72,3 +95,21 @@ customElements.define('code-editor', class extends HTMLElement {
         })
     }
 });
+
+
+// For demo
+window.showPopup = () => {
+    document.getElementById('backdrop').style.display='flex';
+    document.getElementById('popup').classList.remove('scale_down_center');
+    document.getElementById('backdrop').classList.remove('fade_out');
+    document.getElementById('popup').classList.add('scale_up_center');
+    
+}
+
+window.hidePopup = () => {
+    document.getElementById('popup').classList.remove('scale_up_center');
+    document.getElementById('popup').classList.add('scale_down_center');
+    document.getElementById('backdrop').classList.add('fade_out');
+    setTimeout(()=>{document.getElementById('backdrop').style.display='none';}, 450);
+}
+

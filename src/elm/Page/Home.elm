@@ -1,8 +1,7 @@
 module Page.Home exposing (view)
 
-import Html exposing (Html, code, div, h1, h4, li, main_, p, strong, text, ul)
-import Html.Attributes exposing (class, tabindex)
-import Util exposing (codeSnippet)
+import Html as Html exposing (Html)
+import Html.Attributes as Attr
 
 
 
@@ -11,36 +10,42 @@ import Util exposing (codeSnippet)
 
 view : Html msg
 view =
-    main_ [ class "container--fluid", tabindex -1 ]
-        [ h1 [ class "row justify-content-center u-margin-top-xl" ] [ text "ZALORA Style" ]
-        , h4 [ class "row justify-content-center u-text-center" ] [ text "Style is built in a scalable, reusable way that ensures consistency, low cost of changes and a balance between creativity and efficiency. Start to build a responsive, mobile-first project with Style today!" ]
-        , div [ class "divider" ] []
-        , div [ class "row" ]
-            [ div [ class "col-sm-4 col-lg" ]
-                [ h4 [] [ text "Installation" ]
-                , div []
-                    [ text "Install @zalora/style's source files via npm. The installed package also includes the original SASS and demostration HTML for building the project."
-                    , code [ class "code--block" ] [ text "$ npm install @zalora/style" ]
+    Html.main_ [ Attr.class "container--fluid", Attr.tabindex -1 ]
+        [ Html.h1
+            [ Attr.class "row justify-content-center align-items-center u-margin-vertical-xl" ]
+            [ Html.text "ZALORA Style"
+            , Html.img [ Attr.src "assets/palatte.png" ] []
+            ]
+        , Html.h4 [ Attr.class "row justify-content-center u-Html.text-center" ] [ Html.text "Style is built in a scalable, reusable way that ensures consistency, low cost of changes and a balance between creativity and efficiency. Start to build a responsive, mobile-first project with Style today!" ]
+        , Html.div [ Attr.class "Html.divider u-margin-vertical-xl" ] []
+        , Html.div [ Attr.class "row" ]
+            [ Html.div [ Attr.class "col-sm-4 col-lg" ]
+                [ Html.h4 [] [ Html.text "Installation" ]
+                , Html.div []
+                    [ Html.text "Install @zalora/style's source files via npm. The installed package also includes the original SASS and demostration HTML for building the project."
+                    , Html.code [ Attr.class "code--block" ] [ Html.text "$ npm install @zalora/style" ]
                     ]
                 ]
-            , div [ class "col-sm-4 col-lg" ]
-                [ h4 [] [ text "Usage" ]
-                , div []
-                    [ text "To use @zalora/style you can inject the "
-                    , strong [] [ text "style.css" ]
-                    , text " into your html file."
-                    , div [] [ text "Or you can import @zalora/style into your js file as a css module" ]
-                    , code [ class "code--block" ] [ text "import Style from '@zalora/style'" ]
+            , Html.div [ Attr.class "col-sm-4 col-lg" ]
+                [ Html.h4 [] [ Html.text "React Components" ]
+                , Html.div []
+                    [ Html.a [ Attr.href "https://zalora.github.io/style-react", Attr.target "_blank" ] [ Html.text "@zalora/style-react \u{00A0}" ]
+                    , Html.text "implements all components in style using React components"
+                    , Html.code [ Attr.class "code--block" ] [ Html.text "$ npm install @zalora/style-react" ]
+                    , Html.div [ Attr.class "u-Html.text-grey-60" ]
+                        [ Html.text "Both @zalora/style and @zalora/style-react are private. To download them, you need to be a member of"
+                        , Html.a [ Attr.href "https://www.npmjs.com/settings/zalora/members", Attr.target "_blank" ] [ Html.text "\u{00A0} ZALORA" ]
+                        ]
                     ]
                 ]
-            , div [ class "col-sm-4 col-lg" ]
-                [ h4 [] [ text "Vision" ]
-                , p [] [ text "Through our UI, customers will" ]
-                , ul []
-                    [ li [] [ text "Enjoy an enriching, unified experience whether they’re new or returning customers" ]
-                    , li [] [ text "Be inspired by our clean canvas, content, products, and banners" ]
-                    , li [] [ text "Find all the information they need, in a quick and timely manner" ]
-                    , li [] [ text "Be guided throughout their shopping journey on ZALORA" ]
+            , Html.div [ Attr.class "col-sm-4 col-lg" ]
+                [ Html.h4 [] [ Html.text "Vision" ]
+                , Html.p [] [ Html.text "Through our UI, customers will" ]
+                , Html.ul []
+                    [ Html.li [] [ Html.text "Enjoy an enriching, unified experience whether they’re new or returning customers" ]
+                    , Html.li [] [ Html.text "Be inspired by our clean canvas, content, products, and banners" ]
+                    , Html.li [] [ Html.text "Find all the information they need, in a quick and timely manner" ]
+                    , Html.li [] [ Html.text "Be guided throughout their shopping journey on ZALORA" ]
                     ]
                 ]
             ]

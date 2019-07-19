@@ -21,7 +21,7 @@ currentPage content =
 viewHeader : Html msg
 viewHeader =
     div [ class "navbar align-items-center justify-content-start" ]
-        [ a [ class "navbar__logo", Route.href Route.Home ] [ img [ src "/assets/primary_logo_white.png", alt "ZALORA" ] [] ]
+        [ a [ class "navbar__logo", Route.href Route.Home ] [ img [ src "assets/primary_logo_white.png", alt "ZALORA" ] [] ]
         , ul [ class "navbar__nav" ]
             [ li [ class "navbar__navItem" ] [ a [ class "u-text-white", Route.href Route.Components ] [ text "Documentation" ] ]
             , li [ class "navbar__navItem" ] [ a [ class "u-text-white", Route.href Route.Guides ] [ text "Guide" ] ]
