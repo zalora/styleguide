@@ -66,18 +66,18 @@ A button is indicates a possible user action. Should be visible and inform the u
 
 A button can contain text only, icon only or the combination of text and icon. 
 
-![Button Specification](./img/button/Buttonspec.png "There are 2 sizes of a button. The default size is 48px and for the small one is 40px.")
+![Button Specification](img/button/Buttonspec.png "There are 2 sizes of a button. The default size is 48px and for the small one is 40px.")
 
 ## Order
 
-![Full width button.png](./img/button/Fullwidthbutton.png "Full-width button: for the main action users should take.")
+![Full width button.png](img/button/Fullwidthbutton.png "Full-width button: for the main action users should take.")
   
   
 
-![Side by side button.png](./img/button/Sidebyside.png "Side by side button: mostly for step. When the next and previous step is equally important. The right one must be a positive action.")
+![Side by side button.png](img/button/Sidebyside.png "Side by side button: mostly for step. When the next and previous step is equally important. The right one must be a positive action.")
 
   
-![Stack button.png](./img/button/Stackbutton.png "Top bottom button: for a longer text. The top one must be a positive action")
+![Stack button.png](img/button/Stackbutton.png "Top bottom button: for a longer text. The top one must be a positive action")
 
 
 

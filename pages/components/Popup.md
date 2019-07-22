@@ -31,7 +31,7 @@ Only to inform important information that requires specific user action, decisio
 ## Anatomy
 
 
-![Popup Specification.png](./img/popup/Popupspec.png)
+![Popup Specification.png](img/popup/Popupspec.png)
 
 **Title**: Tell about the purpose of the popup. The title is mandatory for every popup. Contain a brief, clear statement and explanation enough what this message about. Avoid apologies, alarm and ambiguity for the title. 
 

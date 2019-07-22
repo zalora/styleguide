@@ -22,13 +22,13 @@ A checkbox is a selection control that allows users to select multiple options, 
 * For an acknowledgement (like terms and conditions) : the default state is not checked.
 * For a marketing purpose (subscribe newsletter) : the default state is checked. 
 
-![General checkbox](./img/checkbox/Generalcheckbox.png)
+![General checkbox](img/checkbox/Generalcheckbox.png)
 
 ### Filter checkmark
 * Using a specific check icon and for filter only.  
 * For this checkmark, the default state means opt-in all option. And the active state means select some option. 
 
-![Filter checkmark](./img/checkbox/Filtercheckmark.png)
+![Filter checkmark](img/checkbox/Filtercheckmark.png)
 
 To change the normal checkbox to filter checkbox, you just need to change the class name from `checkbox` to `filterCheckbox`
 
@@ -56,7 +56,7 @@ To change the normal checkbox to filter checkbox, you just need to change the cl
 
 
 ## Anatomy
-![Checkbox Specification](./img/checkbox/Checkboxspec.png)
+![Checkbox Specification](img/checkbox/Checkboxspec.png)
 
 The icon should be on the left side. And native behaviour like ripple can be applied for the mobile platform. 
 

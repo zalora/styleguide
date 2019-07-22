@@ -12,7 +12,7 @@ Use the grid system to build consistent layout between pages and maximize the ex
 
 Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-width(1344px)** in its grid system. A fluid container is a container that is always expanded to the **full-width** of the screen. But in Zalora/Style, the container won't go smaller than 320px, or larger than 1344px. It helps us to remain consistency layout between divices.
 
-![columns-gutters-margins-figure-caption](./img/Grid/grid_composition.png)
+![columns-gutters-margins-figure-caption](img/Grid/grid_composition.png)
 
 ## Breakpoints
 
@@ -34,7 +34,7 @@ Zalora/Style defines 4 breakpoints: small, medium, large and extra large:
 
 By applying the breakpoint, we can adjust the layout of a page into diffent screen sizes:
 
-![How grid works on different screen sizes](./img/Grid/grid_on_different_sizes.png)
+![How grid works on different screen sizes](img/Grid/grid_on_different_sizes.png)
 
 ## Implementation
 

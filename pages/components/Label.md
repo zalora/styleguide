@@ -34,13 +34,13 @@
 
 * You can include an icon, provided the icon is simple, useful and has the same height as the font.
 
-![label with icon](./img/Label/label_with_icon.png "Label with icon")
+![label with icon](img/Label/label_with_icon.png "Label with icon")
 
 ### Specification
 
-![general spec](./img/Label/label_spec_general.png "General spec")
+![general spec](img/Label/label_spec_general.png "General spec")
 
 * Max length: 192px (of which text is max 184px)
 * If text length > 184px, the text will be truncated with an ellipsis. Since there is no way to see the full content beyond the ellipsis, make sure to keep the text shorter than that!
 
-![truncated label](./img/Label/truncated_label.png "Truncated label")
+![truncated label](img/Label/truncated_label.png "Truncated label")

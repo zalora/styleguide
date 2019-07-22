@@ -38,9 +38,9 @@ Adding image to your markdown file, may not be that straitforward if the image y
 
 You can add an image to your markdown file by the following steps:
 1. Add the image to `img` folder
-2. Add `![alt text](./img/path/to/your/image "title text")` to your markdown
+2. Add `![alt text](img/path/to/your/image "title text")` to your markdown
 
-E.g. To add `fb.png` in `img/Button` folder, the markdown string will be `![Facebook button](./img/Button/fb.png "Continue with Facebook")`
+E.g. To add `fb.png` in `img/Button` folder, the markdown string will be `![Facebook button](img/Button/fb.png "Continue with Facebook")`
 
 ### Emoji
 Feel free to add emoji to your markdown :)
