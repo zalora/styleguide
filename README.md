@@ -11,5 +11,9 @@ A new portal for our new [style](https://github.com/zalora/style).
     npm run build
     npm start
 
+## Publish to Github Pages
+    npm run docs
+This command deploys your dist folder to gh-pages branch
+
 ## Contributing
 Feel free to contribute the content of our styleguide by kindly following our [contributing](CONTRIBUTING.md) guideline.
