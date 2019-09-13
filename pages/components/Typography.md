@@ -48,11 +48,7 @@ When you use text on a background other than black/white, please check the color
 
 #### Line height
 
-Line height is the amount of apace between beaslines in a block of text. A text's line-height is proportional to its font size.
-
-![line-height demostration for font size 16px](img/typography/line-height-16px.png "The line height for text with font-size 16px, is 24px")
-
-![line-height demostration for font size 20px](img/typography/line-height-20px.png "The line height for text with font-size 20px, is 32px")
+Line height is the amount of apace between beaslines in a block of text. A text's line-height is proportional to its font size. Check the chart above, the line height for text with font-size 16px, is 24px. And the line height for text with font-size 20px, is 32px.
 
 #### Emphasize Information
 

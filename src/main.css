@@ -337,13 +337,3 @@ th, td {
 .articleList {
   overflow: hidden;
 }
-
-.icon {
-  display: inline-block;
-  flex-shrink: 0;
-  width: 1em;
-  height: 1em;
-  font-size: 24px;
-  user-select: none;
-  transition: fill 200ms cubic-bezier(.4, 0, .2, 1) 0ms, stroke 200ms cubic-bezier(.4, 0, .2, 1) 0ms;
-}

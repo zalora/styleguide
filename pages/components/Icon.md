@@ -1,8 +1,8 @@
 # Icon
 
-You can download the icons here (TO BE UPDATED)
+You can download the icons [here](https://github.com/zalora/style/tree/master/assets/icon)
 
-You make also want use the helper class `icon` from style to change the size and color of the svg icons easily.
+You can add the helper class `icon` to the svg code. e.g. `<svg class="icon" ...></svg>`. The helper class makes the svg icon inherite the font-size and color of it's parent. In the example below, the icon will have a size of 64px and pink color.
 
 ```html
 

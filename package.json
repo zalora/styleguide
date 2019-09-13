@@ -13,7 +13,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
-    "@zalora/style": "^3.2.3",
+    "@zalora/style": "^3.2.11",
     "buildbranch": "^2.0.1",
     "clean-webpack-plugin": "^2.0.2",
     "codemirror": "^5.40.2",
