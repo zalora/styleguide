@@ -19,6 +19,7 @@ Color utility classes allow you to determine the background, border, or text col
         <span class="swatch__info__hex">#000000</span>
     </div>
 </section>
+
 <section class="swatch__group">
     <div class="swatch__color u-bg-grey-10 u-text-on-grey-10">
         <bold class="swatch__info__name">Grey-10</bold>

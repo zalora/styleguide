@@ -17,3 +17,10 @@ This command deploys your dist folder to gh-pages branch
 
 ## Contributing
 Feel free to contribute the content of our styleguide by kindly following our [contributing](CONTRIBUTING.md) guideline.
+
+
+## TODO:
+- textField usage image, anatomy image
+- explaination of secondary divider
+- demo of toastr
+- update style library

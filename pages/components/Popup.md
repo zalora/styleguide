@@ -48,3 +48,8 @@ Popup should be placed center align and in the middle of the screen to make the 
 
 ## Order and alignment
 The placement of the button on popup should be side by side if possible. But it can be stack as well to accommodate the longer text. 
+
+## Related components
+
+* [Banner](/#/components/Banner)
+* [Toastr](/#/components/Toastr)

@@ -72,4 +72,4 @@ The icon should be on the left side. And native behaviour like ripple can be app
 
 
 ## Related components
-[Radio button](/#/components/Radio%20Button)
+[Radio button](/#/components/Radio)

@@ -113,3 +113,14 @@ window.hidePopup = () => {
     setTimeout(()=>{document.getElementById('backdrop').style.display='none';}, 450);
 }
 
+window.togglePanel = ($el, id) => {
+    if ($el.classList.contains('is-expanded')) {
+        $el.classList.remove('is-expanded'); 
+        document.getElementById(id).classList.remove('expand');
+        document.getElementById(id).classList.add('collapse');
+    } else {
+        $el.classList.add('is-expanded'); 
+        document.getElementById(id).classList.remove('collapse');
+        document.getElementById(id).classList.add('expand');
+    }
+}

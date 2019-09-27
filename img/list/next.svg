@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>7B956072-B395-4DA9-B734-0D66DC9D58B0</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Element---take-from-here" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Zalora_library_element" transform="translate(-1168.000000, -600.000000)" fill-rule="nonzero">
+            <g id="pagination/action" transform="translate(1160.000000, 592.000000)">
+                <g id="pagination/action/next">
+                    <g id="icon/pagination/next" transform="translate(8.000000, 8.000000)">
+                        <g transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) ">
+                            <rect id="Rectangle" fill-opacity="0.01" fill="#FFFFFF" x="0" y="0" width="24" height="24"></rect>
+                            <polygon id="icon_next" fill="#474747" transform="translate(12.000000, 12.000000) rotate(90.000000) translate(-12.000000, -12.000000) " points="15.825 9 12 12.708502 8.175 9 7 10.1417003 12 15 17 10.1417003"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

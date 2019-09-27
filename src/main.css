@@ -1,6 +1,5 @@
 code {
   padding: 0 .25rem;
-  margin: .5rem 0;
   color: #297e84;
 }
 
@@ -29,6 +28,15 @@ ul {
   list-style: disc inside;
 }
 
+ul li ul {
+  list-style: circle inside;
+  margin-left: 16px;
+}
+
+.example__preview ul {
+  list-style: none;
+}
+
 li > p:first-child {
   display: inline-block;
 }
@@ -36,6 +44,8 @@ li > p:first-child {
 p {
   margin-block-start: .5em;
   margin-block-end: .5em;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h2 {
@@ -50,21 +60,21 @@ h4 {
   margin-top: 32px;
 }
 
-
 .figure{
   margin-inline-end: 0;
   max-width: 375px;
   margin-top: 32px;
+  display: inline-block;
 }
 
 .figure img {
   border: 1px solid #f4f4f4;
 }
 
-.row .figure:first-child{
+/* .row .figure:first-child{
   margin-inline-start: 0;
   margin-inline-end: 0;
-}
+} */
 
 .figure-caption__tag.do {
   font-weight: 500;

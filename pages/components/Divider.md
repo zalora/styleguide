@@ -18,15 +18,16 @@ There are two types of a divider:
 
 #### Thin divider
 To group related / same level content.
-<div class="row">
-![thin divider in the cart screen](img/divider/thindivider_cart.png "Do[On the cart screen, the divider makes a clear grouping per item in one seller.]") ![wrong thin divider in the pdv screen](img/divider/wrongthindivider_pdv.png "Don't[If you need to group text-only information is better to play with the spacing rather than put too much divider.]")
-</div>
+
+![thin divider in the cart screen](img/divider/thindivider_cart.png "Do[On the cart screen, the divider makes a clear grouping per item in one seller.]") 
+![wrong thin divider in the pdv screen](img/divider/wrongthindivider_pdv.png "Don't[If you need to group text-only information is better to play with the spacing rather than put too much divider.]")
 
 #### Thick divider
 To group unrelated / different level content.
-<div class="row">
-![thick divider in the cart screen](img/divider/thickdivider_cart.png "Do[On the cart screen, the divider makes a clear grouping per seller.]") ![thick divider in the pdv screen](img/divider/thickdivider_pdv.png "Do[On the PDV screen, the divider devide the information between the information about the item and item suggestion.]") ![wrong thick divider in the wishlist screen](img/divider/wrongthickdivider_wishlist.png "Don't[On the wishlist screen, the item here has the same level so it should use a thin divider.]")
-</div>
+
+![thick divider in the cart screen](img/divider/thickdivider_cart.png "Do[On the cart screen, the divider makes a clear grouping per seller.]") 
+![thick divider in the pdv screen](img/divider/thickdivider_pdv.png "Do[On the PDV screen, the divider devide the information between the information about the item and item suggestion.]") 
+![wrong thick divider in the wishlist screen](img/divider/wrongthickdivider_wishlist.png "Don't[On the wishlist screen, the item here has the same level so it should use a thin divider.]")
 
 ## The Usage
 <span class="u-text-positive">Do</span>

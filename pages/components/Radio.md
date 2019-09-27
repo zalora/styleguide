@@ -56,7 +56,6 @@ A radio button is a selection control that allows users to select only one of th
 Be listed according to logical order, whether is an alphabetical, most popular or time-based order. 
 
 ![Radio button list](img/radiobutton/Radiobuttonlist.png "Radio button for sort. The order is based on the most popular option.")
-
 ![Radio button side by side](img/radiobutton/Sidebysideradiobutton.png "Radio button on sign up screen. The order is based on the alphabet.")
 
 

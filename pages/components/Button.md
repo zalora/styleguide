@@ -71,12 +71,7 @@ A button can contain text only, icon only or the combination of text and icon.
 ## Order
 
 ![Full width button.png](img/button/Fullwidthbutton.png "Full-width button: for the main action users should take.")
-  
-  
-
 ![Side by side button.png](img/button/Sidebyside.png "Side by side button: mostly for step. When the next and previous step is equally important. The right one must be a positive action.")
-
-  
 ![Stack button.png](img/button/Stackbutton.png "Top bottom button: for a longer text. The top one must be a positive action")
 
 
