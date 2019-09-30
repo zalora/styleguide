@@ -1,6 +1,6 @@
 # Badge
 
- Badge is a component to draw attention to another interface element like icons, text and buttons and contains a dynamic count.
+ A Badge is a component to draw attention to another interface element like icons, text and buttons and contains a dynamic count.
 
  There are two types of badges:
 * Badge
@@ -35,27 +35,27 @@
 </div>
 ```
 
-***Note that***, when the target of the badge is text, you may want to add additional margin to it. This helps you to adjust the position of the badge.
+***Note that***, when the target of the badge is text, you may want to use an additional margin to adjust the position of the badge.
 
 ## Usage
 
-Badge is always used with another UI component and not on its own.
+A Badge component is always used with another UI component and not on its own.
 
-They only contain numeric value not text.
+They only contain the numeric value, not text.
 
-Use a circle for showing single digit and capsule for double or more digits.
-
-
-![Number badge usage](img/badge/badge_usage_number.png "Use number badge, so that it gives feedback to audience about the change of the target of the badge. E.g. Use number badge for wishlist so that the number changes when user add/remove product from wishlist.")
+Use a circle for showing single-digit and capsule for double or more digits.
 
 
-![Circle badge usage](img/badge/badge_usage_dot.png "Use dot badge, when you want to indicate the target of the badge is not in the the default state. E.g. Use dot badge for filter so that user knows that the filter is appplied to current catalog page.")
+![Number badge usage](img/badge/badge_usage_number.png "Use number badge, so that it gives feedback to the audience about the change of the target of the badge. E.g. Use number badge for a wishlist so that the number changes when the user adds/removes a product from wishlist.")
+
+
+![Circle badge usage](img/badge/badge_usage_dot.png "Use dot badge, when you want to indicate the target of the badge is not in the default state. E.g. Use dot badge for filtering so that user knows that the filter is applied to current catalog page.")
 
 
 
 ## Anatomy
 
-Badge is composed of two elements:
+A Badge component is composed of two elements:
 * Circle
 * Number
 

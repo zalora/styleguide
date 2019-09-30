@@ -10,7 +10,7 @@ Use the grid system to build consistent layout between pages and maximize the ex
 
 ## Fluid container, columns, margins and gutters
 
-Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-width(1344px)** in its grid system. A fluid container is a container that is always expanded to the **full-width** of the screen. But in Zalora/Style, the container won't go smaller than 320px, or larger than 1344px. It helps us to remain consistency layout between divices.
+Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-width(1344px)** in its grid system. A fluid container is a container that is always expanded to the **full-width** of the screen. But in Zalora/Style, the container won't go smaller than 320px, or larger than 1344px. It helps us to remain consistency layout between devices.
 
 ![columns-gutters-margins-figure-caption](img/grid/grid_composition.png)
 
@@ -18,7 +18,7 @@ Zalora/Style adopts fluid-container with a **min-width(320px)** and a **max-widt
 
 A breakpoint is the range of predetermined screen sizes that have specific layout requirements. At a given breakpoint range, the layout adjusts to suit the screen size and orientation.
 
-The following video is a demonstration from [Material Design](https://material.io/design/layout/responsive-layout-grid.html#) about how breakpoints help to arrange layout on diffent size of screens.
+The following video is a demonstration from [Material Design](https://material.io/design/layout/responsive-layout-grid.html#) about how breakpoints help to arrange layout on different size of screens.
 
 <video controls autoplay>
 <source data-src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1fsdEL9VNAeJaQjU-bdzLZnZ2IuoPEpYT%2Flayout-responsive-breakpoints.mp4" type="video/mp4"/> </video>
@@ -32,15 +32,15 @@ Zalora/Style defines 4 breakpoints: small, medium, large and extra large:
 | **>= 1023px**        | Laptop          | col-lg-*        | 12     | 32px   | 16px   |
 | **>= 1344px**        | Desktop monitor | col-xl-*        | 12     | -      | 24px   |
 
-By applying the breakpoint, we can adjust the layout of a page into diffent screen sizes:
+By applying the breakpoint, we can adjust the layout of a page into different screen sizes:
 
 ![How grid works on different screen sizes](img/grid/grid_on_different_sizes.png)
 
 ## Implementation
 
-Zalora/Style's grid system is built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Below is an example and an in-depth look at how the grid comes together.
+Zalora/Style's grid system is built with [flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox). Below are examples and an in-depth look at how the grid comes together.
 
-You may need some background knowledge of flexbox to follow the guidelines below. This [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) is a good place for you to get know the background, terminology, guidelines and code snippets.
+You may need some background knowledge of flexbox to follow the guidelines below. This [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) is an excellent place for you to get to know the background, terminology, guidelines and code snippets.
 ### Auto layout
 You can fix the width of columns and make the rest columns share the available space evenly. Or you can adjust a column's width based on its content.
 #### Equal width
@@ -93,7 +93,7 @@ There is a util class `w-100` for you to break equal-width columns into multiple
 ```
 
 #### Setting one column width
-In many layouts you may want to fix the width of one column and have the rest columns automatically resize around it.
+In many layouts, you may want to fix the width of one column and have the rest columns automatically resize around it.
 
 ```html
 <section class="container--fluid is-debug">
@@ -155,7 +155,7 @@ Use `col-{breakpoint}-auto` to make the column's width based on the natural widt
 ### Grid with breakpoints
 
 #### All breakpoints
-The column widths apply at all breapoints (i.e. col-`sm`-1 is applied to all screens that is `sm` **and up**).
+The column widths apply at all breakpoints (i.e. col-`sm`-1 is applied to all screens that are `sm` **and up**).
 The class names are formed by col-`{breakpoint}`-`{#columns}`. The number of columns is limited by the breakpoint. I.e. for `sm` you can take maximun `4` cloumns.
 
 ```html
@@ -188,7 +188,7 @@ The class names are formed by col-`{breakpoint}`-`{#columns}`. The number of col
 </section>
 ```
 #### Mix and match
-You may also have multiple width defined. It causes the layout to change at the defined breakpoint. E.g. a column can be defined as `col-sm-4 col-lg-6`=> when the screen is smaller than `lg` the column takes 100% of the row, while when the screen is `lg` and up, the column takes 6/12 (1/2) of the screen.
+You may also have multiple widths defined. It causes the layout to change at the defined breakpoint. E.g. a column can be defined as `col-sm-4 col-lg-6`=> when the screen is smaller than `lg` the column takes 100% of the row, while when the screen is `lg` and up, the column takes 6/12 (1/2) of the screen.
 
 ```html
 <section class="container--fluid is-debug">
@@ -203,7 +203,7 @@ You may also have multiple width defined. It causes the layout to change at the 
 </section>
 ```
 
-### Aligment
+### Alignment
 Use flexbox alignment utilities to vertically and horizontally align columns. 
 
 #### Vertical alignment

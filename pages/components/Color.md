@@ -1,6 +1,6 @@
 # Color
 
-Color utility classes allow you to determine the background, border, or text colors for your elements. Simply format a utility class using the color names shown below. For example:
+Color utility classes allow you to determine the background, border, or text colors for your elements. Format a utility class using the color names shown below. For example:
 
 * Use `.u-bg-teal-10` to set an element's background color to `#D6E6E7`.
 * Use `.u-text-grey-80` to set an element's text color to `#474747`.

@@ -27,13 +27,13 @@ Lists are continuous, vertical indexes of text with or without image and action.
 	</div>
 </div>
 ```
-List items are fluid, in the above example, we used grid class `col-sm-1` to set the width of the list items.
+List items are fluid. In the above example, we used grid class `col-sm-1` to set the width of the list items.
 
 ## Usage
 
 Lists are used to display large or small amounts of information cleanly and efficiently one after the other.
 
-Lists should be sorted in logical ways that make content easy to scan, such as alphabetical, numerical, chronological, or user preference. They can be organised using headers, dividers and spacing. Use dividers sparingly, to create groupings rather than separate items.
+Lists should be sorted in logical ways that make content easy to scan, such as alphabetical, numerical, chronological, or user preference. They can be organised using headers, dividers and spacing. Use dividers sparingly to create groupings rather than separate items.
 
 ![List Usage](img/list/List_usage.jpg)
 
@@ -41,7 +41,7 @@ Lists should be sorted in logical ways that make content easy to scan, such as a
 ## Anatomy
 ![List Anatomy](img/list/List_Anatomy.jpg)
 
-List is composed of the following elements:
+A list is composed of the following elements:
 
 Primary text
 

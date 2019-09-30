@@ -44,7 +44,7 @@ Only to inform important information that requires specific user action, decisio
 Scrollable content is permitted only for terms and conditions.
 
 ## Placement 
-Popup should be placed center align and in the middle of the screen to make the user focus on the message. 
+Popup should be placed centre align and in the middle of the screen to make the user focus on the message. 
 
 ## Order and alignment
 The placement of the button on popup should be side by side if possible. But it can be stack as well to accommodate the longer text. 

@@ -1,8 +1,8 @@
 # Expansion Panel
-An expansion panel can help us to solve various problems: display large amount of information in limited screen space, create flows, provide light weight editing.
+An expansion panel can help us to solve various problems: display large amount of information in limited screen space, create flows, provide lightweight editing.
 
 ## Usage
-* *Displaying large amount of information*
+* *Displaying a large amount of information*
 
 Expansion panels are useful for reducing vertical space with large amounts of information. Additionally, it expands and shows the more important information and hide the noise for the audience. 
 
@@ -10,9 +10,9 @@ Expansion panels are useful for reducing vertical space with large amounts of in
 
 Expansion panels may be displayed in a sequence to form a flow.  For example, in ZALORA desktop checkout, we use a series of expansion panels to collect information required by an order, user’s information -> address -> payment -> order items and discount.
 
-* *Light weight editing*
+* *Lightweight editing*
 
-With studies, expansion panels are best used for lightweight editing of an element, such as selecting a value for a setting. It provides the audience enough context and won’t interupt their options. A good example is also ZALORA desktop checkout page.
+With studies, expansion panels are best used for lightweight editing of an element, such as selecting a value for a setting. It provides the audience with enough context and won’t interrupt their options. A good example is also ZALORA desktop checkout page.
 
 ## Behaviour
 There are two types of expansion panel:
@@ -21,7 +21,7 @@ There are two types of expansion panel:
 The expanded/collapsed status are independent between panels. Meaning, you can expand as many panels as you want.
 
 * Accordion:
-You can expand at most one panel in the same time.
+You can expand at most one panel at the same time.
 
 Check the behavior out from this interactable demo in [@zalora/style-react](https://zalora.github.io/style-react/#!/ExpansionMenu). (allowOnlyOneExpanded={true} => Accordion, allowOnlyOneExpanded={false} => Independent expansion panel.)
 
@@ -45,5 +45,3 @@ Check the behavior out from this interactable demo in [@zalora/style-react](http
   </li>
 </ul>
 ```
-
-## Spec 

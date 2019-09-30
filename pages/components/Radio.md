@@ -35,9 +35,9 @@ A radio button is a selection control that allows users to select only one of th
 
 * The radio icon should be on the left side. And native behaviour like ripple can be applied for the mobile platform. 
 
-* If there is enough space, you can put the radio button side by side, like on the sign up screen.
+* If there is enough space, you can put the radio button side by side, like on the signup screen.
 
-* **The behaviour** is when the user select another option, it will de-select the current selection.
+* **The behaviour** is when the user selects another option, it will de-select the current selection.
 
 
 

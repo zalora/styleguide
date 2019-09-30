@@ -1,7 +1,7 @@
 # Tabs
-Tabs are used to organise and allow navigation between groups of content that are related and at the same level of hierarchy.
+Tabs are used to organise and allow navigation between groups of content that are related and at the same level of the hierarchy.
 
-In contrast, the content in navigation bars are unrelated to each other.
+In contrast, the content in navigation bars is unrelated to each other.
 
 
 ## Usage
@@ -9,7 +9,7 @@ In contrast, the content in navigation bars are unrelated to each other.
 * Tabs are used for mobile design.
 * They are placed above the content it represents and below the top bar.
 * There can be as many tabs as required.
-* Pre-select one of the tabs (usually the first) when user lands.
+* Pre-select one of the tabs (usually the first) when a user lands.
 * Active tab must be highlighted.
 
 <span class="u-text-urgent">Don't</span>
@@ -70,5 +70,5 @@ Moving between tabs
 - Swipe within the content area (iOS and android)
 
 Scrolling interaction of tabs
-- When a screen scrolls, tabs can either be fixed to the top of the screen, or scroll off the screen. If they scroll off the screen, they will return when the user scrolls upward.
+- When a screen scrolls, tabs can either be fixed to the top of the screen or scroll off the screen. If they scroll off the screen, they will return when the user scrolls upward.
 - Don’t scroll tabs behind a top app bar. When tabs are attached to a component, they should appear and move as a single unit.

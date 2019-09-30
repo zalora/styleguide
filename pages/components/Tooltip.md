@@ -1,17 +1,17 @@
 # Tooltip
-A tooltip is a brief, informative message that appears when users hover over, or tap an element.
+A tooltip is a brief, informative message that appears when users hover over or tap an element.
 
 ## Usage
 * **Indicative Tooltips**
 
 Add tooltips to icons that are likely unfamiliar to many users. Use a tooltip to describe the purpose of the icon is very helpful.
 
-![Alibaba](img/tooltip/alibaba.png "Alibaba had a search bar with an unlabeled camera icon. When users hovered over this icon, a tooltip that read Search by image appeared. This functionality was likely unfamiliar to many users, and therefore a tooltip describing its purpose was helpful.")
+![Alibaba](img/tooltip/alibaba.png "Alibaba had a search bar with an unlabeled camera icon. When users hovered over this icon, a tooltip that reads Search by image appeared. This functionality was likely unfamiliar to many users, and therefore a tooltip describing its purpose was helpful.")
 
 
 * **Info Tooltips**
 
-Use tooltip to provide additional information for some special terms. This kind of tooltips are usually attached to an ? or i icon that is placed after the special term.
+Use tooltip to provide additional information for some particular words. This kind of tooltips is usually attached to an ? or i icon that is placed after the particular word.
 
 ![Info tooltip example: Additional International Fee](img/tooltip/additional_fee.png "Example: Additional International Fee. An info tooltip is very helpful here to explain to the customers about what the additional international fee is.")
 

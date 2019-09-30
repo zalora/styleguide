@@ -18,7 +18,7 @@ Banners contain a single message and specific actions for users to take. We use 
 </div>
 ```
 
-**Warning** banners appear before users take actions because its intent is to prevent users’ mistakes before the action is done.
+**Warning** banners appear before users take actions because it intents to prevent users’ mistakes before the action is done.
 
 ```html
 <div class="banner banner--warning">
@@ -49,7 +49,7 @@ Banners contain a single message and specific actions for users to take. We use 
 ### Rules
 * Banners are interruptive and should be avoided as much as possible.
 * Banners are displayed at the top of the screen, below a top app bar. * Banners remain on screen when scrolling pannable content. They are persistent and non modal, allowing users to ignore them or interact with them at any time.
-* The information on the banners are always shown in context.
+* The information on the banners is always shown in context.
 
 ### Frequency
 Only one banner is shown at a time. One banner is dismissed by users before another banner shows. Because of this, we should minimise the use of banners to avoid information loss.

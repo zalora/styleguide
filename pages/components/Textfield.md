@@ -1,6 +1,6 @@
 # Textfield
 
-Text fields let users enter and edit text that automatically brings up a keyboard when the user taps it. Display a ‘Clear’ button in the right end of a text field when appropriate.
+A textfield let users enter and edit the text that automatically brings up a keyboard when the user taps it. Display a ‘Clear’ button at the right end of a text field when appropriate.
 
 ```html
 <div class="row u-margin-vertical-m">
@@ -22,7 +22,7 @@ Text field is used to request a small amount of information, such as an email ad
 
 ## Anatomy
 
-Textfield is composed of following elements:
+Textfield is composed of the following elements:
 
 Label text
 	
@@ -51,15 +51,15 @@ Input text
 
 Clear icon
 
-* The clear button appears when the textfield is in focussed state and user is typing in. For example, it replaces the error icon in non-focussed error state when the textfield is in focus.
+* The clear button appears when the textfield is in focussed state and the user is typing in. For example, it replaces the error icon in a non-focussed error state when the textfield is in focus.
 
 Error message
 
-* Error message is used to give user the contextual information like what is the error or how to resolve it. If a textfield has helper text, then the same turns to error message.
+* Error message is used to give the user the contextual information like what is the error or how to resolve it. If a textfield has helper text, then the same turn to the error message.
 
 Textfield icon
 
-* Based on state of the textfield, the textfield can have an icon, like the error exclamation icon in error state or the check mark icon in case of success textfield
+* Based on the state of the textfield, the textfield can have an icon, like the error exclamation icon in error state or the checkmark icon in case of success textfield
 
 
 ## State

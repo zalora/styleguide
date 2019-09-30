@@ -1,6 +1,6 @@
 # Typography
 
-Typography helps you to express your design and contents in a percise and efficient way.
+Typography helps you to express your design and contents in a precise and efficient way.
 
 ## Font
 #### System Font stack
@@ -14,9 +14,9 @@ font-family: apple-system,blinkmacsystemfont,”SegoeUI”,”Roboto”,”Oxyge
 `
 
 #### Expressive font
-For headlines, you can choose an expressive font. Expressive fonts are unconventional font designs have details and intricacy that help attract the eye. In ZALORA, we use **High Tide** as our expressive font. However, we should only use it on banners and marketing materials, but not in our content(codebase). The preferrerd way is to convert the part that needs to be **High Tide** to image, and load the image.
+For headlines, you can choose an expressive font. Expressive fonts are unconventional font designs have details and intricacy that help attract the eye. In ZALORA, we use **High Tide** as our expressive font. However, we should only use it on banners and marketing materials, but not in our content(codebase). The preferred way is to convert the part that needs to be **High Tide** to image and load the image.
 
-High Tide is used in the brand page of ZALORA website:
+High Tide is used on the brand page of ZALORA website:
 ![Example of High Tide font](img/typography/Browse_Our_Brands.png )
 
 ## Readability
@@ -44,11 +44,11 @@ In style, we encourage to use the default letter-spacing, and kind of overriding
 
 #### Color
 
-When you use text on a background other than black/white, please check the color swatches here to find which color should you use so that it guarantees the readability your content.
+When you use text on a background other than black/white, please check the color section in this document. The color swatches show which color you should use on a certain background color to guarantee the readability your content.
 
 #### Line height
 
-Line height is the amount of apace between beaslines in a block of text. A text's line-height is proportional to its font size. Check the chart above, the line height for text with font-size 16px, is 24px. And the line height for text with font-size 20px, is 32px.
+Line height is the amount of apace between baselines in a block of text. A text's line-height is proportional to its font size. Check the chart above, the line-height for text with font-size 16px, is 24px. And the line height for text with font-size 20px, is 32px.
 
 #### Emphasize Information
 

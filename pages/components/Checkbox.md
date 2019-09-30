@@ -63,7 +63,7 @@ The icon should be on the left side. And native behaviour like ripple can be app
 
 
 ## Write for radio button
-  * Use a positive and active wording.
+  * Use positive and active wording.
   * Start with a capital letter.  
   * Don't end it with punctuation. 
   * Keep the text in a single line. 

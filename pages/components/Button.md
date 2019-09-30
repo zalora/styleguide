@@ -1,5 +1,5 @@
 # Button
-A button is indicates a possible user action. Should be visible and inform the users on what will happen when they click on it. 
+A button indicates a possible user action. Should be visible and inform the users on what will happen when they click on it. 
 
 
 ## Type
@@ -29,7 +29,7 @@ A button is indicates a possible user action. Should be visible and inform the u
     ```
     Users need to complete an action before the button is active. Mostly use with the primary and apply button. 
 
-    ***Note that***, the disable state is the same for all buttons.
+    ***Note that***, the disabled state is the same for all buttons.
 
   * **Text link**
     ```html
@@ -71,15 +71,15 @@ A button can contain text only, icon only or the combination of text and icon.
 ## Order
 
 ![Full width button.png](img/button/Fullwidthbutton.png "Full-width button: for the main action users should take.")
-![Side by side button.png](img/button/Sidebyside.png "Side by side button: mostly for step. When the next and previous step is equally important. The right one must be a positive action.")
-![Stack button.png](img/button/Stackbutton.png "Top bottom button: for a longer text. The top one must be a positive action")
+![Side by side button.png](img/button/Sidebyside.png "Side by side button: mostly for step. When the next and previous step is equally important, the right one must be a affirmative action.")
+![Stack button.png](img/button/Stackbutton.png "Top-bottom button: for a longer text. The top one must be a affirmative action")
 
 
 
 ## Length
 There are 2 types of button length:
-  * Full-width button: Always have same margin left and right with the minimum is 16px to the edge of the screen.
-  * Fixed width button: Always have 16px margin left and right after the text. So, the length of the button is dynamic. 
+  * Full-width button: Always have the same margin-left and right with the minimum is 16px to the edge of the screen.
+  * Fixed width button: Always have 16px margin-left and right after the text. So, the length of the button is dynamic. 
 
 
 
@@ -90,7 +90,7 @@ Icon button:
   * Don't use more than one icon in one button. 
 
 Text and icon button:
-  * Horizontal align the icon and text within the button. 
+  * Horizontally align the icon and text within the button. 
   * Use a centre align.  
 
 
@@ -98,8 +98,8 @@ Text and icon button:
 ## Write for button
   * Make it as short as possible but also clearly explaining the result of the button.
   * Concise and fit within a single line.
-  * Between two to five words.
+  * The length should be between two to five words.
   * Free from any punctuation.
-  * In title case regardless of platform.
+  * In title case, regardless of platform.
   * Always start with a verb and continue with the subject. The subject will help to add context. 
   * Use impactful verbs to grab users attention.
