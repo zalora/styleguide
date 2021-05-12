@@ -16,7 +16,7 @@
     "@zalora/style": "^3.2.13",
     "buildbranch": "^2.0.1",
     "clean-webpack-plugin": "^2.0.2",
-    "codemirror": "^5.40.2",
+    "codemirror": "^5.58.2",
     "copy-webpack-plugin": "^5.0.2",
     "css-loader": "^1.0.0",
     "elm-hot-webpack-loader": "^1.0.2",
